@@ -149,10 +149,10 @@ Because the AudioMoth doesn’t have an onboard battery, if the batteries fall o
     * We name all of our recorder locations with an alphabetical code that gives the site of the deployments, and a numeric code that uniquely identifies the point at that site. For instance, our deployments at Powdermill Nature Reserve in the pond area are named PNRE-POND-0001, PNRE-POND-00002, etc. 
    
 * Protocols can help make the whole process faster. Here are some example protocols we use.
- * Packing for a deployment
- * Deploying recorders
- * Bringing recorders home
- * List of things to do post-deployment
+   * Packing for a deployment
+   * Deploying recorders
+   * Bringing recorders home
+   * List of things to do post-deployment
  
 * When recording data in the field, use waterproof paper and permanent pens (e.g., fine-tipped Sharpies)
 
