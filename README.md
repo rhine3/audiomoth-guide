@@ -43,7 +43,6 @@ Decide whether onboard LED light should be on or off
   * Only red = recording
   * Both green & red = recording cannot be made. Causes of this include the time or program not being set (while in CUSTOM mode), the batteries falling out at some point after programming (while in CUSTOM mode), the recorder getting wet, the SD card malfunctioning, etc. For more information, see the [AudioMoth manual](https://docs.wixstatic.com/ugd/d97703_9ac305905bdd4cdfab6aee99767a56e6.pdf)
 
-
 Set recording and sleep duration in seconds. After doing this, the program will calculate the energy and storage used each day.
 
 * AudioMoth will alternate between recording and sleeping within each recording period. 
@@ -66,6 +65,8 @@ Install batteries and formatted microSD card in AudioMoth to be programmed.
 Plug in AudioMoth with switch set to “USB/OFF” mode, and press green button in the programming app to set time and recording program. 
 
 The AudioMoth now has a CUSTOM recording schedule and CUSTOM should be selected on the AudioMoth switch to use this schedule.
+
+* This custom schedule can be saved and reused. However, on some platforms, clicking the saved file itself will not correctly open the program. Instead, open the saved program through the timesetter app by selecting the menu option AudioMoth > Open Configuration
 
 Because the AudioMoth doesn’t have an onboard battery, if the batteries fall out, the programming and set time will be lost. **The AudioMoth must be reprogrammed if the batteries fall out.**
 
