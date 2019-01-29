@@ -146,6 +146,13 @@ Because the AudioMoth doesn’t have an onboard battery, if the batteries fall o
 
 * Since so many recorders will be deployed, information about their identity and location has to be taken accurately and efficiently
     * Record the deployment date; information about the identity (ID number) of the AudioMoth, SD card, and location; any important notes about placement, etc.
-    * See here for an example data sheet with recommended information to gather for a deployment, and here for an example data sheet with information to gather for a return
-    * Use waterproof paper and permanent pens (e.g., fine-tipped Sharpies)
+    * We name all of our recorder locations with an alphabetical code that gives the site of the deployments, and a numeric code that uniquely identifies the point at that site. For instance, our deployments at Powdermill Nature Reserve in the pond area are named PNRE-POND-0001, PNRE-POND-00002, etc. 
+   
+* Protocols can help make the whole process faster. Here are some example protocols we use.
+ * Packing for a deployment
+ * Deploying recorders
+ * Bringing recorders home
+ * List of things to do post-deployment
+ 
+* When recording data in the field, use waterproof paper and permanent pens (e.g., fine-tipped Sharpies)
 
