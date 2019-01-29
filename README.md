@@ -54,7 +54,7 @@ Set recording and sleep duration in seconds. After doing this, the program will 
 * AudioMoths alternate between recording and sleeping. When it does this depends on the switch position. If you want to make recordings immediately without regard to the recording schedule programmed on the device, use the DEFAULT mode. For all other deployments with scheduled recording periods, use the custom mode.
 
   * In DEFAULT mode: Device immediately starts recording for recording duration time, then sleeps, then begins recording again. This repeats until DEFAULT mode is turned off or the recorder dies.
-  * In CUSTOM mode: If device is turned on outside of recording period, it waits until recording period starts, then begins its recording schedule. If it is turned on during the recording period, when a recording is scheduled, it sleeps for the length of the scheduled recording, then starts recording after. For more information about how recordings are scheduled, see the configuration code here.
+  * In CUSTOM mode: If device is turned on outside of recording period, it waits until recording period starts, then begins its recording schedule. If it is turned on during the recording period, when a recording is scheduled, it sleeps for the length of the scheduled recording, then starts recording after. For more information about how recordings are scheduled, see the configuration code [here](https://github.com/OpenAcousticDevices/AudioMoth-Configuration-App/blob/master/lifeDisplay.js).
 
 Install batteries and formatted microSD card in AudioMoth to be programmed. 
 
