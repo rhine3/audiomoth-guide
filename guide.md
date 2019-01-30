@@ -45,9 +45,11 @@ Set up to 5 recording period(s) in Coordinated Universal Time (UTC) using 24-hou
 
 Set sample rate as 2x the highest frequency you want to record
 
-* **What sample rate should I use?** You should use a sample rate that is 2x higher than the highest frequency you want to record. This sample rate is known as the [Nyquist rate](https://en.wikipedia.org/wiki/Nyquist_rate) and is the minimum sample rate required to resolve the highest frequency. For birds, a 32kHz sample rate is fine. For bats' ultrasonic calls, a much higher sample rate is required.
+* **What sample rate should I use?** You should use a sample rate that is 2x higher than the highest frequency you want to record. This sample rate is known as the [Nyquist rate](https://en.wikipedia.org/wiki/Nyquist_rate) and is the minimum sample rate required to resolve a sound at a particular frequency. For birds, a 32kHz sample rate is fine. For bats' ultrasonic calls, a much higher sample rate is required.
 
-* Note that for high sample rates, SD cards with faster read/write speeds must be used. See the [SD card guide](https://www.openacousticdevices.info/sd-card-guide) for more information.
+* Sample rates > 192kHz are "experimental"--use with caution.
+
+* To record at very high sample rates, SD cards with faster read/write speeds must be used. Additionally, recordings at higher sample rates take up much more space on the SD card. We use 128GB SanDisk Extreme cards to record at 192kHz, but see the [SD card guide](https://www.openacousticdevices.info/sd-card-guide) for more advice.
 
 Set amount of gain for recording
 
