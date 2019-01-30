@@ -33,11 +33,16 @@ Set recording periods in Coordinated Universal Time (UTC) using 24-hour clock
 
    * **What is UTC?**: Instead of referring to a time zone (like Eastern Time, Pacific Time, etc.), recordings on the AudioMoth are scheduled in UTC, a universal time standard. This is done to avoid ambiguity in time zones. UTC is equivalent to Greenwich Mean Time, but does not observe Daylight Savings times as some countries in GMT time zones do.
 
+<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/programming/recording-period.gif" align="center">
+
 Set sample rate as 2x the highest frequency you want to record
 
 * **What sample rate should I use?** You should use a sample rate that is 2x higher than the highest frequency you want to record. This sample rate is known as the [Nyquist rate](https://en.wikipedia.org/wiki/Nyquist_rate) and is the minimum sample rate required to resolve the highest frequency. For birds, a 32kHz sample rate is fine. For bats' ultrasonic calls, a much higher sample rate is required.
 
 * Note that for high sample rates, SD cards with faster read/write speeds must be used. See the [SD card guide](https://www.openacousticdevices.info/sd-card-guide) for more information.
+
+
+<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/programming/sleep-rec.gif" align="center">
 
 Set amount of gain for recording.
 
@@ -73,6 +78,8 @@ Install batteries and formatted microSD card in AudioMoth to be programmed.
 
 * Recording with high sampling rate (e.g., recording bats) requires SD cards with fast read/write speeds. Files produced with high sampling rate are also larger, so they use up space on the SD card more quickly. We use SanDisk Extreme 128GB for bat recordings. See the [SD card guide](https://www.openacousticdevices.info/sd-card-guide) for more information.
 
+* The card goes in the AudioMoth with the contacts facing **up**, as shown on the graphic on the front of the AudioMoth. (It won't fit any other way.)
+
 Plug in AudioMoth with switch set to “USB/OFF” mode, and press green button in the programming app to set time and recording program. 
 
 The AudioMoth now has a CUSTOM recording schedule and CUSTOM should be selected on the AudioMoth switch to use this schedule.
@@ -96,14 +103,17 @@ TODO
 * Place signs on all entry points (especially roads, parking lots). Signs must include the verbiage “By proceeding, you consent to being recorded.” An example of a complete sign:
 
 ```
-Equipment for recording bird vocalizations is in use in this area within 3 hours of sunrise. This equipment may incidentally record other sounds, including human conversation. By proceeding during this period, you consent to being recorded. Please contact Justin Kitzes at justin.kitzes@pitt.edu with questions about this study.
+Equipment for recording bird vocalizations is in use in this area within 3 hours of sunrise. 
+This equipment may incidentally record other sounds, including human conversation. 
+By proceeding during this period, you consent to being recorded. 
+Please contact Justin Kitzes at justin.kitzes@pitt.edu with questions about this study.
 ```
 
 * Another idea is to add a note on each recorder with information about the study, though it’s unclear whether these notes would deter or encourage recorder loss.
 
 ### Housings
 
-<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/bag-housing.jpg" width="250" align="right">
+<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/housing/bag-housing.jpg" width="250" align="right">
 
 * AudioMoths can be deployed in ziploc baggies using buckling straps
 
@@ -164,7 +174,7 @@ TODO
 ### Logistics
 
 
-<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/bulk-housings.jpg" width="250" align="right">
+<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/housing/bulk-housings.jpg" width="250" align="right">
 
 * Before heading out to the field, pre-pack bags with desiccant and pre-attach them to straps. This saves time and prevents headaches in the field
 
