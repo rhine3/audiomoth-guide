@@ -1,11 +1,20 @@
+This guide is intended to be comprehensive for both first-time AudioMoth users and those interested in scaling up their AudioMoth deployment. 
+
+The information in it overlaps with the official guides on the [OpenAcoustics website](https://www.openacousticdevices.info/getting-started), but some technical information about the devices themselves is excluded. We have also elaborated on each step by including images, procedures, and "rules of thumb" that we've created while deploying hundreds of AudioMoths.
+
+**Jump to:**
+* [Quick start](#quick-start)
+* [Programming](#programming)
+* [Deployment](#deployment)
+* [Scaling up](#scaling-up)
 
 ## Quick start
 
-AudioMoths are very easy to set up out of the box. The steps in general are described in the [AudioMoth guide](https://docs.wixstatic.com/ugd/d97703_9ac305905bdd4cdfab6aee99767a56e6.pdf). Our procedure is as follows:
+*AudioMoths are very easy to set up out of the box. The steps in general are described in the [AudioMoth guide](https://docs.wixstatic.com/ugd/d97703_9ac305905bdd4cdfab6aee99767a56e6.pdf). Our procedure is as follows.*
 
 * Purchase necessary supplies, including batteries and SD cards
 * [Download](https://www.openacousticdevices.info/config) the timesetter/programming app 
-* Create a program; this is explained with graphics on the [AudioMoth Config App guide](https://www.openacousticdevices.info/config-app-guide), and in detail below
+* Create a program as described in detail below
 * Insert batteries and SD cards into AudioMoth
 * Connect AudioMoth to computer and press green button on configuration app
 * Create housings for your AudioMoths
@@ -14,14 +23,15 @@ AudioMoths are very easy to set up out of the box. The steps in general are desc
 
 
 
-## Programming how-to
+## Programming
 
+*To create a recording schedule for your AudioMoth, you will download a programming app, plug in your AudioMoth, and set the time & recording schedule via the app interface.*
 
 Download programming app: https://www.openacousticdevices.info/config
 
 Set recording periods in Coordinated Universal Time (UTC) using 24-hour clock
 
-* **What is UTC?**: Instead of referring to a time zone (like Eastern Time, Pacific Time, etc.), recordings on the AudioMoth are scheduled in UTC, a universal time standard. This is done to avoid ambiguity in time zones. UTC is equivalent to Greenwich Mean Time, but does not observe Daylight Savings times as some countries in GMT time zones do.
+   * **What is UTC?**: Instead of referring to a time zone (like Eastern Time, Pacific Time, etc.), recordings on the AudioMoth are scheduled in UTC, a universal time standard. This is done to avoid ambiguity in time zones. UTC is equivalent to Greenwich Mean Time, but does not observe Daylight Savings times as some countries in GMT time zones do.
 
 Set sample rate as 2x the highest frequency you want to record
 
@@ -36,9 +46,15 @@ Decide whether onboard LED light should be on or off
 * **What do the LED lights mean?**  It can be helpful to turn LED lights on for more information about your AudioMoth, though this might attract more attention from animals/curious humans. Lights are especially useful when testing the recorder. LED light meanings are:
   * Only green = sleeping between recordings
   * Only red = recording
-  * Both green & red = recording cannot be made. Causes of this include the time or program not being set (while in CUSTOM mode), the batteries falling out at some point after programming (while in CUSTOM mode), the recorder getting wet, the SD card malfunctioning, etc. For more information, see the [AudioMoth manual](https://docs.wixstatic.com/ugd/d97703_9ac305905bdd4cdfab6aee99767a56e6.pdf)
+  * Both green & red = recording cannot be made. Causes of this include the time or program not being set (while in CUSTOM mode), the batteries falling out at some point after programming (while in CUSTOM mode), the recorder getting wet, the SD card malfunctioning, etc. For more information, see the [official documentation](https://www.openacousticdevices.info/led-guide)
 
 Set recording and sleep duration in seconds. After doing this, the program will calculate the energy and storage used each day.
+
+* The programming app shows an estimate of how much storage and energy will be consumed each day. 
+
+  * If your goal is to refresh batteries/cards as infrequently as possible, it is helpful to try to match AA battery capacity (2600 mAh) with SD card capacity.
+
+  * Recording 3hr/day at 32kHz sampling rate, a 64GB card and regular AA batteries both last ~7 weeks, needing replacement at approximately the same time.
 
 * AudioMoth will alternate between recording and sleeping within each recording period. 
 
@@ -65,14 +81,13 @@ The AudioMoth now has a CUSTOM recording schedule and CUSTOM should be selected 
 
 Because the AudioMoth doesn’t have an onboard battery, if the batteries fall out, the programming and set time will be lost. **The AudioMoth must be reprogrammed if the batteries fall out.**
 
+### Resetting the firmware
 
-## Programming tips
+TODO
 
-* The programming app shows an estimate of how much storage and energy will be consumed each day. If your goal is to refresh batteries/cards as infrequently as possible, it is helpful to try to match AA battery capacity (2600 mAh) with SD card capacity.
+## Deployment
 
-* Recording 3hr/day at 32kHz sampling rate, a 64GB card and regular AA batteries both last ~7 weeks, needing replacement at approximately the same time.
-
-## Deployment tips
+*"Deployment" is the process of putting recorders out into the field. Below are ideas and important notes to remember about deployments, including how to inform the public, record data, safely affix AudioMoths to trees, and more.*
 
 ### Informing the public
 
@@ -88,7 +103,9 @@ Equipment for recording bird vocalizations is in use in this area within 3 hours
 
 ### Housings
 
-* AudioMoths can be deployed in ziploc baggies using buckling straps. [Example by Lauren Schricker](http://www.kitzeslab.org/first-major-deployment/)
+<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/bag-housing.jpg" width="250" align="right">
+
+* AudioMoths can be deployed in ziploc baggies using buckling straps
 
 * If the strap is too small for the circumference of the tree, attach another strap
 
@@ -118,7 +135,18 @@ Equipment for recording bird vocalizations is in use in this area within 3 hours
 * The first versions of the AudioMoth firmware use filenames with compact representations of date & time. To find the date and time a file was created, either look at the “last modified” time (which represents the time in UTC that the file was saved, i.e., the time at the end of the recording) or convert the filename using the instructions in the AudioMoth user manual
 
 
-## For large deployments
+## Scaling up
+
+*For large deployments, special considerations must be taken into account. If you're deploying 100 recorders, an extra 5 minutes spent per recorder means spending over 8 more hours in the field!*
+
+### Purchasing AudioMoths
+
+TODO
+
+
+### Pre-positioning points
+
+TODO
 
 
 ### Placing AudioMoths
@@ -134,6 +162,9 @@ Equipment for recording bird vocalizations is in use in this area within 3 hours
 * Most commercial GPS units are imprecise, especially under heavy foliage, so it can be challenging to know when you’re at the right point. When in doubt, take notes, and take another GPS point to compare later
 
 ### Logistics
+
+
+<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/bulk-housings.jpg" width="250" align="right">
 
 * Before heading out to the field, pre-pack bags with desiccant and pre-attach them to straps. This saves time and prevents headaches in the field
 
