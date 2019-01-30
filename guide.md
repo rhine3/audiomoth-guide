@@ -1,3 +1,5 @@
+# AudioMoth Guide
+
 This guide is intended to be comprehensive for both first-time AudioMoth users and those interested in scaling up their AudioMoth deployment. 
 
 The information in it complements with the official guides on the [OpenAcoustics website](https://www.openacousticdevices.info/getting-started). Some technical information about the devices themselves is excluded. We have also elaborated on each step by including images, procedures, and "rules of thumb" that we've created while deploying hundreds of AudioMoths.
