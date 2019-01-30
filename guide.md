@@ -1,6 +1,6 @@
 This guide is intended to be comprehensive for both first-time AudioMoth users and those interested in scaling up their AudioMoth deployment. 
 
-The information in it overlaps with the official guides on the [OpenAcoustics website](https://www.openacousticdevices.info/getting-started), but some technical information about the devices themselves is excluded. We have also elaborated on each step by including images, procedures, and "rules of thumb" that we've created while deploying hundreds of AudioMoths.
+The information in it complements with the official guides on the [OpenAcoustics website](https://www.openacousticdevices.info/getting-started). Some technical information about the devices themselves is excluded. We have also elaborated on each step by including images, procedures, and "rules of thumb" that we've created while deploying hundreds of AudioMoths.
 
 **Jump to:**
 * [Quick start](#quick-start)
@@ -25,19 +25,22 @@ The information in it overlaps with the official guides on the [OpenAcoustics we
 
 ## Programming
 
-*To create a recording schedule for your AudioMoth, you will download a programming app, plug the AudioMoth into your computer, and set the time & recording schedule via the app interface.*
 
+To create a recording schedule for your AudioMoth, you will download a programming app, plug the AudioMoth into your computer, and set the time & recording schedule via the app interface.
+
+For a simple and intuitive introduction to this process, see the [OpenAcoustics Config App Guide](https://www.openacousticdevices.info/config-app-guide). For more in-depth information, read the steps below.
 
 ### Create recording schedule 
-
 Download programming app: https://www.openacousticdevices.info/config
 
 Set up to 5 recording period(s) in Coordinated Universal Time (UTC) using 24-hour clock
 
    * **What is UTC?**: Instead of referring to a time zone (like Eastern Time, Pacific Time, etc.), recordings on the AudioMoth are scheduled in UTC, a universal time standard. This is done to avoid ambiguity in time zones. UTC is equivalent to Greenwich Mean Time, but does not observe Daylight Savings times as some countries in GMT time zones do.
+   
+   * Make sure to press "Add recording period" after typing in the desired time of each recording period. Recording periods will show up on the red/white graphic or the period listing on the right side of the program. Likewise, be sure to remove unwanted periods.
 
 <p align="center">
-<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/programming/recording-period-fast.gif" width="500">
+<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/programming/recording-period-fast.gif" width="50%">
 </p>
 
 Set sample rate as 2x the highest frequency you want to record
@@ -46,7 +49,9 @@ Set sample rate as 2x the highest frequency you want to record
 
 * Note that for high sample rates, SD cards with faster read/write speeds must be used. See the [SD card guide](https://www.openacousticdevices.info/sd-card-guide) for more information.
 
-Set amount of gain for recording.
+Set amount of gain for recording
+
+* The gain is the amount that sounds from the microphone will be amplified once recorded. Setting this correctly requires trial and error in your particular field conditions. If the gain is too high, your recordings will [clip](https://en.wikipedia.org/wiki/Clipping_(audio)), creating an unpleasant distortion that can be challenging, if not impossible, to analyze. Alternatively, if your gain is too low, sounds will be faint and hard to hear.
 
 Set recording and sleep duration in seconds. After doing this, the program will calculate the energy and storage used each day.
 
@@ -75,7 +80,7 @@ Decide whether onboard LED light should be on or off
   * Flashing red after turned to USB/OFF: an indicator of battery life (see [official documentation](https://www.openacousticdevices.info/led-guide))
 
 <p align="center">
-<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/programming/sleep-rec-fast.gif" width="500">
+<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/programming/sleep-rec-fast.gif" width="50%">
 </p>
 
 #### Example programs
@@ -115,13 +120,16 @@ Because the AudioMoth doesn’t have an onboard battery, if the batteries fall o
 
 
 
-### Reset firmware
+### Flash firmware
 
-TODO
+Several different firmware versions for the AudioMoth have been created and released. Some releases are just updates, but some have special functionality; for instance, allowing the AudioMoth to trigger recording only when a sound of interest is heard.
+
+If you want to flash new firmware to your device, follow the guide [here](https://www.openacousticdevices.info/flashing).
+
 
 ## Deployment
 
-*"Deployment" is the process of putting recorders out into the field. Below are ideas and important notes to remember about deployments, including how to inform the public, record data, safely affix AudioMoths to trees, and more.*
+"Deployment" is the process of putting recorders out into the field. Below are ideas and important notes to remember about deployments, including how to inform the public, record data, safely affix AudioMoths to trees, and more.
 
 ### Informing the public
 
@@ -140,7 +148,7 @@ Please contact Justin Kitzes at justin.kitzes@pitt.edu with questions about this
 
 ### Housings
 
-<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/housing/bag-housing.jpg" width="250" align="right">
+<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/housing/bag-housing.jpg" width="30%" align="right">
 
 * AudioMoths can be deployed in ziploc baggies using buckling straps
 
@@ -174,34 +182,56 @@ Please contact Justin Kitzes at justin.kitzes@pitt.edu with questions about this
 
 ## Scaling up
 
-*For large deployments, special considerations must be taken into account. If you're deploying 100 recorders, an extra 5 minutes spent per recorder means spending over 8 more hours in the field!*
+For large deployments, special considerations must be taken into account. If you're deploying 100 recorders, an extra 5 minutes spent per recorder means spending over 8 more hours in the field!
 
 ### Purchasing AudioMoths
 
-TODO
+* While GroupGets purchases are helpful for folks looking to buy on the scale of a few dozen AudioMoths, these group purchases have caps on how many recorders can be purchased at once. Additionally, we have found it is significantly less expensive to purchase recorders in bulk (30-40 USD instead of 50 USD on GroupGets).
+
+* Our lab has had excellent experiences with [RushPCB](https://rushpcb.com/). We purchased the devices put together (i.e., components connected to boards, battery pack soldiered to board), but without the firmware pre-flashed. We found it easy to flash the firmware itself.
+
+* Parts of the original AudioMoth design are constantly going out of stock due to high demand. We enlisted in the help of our school's electronics shop to find new parts that were interchangeable with the out-of-stock parts.
 
 
-### Pre-positioning points
+### Pre-select recorder locations
 
-TODO
+Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](https://twitter.com/mountain_laur) developed this method of pre-positioning locations of recorders for deployments.
 
+* Login to your Google account 
 
-### Placing AudioMoths
+* Create a new map: go to https://drive.google.com > New > More > Google My Maps
 
-* When even spacing (e.g. a recorder every 200m) or a specific recorder placement is desired, pre-select and pre-load GPS points onto your GPS device
+* Change the base map to satellite
 
-* Use satellite imagery to identify specific trees on which to deploy AudioMoths. 
+* Click on the "Add Marker" tool and add markers to your map. You might try to target specific locations, e.g. particular trees that are good candidates for hanging AudioMoths.
 
-* If in the field you are unsure that you are at the correct preselected tree, or if the point must be moved due to inaccessible or poor-quality trees, use your GPS unit to reposition the point. Upload the corrected points when you return from the field. 
+    * We name all of our recorder locations with an alphabetical code that gives the site of the deployments, and a numeric code that uniquely identifies the point at that site. For instance, our deployments at Powdermill Nature Reserve in the pond area are named PNRE-POND-0001, PNRE-POND-00002, etc. 
 
-* Practice using the crucial features of your GPS unit before you head out to the field, and bring extra batteries
+* Use the "measuring" tool to get even spacing between points (press "Enter" to temporarily save a measurement before you plot your next point) 
 
-* Most commercial GPS units are imprecise, especially under heavy foliage, so it can be challenging to know when you’re at the right point. When in doubt, take notes, and take another GPS point to compare later
+<p align="center">
+<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/programming/google-maps-demo.gif" width="100%">
+</p>
+
+* Click the three dots next to the map name and export as KML/KMZ. 
+
+* Upload the map file onto your GPS unit. 
+
+    * You may have to convert the map to a format for your GPS unit, for instance, Garmin GPS units require a GPX file. [GPSBabel](https://www.gpsbabel.org/) is a free converter you can use for exactly this purpose
+
+* When need to move a point in the field (e.g., the tree you wanted to use fell down), either reset the location of the point or make a new point on your GPS. Make sure to indicate in your field notes whenever the pre-set location of the point was changed. 
+
+    * Most commercial GPS units are imprecise, especially under heavy foliage, so it can be challenging to know when you’re at the right point. When in doubt, take notes, and take another GPS point to compare later
+
+    * Practice using the crucial features of your GPS unit before you head out to the field, and bring extra batteries
+
+* After you return, follow these steps in reverse order to record the actual locations of your devices.
+
 
 ### Logistics
 
 
-<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/housing/bulk-housings.jpg" width="250" align="right">
+<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/housing/bulk-housings.jpg" width="30%" align="right">
 
 * Before heading out to the field, pre-pack bags with desiccant and pre-attach them to straps. This saves time and prevents headaches in the field
 
@@ -211,7 +241,7 @@ TODO
 
 * Since so many recorders will be deployed, information about their identity and location has to be taken accurately and efficiently
     * Record the deployment date; information about the identity (ID number) of the AudioMoth, SD card, and location; any important notes about placement, etc.
-    * We name all of our recorder locations with an alphabetical code that gives the site of the deployments, and a numeric code that uniquely identifies the point at that site. For instance, our deployments at Powdermill Nature Reserve in the pond area are named PNRE-POND-0001, PNRE-POND-00002, etc. 
+    * See the previous section about pre-positioning recorder locations and ideas for location naming conventions.
    
 * Protocols can help make the whole process faster. Here are some example protocols we use.
 
