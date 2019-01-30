@@ -36,7 +36,9 @@ Set recording periods in Coordinated Universal Time (UTC) using 24-hour clock
 
    * **What is UTC?**: Instead of referring to a time zone (like Eastern Time, Pacific Time, etc.), recordings on the AudioMoth are scheduled in UTC, a universal time standard. This is done to avoid ambiguity in time zones. UTC is equivalent to Greenwich Mean Time, but does not observe Daylight Savings times as some countries in GMT time zones do.
 
-<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/programming/recording-period.gif" align="center" width="400">
+<center>
+<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/programming/recording-period-fast.gif" width="400">
+</center>
 
 Set sample rate as 2x the highest frequency you want to record
 
@@ -73,7 +75,7 @@ Decide whether onboard LED light should be on or off
   * Only red = recording
   * Both green & red = recording cannot be made. Causes of this include the time or program not being set (while in CUSTOM mode), the batteries falling out at some point after programming (while in CUSTOM mode), the recorder getting wet, the SD card malfunctioning, etc. For more information, see the [official documentation](https://www.openacousticdevices.info/led-guide)
 
-<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/programming/sleep-rec.gif" align="center" width="400">
+<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/programming/sleep-rec-fast.gif" align="middle" width="400">
 
 
 
