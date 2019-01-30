@@ -1,4 +1,4 @@
-# AudioMoth Guide
+# About the [AudioMoth Guide](https://github.com/rhine3/audiomoth-guide/blob/master/guide.md)
 
 In the past year of using AudioMoths, our lab (the Kitzes Lab at the University of Pittsburgh) has learned quite a lot about them through trial and error. This practical guide serves as a repository for everything we've picked up about using them.
 
