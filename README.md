@@ -10,7 +10,7 @@ AudioMoths are very easy to set up out of the box. The steps in general are desc
 
 * Purchase necessary supplies, including batteries and SD cards
 * [Download](https://www.openacousticdevices.info/config) the timesetter/programming app 
-* Create a program; this is explained with graphics on the [AudioMoth Config App guide](https://www.openacousticdevices.info/config-app-guide), and in detail in the "Programming how-to" section below.
+* Create a program; this is explained with graphics on the [AudioMoth Config App guide](https://www.openacousticdevices.info/config-app-guide), and in detail below
 * Insert batteries and SD cards into AudioMoth
 * Connect AudioMoth to computer and press green button on configuration app
 * Create housings for your AudioMoths
@@ -85,7 +85,9 @@ Because the AudioMoth doesn’t have an onboard battery, if the batteries fall o
 
 * Place signs on all entry points (especially roads, parking lots). Signs must include the verbiage “By proceeding, you consent to being recorded.” An example of a complete sign:
 
-      Equipment for recording bird vocalizations is in use in this area within 3 hours of sunrise. This equipment may incidentally record other sounds, including human conversation. By proceeding during this period, you consent to being recorded. Please contact Justin Kitzes at justin.kitzes@pitt.edu with questions about this study.
+```
+Equipment for recording bird vocalizations is in use in this area within 3 hours of sunrise. This equipment may incidentally record other sounds, including human conversation. By proceeding during this period, you consent to being recorded. Please contact Justin Kitzes at justin.kitzes@pitt.edu with questions about this study.
+```
 
 * Another idea is to add a note on each recorder with information about the study, though it’s unclear whether these notes would deter or encourage recorder loss.
 
@@ -114,7 +116,7 @@ Because the AudioMoth doesn’t have an onboard battery, if the batteries fall o
 
 ### Logistics
 
-* Create a packing list to make sure you have a few essential tools. A roll of duct tape or a pair of scissors can save the day. We will gladly share our packing list if requested.
+* Create a packing list to make sure you have a few essential tools. [Example](https://github.com/rhine3/audiomoth-guide/blob/master/documents/packing-list.md)
 
 * If you’re also using playback or imitation to survey the area, make sure these sounds can’t be mistaken on the recordings for actual birds. This can be avoided by using playback or imitation only outside the hours of the recording, using a distinctive unnatural sound (e.g., a “triple knock” instead of a “double knock”), or verbally announcing your presence so that any recorders that may capture your recording can hear your announcement 
 
@@ -149,9 +151,10 @@ Because the AudioMoth doesn’t have an onboard battery, if the batteries fall o
     * We name all of our recorder locations with an alphabetical code that gives the site of the deployments, and a numeric code that uniquely identifies the point at that site. For instance, our deployments at Powdermill Nature Reserve in the pond area are named PNRE-POND-0001, PNRE-POND-00002, etc. 
    
 * Protocols can help make the whole process faster. Here are some example protocols we use.
-   * Packing for a deployment
-   * Deploying recorders
-   * Bringing recorders home
+
+   * [Packing for a deployment](https://github.com/rhine3/audiomoth-guide/blob/master/documents/packing-list.md)
+   * [Deploying recorders](https://github.com/rhine3/audiomoth-guide/blob/master/documents/deployment-protocol.pdf)
+   * [Bringing recorders home](https://github.com/rhine3/audiomoth-guide/blob/master/documents/return-protocol.pdf)
    * List of things to do post-deployment
  
 * When recording data in the field, use waterproof paper and permanent pens (e.g., fine-tipped Sharpies)
