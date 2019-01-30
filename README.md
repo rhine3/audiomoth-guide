@@ -2,7 +2,6 @@
 
 In the past year of using AudioMoths, our lab (the Kitzes Lab at the University of Pittsburgh) has learned quite a lot about them through trial and error. This practical guide serves as a repository for everything we've picked up about using them.
 
-TODO: how to partition info between the AudioMoth guide and this guide? reproduce all info? The pictures and animations on the AudioMoth guide are helpful, though--should we add those?
 
 ## Quick start
 
@@ -15,6 +14,6 @@ AudioMoths are very easy to set up out of the box. For instance:
 * Connect AudioMoth to computer and press green button on configuration app
 * Create housings for your AudioMoths
 * Devise a field protocol for deployment of the AudioMoths
-* Deploy AudioMoths and put up legally required "recording in progress" signs
+* Deploy AudioMoths and put up any legally required "recording in progress" signs
 
 For full details, tips, and more information, see our [guide](https://github.com/rhine3/audiomoth-guide/blob/master/guide.md).
