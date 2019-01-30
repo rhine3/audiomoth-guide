@@ -6,8 +6,8 @@ For every deployment, create a copy of this checklist, deleting all unnecessary 
 
 **Anticipated activities:** ______________
 
-  Number of AudioMoths:
-  Procedures: (Choose: new deployments, refresh, removal)
+  - Number of AudioMoths:
+  - Procedures: (Choose: new deployments, refresh, removal)
   
 **Anticipated return date:** ______________
 
