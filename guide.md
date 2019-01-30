@@ -248,7 +248,8 @@ Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](http
    * [Packing for a deployment](https://github.com/rhine3/audiomoth-guide/blob/master/documents/packing-list.md)
    * [Deploying recorders](https://github.com/rhine3/audiomoth-guide/blob/master/documents/deployment-protocol.pdf)
    * [Bringing recorders home](https://github.com/rhine3/audiomoth-guide/blob/master/documents/return-protocol.pdf)
-   * List of things to do post-deployment
+   * [Post-field checklist](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-checklist.md) (which references the document below)
+   * [Checking in data written down in the field](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-protocol-template.pdf) - [an example](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-protocol-example.pdf)
  
-* When recording data in the field, use waterproof paper and permanent pens (e.g., fine-tipped Sharpies)
+* When writing down data in the field, use waterproof paper and permanent pens (e.g., fine-tipped Sharpies)
 
