@@ -2,7 +2,7 @@
 
 This guide is intended to be comprehensive for both first-time AudioMoth users and those interested in scaling up their AudioMoth deployment. 
 
-The information in it complements with the official guides on the [OpenAcoustics website](https://www.openacousticdevices.info/getting-started). Some technical information about the devices themselves is excluded. We have also elaborated on each step by including images, procedures, and "rules of thumb" that we've created while deploying hundreds of AudioMoths.
+The information here complements official guides on the [Open Acoustic Devices website](https://www.openacousticdevices.info/getting-started). Some technical information about the devices themselves is excluded. We have also elaborated on each step by including images, procedures, and "rules of thumb" that we've created while deploying hundreds of AudioMoths.
 
 **Jump to:**
 * [Quick start](#quick-start)
@@ -12,7 +12,7 @@ The information in it complements with the official guides on the [OpenAcoustics
 
 ## Quick start
 
-*AudioMoths are very easy to set up out of the box. The steps in general are described in the [AudioMoth guide](https://docs.wixstatic.com/ugd/d97703_9ac305905bdd4cdfab6aee99767a56e6.pdf). Our procedure is as follows.*
+AudioMoths are very easy to set up out of the box. A good general introduction to the AudioMoth is available in the [AudioMoth guide](https://docs.wixstatic.com/ugd/d97703_9ac305905bdd4cdfab6aee99767a56e6.pdf) by Open Acoustic Devices. Our procedure is as follows.
 
 * Purchase necessary supplies, including batteries and SD cards
 * [Download](https://www.openacousticdevices.info/config) the timesetter/programming app 
@@ -27,10 +27,9 @@ The information in it complements with the official guides on the [OpenAcoustics
 
 ## Programming
 
-
 To create a recording schedule for your AudioMoth, you will download a programming app, plug the AudioMoth into your computer, and set the time & recording schedule via the app interface.
 
-For a simple and intuitive introduction to this process, see the [OpenAcoustics Config App Guide](https://www.openacousticdevices.info/config-app-guide). For more in-depth information, read the steps below.
+For a simple and intuitive introduction to this process, see the [Config App Guide](https://www.openacousticdevices.info/config-app-guide). For more in-depth information, read the steps below.
 
 ### Create recording schedule 
 Download programming app: https://www.openacousticdevices.info/config
