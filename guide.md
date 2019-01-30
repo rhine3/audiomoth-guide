@@ -27,13 +27,16 @@ The information in it overlaps with the official guides on the [OpenAcoustics we
 
 *To create a recording schedule for your AudioMoth, you will download a programming app, plug in your AudioMoth, and set the time & recording schedule via the app interface.*
 
+
+### Create recording schedule 
+
 Download programming app: https://www.openacousticdevices.info/config
 
 Set recording periods in Coordinated Universal Time (UTC) using 24-hour clock
 
    * **What is UTC?**: Instead of referring to a time zone (like Eastern Time, Pacific Time, etc.), recordings on the AudioMoth are scheduled in UTC, a universal time standard. This is done to avoid ambiguity in time zones. UTC is equivalent to Greenwich Mean Time, but does not observe Daylight Savings times as some countries in GMT time zones do.
 
-<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/programming/recording-period.gif" align="center">
+<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/programming/recording-period.gif" align="center" width="400">
 
 Set sample rate as 2x the highest frequency you want to record
 
@@ -41,17 +44,7 @@ Set sample rate as 2x the highest frequency you want to record
 
 * Note that for high sample rates, SD cards with faster read/write speeds must be used. See the [SD card guide](https://www.openacousticdevices.info/sd-card-guide) for more information.
 
-
-<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/programming/sleep-rec.gif" align="center">
-
 Set amount of gain for recording.
-
-Decide whether onboard LED light should be on or off
-
-* **What do the LED lights mean?**  It can be helpful to turn LED lights on for more information about your AudioMoth, though this might attract more attention from animals/curious humans. Lights are especially useful when testing the recorder. LED light meanings are:
-  * Only green = sleeping between recordings
-  * Only red = recording
-  * Both green & red = recording cannot be made. Causes of this include the time or program not being set (while in CUSTOM mode), the batteries falling out at some point after programming (while in CUSTOM mode), the recorder getting wet, the SD card malfunctioning, etc. For more information, see the [official documentation](https://www.openacousticdevices.info/led-guide)
 
 Set recording and sleep duration in seconds. After doing this, the program will calculate the energy and storage used each day.
 
@@ -72,6 +65,20 @@ Set recording and sleep duration in seconds. After doing this, the program will 
   * In DEFAULT mode: Device immediately starts recording for recording duration time, then sleeps, then begins recording again. This repeats until DEFAULT mode is turned off or the recorder dies.
   * In CUSTOM mode: If device is turned on outside of recording period, it waits until recording period starts, then begins its recording schedule. If it is turned on during the recording period, when a recording is scheduled, it sleeps for the length of the scheduled recording, then starts recording after. For more information about how recordings are scheduled, see the configuration code [here](https://github.com/OpenAcousticDevices/AudioMoth-Configuration-App/blob/master/lifeDisplay.js).
 
+
+Decide whether onboard LED light should be on or off
+
+* **What do the LED lights mean?**  It can be helpful to turn LED lights on for more information about your AudioMoth, though this might attract more attention from animals/curious humans. Lights are especially useful when testing the recorder. LED light meanings are:
+  * Only green = sleeping between recordings
+  * Only red = recording
+  * Both green & red = recording cannot be made. Causes of this include the time or program not being set (while in CUSTOM mode), the batteries falling out at some point after programming (while in CUSTOM mode), the recorder getting wet, the SD card malfunctioning, etc. For more information, see the [official documentation](https://www.openacousticdevices.info/led-guide)
+
+<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/programming/sleep-rec.gif" align="center" width="400">
+
+
+
+### Set time and program on AudioMoth
+
 Install batteries and formatted microSD card in AudioMoth to be programmed. 
 
 * SD cards must be reformatted to MS-DOS (FAT32) prior to each use/reuse. Windows can natively format cards less than or equal to 32GB in size. Mac can format cards up to 128GB; we haven’t tested anything larger.
@@ -88,7 +95,7 @@ The AudioMoth now has a CUSTOM recording schedule and CUSTOM should be selected 
 
 Because the AudioMoth doesn’t have an onboard battery, if the batteries fall out, the programming and set time will be lost. **The AudioMoth must be reprogrammed if the batteries fall out.**
 
-### Resetting the firmware
+### Reset firmware
 
 TODO
 
