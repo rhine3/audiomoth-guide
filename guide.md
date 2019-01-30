@@ -9,6 +9,7 @@ The information here complements official guides on the [Open Acoustic Devices w
 * [Programming](#programming)
 * [Deployment](#deployment)
 * [Scaling up](#scaling-up)
+* [Data analysis](#data-analysis)
 
 ## Quick start
 
@@ -41,7 +42,7 @@ Set up to 5 recording period(s) in Coordinated Universal Time (UTC) using 24-hou
    * Make sure to press "Add recording period" after typing in the desired time of each recording period. Recording periods will show up on the red/white graphic or the period listing on the right side of the program. Likewise, be sure to remove unwanted periods.
 
 <p align="center">
-<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/programming/recording-period-fast.gif" width="50%">
+<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/programming/recording-period-fast.gif" width="50%" alt="Demonstration of setting recording period on AudioMoth configuration app">
 </p>
 
 Set sample rate as 2x the highest frequency you want to record
@@ -81,7 +82,7 @@ Decide whether onboard LED light should be on or off
   * Flashing red after turned to USB/OFF: an indicator of battery life (see [official documentation](https://www.openacousticdevices.info/led-guide))
 
 <p align="center">
-<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/programming/sleep-rec-fast.gif" width="50%">
+<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/programming/sleep-rec-fast.gif" width="50%" alt="Demonstration of AudioMoth configuration app">
 </p>
 
 #### Example programs
@@ -89,7 +90,7 @@ Decide whether onboard LED light should be on or off
 Below are some example programs. One creates a single 3-hour long recording per day at 32kHz, suitable for recording a bird dawn chorus. The other creates minute-long recordings with minute-long breaks in between, 30 each at two different times. The latter program records at a sample rate of 192kHz, perhaps for recording bat ultrasonic sounds, and will require a fast microSD card.
 
 <p align="center">
-<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/programming/example-programs.jpg" width="100%">
+<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/programming/example-programs.jpg" width="100%" alt="Example programs on AudioMoth configuration app">
 </p>
 
 
@@ -149,7 +150,7 @@ Please contact Justin Kitzes at justin.kitzes@pitt.edu with questions about this
 
 ### Housings
 
-<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/housing/bag-housing.jpg" width="30%" align="right">
+<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/housing/bag-housing.jpg" width="30%" align="right" alt="AudioMoth deployed on tree">
 
 * AudioMoths can be deployed in ziploc baggies using buckling straps
 
@@ -211,7 +212,7 @@ Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](http
 * Use the "measuring" tool to get even spacing between points (press "Enter" to temporarily save a measurement before you plot your next point) 
 
 <p align="center">
-<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/programming/google-maps-demo.gif" width="100%">
+<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/programming/google-maps-demo.gif" width="100%" alt="Demonstration of Google My Maps">
 </p>
 
 * Click the three dots next to the map name and export as KML/KMZ. 
@@ -232,7 +233,7 @@ Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](http
 ### Logistics
 
 
-<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/housing/bulk-housings.jpg" width="30%" align="right">
+<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/housing/bulk-housings.jpg" width="30%" align="right" alt="200 AudioMoth housings made from Ziploc bags">
 
 * Before heading out to the field, pre-pack bags with desiccant and pre-attach them to straps. This saves time and prevents headaches in the field
 
@@ -254,3 +255,13 @@ Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](http
  
 * When writing down data in the field, use waterproof paper and permanent pens (e.g., fine-tipped Sharpies)
 
+<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/other/nas.jpg" width="40%" align="right" alt="Storage and SD card reader">
+
+* Transferring audio files from hundreds of SD cards is a slow process to do manually. Instead, we've developed a 48 TB Network Attached Storage (NAS) device with a 36-port microSD card reader (see photo), plus a script to automatically copy audio files from all the SD cards onto the NAS.
+
+  * Each SD card has its number (e.g. 0526) written on the front of the card in Sharpie, but is also given a volume name (e.g., MSD-0526) when it is first reformatted to FAT32. These names are then used to organize the audio files copied off of each card.
+
+
+## Data analysis
+
+We have developed a free, open-source audio classifier, [OpenSoundscape](https://github.com/jkitzes/opensoundscape), for analysis of data using machine learning. OpenSoundscape can either predict what species makes each vocalization, or sift through large amounts of negative data to find focal species.
