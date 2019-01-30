@@ -57,9 +57,7 @@ Set recording and sleep duration in seconds. After doing this, the program will 
 
 * The programming app shows an estimate of how much storage and energy will be consumed each day. 
 
-  * If your goal is to refresh batteries/cards as infrequently as possible, it is helpful to try to match AA battery capacity (2600 mAh) with SD card capacity.
-
-  * Recording 3hr/day at 32kHz sampling rate, a 64GB card and regular AA batteries both last ~7 weeks, needing replacement at approximately the same time.
+  * If your goal is to refresh batteries/cards as infrequently as possible, it is helpful to try to match AA battery capacity (2600 mAh) with SD card capacity. Input your card/battery size and storage/energy usage into [this code](https://trinket.io/python/ff8aeb66e1) to see how long the battery and SD card are estimated to last before filling up.
 
 * Even if sleep period is set to 0, device will sleep briefly between recordings to save the prior recording to the card
 
@@ -195,7 +193,7 @@ For large deployments, special considerations must be taken into account. If you
 
 ### Pre-select recorder locations
 
-Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](https://twitter.com/mountain_laur) developed this method of pre-positioning locations of recorders for deployments.
+Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](https://twitter.com/mountain_laur)) developed this method of pre-positioning locations of recorders for deployments.
 
 * Login to your Google account 
 
