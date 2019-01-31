@@ -1,6 +1,6 @@
 # About the [AudioMoth Guide](https://github.com/rhine3/audiomoth-guide/blob/master/guide.md)
 
-In the past year of using AudioMoths, our lab (the Kitzes Lab at the University of Pittsburgh) has learned quite a lot about them through trial and error. This practical guide serves as a repository for everything we've picked up about using them.
+The [AudioMoth](https://www.openacousticdevices.info/) is a low-cost acoustic recorder designed for wildlife and conservation applications. This practical guide is a repository for all of the tips, tricks, and procedures we, the [Kitzes Lab](http://www.kitzeslab.org/), developed in the process of deploying hundreds of AudioMoths since March 2018.
 
 
 ## Quick start
