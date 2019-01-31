@@ -257,7 +257,7 @@ Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](http
 
 <img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/other/nas.jpg" width="40%" align="right" alt="Storage and SD card reader">
 
-* Transferring audio files from hundreds of SD cards is a slow process to do manually. Instead, we've developed a 48 TB Network Attached Storage (NAS) device with a 36-port microSD card reader (see photo), plus a script to automatically copy audio files from all the SD cards onto the NAS.
+* Transferring audio files from hundreds of SD cards is a slow process to do manually. Instead, we've developed a 48 TB Network Attached Storage (NAS) device with a 24-port microSD card reader (see photo), plus a script to automatically copy audio files from all the SD cards onto the NAS.
 
   * Each SD card has its number (e.g. 0526) written on the front of the card in Sharpie, but is also given a volume name (e.g., MSD-0526) when it is first reformatted to FAT32. These names are then used to organize the audio files copied off of each card.
 
