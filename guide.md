@@ -2,7 +2,7 @@
 
 This guide is intended to be comprehensive for both first-time AudioMoth users and those interested in scaling up their AudioMoth deployment. 
 
-The information here complements official guides on the [Open Acoustic Devices website](https://www.openacousticdevices.info/getting-started). Some technical information about the devices themselves is excluded. We have also elaborated on each step by including images, procedures, and "rules of thumb" that we've created while deploying hundreds of AudioMoths.
+The information here complements official guides on the [Open Acoustic Devices website](https://www.openacousticdevices.info/getting-started). Some technical information about the devices themselves is excluded. We have also elaborated on each step by including images, procedures, and rules of thumb that we've created while deploying hundreds of AudioMoths.
 
 **Jump to:**
 * [Quick start](#quick-start)
