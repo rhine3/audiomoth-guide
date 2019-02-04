@@ -215,11 +215,23 @@ Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](http
 <img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/programming/google-maps-demo.gif" width="100%" alt="Demonstration of Google My Maps">
 </p>
 
-* Click the three dots next to the map name and export as KML/KMZ. 
+* Access the map data on your phone (if you have cell phone service):
 
-* Upload the map file onto your GPS unit. 
+    * Download the "Google Maps" app to your phone
+    
+    * In the app, select the menu from the left side > Your places > Maps
 
-    * You may have to convert the map to a format for your GPS unit, for instance, Garmin GPS units require a GPX file. [GPSBabel](https://www.gpsbabel.org/) is a free converter you can use for exactly this purpose
+* Upload the map file onto your GPS unit:
+
+    * Click the three dots next to the map name > Export to KML/KMZ > click checkbox for "Export to a KML file"
+
+    * Download [GPSBabel](https://www.gpsbabel.org/download.html), a free converter you can use to convert KML files to the type of file required by your GPS unit
+        
+    * Select "Google Earth (Keyhole) Markup Language" as the input type, use the file browser to select your file
+    
+    * Convert the map to the format required by your GPS unit. For instance, Garmin GPS units require a GPX file, so select output format "GPX XML"
+    
+    * Use the instructions for your device to transfer the map onto your GPS unit (for instance, here are the [instructions for our device](https://www.youtube.com/watch?v=PdPgse1tHdY))
 
 * When need to move a point in the field (e.g., the tree you wanted to use fell down), either reset the location of the point or make a new point on your GPS. Make sure to indicate in your field notes whenever the pre-set location of the point was changed. 
 
