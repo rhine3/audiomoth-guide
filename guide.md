@@ -1,4 +1,4 @@
-# AudioMoth Guide
+# AudioMoth: a practical guide to the open-source ARU
 
 This guide is intended to be comprehensive for both first-time AudioMoth users and those interested in scaling up their AudioMoth deployment. 
 
