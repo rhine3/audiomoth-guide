@@ -5,10 +5,15 @@ This guide is intended to be comprehensive for both first-time AudioMoth users a
 The information here complements official guides on the [Open Acoustic Devices website](https://www.openacousticdevices.info/getting-started). Some technical information about the devices themselves is excluded. We have also elaborated on each step by including images, procedures, and rules of thumb that we've created while deploying hundreds of AudioMoths.
 
 **Jump to:**
+
 * [Quick start](#quick-start)
+
 * [Programming](#programming)
+
 * [Deployment](#deployment)
+
 * [Scaling up](#scaling-up)
+
 * [Data analysis](#data-analysis)
 
 ## Quick start
@@ -61,7 +66,7 @@ Set recording and sleep duration in seconds. After doing this, the program will 
 
 * The programming app shows an estimate of how much storage and energy will be consumed each day. 
 
-  * If your goal is to refresh batteries/cards as infrequently as possible, it is helpful to try to match AA battery capacity (2600 mAh) with SD card capacity. Input your card/battery size and storage/energy usage into [this code](https://trinket.io/python/ff8aeb66e1) to see how long the battery and SD card are estimated to last before filling up.
+    * If your goal is to refresh batteries/cards as infrequently as possible, it is helpful to try to match AA battery capacity (2600 mAh) with SD card capacity. Input your card/battery size and storage/energy usage into [this code](https://trinket.io/python/ff8aeb66e1) to see how long the battery and SD card are estimated to last before filling up.
 
 * Even if sleep period is set to 0, device will sleep briefly between recordings to save the prior recording to the card
 
@@ -69,17 +74,17 @@ Set recording and sleep duration in seconds. After doing this, the program will 
 
 * AudioMoths alternate between recording and sleeping. When it does this depends on the switch position. If you want to make recordings immediately without regard to the recording schedule programmed on the device, use the DEFAULT mode. For all other deployments with scheduled recording periods, use the CUSTOM mode.
 
-  * **In DEFAULT mode:** Device immediately starts recording for recording duration time, then sleeps, then begins recording again. This repeats until DEFAULT mode is turned off or the recorder dies.
-  * **In CUSTOM mode:** If device is turned on outside of recording period, it waits until recording period starts, then begins its recording schedule. If it is turned on during the recording period, it will not start recording until the next recording begins. For instance, if an AudioMoth was scheduled to record at 09:00 for 2min on, 2min off, and was turned on at 9:01, it would skip the recording scheduled for 9:00-9:02, and wait until 09:04 to make its first recording.
+    * **In DEFAULT mode:** Device immediately starts recording for recording duration time, then sleeps, then begins recording again. This repeats until DEFAULT mode is turned off or the recorder dies.
+    * **In CUSTOM mode:** If device is turned on outside of recording period, it waits until recording period starts, then begins its recording schedule. If it is turned on during the recording period, it will not start recording until the next recording begins. For instance, if an AudioMoth was scheduled to record at 09:00 for 2min on, 2min off, and was turned on at 9:01, it would skip the recording scheduled for 9:00-9:02, and wait until 09:04 to make its first recording.
 
 
 Decide whether onboard LED light should be on or off
 
 * **What do the LED lights mean?**  It can be helpful to turn LED lights on for more information about your AudioMoth, though this might attract more attention from animals/curious humans. Lights are especially useful when testing the recorder. LED light meanings are:
-  * Only green = sleeping between recordings
-  * Only red = recording
-  * Both green & red = recording cannot be made. Causes of this include the time or program not being set (while in CUSTOM mode), the batteries falling out at some point after programming (while in CUSTOM mode), the recorder getting wet, the SD card malfunctioning, etc. 
-  * Flashing red after turned to USB/OFF: an indicator of battery life (see [official documentation](https://www.openacousticdevices.info/led-guide))
+    * Only green = sleeping between recordings
+    * Only red = recording
+    * Both green & red = recording cannot be made. Causes of this include the time or program not being set (while in CUSTOM mode), the batteries falling out at some point after programming (while in CUSTOM mode), the recorder getting wet, the SD card malfunctioning, etc. 
+    * Flashing red after turned to USB/OFF: an indicator of battery life (see [official documentation](https://www.openacousticdevices.info/led-guide))
 
 <p align="center">
 <img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/programming/sleep-rec-fast.gif" width="50%" alt="Demonstration of AudioMoth configuration app">
@@ -159,11 +164,11 @@ Please contact Justin Kitzes at justin.kitzes@pitt.edu with questions about this
 * If possible, avoid placing AudioMoths in direct sunlight, as their enclosures may heat up
 
 * AudioMoths may break if exposed to water. The switch and corners of the AudioMoth are sharp and can rip through a ziploc bag. Take steps to prevent moisture getting into AudioMoth enclosure:
-  * Don’t transport AudioMoths within the bags, as the bags are more likely to break. Instead, keep the AudioMoth and bag separated until you are ready to hook the bag to the tree
-  * Inspect each bag after it is deployed; if there are any scratches or punctures, replace it
-  * Use freezer bags, not sandwich bags
-  * Taping over the sharp parts of the AudioMoth, or over the bag, reduces the chance of punctures. Take care not to cover the mic. [Example by Jennifer Sheridan](https://twitter.com/JenASheridan/status/1047766465900818432)
-  * Include a desiccant pack in the bag to soak up lingering moisture in the bag, preventing condensation
+    * Don’t transport AudioMoths within the bags, as the bags are more likely to break. Instead, keep the AudioMoth and bag separated until you are ready to hook the bag to the tree
+    * Inspect each bag after it is deployed; if there are any scratches or punctures, replace it
+    * Use freezer bags, not sandwich bags
+    * Taping over the sharp parts of the AudioMoth, or over the bag, reduces the chance of punctures. Take care not to cover the mic. [Example by Jennifer Sheridan](https://twitter.com/JenASheridan/status/1047766465900818432)
+    * Include a desiccant pack in the bag to soak up lingering moisture in the bag, preventing condensation
 
 
 ### Hardware
@@ -258,12 +263,12 @@ Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](http
     * See the previous section about pre-positioning recorder locations and ideas for location naming conventions.
    
 * Protocols can help make the whole process faster. Here are some example protocols we use.
-
-   * [Packing for a deployment](https://github.com/rhine3/audiomoth-guide/blob/master/documents/packing-list.md)
-   * [Deploying recorders](https://github.com/rhine3/audiomoth-guide/blob/master/documents/deployment-protocol.pdf)
-   * [Bringing recorders home](https://github.com/rhine3/audiomoth-guide/blob/master/documents/return-protocol.pdf)
-   * [Post-field checklist](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-checklist.md) (which references the document below)
-   * [Checking in data written down in the field](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-protocol-template.pdf) - [an example](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-protocol-example.pdf)
+    
+    * [Packing for a deployment](https://github.com/rhine3/audiomoth-guide/blob/master/documents/packing-list.md)
+    * [Deploying recorders](https://github.com/rhine3/audiomoth-guide/blob/master/documents/deployment-protocol.pdf)
+    * [Bringing recorders home](https://github.com/rhine3/audiomoth-guide/blob/master/documents/return-protocol.pdf)
+    * [Post-field checklist](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-checklist.md) (which references the document below)
+    * [Checking in data written down in the field](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-protocol-template.pdf) - [an example](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-protocol-example.pdf)
  
 * When writing down data in the field, use waterproof paper and permanent pens (e.g., fine-tipped Sharpies)
 
