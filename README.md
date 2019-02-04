@@ -17,3 +17,8 @@ AudioMoths are very easy to set up out of the box. For instance:
 * Deploy AudioMoths and put up any legally required "recording in progress" signs
 
 For full details, tips, and more information, continue on to [the guide](https://github.com/rhine3/audiomoth-guide/blob/master/guide.md).
+
+
+## Cite this work
+
+Rhinehart, T. A. (2019). AudioMoth: a practical guide to the open-source ARU. GitHub repository: https://github.com/rhine3/audiomoth-guide
