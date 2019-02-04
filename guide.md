@@ -145,10 +145,12 @@ If you want to flash new firmware to your device, follow the guide [here](https:
 * Place signs on all entry points (especially roads, parking lots). Signs must include the verbiage “By proceeding, you consent to being recorded.” An example of a complete sign:
 
 ```
-Equipment for recording bird vocalizations is in use in this area within 3 hours of sunrise. 
-This equipment may incidentally record other sounds, including human conversation. 
-By proceeding during this period, you consent to being recorded. 
-Please contact Justin Kitzes at justin.kitzes@pitt.edu with questions about this study.
+Equipment for recording bird vocalizations is in use in this 
+area within 3 hours of sunrise. This equipment may incidentally 
+record other sounds, including human conversation. By 
+proceeding during this period, you consent to being recorded. 
+Please contact Justin Kitzes at justin.kitzes@pitt.edu 
+with questions about this study.
 ```
 
 * Another idea is to add a note on each recorder with information about the study, though it’s unclear whether these notes would deter or encourage recorder loss.
