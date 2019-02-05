@@ -86,19 +86,16 @@ Decide whether onboard LED light should be on or off
     * Both green & red = recording cannot be made. Causes of this include the time or program not being set (while in CUSTOM mode), the batteries falling out at some point after programming (while in CUSTOM mode), the recorder getting wet, the SD card malfunctioning, etc. 
     * Flashing red after turned to USB/OFF: an indicator of battery life (see [official documentation](https://www.openacousticdevices.info/led-guide))
 
-<p align="center" width="50%">
-<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/programming/sleep-rec-fast.gif" width="50%" alt="Demonstration of AudioMoth configuration app">
-</p>
 
 
-![Image: setting sleep and recording durations](https://github.com/rhine3/audiomoth-guide/blob/master/images/programming/sleep-rec-fast.gif)
+![Image: setting sleep and recording durations](images/programming/sleep-rec-fast.gif)
 
 
 #### Example programs
 
 Below are some example programs. One creates a single 3-hour long recording per day at 32kHz, suitable for recording a bird dawn chorus. The other creates minute-long recordings with minute-long breaks in between, 30 each at two different times. The latter program records at a sample rate of 192kHz, perhaps for recording bat ultrasonic sounds, and will require a fast microSD card.
 
-![Image: two example programs](https://github.com/rhine3/audiomoth-guide/blob/master/images/programming/example-programs.jpg)
+![Image: two example programs](images/programming/example-programs.jpg)
 
 
 ### Set time and program on AudioMoth
