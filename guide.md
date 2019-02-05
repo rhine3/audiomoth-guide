@@ -47,7 +47,7 @@ Set up to 5 recording period(s) in Coordinated Universal Time (UTC) using 24-hou
    * Make sure to press "Add recording period" after typing in the desired time of each recording period. Recording periods will show up on the red/white graphic or the period listing on the right side of the program. Likewise, be sure to remove unwanted periods.
 
 
-![Set recording period on AudioMoth configuration app](images/programming/example-programs.jpg)
+![Set recording period on AudioMoth configuration app](images/programming/recording-period-fast.gif)
 
 Set sample rate as 2x the highest frequency you want to record
 
