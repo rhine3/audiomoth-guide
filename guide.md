@@ -2,11 +2,11 @@
 
 This guide is intended to be comprehensive for both first-time AudioMoth users and those interested in scaling up their AudioMoth deployment. 
 
-The information here complements official guides on the [<ins>Open Acoustic Devices website</ins>](https://www.openacousticdevices.info/getting-started). Some technical information about the devices themselves is excluded. We have also elaborated on each step by including images, procedures, and rules of thumb that we've created while deploying hundreds of AudioMoths.
+The information here complements official guides on the [Open Acoustic Devices website](https://www.openacousticdevices.info/getting-started). Some technical information about the devices themselves is excluded. We have also elaborated on each step by including images, procedures, and rules of thumb that we've created while deploying hundreds of AudioMoths.
 
 **Jump to:**
 
-* [<ins>Quick start</ins>](#quick-start)
+* [Quick start](#quick-start)
 
 * [Programming](#programming)
 
@@ -46,9 +46,8 @@ Set up to 5 recording period(s) in Coordinated Universal Time (UTC) using 24-hou
    
    * Make sure to press "Add recording period" after typing in the desired time of each recording period. Recording periods will show up on the red/white graphic or the period listing on the right side of the program. Likewise, be sure to remove unwanted periods.
 
-<p align="center">
-<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/programming/recording-period-fast.gif" width="50%" alt="Demonstration of setting recording period on AudioMoth configuration app">
-</p>
+
+![Set recording period on AudioMoth configuration app](images/programming/example-programs.jpg)
 
 Set sample rate as 2x the highest frequency you want to record
 
@@ -88,14 +87,14 @@ Decide whether onboard LED light should be on or off
 
 
 
-![Image: setting sleep and recording durations](images/programming/sleep-rec-fast.gif)
+![Set sleep and recording durations](images/programming/sleep-rec-fast.gif)
 
 
 #### Example programs
 
 Below are some example programs. One creates a single 3-hour long recording per day at 32kHz, suitable for recording a bird dawn chorus. The other creates minute-long recordings with minute-long breaks in between, 30 each at two different times. The latter program records at a sample rate of 192kHz, perhaps for recording bat ultrasonic sounds, and will require a fast microSD card.
 
-![Image: two example programs](images/programming/example-programs.jpg)
+![Two example programs](images/programming/example-programs.jpg)
 
 
 ### Set time and program on AudioMoth
@@ -156,7 +155,7 @@ with questions about this study.
 
 ### Housings
 
-<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/housing/bag-housing.jpg" width="30%" align="right" alt="AudioMoth deployed on tree">
+![AudioMoth deployed on tree](images/housing/bag-housing.jpg)
 
 * AudioMoths can be deployed in ziploc baggies using buckling straps
 
@@ -217,9 +216,7 @@ Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](http
 
 * Use the "measuring" tool to get even spacing between points (press "Enter" to temporarily save a measurement before you plot your next point) 
 
-<p align="center">
-<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/programming/google-maps-demo.gif" width="100%" alt="Demonstration of Google My Maps">
-</p>
+![Google My Maps](images/programming/google-maps-demo.gif)
 
 * Access the map data on your phone (if you have cell phone service):
 
@@ -250,8 +247,7 @@ Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](http
 
 ### Logistics
 
-
-<img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/housing/bulk-housings.jpg" width="30%" align="right" alt="200 AudioMoth housings made from Ziploc bags">
+![Two hundred AudioMoth housings made from Ziploc bags](images/housing/bulk-housings.jpg)
 
 * Before heading out to the field, pre-pack bags with desiccant and pre-attach them to straps. This saves time and prevents headaches in the field
 
@@ -272,6 +268,9 @@ Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](http
     * [Checking in data written down in the field](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-protocol-template.pdf) - [an example](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-protocol-example.pdf)
  
 * When writing down data in the field, use waterproof paper and permanent pens (e.g., fine-tipped Sharpies)
+
+
+![Storage and SD card reader](images/other/nas.jpg)
 
 <img src="https://github.com/rhine3/audiomoth-guide/blob/master/images/other/nas.jpg" width="40%" align="right" alt="Storage and SD card reader">
 
