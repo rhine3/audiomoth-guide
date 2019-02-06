@@ -48,13 +48,17 @@ AudioMoths are very easy to set up out of the box. A good general introduction t
 
 ## Programming
 
-AudioMoths can be deployed in with a custom recording schedule in CUSTOM mode, or a simpler continuous record/sleep schedule in DEFAULT mode. To make a custom recording schedule, or to customize the length of record/sleep periods in DEFAULT mode, use the AudioMoth configuration app.
+The AudioMoth can be used in two modes, which are be accessed using the switch on the device. 
 
-After creating your configuration, you will plug the AudioMoth into your computer, and set the current time and desired recording schedule via the app interface. 
+* In DEFAULT mode, the AudioMoth will take a recording for a desired amount of time, and then will sleep for a desired amount of time. The device repeats this cycle continuously.
 
-For a simple and intuitive introduction to this process, see the [Open Acoustic Devices Config App Guide](https://www.openacousticdevices.info/config-app-guide). For more in-depth information, read the steps below.
+* In CUSTOM mode, the AudioMoth also cycles through recording/sleeping, but only within "recording periods" that you configure. For instance, you could set the AudioMoth to record a minutelong file every 10 minutes for the first 6 hours after sunset. 
 
-### Create recording schedule 
+* In summary, to make recordings immediately, or make them continuously without regard to the recording schedule programmed on the device, use the DEFAULT mode. When recording at a particular time of day is desired, use the CUSTOM mode. The device behaves differently in several other ways in these different modes, as described in the following sections.
+
+To make a custom recording schedule, or to customize the length of record/sleep periods in DEFAULT mode, use the AudioMoth configuration app. After creating your configuration, you will plug the AudioMoth into your computer, and set the current time and desired recording schedule via the app interface. For a simple and intuitive introduction to this process, see the [Open Acoustic Devices Config App Guide](https://www.openacousticdevices.info/config-app-guide). For more in-depth information, read the steps below.
+
+### How to create a recording schedule 
 
 Download programming app: https://www.openacousticdevices.info/config
 
@@ -63,9 +67,35 @@ Set up to 5 recording period(s) in Coordinated Universal Time (UTC) using 24-hou
    * **What is UTC?**: Instead of referring to a time zone (like Eastern Time, Pacific Time, etc.), recordings on the AudioMoth are scheduled in UTC, a universal time standard. This is done to avoid ambiguity in time zones. UTC is equivalent to Greenwich Mean Time (GMT), but does not observe Daylight Savings time as some countries in the GMT time zone do.
    
    * Make sure to press "Add recording period" after typing in the desired time of each recording period. Recording periods will show up on the red/white graphic or the period listing on the right side of the program. Likewise, be sure to remove unwanted periods.
-
-
+   
 ![Set recording period on AudioMoth configuration app](images/programming/recording-period-fast.gif)
+
+Set recording and sleep duration in seconds. 
+
+* Even if sleep period is set to 0, the device will sleep briefly between recordings to save the prior recording to the card.
+
+* To make a single continuous file each recording period, set the recording duration length equal to the length of the longest recording period. Note that the maximum file size for any single file is 4GB, so make sure that the estimated size of each individual file is less than 4000 MB. 
+
+* The time that recording begins depends on the switch position (DEFAULT or CUSTOM):
+
+    * **DEFAULT:** Device immediately starts recording for recording duration time, then sleeps, then begins recording again. This repeats until DEFAULT mode is turned off or the recorder dies. Recording period/schedule is irrelevant in DEFAULT mode.
+
+    * **CUSTOM:** 
+
+        * If device is turned on outside of the scheduled recording periods, it waits until recording period starts, then begins its recording schedule. 
+    
+        * If it is turned on during the recording period, it will not start recording until the next scheduled recording begins. 
+  
+          For instance, consider an AudioMoth scheduled to record at 09:00, with a 2-minute recording duration and 2-minute sleep duration. If the AudioMoth was switched to CUSTOM mode at 9:01, it would skip the recording scheduled for 9:00-9:02, and wait until 09:04 to make its first recording.
+
+
+The program will calculate the energy and storage used each day once you have specified the recording period and recording/sleep durations.
+
+* To refresh batteries and cards as infrequently as possible during multi-month deployments, use a battery/SD card combination where the battery life and card storage run out at roughly the same time, given the device's estimated energy and storage usage.
+
+* Use [this code](https://trinket.io/python/ff8aeb66e1) to estimate the number of operational days of a battery and SD card. Input card size and battery capacity (e.g., 2850 mAh for a Duracell alkaline AA battery), plus the config app's estimated and storage and energy usage. For more information on battery capacity, see the section on [batteries](#sd-cards-and-batteries).
+
+### Other settings to consider
 
 Set sample rate as 2x the highest frequency you want to record.
 
@@ -82,39 +112,6 @@ Set amount of gain for recording.
 * The gain is the amount that sounds from the microphone will be amplified once recorded. 
 
 * Selecting the optimal gain requires trial and error in your particular field conditions. If the gain is too high, your recordings will [clip](https://en.wikipedia.org/wiki/Clipping_(audio)), creating an unpleasant distortion that can be challenging, if not impossible, to analyze. Alternatively, if the gain is too low, sounds will be faint and hard to hear.
-
-Set recording and sleep duration in seconds. 
-
-* Note the difference between the "recording schedule," "recording period," and "recording duration."
-
-    * The *recording schedule* is the overall schedule
-    
-    * A custom recording schedule is composed of *recording periods*, the time of day the recorder is active when it is on CUSTOM mode)
-    
-    * The *recording duration* is the length of each recording. 
-    
-    * Example: add one recording period, 12:00-13:00. Set the recording duration as 120 seconds and the sleep duration as 60 second. Every day, this custom recording schedule would create 20 two-minute recordings, each spaced one minute apart.
-
-* AudioMoth recording/sleeping behavior varies depending on switch position (DEFAULT or CUSTOM) and time of day vs. recording period.
-
-    * **DEFAULT:** Device immediately starts recording for recording duration time, then sleeps, then begins recording again. This repeats until DEFAULT mode is turned off or the recorder dies. Recording period/schedule is irrelevant in DEFAULT mode.
-    
-    * **CUSTOM:** 
-        * If device is turned on outside of the scheduled recording periods, it waits until recording period starts, then begins its recording schedule. 
-        * If it is turned on during the recording period, it will not start recording until the next scheduled recording begins. For instance, consider an AudioMoth scheduled to record at 09:00, with a 2-minute recording duration and 2-minute sleep duration. If the AudioMoth was switched to CUSTOM mode at 9:01, it would skip the recording scheduled for 9:00-9:02, and wait until 09:04 to make its first recording.
-        
-    * In summary, to make recordings immediately, or make them continuously without regard to the recording schedule programmed on the device, use the DEFAULT mode. When recording at a particular time of day is desired, use the CUSTOM mode.
-
-* Even if sleep period is set to 0, the device will sleep briefly between recordings to save the prior recording to the card.
-
-* To make a single continuous file each recording period, set the recording duration length equal to the length of the recording period. Note that the maximum file size for any single file is 4GB, so make sure that the estimated size of each individual file is less than 4000 MB. 
-
-The program will calculate the energy and storage used each day once you have specified the recording period and recording/sleep durations.
-
-* To refresh batteries and cards as infrequently as possible during multi-month deployments, use a battery/SD card combination where the battery life and card storage run out at roughly the same time, given the device's estimated energy and storage usage.
-
-* Use [this code](https://trinket.io/python/ff8aeb66e1) to estimate the number of operational days of a battery and SD card. Input card size and battery capacity (e.g., 2850 mAh for a Duracell alkaline AA battery), plus the config app's estimated and storage and energy usage. For more information on battery capacity, see the section on [batteries](#sd-cards-and-batteries).
-
 
 Decide whether onboard LED light should be on or off.
 
