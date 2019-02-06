@@ -20,14 +20,14 @@ Please submit suggestions for modifications to this guide via email at `tessa.rh
 * [Data analysis](#data-analysis)
 
 
-The guide is available in both PDF and Markdown formats at the original repository: https://github.com/rhine3/audiomoth-guide. Use `pandoc` to compile the PDF version: `pandoc guide.md -o guide.pdf --variable urlcolor=cyan`. 
-
-
 #### Cite & share this guide
 If you find this guide helpful, please share and cite it! Citation information:
 ```
 Rhinehart, Tessa A (2019). AudioMoth: a practical guide to the open-source ARU. GitHub repository: https://github.com/rhine3/audiomoth-guide
 ```
+
+The guide is available in both PDF and Markdown formats at the original repository: https://github.com/rhine3/audiomoth-guide. Use `pandoc` to compile the PDF version: `pandoc guide.md -o guide.pdf --variable urlcolor=cyan`. 
+
 
 ## Quick start
 
