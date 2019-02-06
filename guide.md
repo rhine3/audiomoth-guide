@@ -4,8 +4,10 @@ This guide is intended to be comprehensive for both first-time AudioMoth users a
 
 The information here complements official guides on the [Open Acoustic Devices website](https://www.openacousticdevices.info/getting-started). Some technical information about the devices themselves is excluded. We have also elaborated on each step by including images, procedures, and rules of thumb that we've created while deploying hundreds of AudioMoths.
 
+Please submit suggestions for modifications to this guide via email at `tessa.rhinehart at pitt.edu` or via the [Issues tracker](https://github.com/rhine3/audiomoth-guide/issues) on GitHub.
 
-**Jump to:**
+
+#### Table of contents
 
 * [Quick start](#quick-start)
 
@@ -18,10 +20,11 @@ The information here complements official guides on the [Open Acoustic Devices w
 * [Data analysis](#data-analysis)
 
 
+The guide is available in both PDF and Markdown formats at the original repository: https://github.com/rhine3/audiomoth-guide. Use `pandoc` to compile the PDF version: `pandoc guide.md -o guide.pdf --variable urlcolor=cyan`. 
 
-The guide is available in both PDF and Markdown formats at the original repository: https://github.com/rhine3/audiomoth-guide. I welcome suggestions via the [Issues tracker](https://github.com/rhine3/audiomoth-guide/issues) on GitHub or via email at `tessa.rhinehart at pitt.edu`
 
-If you find this guide helpful, please share and cite it!
+#### Cite & share this guide
+If you find this guide helpful, please share and cite it! Citation information:
 ```
 Rhinehart, Tessa A (2019). AudioMoth: a practical guide to the open-source ARU. GitHub repository: https://github.com/rhine3/audiomoth-guide
 ```
