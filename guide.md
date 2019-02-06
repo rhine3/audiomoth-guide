@@ -80,7 +80,6 @@ Set amount of gain for recording.
 
 Set recording and sleep duration in seconds. 
 
-
 * Note the difference between the "recording schedule," composed of "recording periods" (the time of day the recorder is active when it is on CUSTOM mode) and "recording duration" (the length of each recording). For instance, if you set your recording schedule for 12:00-13:00, with a 120-second recording period and 60-second sleep period, the AudioMoth would create 20 two-minute recordings, each spaced one minute apart.
 
 * AudioMoth record/sleep behavior varies depending on switch position (DEFAULT or CUSTOM) and time of day vs. recording period.
@@ -110,8 +109,11 @@ Decide whether onboard LED light should be on or off.
     * Flashing red after turned to USB/OFF: an indicator of battery life (see [official documentation](https://www.openacousticdevices.info/led-guide))
 
 
-
 ![Set sleep and recording durations](images/programming/sleep-rec-fast.gif)
+
+You may save the completed schedule as a file for later reference, reuse, copying, and sharing.
+
+* On some platforms, clicking the saved file itself will not correctly open the program. Instead, open the saved program through the configuration app itself. Select the menu option AudioMoth > Open Configuration.
 
 
 #### Example programs
@@ -131,7 +133,7 @@ Install formatted microSD card in AudioMoth to be programmed.
 
 * Recording with high sampling rate (e.g., recording bats) requires SD cards with fast read/write speeds. Files produced with high sampling rate are also larger, so they use up space on the SD card more quickly. We use SanDisk Extreme 128GB for bat recordings. See the [SD card guide](https://www.openacousticdevices.info/sd-card-guide) for more information.
 
-* The card goes in the AudioMoth with the contacts facing **up**, as shown on the graphic on the front of the AudioMoth. (It won't fit any other way.)
+* Insert the card into the AudioMoth with the contacts facing **up**, as shown on the graphic on the front of the AudioMoth. (It won't fit any other way.)
 
 ![Correct way to insert SD card](images/other/sd-card-position.jpg)
 
@@ -150,7 +152,7 @@ Install batteries.
 
 ### Set time and program on AudioMoth
 
-Set switch on AudioMoth to “USB/OFF” mode and plug into computer via microUSB
+Set switch on AudioMoth to “USB/OFF” mode and plug into computer via microUSB.
 
 Verify that the AudioMoth is plugged in: the date, time, and recorder information on the programming app will go from greyed out to black.
 
@@ -158,11 +160,9 @@ Press green button in the programming app. This saves the recording program to t
 
 The AudioMoth now has a CUSTOM recording schedule. When ready to deploy, switch AudioMoth switch to CUSTOM.
 
-* This custom schedule can be saved and reused. However, on some platforms, clicking the saved file itself will not correctly open the program. Instead, open the saved program through the timesetter app by selecting the menu option AudioMoth > Open Configuration
-
 Because the AudioMoth doesn’t have an onboard battery, if the batteries fall out, the programming and set time will be lost. **The AudioMoth must be reprogrammed if the batteries fall out.**
 
-* If turned to DEFAULT mode after the batteries come out, the device will record at default settings (10s on, 5s off)
+* If turned to DEFAULT mode after the batteries come out, the device will record at default settings (10 seconds on, 5 seconds off).
 
 * If turned to CUSTOM mode after the batteries come out, the device **will not record**.
 
@@ -194,123 +194,170 @@ Please contact Justin Kitzes at justin.kitzes@pitt.edu
 with questions about this study.
 ```
 
-* Another idea is to add a note on each recorder with information about the study, though it’s unclear whether these notes would deter or encourage recorder loss.
+* Another idea is to add a note on each recorder with information about the study. However, it is unclear whether these notes would deter or encourage recorder loss. :-)
 
 ### Housings
 
+AudioMoths may break if exposed to water. It is necessary to house them in a secure, watertight container.
+
+#### Ziploc baggies
+
 ![AudioMoth deployed on tree](images/housing/bag-housing.jpg)
 
-* AudioMoths can be deployed in ziploc baggies using buckling straps
+AudioMoths can be deployed in Ziploc baggies using buckling straps.
 
-* If the strap is too small for the circumference of the tree, attach another strap
+* If the strap is too small for the circumference of the tree, attach another strap.
 
-* If possible, avoid placing AudioMoths in direct sunlight, as their enclosures may heat up
+* If possible, avoid placing AudioMoths in direct sunlight, as their enclosures may heat up.
 
-* AudioMoths may break if exposed to water. The switch and corners of the AudioMoth are sharp and can rip through a ziploc bag. Take steps to prevent moisture getting into AudioMoth enclosure:
-    * Don’t transport AudioMoths within the bags, as the bags are more likely to break. Instead, keep the AudioMoth and bag separated until you are ready to hook the bag to the tree
-    * Inspect each bag after it is deployed; if there are any scratches or punctures, replace it
-    * Use freezer bags, not sandwich bags
-    * Taping over the sharp parts of the AudioMoth, or over the bag, reduces the chance of punctures. Take care not to cover the mic. [Example by Jennifer Sheridan](https://twitter.com/JenASheridan/status/1047766465900818432)
-    * Include a desiccant pack in the bag to soak up lingering moisture in the bag, preventing condensation
+The switch and corners of the AudioMoth are sharp and can rip through a Ziploc bag. Take steps to prevent moisture getting into AudioMoth enclosure:
+
+* Don’t transport AudioMoths within the bags, as the bags are more likely to break. Instead, keep the AudioMoth and bag separated until you are ready to hook the bag to the tree. If it is raining, bring an umbrella and transport AudioMoths within a waterproof bag.
+
+* Use freezer bags, not sandwich bags.
+
+* AudioMoth v 1.0 has sharp edges and switch. Taping over the sharp parts of the AudioMoth, or judiciously applying hot glue, reduces the chance of punctures. 
+
+    * We do not apply anything next to the mic, as we are currently unsure of the effect on the recording quality. Take care not to obstruct SD card insertion or switch movement.
+
+    * [Example with tape by Jennifer Sheridan](https://twitter.com/JenASheridan/status/1047766465900818432)
+   
+
+* Include a desiccant pack in the bag to soak up lingering moisture in the bag, preventing condensation
+
+* Before you walk away from a newly-deployed AudioMoth, inspect the bag for scratches or punctures. Replace if necessary.
+
+#### Hard cases
+
+Unlike a hard case, Ziploc baggies don't provide much protection against small animal chewing and bison rubbing.
+
+No standardized hard case currently exists for AudioMoths, but many groups have shared their housing advice on the [WildLabs Acoustic Monitoring forum](https://www.wildlabs.net/community/group/acoustic-monitoring) and Twitter. Some examples:
+
+* [Hand-assembled case by Heather Wood](https://www.wildlabs.net/community/thread/554)
+
+* [3D printable case by Robin Jones](https://www.thingiverse.com/thing:3292311)
+
+* [3D printable case by Jon Flanders](https://twitter.com/jonrflanders/status/1084491613068513282) (design not released yet)
+
+* [Hand-assembled case by Ruby Lee](https://www.wildlabs.net/resources/case-studies/trialing-audiomoth-detect-hidden-threats-under-canopies-belize) (design not released; scroll down to see picture)
 
 
 ### Hardware
 
 * Because the AudioMoth doesn’t have an onboard battery, if the batteries fall out, the programming and set time will be lost; if you have programmed a CUSTOM recording schedule it is no longer on the AudioMoth and will require reprogramming. We take care not to jostle AudioMoths in transport, and we always bring several extra programmed AudioMoths with us during deployments, just in case we drop one and the batteries fall out. 
 
-* The switch is fragile and snaps off easily. Be careful when turning the AudioMoth on and off, applying pressure closer to the base of the switch 
+* The switch is fragile and snaps off easily. A slow, careful, and firm touch reduces disappointing switch snapping when turning the AudioMoth on and off.
 
 
 ### Logistics
 
 * Create a packing list to make sure you have a few essential tools. [Example](https://github.com/rhine3/audiomoth-guide/blob/master/documents/packing-list.md)
 
-* If you’re also using playback or imitation to survey the area, make sure these sounds can’t be mistaken on the recordings for actual birds. This can be avoided by using playback or imitation only outside the hours of the recording, using a distinctive unnatural sound (e.g., a “triple knock” instead of a “double knock”), or verbally announcing your presence so that any recorders that may capture your recording can hear your announcement 
+* If you’re also using playback or imitation to survey the area, make sure these sounds can’t be mistaken on the recordings for actual birds. This can be avoided by using playback or imitation only outside the hours of the recording, using a distinctive unnatural sound (e.g., a “triple knock” instead of a “double knock”), or verbally announcing your presence so that any recorders that may capture your recording can hear your announcement.
 
-* The first versions of the AudioMoth firmware use filenames with compact representations of date & time. To find the date and time a file was created, either look at the “last modified” time (which represents the time in UTC that the file was saved, i.e., the time at the end of the recording) or convert the filename using the instructions in the AudioMoth user manual
+* The first versions of the AudioMoth firmware use filenames with compact representations of date & time. To find the date and time a file was created, either look at the “last modified” time (which represents the time in UTC that the file was saved, i.e., the time at the end of the recording) or convert the filename using the instructions in the AudioMoth user manual.
 
 
 ## Scaling up
 
-For large deployments, special considerations must be taken into account. If you're deploying 100 recorders, an extra 5 minutes spent per recorder means spending over 8 more hours in the field!
+For large deployments, special considerations must be taken into account. For instance, when deploying 100 recorders, an extra 5 minutes spent per recorder results in 8+ additional hours in the field!
 
 ### Purchasing AudioMoths
 
 * While GroupGets purchases are helpful for folks looking to buy on the scale of a few dozen AudioMoths, we have found it significantly less expensive to purchase recorders in bulk (e.g., for several hundred recorders, 30-40 USD per recorder instead of 50 USD on GroupGets).
 
-* Our lab has had excellent experiences with [RushPCB](https://rushpcb.com/). We purchased the devices pre-assembled (i.e., components connected to boards, battery pack soldiered to board), but without the firmware flashed. We found it easy to flash the firmware in our lab.
+* Our lab has had excellent experiences purchasing AudioMoths from [RushPCB](https://rushpcb.com/). We purchased the devices pre-assembled (i.e., components connected to boards, battery pack soldiered to board), but without the firmware flashed. We found it easy to flash the firmware in our lab.
 
 * Parts of the original AudioMoth design are constantly going out of stock due to high demand. We enlisted in the help of our school's electronics shop to find new parts that were interchangeable with the out-of-stock parts.
 
 
 ### Pre-select recorder locations
 
-Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](https://twitter.com/mountain_laur)) developed this method of pre-positioning locations of recorders for deployments.
+Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](https://twitter.com/mountain_laur)) developed this method of pre-positioning locations of recorders for deployments:
 
-* Login to your Google account 
+* Log in to your Google account.
 
 * Create a new map: go to https://drive.google.com > New > More > Google My Maps
 
-* Change the base map to satellite
+* Change the base map to "Satellite"
 
-* Click on the "Add Marker" tool and add markers to your map. You might try to target specific locations, e.g. particular trees that are good candidates for hanging AudioMoths.
+* Click on the "Add Marker" tool and add markers to your map. You might try to target specific locations, for example, identify particular trees that are good candidates for hanging AudioMoths.
 
-    * We name all of our recorder locations with an alphabetical code that gives the site of the deployments, and a numeric code that uniquely identifies the point at that site. For instance, our deployments at Powdermill Nature Reserve in the pond area are named PNRE-POND-0001, PNRE-POND-00002, etc. 
+    * We name all of our recorder locations with an alphabetical code that gives the site of the deployments, and a numeric code that uniquely identifies the point at that site. For instance, our deployments at Powdermill Nature Reserve in the pond area are named PNRE-POND-0001, PNRE-POND-0002, etc. 
 
-* Use the "measuring" tool to get even spacing between points (press "Enter" to temporarily save a measurement before you plot your next point) 
+* Use the "measuring" tool to find even spacing between points (press "Enter" to temporarily save a measurement before you plot your next point) 
 
 ![Google My Maps](images/programming/google-maps-demo.gif)
 
-* Access the map data on your phone (if you have cell phone service):
+Upload the map file onto your GPS unit:
 
-    * Download the "Google Maps" app to your phone
-    
-    * In the app, select the menu from the left side > Your places > Maps
+* Download the Google My Map in KML format: click the three dots next to the map title > Export to KML/KMZ > click checkbox for "Export to a KML file"
 
-* Upload the map file onto your GPS unit:
-
-    * Click the three dots next to the map name > Export to KML/KMZ > click checkbox for "Export to a KML file"
-
-    * Download [GPSBabel](https://www.gpsbabel.org/download.html), a free converter you can use to convert KML files to the type of file required by your GPS unit
+* Download [GPSBabel](https://www.gpsbabel.org/download.html), a free converter you can use to convert KML files to the type of file required by your GPS unit
         
-    * Select "Google Earth (Keyhole) Markup Language" as the input type, use the file browser to select your file
-    
-    * Convert the map to the format required by your GPS unit. For instance, Garmin GPS units require a GPX file, so select output format "GPX XML"
-    
-    * Use the instructions for your device to transfer the map onto your GPS unit (for instance, here are the [instructions for our device](https://www.youtube.com/watch?v=PdPgse1tHdY))
+* Select "Google Earth (Keyhole) Markup Language" as the input type, use the file browser to select your file
 
-* When need to move a point in the field (e.g., the tree you wanted to use fell down), either reset the location of the point or make a new point on your GPS. Make sure to indicate in your field notes whenever the pre-set location of the point was changed. 
+* Convert the map to the format required by your GPS unit. For instance, Garmin GPS units require a GPX file, so select output format "GPX XML"
 
-    * Most commercial GPS units are imprecise, especially under heavy foliage, so it can be challenging to know when you’re at the right point. When in doubt, take notes, and take another GPS point to compare later
+* Use the instructions for your device to transfer the map onto your GPS unit (for instance, here are the [instructions for our device](https://www.youtube.com/watch?v=PdPgse1tHdY))
 
-    * Practice using the crucial features of your GPS unit before you head out to the field, and bring extra batteries
+When need to move a point in the field (e.g., the tree you wanted to use fell down), either reset the location of the point or make a new point on your GPS. Make sure to indicate in your field notes whenever the pre-set location of the point was changed. 
 
-* After you return, follow these steps in reverse order to record the actual locations of your devices.
+* Most commercial GPS units are imprecise, especially under heavy foliage, so it can be challenging to know when you’re at the right point. When in doubt, take notes, and take another GPS point to compare later
+
+* Practice using the crucial features of your GPS unit before you head out to the field, and bring extra batteries
+
+Access the map data on your phone via Gaia GPS:
+
+* Download the Google My Map in KML format: click the three dots next to the map title > Export to KML/KMZ > click checkbox for "Export to a KML file"
+
+* Download "Gaia GPS" to your phone.
+
+* Download the KML file on your phone, e.g., by emailing it to yourself.
+
+* If you have an Android phone, open Gaia GPS > click the "plus" with a circle icon in the upper right corner > select "Import file" > find the file on your phone
+
+* If you have an Apple phone, follow [https://help.gaiagps.com/hc/en-us/articles/115003639048-Import-GPX-and-KML-files-in-Gaia-GPS-for-iOS] these instructions.
+
+Access the map data on your phone via Google Maps (if you have cell phone service):
+
+* Download the "Google Maps" app to your phone.
+
+* In the app, select the menu from the left side > Your places > Maps
+
+
+After you return, follow these steps in reverse order to record the actual locations of your devices.
+
 
 
 ### Logistics
 
 ![Two hundred AudioMoth housings made from Ziploc bags](images/housing/bulk-housings.jpg)
 
-* Before heading out to the field, pre-pack bags with desiccant and pre-attach them to straps. This saves time and prevents headaches in the field
+* Save time in the field by pre-pack bags with desiccant and pre-attach them to straps in the lab, instead of performing these tasks in the field.
 
-* It is very helpful to have two people in the field
-  * One person can record data, e.g., the unique ID of the AudioMoth, its SD card, and the point at which it is deployed.
-  * The other person can manage putting the AudioMoth on the tree and collecting a more accurate GPS point
+* It is very helpful to have two people in the field.
 
-* Since so many recorders will be deployed, information about their identity and location has to be taken accurately and efficiently
-    * Record the deployment date; information about the identity (ID number) of the AudioMoth, SD card, and location; any important notes about placement, etc.
+    * One person can record data, e.g., the unique ID of the AudioMoth, its SD card, and the point at which it is deployed.
+
+    * The other person can manage putting the AudioMoth on the tree and collecting a more accurate GPS point
+
+* Since so many recorders will be deployed, information about their identity and location has to be taken accurately and efficiently.
+
+    * Record the deployment date; information about the identity (ID number) of the AudioMoth, SD card, and location; any important notes about placement; etc.
+    
     * See the previous section about pre-positioning recorder locations and ideas for location naming conventions.
    
-* Protocols can help make the whole process faster. Here are some example protocols we use.
+* We use protocols to speed up the process and keep track of repetitive tasks. (It's easy to leave out crucial steps, like turning the AudioMoth on, if you don't have to check them each off of a list.)
     
     * [Packing for a deployment](https://github.com/rhine3/audiomoth-guide/blob/master/documents/packing-list.md)
     * [Deploying recorders](https://github.com/rhine3/audiomoth-guide/blob/master/documents/deployment-protocol.pdf)
     * [Bringing recorders home](https://github.com/rhine3/audiomoth-guide/blob/master/documents/return-protocol.pdf)
     * [Post-field checklist](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-checklist.md) (which references the document below)
-    * [Checking in data written down in the field](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-protocol-template.pdf) - [an example](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-protocol-example.pdf)
+    * [Template for protocols to check in data written down in the field](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-protocol-template.pdf) 
+    * [Example modification of the above template](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-protocol-example.pdf)
  
-* When writing down data in the field, use waterproof paper and permanent pens (e.g., fine-tipped Sharpies)
+* When writing down data in the field, use waterproof paper and permanent pens (e.g., fine-tipped Sharpies).
 
 
 ![Storage and SD card reader](images/other/nas.jpg)
