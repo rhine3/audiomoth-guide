@@ -90,18 +90,18 @@ Set recording and sleep duration in seconds.
 
   Essentially, if you want to make recordings immediately or continuously without regard to the recording schedule programmed on the device, use the DEFAULT mode. When recording at a particular time of day is desired, use the CUSTOM mode.
 
-* Even if sleep period is set to 0, device will sleep briefly between recordings to save the prior recording to the card.
+* Even if sleep period is set to 0, the device will sleep briefly between recordings to save the prior recording to the card.
 
-* If you only want to make one recording each recording period, set the recording duration to be the same length as the recording period. Note that the maximum file size for any single file is 4GB, so make sure that the size of each individual file is less than 4000 MB.
+* To make a single continuous file each recording period, set the recording duration length equal to the length of the recording period. Note that the maximum file size for any single file is 4GB, so make sure that the estimated size of each individual file is less than 4000 MB. 
 
 The program will calculate the energy and storage used each day once you have specified the recording period and recording/sleep durations.
 
-* To refresh batteries/cards as infrequently as possible, find a battery & SD card combination that run out at roughly the same time given the device's estimated energy and storage usage.
+* To refresh batteries and cards as infrequently as possible during multi-month deployments, use a battery/SD card combination where the battery life and card storage run out at roughly the same time, given the device's estimated energy and storage usage.
 
-* Use [this code](https://trinket.io/python/ff8aeb66e1) to see how long the battery and SD card are estimated to last. Input card size and battery capacity (e.g., 2850 mAh for a Duracell alkaline AA battery), plus the config app's estimated and storage and energy usage. For more information on battery capacity, see the section on [batteries](#sd-cards-and-batteries).
+* Use [this code](https://trinket.io/python/ff8aeb66e1) to estimate the number of operational days of a battery and SD card. Input card size and battery capacity (e.g., 2850 mAh for a Duracell alkaline AA battery), plus the config app's estimated and storage and energy usage. For more information on battery capacity, see the section on [batteries](#sd-cards-and-batteries).
 
 
-Decide whether onboard LED light should be on or off
+Decide whether onboard LED light should be on or off.
 
 * **What do the LED lights mean?**  It can be helpful to turn LED lights on for more information about your AudioMoth, though this might attract more attention from animals/curious humans. Lights are especially useful when testing the recorder. LED light meanings are:
     * Only green = sleeping between recordings
@@ -127,13 +127,16 @@ Below are some example programs. One creates a single 3-hour long recording per 
 
 Install formatted microSD card in AudioMoth to be programmed.
 
-* SD cards must be reformatted to MS-DOS (FAT32) prior to each use/reuse. **We have experienced problems if we don't reformat the card every time we reuse it--sometimes, erasing is not enough.** Windows can natively format cards less than or equal to 32GB in size. Mac can format cards up to 128GB; we haven’t tested anything larger.
+* SD cards must be reformatted to MS-DOS (FAT32) prior to each use/reuse. **We have experienced problems if we don't reformat the card every time we reuse it--sometimes, erasing is not enough.** Windows computers can natively format cards less than or equal to 32GB in size, but there are [free programs](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) that allow Windows users to format larger cards. Mac computers can format cards up to 128GB; we haven't tested anything larger.
 
 * Recording with high sampling rate (e.g., recording bats) requires SD cards with fast read/write speeds. Files produced with high sampling rate are also larger, so they use up space on the SD card more quickly. We use SanDisk Extreme 128GB for bat recordings. See the [SD card guide](https://www.openacousticdevices.info/sd-card-guide) for more information.
 
 * The card goes in the AudioMoth with the contacts facing **up**, as shown on the graphic on the front of the AudioMoth. (It won't fit any other way.)
 
-Install batteries 
+![Correct way to insert SD card](images/other/sd-card-position.jpg)
+
+
+Install batteries.
 
 * Battery life depends on the type of battery you use. Check the battery's *capacity* in milliamp-hours (mAh). Lithium AA batteries have a larger capacity than typical alkaline AA batteries, but also cost more.
 
@@ -142,6 +145,7 @@ Install batteries
     * Voltage of batteries that are connected in series (as they are on the AudioMoth) is the number of batteries multiplied by the voltage of each battery. AudioMoth v.1 uses 3 batteries at 1.5 volts each, so the voltage of the battery bank is `3 * 1.5V = 4.5V`.
     
     * Capacity of batteries in series is the capacity of any one battery in the series. (Don't mix batteries of different capacities, or new and old batteries.) For instance, a Duracll alkaline AA battery has a capacity of 2850mAh.
+   
 
 
 ### Set time and program on AudioMoth
