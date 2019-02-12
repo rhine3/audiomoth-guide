@@ -7,6 +7,20 @@ The information here complements official guides on the [Open Acoustic Devices w
 Please submit suggestions for modifications to this guide via email at `tessa.rhinehart at pitt.edu` or via the [Issues tracker](https://github.com/rhine3/audiomoth-guide/issues) on GitHub.
 
 
+#### Cite & share this guide
+If you find this guide helpful, please share and cite it! Citation information:
+```
+Rhinehart, Tessa A (2019). AudioMoth: a practical  
+guide to the open-source ARU. GitHub repository: 
+https://github.com/rhine3/audiomoth-guide
+```
+
+The guide is available in both [PDF](https://github.com/rhine3/audiomoth-guide/raw/master/guide.pdf) and [Markdown](https://github.com/rhine3/audiomoth-guide/raw/master/guide.md) formats at the original repository: https://github.com/rhine3/audiomoth-guide. 
+
+Use `pandoc` to compile the PDF version from Markdown: `pandoc guide.md -o guide.pdf --variable urlcolor=cyan`. 
+
+
+
 #### Table of contents
 
 * [Quick start](#quick-start)
@@ -18,17 +32,6 @@ Please submit suggestions for modifications to this guide via email at `tessa.rh
 * [Scaling up](#scaling-up)
 
 * [Data analysis](#data-analysis)
-
-
-#### Cite & share this guide
-If you find this guide helpful, please share and cite it! Citation information:
-```
-Rhinehart, Tessa A (2019). AudioMoth: a practical  
-guide to the open-source ARU. GitHub repository: 
-https://github.com/rhine3/audiomoth-guide
-```
-
-The guide is available in both PDF and Markdown formats at the original repository: https://github.com/rhine3/audiomoth-guide. Use `pandoc` to compile the PDF version: `pandoc guide.md -o guide.pdf --variable urlcolor=cyan`. 
 
 
 ## Quick start
@@ -93,7 +96,7 @@ The program will calculate the energy and storage used each day once you have sp
 
 * To refresh batteries and cards as infrequently as possible during multi-month deployments, use a battery/SD card combination where the battery life and card storage run out at roughly the same time, given the device's estimated energy and storage usage.
 
-* Use [this code](https://trinket.io/python/ff8aeb66e1) to estimate the number of operational days of a battery and SD card. Input card size and battery capacity (e.g., 2850 mAh for a Duracell alkaline AA battery), plus the config app's estimated and storage and energy usage. For more information on battery capacity, see the section on [batteries](#sd-cards-and-batteries).
+* Use [this code](https://trinket.io/python/ff8aeb66e1) to estimate the number of operational days of a battery and SD card. Input card size and capacity of a single battery (e.g., 2850 mAh for a Duracell alkaline AA battery), plus the config app's estimated and storage and energy usage. For more information on battery capacity, see the section on [batteries](#sd-cards-and-batteries).
 
 ### Other settings to consider
 
@@ -165,7 +168,7 @@ Install formatted microSD card in AudioMoth to be programmed.
 
 Install batteries.
 
-* Battery life depends on the type of battery you use. Check the battery's *capacity* in milliamp-hours (mAh). Lithium AA batteries have a larger capacity than typical alkaline AA batteries, but also cost more.
+* Battery life depends on the type of battery you use. Check the battery's *capacity* in milliamp-hours (mAh). Lithium AA batteries have a larger capacity than typical alkaline AA batteries, but also cost more. On the AudioMoth, the capacities do not add up--the capacity of the three batteries connected in series is equal to the capacity of any single battery.
 
 * While the AudioMoth's battery casing accepts 3 AA batteries, with some electronics expertise you can modify the device to increase its battery life. The modified bank of batteries must have the same voltage but a higher capacity in mAh. For instance, 3 D batteries have the same voltage as 3 AA batteries but a higher capacity.
 
@@ -214,7 +217,7 @@ Equipment for recording bird vocalizations is in use in this
 area within 3 hours of sunrise. This equipment may incidentally 
 record other sounds, including human conversation. By 
 proceeding during this period, you consent to being recorded. 
-Please contact Justin Kitzes at justin.kitzes@pitt.edu 
+Please contact Jane Doe at jane.doe@university.edu
 with questions about this study.
 ```
 
@@ -234,7 +237,7 @@ AudioMoths can be deployed in Ziploc baggies using buckling straps.
 
 * If possible, avoid placing AudioMoths in direct sunlight, as their enclosures may heat up.
 
-The switch and corners of the AudioMoth are sharp and can rip through a Ziploc bag. Take steps to prevent moisture getting into AudioMoth enclosure:
+The switch and corners of the AudioMoth v1.0 are sharp and can rip through a Ziploc bag. (More recent AudioMoth designs have rounded corners and an inset switch to reduce this issue.) Take steps to prevent moisture getting into AudioMoth enclosure:
 
 * Don’t transport AudioMoths within the bags, as the bags are more likely to break. Instead, keep the AudioMoth and bag separated until you are ready to hook the bag to the tree. If it is raining, bring an umbrella and transport AudioMoths within a waterproof bag.
 
@@ -298,7 +301,7 @@ For large deployments, special considerations must be taken into account. For in
 
 * Our lab has had excellent experiences purchasing AudioMoths from [RushPCB](https://rushpcb.com/). We purchased the devices pre-assembled (i.e., components connected to boards, battery pack soldiered to board), but without the firmware flashed. We found it easy to flash the firmware in our lab.
 
-* Parts of the original AudioMoth design are constantly going out of stock due to high demand. We enlisted in the help of our school's electronics shop to find new parts that were interchangeable with the out-of-stock parts.
+* Parts of the original AudioMoth design are constantly going out of stock due to high demand. We enlisted the help of our school's electronics shop to find new parts that were interchangeable with the out-of-stock parts.
 
 
 ### Pre-select recorder locations
