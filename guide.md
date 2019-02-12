@@ -1,3 +1,11 @@
+---
+geometry: margin=1in
+output:
+  pdf_document:
+    latex_engine: xelatex
+mainfont: Times
+---
+
 # AudioMoth: a practical guide to the open-source ARU
 
 This guide is intended to be comprehensive for both first-time AudioMoth users and those interested in scaling up their AudioMoth deployment. 
@@ -15,9 +23,7 @@ guide to the open-source ARU. GitHub repository:
 https://github.com/rhine3/audiomoth-guide
 ```
 
-The guide is available in both [PDF](https://github.com/rhine3/audiomoth-guide/raw/master/guide.pdf) and [Markdown](https://github.com/rhine3/audiomoth-guide/raw/master/guide.md) formats at the original repository: https://github.com/rhine3/audiomoth-guide. 
-
-Use `pandoc` to compile the PDF version from Markdown: `pandoc guide.md -o guide.pdf --variable urlcolor=cyan`. 
+The guide is available in both [PDF](https://github.com/rhine3/audiomoth-guide/raw/master/guide.pdf) and [Markdown](https://github.com/rhine3/audiomoth-guide/raw/master/guide.md) formats. Use `pandoc` to compile the PDF version from Markdown: `pandoc guide.md -o guide.pdf --variable urlcolor=cyan`. 
 
 
 
