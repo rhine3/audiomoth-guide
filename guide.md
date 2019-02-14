@@ -15,7 +15,7 @@ guide to the open-source ARU. GitHub repository:
 https://github.com/rhine3/audiomoth-guide
 ```
 
-<!-- Use `pandoc` to compile the PDF version from Markdown: `pandoc guide.md -o guide.pdf --variable urlcolor=cyan --template ./pandoc/template.latex`. -->
+<!-- Use `pandoc` to compile the PDF version from Markdown: `pandoc guide.md -o guide.pdf --variable urlcolor=cyan`. -->
 
 
 
@@ -320,7 +320,7 @@ Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](http
 
 ![Google My Maps](images/programming/google-maps-demo.gif)
 
-Upload the map file onto your GPS unit:
+#### Access the map data via your GPS unit
 
 * Download the Google My Map in KML format: click the three dots next to the map title > Export to KML/KMZ > click checkbox for "Export to a KML file"
 
@@ -338,11 +338,11 @@ When need to move a point in the field (e.g., the tree you wanted to use fell do
 
 * Practice using the crucial features of your GPS unit before you head out to the field, and bring extra batteries
 
-Access the map data on your phone via Gaia GPS:
+#### Access the map data on your phone via Gaia GPS
 
 * Download the Google My Map in KML format: click the three dots next to the map title > Export to KML/KMZ > click checkbox for "Export to a KML file"
 
-* Download "Gaia GPS" to your phone.
+* Download "Gaia GPS" to your phone and create an account.
 
 * Download the KML file on your phone, e.g., by emailing it to yourself.
 
@@ -350,15 +350,46 @@ Access the map data on your phone via Gaia GPS:
 
 * If you have an Apple phone, follow [https://help.gaiagps.com/hc/en-us/articles/115003639048-Import-GPX-and-KML-files-in-Gaia-GPS-for-iOS] these instructions.
 
-Access the map data on your phone via Google Maps (if you have cell phone service):
+In the field, keep track of your points by repositioning them as you go. You can also take pictures of the points to help you find them later, and change the color of the pinpoint on Gaia to easily identify the points where you've already deployed recorders.
 
-* Download the "Google Maps" app to your phone.
+* Click on the point on your map. A small dialogue box will pop up containing the name of the point. 
 
-* In the app, select the menu from the left side > Your places > Maps
+* Access the details about the point from this small dialogue box:
 
+    * For Android phones, click on the name of the point
+    * For Apple phones, click on the "information" icon to the right of the name of the point.
+    
+* *Reposition points:* From the point details screen, click Edit/Reposition > use your finger to click and drag the point to your current location > click Save
 
-After you return, follow these steps in reverse order to record the actual locations of your devices.
+* *Take picture:* From the point details screen, click on the "camera" icon >  accept the picture when you are satisfied with it
 
+* *Change color of waypoint:* This helps to indicate that you have completed the deployment at this spot. From the point details screen, click Edit/Reposition > tap on the current point icon in the upper corner > select a different icon (e.g. a check mark)
+
+* *Rename waypoint:* This is another way to indicate you have completed the deployment at this spot. From the point details screen, click the "pencil" button next to the name of the waypoint.
+
+After you return, export your completed locations. Note that this web-based method does NOT export photos taken at waypoints, but it IS possible to [export photos taken at waypoints on iOS](https://help.gaiagps.com/hc/en-us/articles/115003639728-Export-Tracks-Routes-and-Waypoints-to-GPX-or-KML) (with a 20-photo limit).
+
+* Ensure you are logged into your Gaia GPS account on your phone. Your points should have automatically synced to [gaiagps.com]. 
+
+* Log in to [GaiaGPS.com] with your account username and password
+
+* Click on your name in the upper-right hand corner and select "Waypoints"
+
+* Select all of your waypoints to be exported by clicking the checkbox next to each point. To export all points, click the checkbox in the top row next to the word "Title."
+
+    * If you renamed your waypoints, e.g., "New point 35," you can search for the new points using the search bar with the magnifying glass next to it.
+    
+* Click "File to Folder" > "Create New Folder" > type in a name for the folder > "Create Folder" > then click on the name of your newly created folder. This adds your points to the folder.
+
+* Click on your name in the upper-right hand corner again and select "Folders"
+
+* Select your folder and then click the "Data" button with a download icon next to it > Download as KML
+
+You can now add your updated points to your original Google Earth map. 
+
+* Open your original map: maps.google.com > Menu icon on the left side > "Your Places" > "Maps" > click your map name > "Open in My Maps"
+
+* Add a new layer for the map: "Add layer" > name layer something descriptive, e.g. "2019 Feb 07-15 deployment" > under this layer name, click "Import" > select or drag the KML file.
 
 
 ### Logistics
