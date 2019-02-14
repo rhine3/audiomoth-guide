@@ -8,14 +8,12 @@ Please submit suggestions for modifications to this guide via email at `tessa.rh
 
 
 #### Cite & share this guide
-If you find this guide helpful, please share and cite it! Citation information:
+The guide is available in both [PDF](https://github.com/rhine3/audiomoth-guide/raw/master/guide.pdf) and [Markdown](https://github.com/rhine3/audiomoth-guide/raw/master/guide.md) formats. If you find it helpful, please share and cite it! Citation information:
 ```
 Rhinehart, Tessa A (2019). AudioMoth: a practical  
 guide to the open-source ARU. GitHub repository: 
 https://github.com/rhine3/audiomoth-guide
 ```
-
-The guide is available in both [PDF](https://github.com/rhine3/audiomoth-guide/raw/master/guide.pdf) and [Markdown](https://github.com/rhine3/audiomoth-guide/raw/master/guide.md) formats. 
 
 <!-- Use `pandoc` to compile the PDF version from Markdown: `pandoc guide.md -o guide.pdf --variable urlcolor=cyan`. -->
 
@@ -39,9 +37,9 @@ The guide is available in both [PDF](https://github.com/rhine3/audiomoth-guide/r
 AudioMoths are very easy to set up out of the box. A good general introduction to the AudioMoth is available in the [AudioMoth guide](https://docs.wixstatic.com/ugd/d97703_9ac305905bdd4cdfab6aee99767a56e6.pdf) by Open Acoustic Devices. Our procedure is as follows.
 
 * Purchase necessary supplies, including batteries and SD cards
-* [Download](https://www.openacousticdevices.info/config) the timesetter/programming app 
-* Create a program as described in detail below
-* Insert batteries and SD cards into AudioMoth
+* [Download](https://www.openacousticdevices.info/config) the configuration app 
+* Use the app to create a "program" (a recording schedule for the AudioMoth to follow) as described in detail below
+* Insert batteries and microSD card into AudioMoth
 * Connect AudioMoth to computer and press green button on configuration app
 * Create housings for your AudioMoths
 * Devise a field protocol for deployment of the AudioMoths
@@ -51,11 +49,11 @@ AudioMoths are very easy to set up out of the box. A good general introduction t
 
 ## Programming
 
-The AudioMoth can be used in two modes, which are be accessed using the switch on the device. 
+Before using the AudioMoth, you will "program" it using the AudioMoth configuration app. Depending on your needs, you may customize the time of day during which the AudioMoth records, the length of each recording, and the amount of time the AudioMoth "sleeps" between each recording. The AudioMoth can be used in two modes, which are be accessed using the switch on the device. 
 
 * In DEFAULT mode, the AudioMoth will take a recording for a desired amount of time, and then will sleep for a desired amount of time. The device repeats this cycle continuously.
 
-* In CUSTOM mode, the AudioMoth also cycles through recording/sleeping, but only within "recording periods" that you configure. For instance, you could set the AudioMoth to record a minutelong file every 10 minutes for the first 6 hours after sunset. 
+* In CUSTOM mode, the AudioMoth also cycles through recording/sleeping, but only within "recording periods" that you have already configured. For instance, you could set the AudioMoth to record a minute-long file every 10 minutes for the first 6 hours after sunset. 
 
 * In summary, to make recordings immediately, or make them continuously without regard to the recording schedule programmed on the device, use the DEFAULT mode. When recording at a particular time of day is desired, use the CUSTOM mode. The device behaves differently in several other ways in these different modes, as described in the following sections.
 
@@ -63,7 +61,7 @@ To make a custom recording schedule, or to customize the length of record/sleep 
 
 ### How to create a recording schedule 
 
-Download programming app: https://www.openacousticdevices.info/config
+Download configuration app: https://www.openacousticdevices.info/config
 
 Set up to 5 recording period(s) in Coordinated Universal Time (UTC) using 24-hour clock.
 
@@ -172,7 +170,7 @@ Install batteries.
 
 * While the AudioMoth's battery casing accepts 3 AA batteries, with some electronics expertise you can modify the device to increase its battery life. The modified bank of batteries must have the same voltage but a higher capacity in mAh. For instance, 3 D batteries have the same voltage as 3 AA batteries but a higher capacity.
 
-    * The *voltage* of batteries connected in series (as they are on the AudioMoth) is equal to the number of batteries multiplied by the voltage of each battery. AudioMoth v.1 uses 3 batteries at 1.5 volts each, so the voltage of the battery bank is `3 * 1.5V = 4.5V`.
+    * The *voltage* of batteries connected in series (as they are on the AudioMoth) is equal to the number of batteries multiplied by the voltage of each battery. AudioMoth v1.0 uses 3 batteries at 1.5 volts each, so the voltage of the battery bank is `3 * 1.5V = 4.5V`.
     
     * The *capacity* of batteries in series is the capacity of any one battery in the series. (Don't mix batteries of different capacities, or new and old batteries.) For instance, a Duracell alkaline AA battery has a capacity of 2850mAh.
    
