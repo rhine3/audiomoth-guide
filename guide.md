@@ -369,9 +369,9 @@ In the field, keep track of your points by repositioning them as you go. You can
 
 After you return, export your completed locations. Note that this web-based method does NOT export photos taken at waypoints, but it IS possible to [export photos taken at waypoints on iOS](https://help.gaiagps.com/hc/en-us/articles/115003639728-Export-Tracks-Routes-and-Waypoints-to-GPX-or-KML) (with a 20-photo limit).
 
-* Ensure you are logged into your Gaia GPS account on your phone. Your points should have automatically synced to [gaiagps.com]. 
+* Ensure you are logged into your Gaia GPS account on your phone. Your points should have automatically synced to gaiagps.com. 
 
-* Log in to [GaiaGPS.com] with your account username and password
+* Log in to GaiaGPS.com with your account username and password
 
 * Click on your name in the upper-right hand corner and select "Waypoints"
 
