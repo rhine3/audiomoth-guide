@@ -314,7 +314,9 @@ Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](http
 
     * We name all of our recorder locations with an alphabetical code that gives the site of the deployments, and a numeric code that uniquely identifies the point at that site. For instance, our deployments at Powdermill Nature Reserve in the pond area are named PNRE-POND-0001, PNRE-POND-0002, etc. 
 
-* Use the "measuring" tool to find even spacing between points (press "Enter" to temporarily save a measurement before you plot your next point) 
+* Use the "measuring" tool to find even spacing between points (press "Enter" to temporarily save a measurement before you plot your next point)
+
+* If multiple groups of people will deploy recorders, decide beforehand which group will deploy at which points. You can change the color of the point marker on Google Maps to easily see the group divisions.
 
 ![Google My Maps](images/programming/google-maps-demo.gif)
 
@@ -350,6 +352,10 @@ When need to move a point in the field (e.g., the tree you wanted to use fell do
 
 In the field, keep track of your points by repositioning them as you go. You can also take pictures of the points to help you find them later, and change the color of the pinpoint on Gaia to easily identify the points where you've already deployed recorders.
 
+If multiple people are deploying recorders, it is easiest to give only one person the task of repositioning/photographing/checking off points, as you won't have to combine two maps later. Make sure to bring an external battery charger for your phone.
+
+How to modify Gaia GPS data in the field:
+
 * Click on the point on your map. A small dialogue box will pop up containing the name of the point. 
 
 * Access the details about the point from this small dialogue box:
@@ -375,7 +381,7 @@ After you return, export your completed locations. Note that this web-based meth
 
 * Select all of your waypoints to be exported by clicking the checkbox next to each point. To export all points, click the checkbox in the top row next to the word "Title."
 
-    * If you renamed your waypoints, e.g., "New point 35," you can search for the new points using the search bar with the magnifying glass next to it.
+    * If you renamed your waypoints, e.g., "New point 35," you can search for and select new points using the search bar with the magnifying glass next to it.
     
 * Click "File to Folder" > "Create New Folder" > type in a name for the folder > "Create Folder" > then click on the name of your newly created folder. This adds your points to the folder.
 
@@ -387,7 +393,7 @@ You can now add your updated points to your original Google Earth map.
 
 * Open your original map: maps.google.com > Menu icon on the left side > "Your Places" > "Maps" > click your map name > "Open in My Maps"
 
-* Add a new layer for the map: "Add layer" > name layer something descriptive, e.g. "2019 Feb 07-15 deployment" > under this layer name, click "Import" > select or drag the KML file.
+* Add a new layer for the map: "Add layer" > name layer something descriptive, e.g. "2019 Feb 7th-15th deployment" > under this layer name, click "Import" > select or drag the KML file.
 
 
 ### Logistics
