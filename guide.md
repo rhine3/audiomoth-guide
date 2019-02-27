@@ -295,7 +295,7 @@ For large deployments, special considerations must be taken into account. For in
 
 ### Purchasing AudioMoths
 
-* While GroupGets purchases are helpful for folks looking to buy on the scale of a few dozen AudioMoths for $50 each, it may be possible to get them for a smaller amount if larger volumes are ordered. Our lab has had excellent experiences purchasing AudioMoths from [RushPCB](https://rushpcb.com/). We purchased the devices pre-assembled (i.e., components connected to boards, battery pack soldiered to board), but without the firmware flashed. We found it easy to flash the firmware in our lab.
+* GroupGets purchases run by [Alasdair Davies](https://twitter.com/Al2kA) are helpful for folks looking to buy on the scale of a few dozen AudioMoths for $50 each. It may be possible to purchase AudioMoths at a lower price if larger volumes are ordered. Our lab has had excellent experiences purchasing AudioMoths from [RushPCB](https://rushpcb.com/). We purchased the devices pre-assembled (i.e., components connected to boards, battery pack soldiered to board), but without the firmware flashed. We found it easy to flash the firmware in our lab.
 
 * Parts of the original AudioMoth design are constantly going out of stock due to high demand. We enlisted the help of our school's electronics shop to find new parts that were interchangeable with the out-of-stock parts.
 
