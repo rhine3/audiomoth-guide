@@ -36,7 +36,8 @@ https://github.com/rhine3/audiomoth-guide
 
 AudioMoths are very easy to set up out of the box. A good general introduction to the AudioMoth is available in the [AudioMoth guide](https://docs.wixstatic.com/ugd/d97703_9ac305905bdd4cdfab6aee99767a56e6.pdf) by Open Acoustic Devices. Our procedure is as follows.
 
-* Purchase necessary supplies, including batteries and SD cards
+* [Purchase AudioMoths](#purchasing-audiomoths) 
+* Buy necessary supplies, including batteries and SD cards
 * [Download](https://www.openacousticdevices.info/config) the configuration app 
 * Use the app to create a "program" (a recording schedule for the AudioMoth to follow) as described in detail below
 * Insert batteries and microSD card into AudioMoth
@@ -184,7 +185,7 @@ Verify that the AudioMoth is plugged in: the date, time, and recorder informatio
 
 Press green button in the programming app. This saves the recording program to the AudioMoth, and sets the AudioMoth's internal clock to your computer's time in UTC.
 
-The AudioMoth now has a CUSTOM recording schedule. When ready to deploy, switch AudioMoth switch to CUSTOM.
+The AudioMoth now has a CUSTOM recording schedule. When ready to deploy, move AudioMoth switch to CUSTOM.
 
 Because the AudioMoth doesn’t have an onboard battery, if the batteries fall out, the programming and set time will be lost. **The AudioMoth must be reprogrammed if the batteries fall out.**
 
@@ -223,7 +224,7 @@ with questions about this study.
 
 ### Housings
 
-AudioMoths may break if exposed to water. It is necessary to house them in a secure, watertight container.
+AudioMoths may break if exposed to water, so it is necessary to house them in a secure, watertight container. This is complicated by the fact that the mic, a MEMS mic, is attached to the circuitboard. The housing must be both watertight and acoustically transparent over the mic.
 
 #### Ziploc baggies
 
@@ -241,7 +242,7 @@ The switch and corners of the AudioMoth v1.0 are sharp and can rip through a Zip
 
 * Use freezer bags, not sandwich bags.
 
-* AudioMoth v 1.0 has sharp edges and switch. Taping over the sharp parts of the AudioMoth, or judiciously applying hot glue, reduces the chance of punctures. 
+* Taping over the sharp parts of the AudioMoth, or judiciously applying hot glue, reduces the chance of punctures. 
 
     * We do not apply anything next to the mic, as we are currently unsure of the effect on the recording quality. Take care not to obstruct SD card insertion or switch movement.
 
@@ -271,7 +272,7 @@ No standardized hard case currently exists for AudioMoths, but many groups have 
 
 * Because the AudioMoth doesn’t have an onboard battery, if the batteries fall out, the programming and set time will be lost; if you have programmed a CUSTOM recording schedule it is no longer on the AudioMoth and will require reprogramming. We take care not to jostle AudioMoths in transport, and we always bring several extra programmed AudioMoths with us during deployments, just in case we drop one and the batteries fall out. 
 
-* The switch is fragile and snaps off easily. A slow, careful, and firm touch reduces disappointing switch snapping when turning the AudioMoth on and off.
+* The switch is fragile and snaps off easily. A slow, careful, and firm touch reduces disappointing switch snapping when turning the AudioMoth on and off. If your switch has snapped, it is possible to [replace the switch slider](https://www.openacousticdevices.info/support/device-support/simple-audiomoth-switch-repair).
 
 
 ### Logistics
@@ -295,7 +296,13 @@ For large deployments, special considerations must be taken into account. For in
 
 ### Purchasing AudioMoths
 
-* GroupGets purchases run by [Alasdair Davies](https://twitter.com/Al2kA) are helpful for folks looking to buy on the scale of a few dozen AudioMoths for $50 each. It may be possible to purchase AudioMoths at a lower price if larger volumes are ordered. Our lab has had excellent experiences purchasing AudioMoths from [RushPCB](https://rushpcb.com/). We purchased the devices pre-assembled (i.e., components connected to boards, battery pack soldiered to board), but without the firmware flashed. We found it easy to flash the firmware in our lab.
+Wherever you purchase AudioMoths, make sure you check what version you're purchasing. For instance, AudioMoth v1.0.0 has sharp corners and a protruding switch; v1.1.0 has rounded corners and a recessed switch to reduce bag breakage.
+
+* [GroupGets](https://groupgets.com/) purchases are run by [Alasdair Davies](https://twitter.com/Al2kA) every few months. These are helpful for folks looking to buy on the scale of a few dozen AudioMoths for $50 each. 
+
+* For those who can't wait for the next GroupGets purchase, AudioMoth is available at higher prices on [LabMaker](https://www.labmaker.org/products/audiomoth). LabMaker prices are higher due to a smaller number of devices being assembled at once. 
+
+* It may be possible to purchase AudioMoths at a lower price if larger volumes are ordered. Our lab has had excellent experiences purchasing from [RushPCB](https://rushpcb.com/). We bought the devices pre-assembled (i.e., components connected to boards, battery pack soldiered to board), but without the firmware flashed. We found it easy to flash the firmware in our lab.
 
 * Parts of the original AudioMoth design are constantly going out of stock due to high demand. We enlisted the help of our school's electronics shop to find new parts that were interchangeable with the out-of-stock parts.
 
