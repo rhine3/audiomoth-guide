@@ -2,7 +2,7 @@
 
 This guide is intended to be comprehensive for both first-time AudioMoth users and those interested in scaling up their AudioMoth deployment. 
 
-The information here complements official guides on the [Open Acoustic Devices website](https://www.openacousticdevices.info/getting-started). Some technical information about the devices themselves is excluded. We have also elaborated on each step by including images, procedures, and rules of thumb that we've created while deploying hundreds of AudioMoths.
+The information here complements official guides on the [Open Acoustic Devices website](https://www.openacousticdevices.info/getting-started) and a guide by [David Brown](https://sites.google.com/view/audiomoth/home). Some technical information about the devices themselves is excluded. We have also elaborated on each step by including images, procedures, and rules of thumb that we've created while deploying hundreds of AudioMoths. 
 
 Please submit suggestions for modifications to this guide via email at `tessa.rhinehart at pitt.edu` or via the [Issues tracker](https://github.com/rhine3/audiomoth-guide/issues) on GitHub.
 
@@ -49,7 +49,7 @@ AudioMoths are very easy to set up out of the box. A good general introduction t
 
 ## Programming
 
-Before using the AudioMoth, you will "program" it using the AudioMoth configuration app. Depending on your needs, you may customize the time of day during which the AudioMoth records, the length of each recording, and the amount of time the AudioMoth "sleeps" between each recording. The AudioMoth can be used in two modes, which are be accessed using the switch on the device. 
+Before using the AudioMoth, you will "program" it using the [Audiomoth configuration app](https://www.openacousticdevices.info/config). Depending on your needs, you may customize the time of day during which recordings are made, the length of each recording, and the amount of time the recorder "sleeps" between each recording. The AudioMoth can be used in two modes, which are be accessed using the switch on the device. 
 
 * In DEFAULT mode, the AudioMoth will take a recording for a desired amount of time, and then will sleep for a desired amount of time. The device repeats this cycle continuously.
 
