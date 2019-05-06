@@ -152,7 +152,6 @@ The other creates minute-long recordings with minute-long breaks in between, 30 
 
 
 
-
 ### SD cards and batteries
 
 Install formatted microSD card in AudioMoth to be programmed.
@@ -292,7 +291,13 @@ No standardized hard case currently exists for AudioMoths, but many groups have 
     
     * Verbally announce your presence so that all recorders that may capture your recording can hear your announcement
 
-* The first versions of the AudioMoth firmware use filenames with compact representations of date and time. To find the date and time a file was created, either look at the “last modified” time (which represents the time in UTC that the file was saved, i.e., the time at the end of the recording) or convert the filename using the instructions in the AudioMoth user manual.
+* The AudioMoth stores metadata about the recording in the "Comments" field of the EXIF metadata. This includes recording date/time, sample rate, recording duration, gain setting, battery level, and AudioMoth serial number. 
+
+   * EXIF data can be accessed via [`exiftool`](http://owl.phy.queensu.ca/~phil/exiftool/) on Mac, Linux, and Windows. Once it is installed, open a Terminal window and run `exiftool FILENAME.wav`
+
+   * If SD cards get mixed up, this information can be used to recover what unit the recording was made on.
+   
+* The first versions of the AudioMoth firmware use filenames with compact representations of the date and time that the recording started. These filenames can be converted to date & time using the instructions in the AudioMoth user manual. In contrast, the "last modified" time represents the time in UTC that the file was saved, i.e., the time in UTC when the recording ended. More recent firmware saves more easily interpreted filenames.
 
 
 ## Scaling up
