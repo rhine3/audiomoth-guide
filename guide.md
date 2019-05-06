@@ -120,8 +120,9 @@ Set amount of gain for recording.
 Decide whether onboard LED light should be on or off.
 
 * **What do the LED lights mean?**  It can be helpful to turn LED lights on for more information about your AudioMoth, though this might attract more attention from animals/curious humans. Lights are especially useful when testing the recorder. LED light meanings are:
-    * Only green = sleeping between recordings
-    * Only red = recording
+    * Blinking red = recording
+    * Blinking green = sleeping between recordings
+    * Constant red = memory card full
     * Both green & red = recording cannot be made. Causes of this include, but are not limited to,
     
         * time or program not being set (while in CUSTOM mode);
@@ -161,6 +162,8 @@ Install formatted microSD card in AudioMoth to be programmed.
 * Windows computers can natively format cards less than or equal to 32GB in size, but there are [free programs](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) that allow Windows users to format larger cards. Mac computers can format cards up to 128GB; we haven't tested anything larger.
 
 * Recording with high sampling rate (e.g., recording bats) requires SD cards with fast read/write speeds. Files produced with high sampling rate are also larger, so they use up space on the SD card more quickly. We use SanDisk Extreme 128GB for bat recordings. See the [SD card guide](https://www.openacousticdevices.info/sd-card-guide) for more information.
+
+* If the SD card is full, the AudioMoth stops saving recordings and its red light stays red constantly. It does not overwrite previous recordings.
 
 * Insert the card into the AudioMoth with the contacts facing **up**, as shown on the graphic on the front of the AudioMoth. (It won't fit any other way.)
 
