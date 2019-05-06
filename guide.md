@@ -162,7 +162,7 @@ Install formatted microSD card in AudioMoth to be programmed.
 
 * Recording with high sampling rate (e.g., recording bats) requires SD cards with fast read/write speeds. Files produced with high sampling rate are also larger, so they use up space on the SD card more quickly. We use SanDisk Extreme 128GB for bat recordings. See the [SD card guide](https://www.openacousticdevices.info/sd-card-guide) for more information.
 
-* If the SD card is full, the AudioMoth stops saving recordings and its red light stays red constantly. It does not overwrite previous recordings.
+* When an SD card fills, the unit will stop saving recordings to it, and the unit's red LED light will stay constantly lit until the SD card is removed.
 
 * Insert the card into the AudioMoth with the contacts facing **up**, as shown on the graphic on the front of the AudioMoth. (It won't fit any other way.)
 
@@ -203,6 +203,20 @@ Because the AudioMoth doesn’t have an onboard battery, if the batteries fall o
 Several different firmware versions for the AudioMoth have been created and released. Some releases are just updates, but some have special functionality; for instance, allowing the AudioMoth to trigger recording only when a sound of interest is heard.
 
 If you want to flash new firmware to your device, follow the guide [here](https://www.openacousticdevices.info/flashing).
+
+
+
+### Recording results
+
+* If a unit's microSD card is full, the unit stops saving recordings. This avoids overwriting previous recordings. In this situation, the unit's red LED light will stay constantly lit until the SD card is removed.
+
+* The AudioMoth stores metadata about the recording in the "Comments" field of the EXIF metadata. This includes recording date/time, sample rate, recording duration, gain setting, battery level, and AudioMoth serial number. 
+
+   * EXIF data can be accessed via [`exiftool`](http://owl.phy.queensu.ca/~phil/exiftool/) on Mac, Linux, and Windows. Once it is installed, open a Terminal window and run `exiftool FILENAME.wav`
+
+   * If SD cards get mixed up, this information can be used to recover what unit the recording was made on.
+   
+* The first versions of the AudioMoth firmware use filenames with compact representations of the date and time that the recording started. These filenames can be converted to date & time using the instructions in the AudioMoth user manual. In contrast, the "last modified" time represents the time in UTC that the file was saved, i.e., the time in UTC when the recording ended. More recent firmware saves more easily interpreted filenames.
 
 
 ## Deployment
@@ -290,15 +304,8 @@ No standardized hard case currently exists for AudioMoths, but many groups have 
     * Use a distinctive unnatural sound (e.g., a “triple knock” instead of a “double knock”)
     
     * Verbally announce your presence so that all recorders that may capture your recording can hear your announcement
-
-* The AudioMoth stores metadata about the recording in the "Comments" field of the EXIF metadata. This includes recording date/time, sample rate, recording duration, gain setting, battery level, and AudioMoth serial number. 
-
-   * EXIF data can be accessed via [`exiftool`](http://owl.phy.queensu.ca/~phil/exiftool/) on Mac, Linux, and Windows. Once it is installed, open a Terminal window and run `exiftool FILENAME.wav`
-
-   * If SD cards get mixed up, this information can be used to recover what unit the recording was made on.
-   
-* The first versions of the AudioMoth firmware use filenames with compact representations of the date and time that the recording started. These filenames can be converted to date & time using the instructions in the AudioMoth user manual. In contrast, the "last modified" time represents the time in UTC that the file was saved, i.e., the time in UTC when the recording ended. More recent firmware saves more easily interpreted filenames.
-
+    
+* In the case of SD Card mixups, one can use the EXIF metadata ([described above](#recording-results)) to identify which unit created each recording.
 
 ## Scaling up
 
