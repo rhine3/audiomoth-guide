@@ -286,9 +286,11 @@ The switch and corners of the AudioMoth v1.0 are sharp and can rip through a Zip
 
 #### Hard cases
 
-Unlike a hard case, Ziploc baggies don't provide much protection against small animal chewing and bison rubbing.
+Ziploc baggies do not provide protection against intrusions like chewing by curious rodents, and rubbing by deer or bison. If these are a problem in your area, consider using hard enclosures for your AudioMoths.
 
-No standardized hard case currently exists for AudioMoths, but many groups have shared their housing advice on the [WildLabs Acoustic Monitoring forum](https://www.wildlabs.net/community/group/acoustic-monitoring) and Twitter. Some examples:
+Open Acoustic Devices provides a design for a laser-cut acrylic housing [here](https://www.openacousticdevices.info/single-post/2019/04/24/AA-acrylic-laser-cut-enclosure).
+
+In addition, many groups have shared their housing advice on the [WildLabs Acoustic Monitoring forum](https://www.wildlabs.net/community/group/acoustic-monitoring) and Twitter. Some examples:
 
 * [Hand-assembled case by Heather Wood](https://www.wildlabs.net/community/thread/554)
 
