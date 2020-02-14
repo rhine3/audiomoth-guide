@@ -1,5 +1,7 @@
 # About the [AudioMoth Guide](https://github.com/rhine3/audiomoth-guide/blob/master/guide.md)
 
+[![DOI](https://zenodo.org/badge/168228984.svg)](https://zenodo.org/badge/latestdoi/168228984)
+
 The [AudioMoth](https://www.openacousticdevices.info/) is a low-cost acoustic recorder designed for wildlife and conservation applications. This practical guide is a repository for all of the tips, tricks, and procedures we, the [Kitzes Lab](http://www.kitzeslab.org/), developed in the process of deploying hundreds of AudioMoths since March 2018.
 
 
@@ -21,4 +23,8 @@ For full details, tips, and more information, continue on to [the guide](https:/
 
 ## Cite this work
 
-Rhinehart, Tessa A. (2019). AudioMoth: a practical guide to the open-source ARU. GitHub repository: https://github.com/rhine3/audiomoth-guide
+Please cite this work as the following, replacing the `<>` with the DOI as listed at the top of this document.
+
+    Rhinehart, Tessa A. (2019). AudioMoth: a practical 
+    guide to the open-source ARU. GitHub repository: 
+    https://github.com/rhine3/audiomoth-guide. DOI: <>
