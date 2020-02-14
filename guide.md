@@ -19,6 +19,16 @@ https://github.com/rhine3/audiomoth-guide
 
 <!-- Use `pandoc` to compile the PDF version from Markdown: `pandoc guide.md -o guide.pdf --variable urlcolor=cyan`. -->
 
+#### Acknowledgements
+
+This guide was improved by the experiences and feedback of Alex Rogers, Trieste Devlin, Lauren Chronister, Lauren Schricker, Abram Fleishman, and other members of the AudioMoth community. The AudioMoth was developed by [Open Acoustic Devices](https://www.openacousticdevices.info/). Its first description in academic literature can be found in:
+
+```
+Hill, Andrew P., Peter Prince, Evelyn Piña Covarrubias, and 
+C. Patrick Doncaster. “AudioMoth: Evaluation of a Smart Open 
+Acoustic Device for Monitoring Biodiversity and the Environment.” 
+Methods in Ecology and Evolution, December 3, 2017.
+```
 
 
 #### Table of contents
