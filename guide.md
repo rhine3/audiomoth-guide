@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3667065.svg)](https://doi.org/10.5281/zenodo.3667065)
+
 # AudioMoth: a practical guide to the open-source ARU
 
 This guide is intended to be comprehensive for both first-time AudioMoth users and those interested in scaling up their AudioMoth deployment. 
@@ -10,14 +12,14 @@ Please submit suggestions for modifications to this guide via creating pull requ
 #### Cite & share this guide
 If you find this guide helpful, please share it! It is available in both [PDF](https://github.com/rhine3/audiomoth-guide/raw/master/guide.pdf) and [Markdown](https://github.com/rhine3/audiomoth-guide/raw/master/guide.md) formats. 
 
-The guide is licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/), so please feel free to use and modify it with attribution to:
+The guide is licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/), so please feel free to use and modify it with attribution. It can be cited as the following, replacing the `<>` with the DOI in the image at the top of this document.
 ```
 Rhinehart, Tessa A (2019). AudioMoth: a practical  
 guide to the open-source ARU. GitHub repository: 
-https://github.com/rhine3/audiomoth-guide
+https://github.com/rhine3/audiomoth-guide. DOI: <>
 ```
 
-<!-- Use `pandoc` to compile the PDF version from Markdown: `pandoc guide.md -o guide.pdf --variable urlcolor=cyan`. -->
+If you modify this document and would like to make a .pdf version, you can use `pandoc` on the command line to compile the PDF version from Markdown: `pandoc guide.md -o guide.pdf --variable urlcolor=cyan`.
 
 #### Acknowledgements
 
