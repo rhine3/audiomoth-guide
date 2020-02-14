@@ -14,7 +14,7 @@ If you find this guide helpful, please share it! It is available in both [PDF](h
 
 The guide is licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/), so please feel free to use and modify it with attribution. It can be cited as the following, replacing the `<>` with the DOI in the image at the top of this document.
 ```
-Rhinehart, Tessa A (2019). AudioMoth: a practical  
+Rhinehart, Tessa A (2020). AudioMoth: a practical  
 guide to the open-source ARU. GitHub repository: 
 https://github.com/rhine3/audiomoth-guide. DOI: <>
 ```
