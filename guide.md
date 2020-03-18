@@ -52,7 +52,7 @@ AudioMoths are very easy to set up out of the box. A good general introduction t
 
 * [Purchase AudioMoths](#purchasing-audiomoths) 
 * Buy necessary supplies, including batteries and SD cards
-* [Download](https://www.openacousticdevices.info/config) the configuration app 
+* [Download](https://www.openacousticdevices.info/applications) the configuration app 
 * Use the app to create a "program" (a recording schedule for the AudioMoth to follow) as described in detail below
 * Insert batteries and microSD card into AudioMoth
 * Connect AudioMoth to computer and press green button on configuration app
@@ -64,7 +64,7 @@ AudioMoths are very easy to set up out of the box. A good general introduction t
 
 ## Programming
 
-Before using the AudioMoth, you will "program" it using the [Audiomoth configuration app](https://www.openacousticdevices.info/config). Depending on your needs, you may customize the time of day during which recordings are made, the length of each recording, and the amount of time the recorder "sleeps" between each recording. The AudioMoth can be used in two modes, which are be accessed using the switch on the device. 
+Before using the AudioMoth, you will "program" it using the [Audiomoth configuration app](https://www.openacousticdevices.info/applications). Depending on your needs, you may customize the time of day during which recordings are made, the length of each recording, and the amount of time the recorder "sleeps" between each recording. The AudioMoth can be used in two modes, which are be accessed using the switch on the device. 
 
 * In DEFAULT mode, the AudioMoth will take a recording for a desired amount of time, and then will sleep for a desired amount of time. The device repeats this cycle continuously.
 
@@ -79,7 +79,7 @@ Note that the switch is fragile and snaps off easily. A slow, careful, and firm 
 
 ### How to create a recording schedule 
 
-Download configuration app: https://www.openacousticdevices.info/config
+Download configuration app: https://www.openacousticdevices.info/applications
 
 Set up to 5 recording period(s) in Coordinated Universal Time (UTC) using 24-hour clock.
 
