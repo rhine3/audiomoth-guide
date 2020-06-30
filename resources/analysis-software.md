@@ -4,12 +4,13 @@ A variety of free and paid acoustic analysis software is available. Software pac
 
 This list is not necessarily a recommendation or a guarantee of quality of the software or analysis techniques. I have not used all of the software below. Some I use frequently, whereas some I haven't found to be useful or accurate for my purposes. You should always judge the performance of an analysis technique based on *your* dataset, as different recording conditions or species distributions can result in starkly different performance.
 
-* **Manual review**: listening to recordings or looking at spectrograms
+* **Manual review and organization**: organizing, listening to, or looking at spectrograms of recordings
     * [Audacity](https://www.audacityteam.org/) (free) - simple, lightweight listening and spectrogram viewing and comparison
-    * [AviaNZ](http://www.avianz.net/index.php) (free)
+    * [AviaNZ](http://www.avianz.net/index.php) (free) - graphical user interface for organizing and analyzing recordings
     * [Raven Lite](https://ravensoundsoftware.com/software/raven-lite/) (free) - listening and spectrogram viewing; tools to manually select and annotate recordings
     * [WarbleR](https://marce10.github.io/warbleR/) (free) - multipurpose R package
-    * [GlassOFire](http://www.oldbird.org/glassofire.htm) (free) - Windows software for nocturnal flight call review and sorting
+    * [GlassOFire](http://www.oldbird.org/glassofire.htm) (free) - Windows software for avian nocturnal flight call review and sorting
+    * [Vesper](https://github.com/HaroldMills/Vesper) (free) - web-based application for avian nocturnal flight call analysis; also implements BirdVoxDetect, BirdVoxClassify, and others (see below)
 * **Detection**: locating potential sounds of interest in recordings
     * [AviaNZ](http://www.avianz.net/index.php) (free)
     * [BirdVoxDetect](https://github.com/BirdVox/birdvoxdetect) (free) - machine learning-based detection for nocturnal flight calls
