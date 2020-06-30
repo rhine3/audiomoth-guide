@@ -21,6 +21,7 @@ You should always judge the performance of an analysis technique by its performa
    * [WarbleR](https://marce10.github.io/warbleR/) (free) - highly multipurpose R package
 * **Detection**: locating potential sounds of interest in recordings. Methods include supervised machine learning, amplitude-based detection, and clustering to group sounds into similar-sounding clusters (e.g. unsupervised machine learning)
    * [AviaNZ](http://www.avianz.net/index.php) (free) - capable of clustering
+   * [BatDetect](https://github.com/macaodha/batdetect) (free) - bat detection in full-spectrum (i.e., not zero-crossing) recordings
    * [BirdVoxDetect](https://github.com/BirdVox/birdvoxdetect) (free) - machine learning-based detection for nocturnal flight calls
    * [Kaleidescope](https://www.wildlifeacoustics.com/products/kaleidoscope-pro) (paid) - capable of clustering and amplitude-based detection
    * [PAMguard](https://www.pamguard.org/) - detect vocalizations and clicks; geared toward cetacean monitoring
