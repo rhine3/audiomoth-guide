@@ -23,6 +23,7 @@ You should always judge the performance of an analysis technique by its performa
    * [AviaNZ](http://www.avianz.net/index.php) (free) - capable of clustering
    * [BirdVoxDetect](https://github.com/BirdVox/birdvoxdetect) (free) - machine learning-based detection for nocturnal flight calls
    * [Kaleidescope](https://www.wildlifeacoustics.com/products/kaleidoscope-pro) (paid) - capable of clustering and amplitude-based detection
+   * [PAMguard](https://www.pamguard.org/) - detect vocalizations and clicks; geared toward cetacean monitoring
    * [Raven Pro](https://ravensoundsoftware.com/software/raven-pro) (paid) - configurable band-limited energy detection (amplitude-based)
    * [SoundSort](https://github.com/macster110/aipam) (free) - capable of clustering similar pre-detected clips
    * [WarbleR](https://marce10.github.io/warbleR/) (free)
