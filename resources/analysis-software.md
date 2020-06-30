@@ -36,7 +36,7 @@ You should always judge the performance of an analysis technique by its performa
    * [BirdVoxClassify](https://github.com/BirdVox/birdvoxclassify) (free) - pre-created nocturnal flight call classifiers for a limited number of North American bird species
    * [Kaleidescope](https://www.wildlifeacoustics.com/products/kaleidoscope-pro) (paid) - pre-created bat classification
    * [OpenSoundscape](https://github.com/ktizeslab/opensoundscape) (free, in development) - pulse rate analysis of repeating calls; features to create own neural network classifiers are in development
-* **Measuring acoustic parameters**: recording metrics for soundscapes or individual calls
+* **Measuring acoustic parameters**: acoustic metrics for soundscapes or individual sounds
    * [PAMr](https://github.com/TaikiSan21/PAMr) (free) - measure acoustic parameters
    * [Raven Lite](https://ravensoundsoftware.com/software/raven-lite/) (free) - basic measurements of acoustic properties through GUI annotation
    * [Raven Pro](https://ravensoundsoftware.com/software/raven-pro) (paid) - advanced measurements of acoustic properties
