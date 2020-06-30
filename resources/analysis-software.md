@@ -2,9 +2,9 @@
 
 A variety of free and paid software is available for bioacoustic analyses. Software packages vary from complete graphical interfaces, to command-line interfaces, to utility libraries that can be used to create analysis pipelines in Python, R, or other programming languages. 
 
-This list is not necessarily a recommendation or a guarantee of quality of the software or analysis techniques. I have not used all of the software below. Some I use frequently, whereas some I haven't found to be useful or accurate for my purposes. 
+The inclusion criteria for this list are (1) that the software is targeted to or widely used by bioacoustics researchers, and (2) that the software either is stable, is currently in active development, or was recently released. This list is not necessarily a recommendation or a guarantee of quality of particular software packages or analysis techniques. I have not used all of the software below. Some I use frequently and can't live without, whereas some I haven't found to be useful or accurate for my purposes.
 
-You should always judge the performance of an analysis technique based on *your* dataset, as different recording conditions or species distributions can result in starkly different performance of analysis techniques.
+You should always judge the performance of an analysis technique by its performance on *your* dataset. Analysis techniques are often published along with metrics to describe their performance, such as accuracy, precision, and recall. However, different recording conditions or different distributions of sounds present in your dataset can result in starkly different performance of the same analysis technique.
 
 * **Manual review and organization**: organizing, listening to, or looking at spectrograms of recordings
     * [Audacity](https://www.audacityteam.org/) (free) - simple, lightweight listening and spectrogram viewing and comparison
@@ -28,5 +28,6 @@ You should always judge the performance of an analysis technique based on *your*
     * [OpenSoundscape](https://github.com/ktizeslab/opensoundscape) (free, in development) - pulse rate analysis of repeating calls; features to create own neural network classifiers are in developent
 * **Measuring acoustic parameters**: recording metrics for soundscapes or individual calls
     * [soundecology](https://cran.r-project.org/web/packages/soundecology/vignettes/intro.html) (free) - calculate soundscape-wide acoustic indices
-    * [warbleR](https://marce10.github.io/warbleR/) (free) - measure acoustic signal structure
-    * [Raven Lite](https://ravensoundsoftware.com/software/raven-lite/) (free) and [Raven Pro](https://ravensoundsoftware.com/software/raven-pro) (paid) - measure acoustic signal structure
+    * [warbleR](https://marce10.github.io/warbleR/) (free) - offers variety of measurements acoustic signal structure
+    * [Raven Lite](https://ravensoundsoftware.com/software/raven-lite/) (free) - basic measurements of acoustic properties through GUI annotation
+    * [Raven Pro](https://ravensoundsoftware.com/software/raven-pro) (paid) - advanced measurements of acoustic properties
