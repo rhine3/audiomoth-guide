@@ -12,31 +12,42 @@ You should always judge the performance of an analysis technique by its performa
    * [SonicVisualizer](https://www.sonicvisualiser.org/) (free) - spectrogram visualization
 * **Manual review and annotation**: bioacoustics-focused software for organizing and annotating recordings, usually also including features for listening to recordings and generating spectrograms
    * [AviaNZ](http://www.avianz.net/index.php) (free) - graphical user interface for organizing and analyzing recordings
+   * [BatScope](https://www.wsl.ch/en/services-and-products/software-websites-and-apps/batscope-4.html) (free) - manage, sort, view, and play databases of recordings, geared toward bats
    * [DetEdit](https://github.com/MarineBioAcousticsRC/DetEdit) (free) - visualize and annotate detections
    * [GlassOFire](http://www.oldbird.org/glassofire.htm) (free) - Windows software for avian nocturnal flight call review and sorting
+   * [Luscinia](https://rflachlan.github.io/Luscinia/) (free) - database management and recording archiving
+   * [Praat](https://www.fon.hum.uva.nl/praat/) (free) - annotation, especially for individual song analysis (software originally intended for human phonetics)
    * [Raven Lite](https://ravensoundsoftware.com/software/raven-lite/) (free) - listening and spectrogram viewing; tools to manually select and annotate recordings
+   * [seewave](http://rug.mnhn.fr/seewave/) (free) - R package to display spectrograms
    * [SoundSort](https://github.com/macster110/aipam) (free) - visualize, cluster, and annotate recordings, then export these annotations
+   * [Tadarida-L](https://github.com/YvesBas/Tadarida-L) (free) - labeling interface of 3-part "Tadarida" software
    * [Triton](http://cetus.ucsd.edu/technologies_Software.html) (free) - condense/annotate very long recordings using Long Term Spectral Averages
-   * [Vesper](https://github.com/HaroldMills/Vesper) (free, in development) - web-based application for avian nocturnal flight call analysis; also implements BirdVoxDetect,     BirdVoxClassify, and others (see below)
-   * [WarbleR](https://marce10.github.io/warbleR/) (free) - highly multipurpose R package
+   * [Vesper](https://github.com/HaroldMills/Vesper) (free, in development) - web-based application for avian nocturnal flight call analysis; also implements BirdVoxDetect, BirdVoxClassify, and others (see below)
+   * [warbleR](https://marce10.github.io/warbleR/) (free) - highly multipurpose R package
 * **Detection**: locating potential sounds of interest in recordings. Methods include supervised machine learning, amplitude-based detection, and clustering to group sounds into similar-sounding clusters (e.g. unsupervised machine learning)
    * [AviaNZ](http://www.avianz.net/index.php) (free) - capable of clustering
    * [BatDetect](https://github.com/macaodha/batdetect) (free) - bat detection in full-spectrum (i.e., not zero-crossing) recordings
    * [BirdVoxDetect](https://github.com/BirdVox/birdvoxdetect) (free) - machine learning-based detection for nocturnal flight calls
-   * [Kaleidescope](https://www.wildlifeacoustics.com/products/kaleidoscope-pro) (paid) - capable of clustering and amplitude-based detection
+   * [Kaleidoscope](https://www.wildlifeacoustics.com/products/kaleidoscope-pro) (paid, 15-day free trial) - capable of clustering and amplitude-based detection
    * [PAMguard](https://www.pamguard.org/) - detect vocalizations and clicks; geared toward cetacean monitoring
    * [Raven Pro](https://ravensoundsoftware.com/software/raven-pro) (paid) - configurable band-limited energy detection (amplitude-based)
+   * [seewave](http://rug.mnhn.fr/seewave/) (free) - compute cross-correlation and signal envelopes
    * [SoundSort](https://github.com/macster110/aipam) (free) - capable of clustering similar pre-detected clips
+   * [Tadarida-D](https://github.com/YvesBas/Tadarida-D) (free) - detection and feature extraction for 3-part "Tadarida" software
    * [WarbleR](https://marce10.github.io/warbleR/) (free)
 * **Classification**: predict the identity of sounds captured in recordings, e.g. training a convolutional neural network to identify bird species in a recording
    * [ARBIMON](https://arbimon.sieve-analytics.com/) - web-based interface for creating own classifiers
    * [AviaNZ](http://www.avianz.net/index.php) (free) - configure your own "filters" for certain species or download pre-configured filters
-   * [banter](https://github.com/EricArcher/banter) (free) - create your own hierarchical acoustic classifiers
+   * [BatScope](https://www.wsl.ch/en/services-and-products/software-websites-and-apps/batscope-4.html) (free) - classify bat recordings
+   * [Banter](https://github.com/EricArcher/banter) (free) - create your own hierarchical acoustic classifiers
    * [BirdNET](https://github.com/kahst/BirdNET) (free) - pre-created neural network classifiers for common birds of North America and Europe
    * [BirdVoxClassify](https://github.com/BirdVox/birdvoxclassify) (free) - pre-created nocturnal flight call classifiers for a limited number of North American bird species
-   * [Kaleidescope](https://www.wildlifeacoustics.com/products/kaleidoscope-pro) (paid) - pre-created bat classification
+   * [Kaleidoscope](https://www.wildlifeacoustics.com/products/kaleidoscope-pro) (paid, 15-day free trial) - pre-created bat classification
    * [OpenSoundscape](https://github.com/ktizeslab/opensoundscape) (free, in development) - pulse rate analysis of repeating calls; features to create own neural network classifiers are in development
+   * [SonoBat](https://sonobat.com/) (paid) - classification of bat calls
+   * [Tadarida-C](https://github.com/YvesBas/Tadarida-C) (free) - discriminant analysis-based classification; part of 3-part "Tadarida" software
 * **Measuring acoustic parameters**: acoustic metrics for soundscapes or individual sounds
+   * [Luscinia](https://rflachlan.github.io/Luscinia/) (free) - wide variety of acoustic signal analyses
    * [PAMr](https://github.com/TaikiSan21/PAMr) (free) - measure acoustic parameters
    * [Raven Lite](https://ravensoundsoftware.com/software/raven-lite/) (free) - basic measurements of acoustic properties through GUI annotation
    * [Raven Pro](https://ravensoundsoftware.com/software/raven-pro) (paid) - advanced measurements of acoustic properties
