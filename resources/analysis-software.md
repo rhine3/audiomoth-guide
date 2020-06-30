@@ -13,21 +13,20 @@ You should always judge the performance of an analysis technique based on *your*
     * [WarbleR](https://marce10.github.io/warbleR/) (free) - multipurpose R package
     * [GlassOFire](http://www.oldbird.org/glassofire.htm) (free) - Windows software for avian nocturnal flight call review and sorting
     * [Vesper](https://github.com/HaroldMills/Vesper) (free) - web-based application for avian nocturnal flight call analysis; also implements BirdVoxDetect, BirdVoxClassify, and others (see below)
-* **Detection**: locating potential sounds of interest in recordings
-    * [AviaNZ](http://www.avianz.net/index.php) (free)
+* **Detection**: locating potential sounds of interest in recordings. Methods include supervised machine learning, amplitude-based detection, and clustering to group sounds into similar-sounding clusters (e.g. unsupervised machine learning)
+    * [AviaNZ](http://www.avianz.net/index.php) (free) - capable of clustering
     * [BirdVoxDetect](https://github.com/BirdVox/birdvoxdetect) (free) - machine learning-based detection for nocturnal flight calls
-    * [Kaleidescope](https://www.wildlifeacoustics.com/products/kaleidoscope-pro) (paid)
-    * [Raven Pro](https://ravensoundsoftware.com/software/raven-pro) (paid) - configurable amplitude triggering-based detection
+    * [Kaleidescope](https://www.wildlifeacoustics.com/products/kaleidoscope-pro) (paid) - capable of clustering and amplitude-based detection
+    * [Raven Pro](https://ravensoundsoftware.com/software/raven-pro) (paid) - configurable band-limited energy detection (amplitude-based)
     * [WarbleR](https://marce10.github.io/warbleR/) (free)
-* **Clustering**: grouping sounds into similar-sounding "clusters", which can then be manually annotated
-    * [AviaNZ](http://www.avianz.net/index.php) (free)
-    * [Kaleidescope](https://www.wildlifeacoustics.com/products/kaleidoscope-pro) (paid)
-* **Machine learning-based classification**: using a trained machine learning algorithm to predict the identity of sounds captured in recordings, e.g. identifying bird species in a recording
+* **Classification**: predict the identity of sounds captured in recordings, e.g. training a convolutional neural network to identify bird species in a recording
     * [ARBIMON](https://arbimon.sieve-analytics.com/) - web-based interface for creating own classifiers
-    * [BirdNET](https://github.com/kahst/BirdNET) (free) - pre-created classifiers for birds of North America and Europe
-    * [BirdVoxClassify](https://github.com/BirdVox/birdvoxclassify) (free) - pre-created nocturnal flight call classifiers for North American species
+    * [AviaNZ](http://www.avianz.net/index.php) (free) - user can configure "filters" for certain species
+    * [BirdNET](https://github.com/kahst/BirdNET) (free) - pre-created neural network classifiers for common birds of North America and Europe
+    * [BirdVoxClassify](https://github.com/BirdVox/birdvoxclassify) (free) - pre-created nocturnal flight call classifiers for a limited number of North American bird species
     * [Kaleidescope](https://www.wildlifeacoustics.com/products/kaleidoscope-pro) (paid) - pre-created bat classification
-    * [OpenSoundscape](https://github.com/ktizeslab/opensoundscape) (free, in development) - create own classifiers
-* **Measuring acoustic parameters**: soundscape metrics
+    * [OpenSoundscape](https://github.com/ktizeslab/opensoundscape) (free, in development) - pulse rate analysis of repeating calls; features to create own neural network classifiers are in developent
+* **Measuring acoustic parameters**: recording metrics for soundscapes or individual calls
     * [soundecology](https://cran.r-project.org/web/packages/soundecology/vignettes/intro.html) (free) - calculate soundscape-wide acoustic indices
     * [warbleR](https://marce10.github.io/warbleR/) (free) - measure acoustic signal structure
+    * [Raven Lite](https://ravensoundsoftware.com/software/raven-lite/) (free) and [Raven Pro](https://ravensoundsoftware.com/software/raven-pro) (paid)
