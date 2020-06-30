@@ -17,7 +17,7 @@ You should always judge the performance of an analysis technique by its performa
    * [Raven Lite](https://ravensoundsoftware.com/software/raven-lite/) (free) - listening and spectrogram viewing; tools to manually select and annotate recordings
    * [SoundSort](https://github.com/macster110/aipam) (free) - visualize, cluster, and annotate recordings, then export these annotations
    * [Triton](http://cetus.ucsd.edu/technologies_Software.html) (free) - condense/annotate very long recordings using Long Term Spectral Averages
-   * [Vesper](https://github.com/HaroldMills/Vesper) (free) - web-based application for avian nocturnal flight call analysis; also implements BirdVoxDetect,     BirdVoxClassify, and others (see below)
+   * [Vesper](https://github.com/HaroldMills/Vesper) (free, in development) - web-based application for avian nocturnal flight call analysis; also implements BirdVoxDetect,     BirdVoxClassify, and others (see below)
    * [WarbleR](https://marce10.github.io/warbleR/) (free) - highly multipurpose R package
 * **Detection**: locating potential sounds of interest in recordings. Methods include supervised machine learning, amplitude-based detection, and clustering to group sounds into similar-sounding clusters (e.g. unsupervised machine learning)
    * [AviaNZ](http://www.avianz.net/index.php) (free) - capable of clustering
