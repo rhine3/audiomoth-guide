@@ -1,8 +1,10 @@
-# Software for analysis of acoustic recordings
+# Bioacoustics software
 
-A variety of free and paid acoustic analysis software is available. Software packages vary from complete graphical interfaces, to command-line interfaces, to utility libraries that can be used to create analysis pipelines in Python, R, or other programming languages. 
+A variety of free and paid software is available for bioacoustic analyses. Software packages vary from complete graphical interfaces, to command-line interfaces, to utility libraries that can be used to create analysis pipelines in Python, R, or other programming languages. 
 
-This list is not necessarily a recommendation or a guarantee of quality of the software or analysis techniques. I have not used all of the software below. Some I use frequently, whereas some I haven't found to be useful or accurate for my purposes. You should always judge the performance of an analysis technique based on *your* dataset, as different recording conditions or species distributions can result in starkly different performance.
+This list is not necessarily a recommendation or a guarantee of quality of the software or analysis techniques. I have not used all of the software below. Some I use frequently, whereas some I haven't found to be useful or accurate for my purposes. 
+
+You should always judge the performance of an analysis technique based on *your* dataset, as different recording conditions or species distributions can result in starkly different performance of analysis techniques.
 
 * **Manual review and organization**: organizing, listening to, or looking at spectrograms of recordings
     * [Audacity](https://www.audacityteam.org/) (free) - simple, lightweight listening and spectrogram viewing and comparison
