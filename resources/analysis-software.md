@@ -29,4 +29,4 @@ You should always judge the performance of an analysis technique based on *your*
 * **Measuring acoustic parameters**: recording metrics for soundscapes or individual calls
     * [soundecology](https://cran.r-project.org/web/packages/soundecology/vignettes/intro.html) (free) - calculate soundscape-wide acoustic indices
     * [warbleR](https://marce10.github.io/warbleR/) (free) - measure acoustic signal structure
-    * [Raven Lite](https://ravensoundsoftware.com/software/raven-lite/) (free) and [Raven Pro](https://ravensoundsoftware.com/software/raven-pro) (paid)
+    * [Raven Lite](https://ravensoundsoftware.com/software/raven-lite/) (free) and [Raven Pro](https://ravensoundsoftware.com/software/raven-pro) (paid) - measure acoustic signal structure
