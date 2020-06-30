@@ -479,7 +479,7 @@ You can now add your updated points to your original Google Earth map.
 
 ## Data analysis
 
-There is a variety of free and paid acoustic analysis software available (listed below). Software varies from complete graphical interfaces, to command-line interfaces, to utility libraries that can be used to create analysis pipelines in Python, R, or other programming languages. 
+A variety of free and paid acoustic analysis software is available (listed below). Software varies from complete graphical interfaces, to command-line interfaces, to utility libraries that can be used to create analysis pipelines in Python, R, or other programming languages. 
 
 These recommendations are not guarantees of quality of the software or analysis techniques -- this is just meant to be a list of currently used softwares. I have not used them all, and some I haven't found to be useful or accurate for my purposes. You should always judge the performance of an analysis technique based on *your* dataset, as different recording conditions or species distributions can result in starkly different performance.
 
