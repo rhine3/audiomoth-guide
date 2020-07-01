@@ -12,6 +12,7 @@ You should always judge the performance of an analysis method by its performance
 * [Adobe Audition](https://www.adobe.com/products/audition.html) (paid) - geared toward sound editing
 * [**Audacity**](https://www.audacityteam.org/) (free) - simple, lightweight listening and spectrogram viewing, comparison, and manipulation
 * [GoldWave](https://www.goldwave.com/) (free) - view and manipulate audio
+* [Reaper](https://www.reaper.fm/) (free) - spectrogram visualization; enables Python coding within 
 * [SonicVisualizer](https://www.sonicvisualiser.org/) (free) - spectrogram visualization
 
 **Manual review and annotation**: bioacoustics-focused software for organizing and annotating recordings, usually also including features for listening to recordings and generating spectrograms.
