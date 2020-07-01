@@ -50,7 +50,7 @@ You should always judge the performance of an analysis method by its performance
 * [monitoR](http://www.uvm.edu/rsenr/vtcfwru/R/?Page=monitoR/monitoR.htm) (free) - R package for automated detection via template matching 
 * [PAMguard](https://www.pamguard.org/) - detect vocalizations and clicks; geared toward cetacean monitoring
 * [**Raven Pro**](https://ravensoundsoftware.com/software/raven-pro) (paid) - configurable band-limited energy detection (amplitude-based)
-* [scikit-maad](https://github.com/scikit-maad/scikit-maad) (free) - Python package including detection functionality
+* [scikit-maad](https://github.com/scikit-maad/scikit-maad) (free) - Python package including clustering functionality
 * [seewave](http://rug.mnhn.fr/seewave/) (free) - compute cross-correlation and signal envelopes
 * [SoundSort](https://github.com/macster110/aipam) (free) - capable of clustering similar pre-detected clips
 * [Tadarida-D](https://github.com/YvesBas/Tadarida-D) (free) - detection and feature extraction for 3-part "Tadarida" software
@@ -82,6 +82,7 @@ You should always judge the performance of an analysis method by its performance
 * [PAMr](https://github.com/TaikiSan21/PAMr) (free) - measure acoustic parameters
 * [Raven Lite](https://ravensoundsoftware.com/software/raven-lite/) (free) - basic measurements of acoustic properties through GUI annotation
 * [Raven Pro](https://ravensoundsoftware.com/software/raven-pro) (paid) - advanced measurements of acoustic properties
+* [scikit-maad](https://github.com/scikit-maad/scikit-maad) (free) - Python package that can compute ecoacoustic alpha indices
 * [soundecology](https://cran.r-project.org/web/packages/soundecology/vignettes/intro.html) (free) - calculate soundscape-wide acoustic indices
 * [**warbleR**](https://marce10.github.io/warbleR/) (free) - offers variety of measurements acoustic signal structure and timing
 
