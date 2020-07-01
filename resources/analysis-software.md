@@ -39,10 +39,12 @@ You should always judge the performance of an analysis method by its performance
 * [**Avisoft-SASLab Pro**](http://www.avisoft.com/sound-analysis/) (paid) - automated detection
 * [BatExplorer](https://www.batlogger.com/en/products/batexplorer/) (free and paid versions) - bat call detection
 * [BatDetect](https://github.com/macaodha/batdetect) (free) - bat detection in full-spectrum (i.e., not zero-crossing) recordings
+* [bioacoustics](https://github.com/wavx/bioacoustics/) (free) - R package for sound filtering, automated detection, and extraction of acoustic features
 * [BirdVoxDetect](https://github.com/BirdVox/birdvoxdetect) (free) - machine learning-based detection for nocturnal flight calls
 * [gibbonR](https://github.com/DenaJGibbon/gibbonR-package) (free) - R package with automated detection and segmentation algorithms
 * [Ishmael](http://bioacoustics.us/ishmael.html) (free) - automated detection, geared towards marine wildlife
 * [**Kaleidoscope**](https://www.wildlifeacoustics.com/products/kaleidoscope-pro) (paid, 15-day free trial) - capable of clustering and amplitude-based detection
+* [monitoR](http://www.uvm.edu/rsenr/vtcfwru/R/?Page=monitoR/monitoR.htm) (free) - R package for automated detection via template matching 
 * [PAMguard](https://www.pamguard.org/) - detect vocalizations and clicks; geared toward cetacean monitoring
 * [**Raven Pro**](https://ravensoundsoftware.com/software/raven-pro) (paid) - configurable band-limited energy detection (amplitude-based)
 * [seewave](http://rug.mnhn.fr/seewave/) (free) - compute cross-correlation and signal envelopes
