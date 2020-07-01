@@ -12,7 +12,7 @@ Please submit suggestions for modifications to this guide via creating pull requ
 #### Cite & share this guide
 If you find this guide helpful, please share it! It is available in both [PDF](https://github.com/rhine3/audiomoth-guide/raw/master/guide.pdf) and [Markdown](https://github.com/rhine3/audiomoth-guide/raw/master/guide.md) formats. 
 
-The guide is licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/), so please feel free to use and modify it with attribution. It can be cited as the following, replacing the `<>` with the DOI in the image at the top of this document.
+The guide and the other materials in this repository are licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/). Please feel free to use and modify them with attribution. Please cite as follows, replacing the `<>` with the DOI in the image at the top of this document.
 ```
 Rhinehart, Tessa A (2020). AudioMoth: a practical  
 guide to the open-source ARU. GitHub repository: 
