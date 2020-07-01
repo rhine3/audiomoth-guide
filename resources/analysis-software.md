@@ -9,15 +9,20 @@ This list is not necessarily a recommendation or a guarantee of quality of parti
 You should always judge the performance of an analysis method by its performance on *your* dataset. Analysis methods are often published along with metrics to describe their performance, such as accuracy, precision, and recall. However, different recording conditions or different distributions of sounds present in your dataset can result in starkly different performance of the same method.
 
 **Listening and viewing**: general-purpose, non-bioacoustics software for listening to recordings and generating spectrograms.
+* [Adobe Audition](https://www.adobe.com/products/audition.html) (paid) - geared toward sound editing
 * [**Audacity**](https://www.audacityteam.org/) (free) - simple, lightweight listening and spectrogram viewing, comparison, and manipulation
 * [GoldWave](https://www.goldwave.com/) (free) - view and manipulate audio
 * [SonicVisualizer](https://www.sonicvisualiser.org/) (free) - spectrogram visualization
 
 **Manual review and annotation**: bioacoustics-focused software for organizing and annotating recordings, usually also including features for listening to recordings and generating spectrograms.
+* [Anabat Insight](https://www.titley-scientific.com/us/anabat-insight.html) (free and paid versions) - recording organization, annotation, and mapping
 * [AviaNZ](http://www.avianz.net/index.php) (free) - graphical user interface for organizing and analyzing recordings
+* [BatExplorer](https://www.batlogger.com/en/products/batexplorer/) (free and paid versions) - organize and annotate bat recordings
 * [BatScope](https://www.wsl.ch/en/services-and-products/software-websites-and-apps/batscope-4.html) (free) - manage, sort, view, and play databases of recordings, geared toward bats
 * [DetEdit](https://github.com/MarineBioAcousticsRC/DetEdit) (free) - visualize and annotate detections
 * [GlassOFire](http://www.oldbird.org/glassofire.htm) (free) - Windows software for avian nocturnal flight call review and sorting
+* [Ishmael](http://bioacoustics.us/ishmael.html) (free) - annotation and real-time recording
+* [Koe Bioacoustics Software](https://koe.io.ac.nz/) (free) - web-based acoustic data management platform geared towards analysis of small acoustic units
 * [Luscinia](https://rflachlan.github.io/Luscinia/) (free) - database management and recording archiving
 * [Praat](https://www.fon.hum.uva.nl/praat/) (free) - annotation, especially for individual song analysis (software originally intended for human phonetics)
 * [**Raven Lite**](https://ravensoundsoftware.com/software/raven-lite/) (free) - listening and spectrogram viewing; tools to manually select and annotate recordings
@@ -29,9 +34,12 @@ You should always judge the performance of an analysis method by its performance
 * [warbleR](https://marce10.github.io/warbleR/) (free) - highly multipurpose R package
 
 **Detection**: locating potential sounds of interest in recordings. Methods include supervised machine learning, amplitude-based detection, and clustering to group sounds into similar-sounding clusters (e.g. unsupervised machine learning)
+* [Anabat Insight](https://www.titley-scientific.com/us/anabat-insight.html) (free and paid versions) - bat call detection and custom filtering in full-spectrum and zero-crossing recordings
 * [AviaNZ](http://www.avianz.net/index.php) (free) - capable of clustering
+* [BatExplorer](https://www.batlogger.com/en/products/batexplorer/) (free and paid versions) - bat call detection
 * [BatDetect](https://github.com/macaodha/batdetect) (free) - bat detection in full-spectrum (i.e., not zero-crossing) recordings
 * [BirdVoxDetect](https://github.com/BirdVox/birdvoxdetect) (free) - machine learning-based detection for nocturnal flight calls
+* [Ishmael](http://bioacoustics.us/ishmael.html) (free) - automated detection, geared towards marine wildlife
 * [**Kaleidoscope**](https://www.wildlifeacoustics.com/products/kaleidoscope-pro) (paid, 15-day free trial) - capable of clustering and amplitude-based detection
 * [PAMguard](https://www.pamguard.org/) - detect vocalizations and clicks; geared toward cetacean monitoring
 * [**Raven Pro**](https://ravensoundsoftware.com/software/raven-pro) (paid) - configurable band-limited energy detection (amplitude-based)
@@ -41,21 +49,29 @@ You should always judge the performance of an analysis method by its performance
 * [warbleR](https://marce10.github.io/warbleR/) (free)
 
 **Classification**: predict the identity of sounds captured in recordings, e.g. training a convolutional neural network to identify bird species in a recording
+* [Anabat Insight](https://www.titley-scientific.com/us/anabat-insight.html) (free and paid versions) - contains open-source BatClassify classifier and can be used with other algorithms
 * [ARBIMON](https://arbimon.sieve-analytics.com/) - web-based interface for creating own classifiers
 * [AviaNZ](http://www.avianz.net/index.php) (free) - configure your own "filters" for certain species or download pre-configured filters
+* [BatExplorer](https://www.batlogger.com/en/products/batexplorer/) (free and paid versions) - bat classification
 * [BatScope](https://www.wsl.ch/en/services-and-products/software-websites-and-apps/batscope-4.html) (free) - classify bat recordings
 * [Banter](https://github.com/EricArcher/banter) (free) - create your own hierarchical acoustic classifiers
 * [BirdNET](https://github.com/kahst/BirdNET) (free) - pre-created neural network classifiers for common birds of North America and Europe
 * [BirdVoxClassify](https://github.com/BirdVox/birdvoxclassify) (free) - pre-created nocturnal flight call classifiers for a limited number of North American bird species
 * [Kaleidoscope](https://www.wildlifeacoustics.com/products/kaleidoscope-pro) (paid, 15-day free trial) - pre-created bat classification
+* [Koe Bioacoustics Software](https://koe.io.ac.nz/) (free) - clustering with human annotation
 * [OpenSoundscape](https://github.com/ktizeslab/opensoundscape) (free, in development) - pulse rate analysis of repeating calls; features to create own neural network classifiers are in development
 * [SonoBat](https://sonobat.com/) (paid) - classification of bat calls
 * [Tadarida-C](https://github.com/YvesBas/Tadarida-C) (free) - discriminant analysis-based classification; part of 3-part "Tadarida" software
 
 **Measuring acoustic parameters**: acoustic metrics for soundscapes or individual sounds
+* [Koe Bioacoustics Software](https://koe.io.ac.nz/) (free) - assess song sequence structure
 * [Luscinia](https://rflachlan.github.io/Luscinia/) (free) - wide variety of acoustic signal analyses
 * [PAMr](https://github.com/TaikiSan21/PAMr) (free) - measure acoustic parameters
 * [Raven Lite](https://ravensoundsoftware.com/software/raven-lite/) (free) - basic measurements of acoustic properties through GUI annotation
 * [Raven Pro](https://ravensoundsoftware.com/software/raven-pro) (paid) - advanced measurements of acoustic properties
 * [soundecology](https://cran.r-project.org/web/packages/soundecology/vignettes/intro.html) (free) - calculate soundscape-wide acoustic indices
-* [**warbleR**](https://marce10.github.io/warbleR/) (free) - offers variety of measurements acoustic signal structure
+* [**warbleR**](https://marce10.github.io/warbleR/) (free) - offers variety of measurements acoustic signal structure and timing
+
+**Acoustic localization**: estimation of animal position using recordings from time-synchronized recorders
+* [Ishmael](http://bioacoustics.us/ishmael.html) (free) - localization and beamforming
+* Others to be added soon from [This review](https://onlinelibrary.wiley.com/doi/10.1002/ece3.6216)
