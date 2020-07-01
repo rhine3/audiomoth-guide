@@ -8,7 +8,7 @@ This list is not necessarily a recommendation or a guarantee of quality of parti
 
 You should always judge the performance of an analysis method by its performance on *your* dataset. Analysis methods are often published along with metrics to describe their performance, such as accuracy, precision, and recall. However, different recording conditions or different distributions of sounds present in your dataset can result in starkly different performance of the same method.
 
-**Listening and viewing**: general-purpose, non-bioacoustics software for listening to/editing recordings and generating spectrograms.
+**General listening and viewing**: general-purpose, non-bioacoustics software for listening to/editing recordings and generating spectrograms.
 * [Adobe Audition](https://www.adobe.com/products/audition.html) (paid) - geared toward sound editing
 * [**Audacity**](https://www.audacityteam.org/) (free) - simple, lightweight listening and spectrogram viewing, comparison, and manipulation
 * [audiomoth-scripts](https://github.com/nwolek/audiomoth-scripts) (free) - a variety of spectrogram visualization bash scripts. Also includes script to rename AudioMoth hex files to human-readable filenames.
