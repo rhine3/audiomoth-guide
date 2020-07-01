@@ -50,6 +50,7 @@ You should always judge the performance of an analysis method by its performance
 * [monitoR](http://www.uvm.edu/rsenr/vtcfwru/R/?Page=monitoR/monitoR.htm) (free) - R package for automated detection via template matching 
 * [PAMguard](https://www.pamguard.org/) - detect vocalizations and clicks; geared toward cetacean monitoring
 * [**Raven Pro**](https://ravensoundsoftware.com/software/raven-pro) (paid) - configurable band-limited energy detection (amplitude-based)
+* [scikit-maad](https://github.com/scikit-maad/scikit-maad) (free) - Python package including detection functionality
 * [seewave](http://rug.mnhn.fr/seewave/) (free) - compute cross-correlation and signal envelopes
 * [SoundSort](https://github.com/macster110/aipam) (free) - capable of clustering similar pre-detected clips
 * [Tadarida-D](https://github.com/YvesBas/Tadarida-D) (free) - detection and feature extraction for 3-part "Tadarida" software
@@ -69,6 +70,7 @@ You should always judge the performance of an analysis method by its performance
 * [Kaleidoscope](https://www.wildlifeacoustics.com/products/kaleidoscope-pro) (paid, 15-day free trial) - pre-created bat classification
 * [Koe Bioacoustics Software](https://koe.io.ac.nz/) (free) - clustering with human annotation
 * [OpenSoundscape](https://github.com/ktizeslab/opensoundscape) (free, in development) - pulse rate analysis of repeating calls; features to create own neural network classifiers are in development
+* [scikit-maad](https://github.com/scikit-maad/scikit-maad) (free) - Python library enabling creation of own classifiers using scikit learn
 * [SonoBat](https://sonobat.com/) (paid) - classification of bat calls
 * [Tadarida-C](https://github.com/YvesBas/Tadarida-C) (free) - discriminant analysis-based classification; part of 3-part "Tadarida" software
 
