@@ -8,11 +8,13 @@ This list is not necessarily a recommendation or a guarantee of quality of parti
 
 You should always judge the performance of an analysis method by its performance on *your* dataset. Analysis methods are often published along with metrics to describe their performance, such as accuracy, precision, and recall. However, different recording conditions or different distributions of sounds present in your dataset can result in starkly different performance of the same method.
 
-**Listening and viewing**: general-purpose, non-bioacoustics software for listening to recordings and generating spectrograms.
+**Listening and viewing**: general-purpose, non-bioacoustics software for listening to/editing recordings and generating spectrograms.
 * [Adobe Audition](https://www.adobe.com/products/audition.html) (paid) - geared toward sound editing
 * [**Audacity**](https://www.audacityteam.org/) (free) - simple, lightweight listening and spectrogram viewing, comparison, and manipulation
+* [**librosa**](https://librosa.org/librosa/) (free) - Python package with audio loading, spectrogram creation utilities, and per-channel energy normalization
 * [GoldWave](https://www.goldwave.com/) (free) - view and manipulate audio
 * [Reaper](https://www.reaper.fm/) (free) - spectrogram visualization; enables Python and C/C++ coding within 
+* [**scipy.signal**](https://docs.scipy.org/doc/scipy/reference/signal.html) (free) - Python library including spectrogram creation and cross-correlation functions
 * [SonicVisualizer](https://www.sonicvisualiser.org/) (free) - spectrogram visualization
 
 **Manual review and annotation**: bioacoustics-focused software for organizing and annotating recordings, usually also including features for listening to recordings and generating spectrograms.
@@ -71,6 +73,7 @@ You should always judge the performance of an analysis method by its performance
 * [Tadarida-C](https://github.com/YvesBas/Tadarida-C) (free) - discriminant analysis-based classification; part of 3-part "Tadarida" software
 
 **Measuring acoustic parameters**: acoustic metrics for soundscapes or individual sounds
+* [Acoustic_Indices](https://github.com/patriceguyot/Acoustic_Indices) (free) - Python package for calculating acoustic indices
 * [Avisoft-SASLab Pro](http://www.avisoft.com/sound-analysis/) (paid) - "sound parameter measurement" and noise level measurement
 * [Koe Bioacoustics Software](https://koe.io.ac.nz/) (free) - assess song sequence structure
 * [Luscinia](https://rflachlan.github.io/Luscinia/) (free) - wide variety of acoustic signal analyses
