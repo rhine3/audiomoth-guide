@@ -41,6 +41,7 @@ You should always judge the performance of an analysis method by its performance
 **Detection**: locating potential sounds of interest in recordings. Methods include supervised machine learning, amplitude-based detection, and clustering to group sounds into similar-sounding clusters (e.g. unsupervised machine learning)
 * [Anabat Insight](https://www.titley-scientific.com/us/anabat-insight.html) (free and paid versions) - bat call detection and custom filtering in full-spectrum and zero-crossing recordings
 * [ARBIMON](https://arbimon.sieve-analytics.com/) (free for certain number of recordings) - web-based interface enabling creation of pattern-matching detectors
+* [AVA](https://autoencoded-vocal-analysis.readthedocs.io/en/latest/index.html) (free) - Python package; automated segmentation of syllables
 * [AviaNZ](http://www.avianz.net/index.php) (free) - capable of clustering
 * [**Avisoft-SASLab Pro**](http://www.avisoft.com/sound-analysis/) (paid) - automated detection
 * [BatExplorer](https://www.batlogger.com/en/products/batexplorer/) (free and paid versions) - bat call detection
@@ -79,6 +80,7 @@ You should always judge the performance of an analysis method by its performance
 
 **Measuring acoustic parameters**: acoustic metrics for soundscapes or individual sounds
 * [Acoustic_Indices](https://github.com/patriceguyot/Acoustic_Indices) (free) - Python package for calculating acoustic indices
+* [AVA](https://autoencoded-vocal-analysis.readthedocs.io/en/latest/index.html) (free) - Python package; train generative models of vocalizations
 * [Avisoft-SASLab Pro](http://www.avisoft.com/sound-analysis/) (paid) - "sound parameter measurement" and noise level measurement
 * [Koe Bioacoustics Software](https://koe.io.ac.nz/) (free) - assess song sequence structure
 * [Luscinia](https://rflachlan.github.io/Luscinia/) (free) - wide variety of acoustic signal analyses
