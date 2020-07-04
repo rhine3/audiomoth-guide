@@ -93,4 +93,5 @@ You should always judge the performance of an analysis method by its performance
 
 **Acoustic localization**: estimation of animal position using recordings from time-synchronized recorders
 * [Ishmael](http://bioacoustics.us/ishmael.html) (free) - localization and beamforming
+* [PAMGuard](https://www.pamguard.org/) (free)
 * Others to be added soon from [This review](https://onlinelibrary.wiley.com/doi/10.1002/ece3.6216)
