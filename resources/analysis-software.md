@@ -54,7 +54,7 @@ You should always judge the performance of an analysis method by its performance
 * [**Kaleidoscope**](https://www.wildlifeacoustics.com/products/kaleidoscope-pro) (paid, 15-day free trial) - capable of clustering and amplitude-based detection
 * [monitoR](http://www.uvm.edu/rsenr/vtcfwru/R/?Page=monitoR/monitoR.htm) (free) - R package for automated detection via template matching 
 * [PAMguard](https://www.pamguard.org/) - detect vocalizations and clicks; geared toward cetacean monitoring
-* [**Raven Pro**](https://ravensoundsoftware.com/software/raven-pro) (paid) - configurable band-limited energy detection (amplitude-based)
+* [**Raven Pro**](https://ravensoundsoftware.com/software/raven-pro) (paid; free or reduced price options) - configurable band-limited energy detection (amplitude-based)
 * [scikit-maad](https://github.com/scikit-maad/scikit-maad) (free) - Python package including clustering functionality
 * [seewave](http://rug.mnhn.fr/seewave/) (free) - compute cross-correlation and signal envelopes
 * [SoundSort](https://github.com/macster110/aipam) (free) - capable of clustering similar pre-detected clips
