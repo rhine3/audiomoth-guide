@@ -76,6 +76,7 @@ You should always judge the performance of an analysis method by its performance
 * [Kaleidoscope](https://www.wildlifeacoustics.com/products/kaleidoscope-pro) (paid, 15-day free trial) - pre-created bat classification
 * [Koe Bioacoustics Software](https://koe.io.ac.nz/) (free) - clustering with human annotation
 * [OpenSoundscape](https://github.com/ktizeslab/opensoundscape) (free, in development) - pulse rate analysis of repeating calls; features to create own neural network classifiers are in development
+* [prinia-project](https://github.com/shivChitinous/prinia-project) (free) - bird song note classification
 * [scikit-maad](https://github.com/scikit-maad/scikit-maad) (free) - Python library enabling creation of own classifiers using scikit learn
 * [SonoBat](https://sonobat.com/) (paid) - classification of bat calls
 * [Tadarida-C](https://github.com/YvesBas/Tadarida-C) (free) - discriminant analysis-based classification; part of 3-part "Tadarida" software
@@ -87,6 +88,7 @@ You should always judge the performance of an analysis method by its performance
 * [Koe Bioacoustics Software](https://koe.io.ac.nz/) (free) - assess song sequence structure
 * [Luscinia](https://rflachlan.github.io/Luscinia/) (free) - wide variety of acoustic signal analyses
 * [PAMr](https://github.com/TaikiSan21/PAMr) (free) - measure acoustic parameters
+* [prinia-project](https://github.com/shivChitinous/prinia-project) (free) - analysis of note complexity, repetition rate, and signal partitioning
 * [Raven Lite](https://ravensoundsoftware.com/software/raven-lite/) (free) - basic measurements of acoustic properties through GUI annotation
 * [Raven Pro](https://ravensoundsoftware.com/software/raven-pro) (paid) - advanced measurements of acoustic properties
 * [scikit-maad](https://github.com/scikit-maad/scikit-maad) (free) - Python package that can compute ecoacoustic alpha indices
