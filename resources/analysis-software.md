@@ -31,6 +31,7 @@ You should always judge the performance of an analysis method by its performance
 * [Luscinia](https://rflachlan.github.io/Luscinia/) (free) - database management and recording archiving
 * [Praat](https://www.fon.hum.uva.nl/praat/) (free) - annotation, especially for individual song analysis (software originally intended for human phonetics)
 * [**Raven Lite**](https://ravensoundsoftware.com/software/raven-lite/) (free) - listening and spectrogram viewing; tools to manually select and annotate recordings
+* [SDEer](http://dx.doi.org/10.6084/m9.figshare.3792780) (free) - manual annotation for acoustic localization
 * [seewave](http://rug.mnhn.fr/seewave/) (free) - R package to display spectrograms
 * [SoundSort](https://github.com/macster110/aipam) (free) - visualize, cluster, and annotate recordings, then export these annotations
 * [Tadarida-L](https://github.com/YvesBas/Tadarida-L) (free) - labeling interface of 3-part "Tadarida" software
@@ -49,6 +50,7 @@ You should always judge the performance of an analysis method by its performance
 * [BatDetect](https://github.com/macaodha/batdetect) (free) - bat detection in full-spectrum (i.e., not zero-crossing) recordings
 * [bioacoustics](https://github.com/wavx/bioacoustics/) (free) - R package for sound filtering, automated detection, and extraction of acoustic features
 * [BirdVoxDetect](https://github.com/BirdVox/birdvoxdetect) (free) - machine learning-based detection for nocturnal flight calls
+* [CARACAL](https://github.com/OpenWild/caracal) (free) - sound detection for acoustic localization
 * [gibbonR](https://github.com/DenaJGibbon/gibbonR-package) (free) - R package with automated detection and segmentation algorithms
 * [Ishmael](http://bioacoustics.us/ishmael.html) (free) - automated detection, geared towards marine wildlife
 * [**Kaleidoscope**](https://www.wildlifeacoustics.com/products/kaleidoscope-pro) (paid, 15-day free trial) - capable of clustering and amplitude-based detection
@@ -56,6 +58,7 @@ You should always judge the performance of an analysis method by its performance
 * [PAMguard](https://www.pamguard.org/) - detect vocalizations and clicks; geared toward cetacean monitoring
 * [**Raven Pro**](https://ravensoundsoftware.com/software/raven-pro) (paid; free or reduced price options) - configurable band-limited energy detection (amplitude-based)
 * [scikit-maad](https://github.com/scikit-maad/scikit-maad) (free) - Python package including clustering functionality
+* [SDEer](http://dx.doi.org/10.6084/m9.figshare.3792780) (free) - several detection algorithms
 * [seewave](http://rug.mnhn.fr/seewave/) (free) - compute cross-correlation and signal envelopes
 * [SoundSort](https://github.com/macster110/aipam) (free) - capable of clustering similar pre-detected clips
 * [Tadarida-D](https://github.com/YvesBas/Tadarida-D) (free) - detection and feature extraction for 3-part "Tadarida" software
@@ -96,7 +99,13 @@ You should always judge the performance of an analysis method by its performance
 * [soundecology](https://cran.r-project.org/web/packages/soundecology/vignettes/intro.html) (free) - calculate soundscape-wide acoustic indices
 * [**warbleR**](https://marce10.github.io/warbleR/) (free) - offers variety of measurements acoustic signal structure and timing
 
-**Acoustic localization**: estimation of animal position using recordings from time-synchronized recorders
-* [Ishmael](http://bioacoustics.us/ishmael.html) (free) - localization and beamforming
+**Acoustic localization**: software for estimation of animal position using recordings from time-synchronized recorders, including functionality for recorder synchronization, time delay of arrival (TDOA) calculation, coordinate position estimation, direction-of-arrival (DOA) estimation, and improving signal to noise ratio via beamforming
+* [AviSoft SASLab Pro](http://www.avisoft.com/sound-analysis/) (paid) - finds TDOAs via cross-correlation
+* [CARACAL](https://github.com/OpenWild/caracal) (free) - sound detection, DOA localization, and sound source separation
+* [HARKBird](https://sites.google.com/view/alcore-suzuki/home/harkbird) (free) - source separation and DOA localization
+* [Ishmael](http://bioacoustics.us/ishmael.html) (free) - coordinate localization and beamforming
 * [PAMGuard](https://www.pamguard.org/) (free)
-* Others to be added soon from [This review](https://onlinelibrary.wiley.com/doi/10.1002/ece3.6216)
+* [OpenSoundscape](https://github.com/kitzeslab/opensoundscape) (free) - TDOA calculation and coordinate position estimation
+* [scipy.signal.correlate](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.correlate.html) (free) - Python function for signal cross-correlation (can be used to estimate TDOAs)
+* [SDEer](http://dx.doi.org/10.6084/m9.figshare.3792780) (free) - sound detection, recording synchronization, DOA estimation
+* [Sound Finder](https://doi.org/10.1080/09524622.2013.827588) (free) - excel and R software for position estimation using pre-calculated TDOAs
