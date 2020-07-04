@@ -67,6 +67,7 @@ You should always judge the performance of an analysis method by its performance
 * [ARBIMON](https://arbimon.sieve-analytics.com/) (free for certain number of recordings) - web-based interface for creating own classifiers
 * [Avisoft-SASLab Pro](http://www.avisoft.com/sound-analysis/) (paid) - classification by spectrographic template cross-correlation
 * [AviaNZ](http://www.avianz.net/index.php) (free) - configure your own "filters" for certain species or download pre-configured filters
+* [BatClassify](https://bitbucket.org/chrisscott/batclassify/src) (free) - segmentation and classification of ultrasonic sounds
 * [BatExplorer](https://www.batlogger.com/en/products/batexplorer/) (free and paid versions) - bat classification
 * [BatScope](https://www.wsl.ch/en/services-and-products/software-websites-and-apps/batscope-4.html) (free) - classify bat recordings
 * [Banter](https://github.com/EricArcher/banter) (free) - create your own hierarchical acoustic classifiers
