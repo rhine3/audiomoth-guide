@@ -37,6 +37,7 @@ You should always judge the performance of an analysis method by its performance
 * [Triton](http://cetus.ucsd.edu/technologies_Software.html) (free) - condense/annotate very long recordings using Long Term Spectral Averages
 * [Vesper](https://github.com/HaroldMills/Vesper) (free, in development) - web-based application for avian nocturnal flight call analysis; also implements BirdVoxDetect, BirdVoxClassify, and others (see below)
 * [warbleR](https://marce10.github.io/warbleR/) (free) - highly multipurpose R package
+* [XBAT](https://code.google.com/archive/p/xbat-devel/) (free) - annotation
 
 **Detection**: locating potential sounds of interest in recordings. Methods include supervised machine learning, amplitude-based detection, and clustering to group sounds into similar-sounding clusters (e.g. unsupervised machine learning)
 * [Anabat Insight](https://www.titley-scientific.com/us/anabat-insight.html) (free and paid versions) - bat call detection and custom filtering in full-spectrum and zero-crossing recordings
@@ -59,6 +60,7 @@ You should always judge the performance of an analysis method by its performance
 * [SoundSort](https://github.com/macster110/aipam) (free) - capable of clustering similar pre-detected clips
 * [Tadarida-D](https://github.com/YvesBas/Tadarida-D) (free) - detection and feature extraction for 3-part "Tadarida" software
 * [warbleR](https://marce10.github.io/warbleR/) (free)
+* [XBAT](https://code.google.com/archive/p/xbat-devel/) (free) - automated detection with manual review ability
 
 **Classification**: predict the identity of sounds captured in recordings, e.g. training a convolutional neural network to identify bird species in a recording
 * [Anabat Insight](https://www.titley-scientific.com/us/anabat-insight.html) (free and paid versions) - contains open-source BatClassify classifier and can be used with other algorithms
