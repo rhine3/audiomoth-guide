@@ -273,13 +273,13 @@ AudioMoths may break if exposed to water, so it is necessary to house them in a 
 
 ![AudioMoth deployed on tree](images/housing/bag-housing.jpg)
 
-AudioMoths can be deployed in Ziploc baggies using buckling straps.
+AudioMoths can be deployed in Ziploc baggies using [buckling straps (Amazon link)](https://www.amazon.com/Release-Buckle-Black-Adjustable-Luggage/dp/B005DJIBYA). The baggie can be affixed to the strap using zip-ties or by looping the baggie around the strap and securing it with duct tape.
 
-* If the strap is too small for the circumference of the tree, attach another strap.
+* Trees should be as small as possible; larger trees block sound from arriving in all directions.
 
 * If possible, avoid placing AudioMoths in direct sunlight, as their enclosures may heat up.
 
-The switch and corners of the AudioMoth v1.0 are sharp and can rip through a Ziploc bag. (More recent AudioMoth designs have rounded corners and an inset switch to reduce this issue.) Take steps to prevent moisture getting into AudioMoth enclosure:
+The switch and corners of the AudioMoth v1.0 are sharp and can rip through a Ziploc bag. More recent AudioMoth designs have rounded corners and an inset switch to reduce this issue. Take steps to prevent moisture getting into AudioMoth enclosure:
 
 * Don’t transport AudioMoths within the bags, as the bags are more likely to break. Instead, keep the AudioMoth and bag separated until you are ready to hook the bag to the tree. If it is raining, bring an umbrella and transport AudioMoths within a waterproof bag.
 
@@ -291,10 +291,33 @@ The switch and corners of the AudioMoth v1.0 are sharp and can rip through a Zip
 
     * [Example with tape by Jennifer Sheridan](https://twitter.com/JenASheridan/status/1047766465900818432)
    
-
 * Include a desiccant pack in the bag to soak up lingering moisture in the bag, preventing condensation
 
 * Before you walk away from a newly-deployed AudioMoth, inspect the bag for scratches or punctures. Replace if necessary.
+
+#### Heat-sealed bags
+
+Ziploc baggies are susceptible to puncture. These baggies can also be challenging to affix to straps. An alternative to Ziploc baggies is creating an enclosure using a heat-sealed bag. We create these using vacuum sealer with a "heat-seal-only" function. (Vacuuming air out of bags would reduce sound quality.)
+
+![Heat-sealed bag](images/housing/heat-sealed.jpg)
+
+You can use the following steps to create, deploy, and reuse a heat-sealed enclosure:
+* Create seals on 3 sides of the bag
+* Seal 2 inches below one of the sealed sides, then cut the corners off of this side. This creates a pocket for your strap to go through.
+* Insert strap in pocket
+* Program AudioMoth and turn it on
+* Insert AudioMoth and any other desired components (e.g. desiccant packet, small notecard about study)
+* Seal final edge of enclosure
+* Strap enclosure to tree
+* After deployment, cut open the bottom of the bag to release the AudioMoth
+
+![Diagram for preparation of heat-sealed bag](images/housing/heat-sealed-diagram.png)
+
+Two downsides to this method are:
+
+* If you prepare the enclosures on a carpeted surface, you may encounter static shock. To prevent this, you can spray anti-static spray (like hairspray or [anti-static fabric spray](https://www.amazon.com/Static-Guard-Fabric-Spray-Ounce/dp/B0013IRBG4)) on the inside of the bag, or perhaps even rub a dryer sheet on the inside of the bag
+
+* The AudioMoth needs to be programmed and turned on before you put it in the bag. Newer versions of AudioMoth firmware allow you to set a delayed start date for recording; without this, your AudioMoths will start recording on their daily schedule after being turned on, whether or not you've placed them in the field!
 
 
 #### Hard cases
