@@ -401,13 +401,57 @@ Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](http
  
 * When writing down data in the field, use waterproof paper and permanent pens (e.g., fine-tipped Sharpies).
 
+## Data management
 
 ![Storage and SD card reader](images/other/nas.jpg)
 
-* Transferring audio files from hundreds of SD cards is a slow process to do manually. Instead, we've developed a 48 TB Network Attached Storage (NAS) device with a 24-port microSD card reader (see photo), plus a script to automatically copy audio files from all the SD cards onto the NAS.
+Transferring audio files from hundreds of SD cards is a slow process to do manually. Instead, use a multi-port SD card reader. The photo above shows a network-attached storage device (NAS) with 48 TB of storage, plus a multi-port SD card reader.
 
-  * Each SD card has its number (e.g. 0526) written on the front of the card in Sharpie, but is also given a volume name (e.g., MSD-0526) when it is first reformatted to FAT32. These names are then used to organize the audio files copied off of each card.
+* We designed a 32-port SD card reader that can be made using supplies purchased from Amazon, the ["hexadecapus"](https://github.com/kitzeslab/sd-transfer/blob/master/Hexadecapus/Hexadecapus%20multi-SD%20reader.pdf). 
 
+* Each SD card has its number (e.g. 0526) written on the front of the card in Sharpie, but is also given a volume name (e.g., MSD-0526) when it is first reformatted to FAT32. These names are then used to organize the audio files copied off of each card.
+
+* When microSD cards are all named in this way, the following `rsync` command automatically copies data: 
+
+   `rsync -rhv --include /Volumes/MSD* --exclude .Spotlight* --exclude .fsevents* --exclude System* /Volumes/seagate/transfer_20200622/`
+
+  * The command will find all cards in `/Volumes` named with the prefix "MSD" 
+  
+  * These data will be copied to a folder on an external hard drive, `/Volumes/seagate/transfer_20200622`
+  
+  * This command excludes some system files created by some operating systems
+  
+  * Use the flag `-n` to run a dry-run of this command first!
+
+* Before you consider your data transfer complete, check to make sure that all of the expected folders have been created and they are of the expected size and number of recordings.
+
+It is important to keep track of metadata about the files that were created. 
+
+* These metadata can be stored within each audio file. For instance, AudioMoth recordings include the following metadata (may vary by firmware):
+
+ ```
+File Name                       : 5ACDE3A8.WAV
+Directory                       : .
+File Size                       : 27 MB
+File Modification Date/Time     : 2018:04:11 10:35:00-04:00
+File Access Date/Time           : 2018:04:17 11:16:05-04:00
+File Inode Change Date/Time     : 2018:04:17 11:17:43-04:00
+File Permissions                : rwxrwxrwx
+File Type                       : WAV
+File Type Extension             : wav
+MIME Type                       : audio/x-wav
+Encoding                        : Microsoft PCM
+Num Channels                    : 1
+Sample Rate                     : 48000
+Avg Bytes Per Sec               : 96000
+Bits Per Sample                 : 16
+Comment                         : Recorded at 10:30:00 11/04/2018 (UTC) by AudioMoth 0FE081F80FE081F0 at gain setting 2 while battery state was 3.6V
+Duration                        : 0:05:00
+ ```
+
+* These metadata can be viewed and modified with tools such as [`exiftool`](https://exiftool.org/)
+
+* Several metadata standards exist for audio recordings, including [Tethys](https://tethys.sdsu.edu/) and [GUANO](https://guano-md.org/)
 
 ## Data analysis
 
