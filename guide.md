@@ -37,7 +37,7 @@ Methods in Ecology and Evolution, December 3, 2017.
 
 * [Quick start](#quick-start)
 
-* [Programming](#programming)
+* [Setup](#setup)
 
 * [Deployment](#deployment)
 
@@ -46,7 +46,7 @@ Methods in Ecology and Evolution, December 3, 2017.
 * [Data analysis](#data-analysis)
 
 
-## Quick start
+# Quick start
 
 AudioMoths are very easy to set up out of the box. A good general introduction to the AudioMoth is available in the [AudioMoth guide](https://docs.wixstatic.com/ugd/d97703_9ac305905bdd4cdfab6aee99767a56e6.pdf) by Open Acoustic Devices. Our procedure is as follows.
 
@@ -61,61 +61,43 @@ AudioMoths are very easy to set up out of the box. A good general introduction t
 * Deploy AudioMoths and put up legally required "recording in progress" signs
 
 
+# Setup
 
-## Programming
+Before using the AudioMoth, you will "program" it using the [Audiomoth configuration app](https://www.openacousticdevices.info/applications). Depending on your needs, you may customize the time of day during which recordings are made, the length of each recording, and the amount of time the recorder "sleeps" between each recording. The AudioMoth can be used in two modes which are be accessed using the switch on the device. 
 
-Before using the AudioMoth, you will "program" it using the [Audiomoth configuration app](https://www.openacousticdevices.info/applications). Depending on your needs, you may customize the time of day during which recordings are made, the length of each recording, and the amount of time the recorder "sleeps" between each recording. The AudioMoth can be used in two modes, which are be accessed using the switch on the device. 
-
-* In DEFAULT mode, the AudioMoth will take a recording for a desired amount of time, and then will sleep for a desired amount of time. The device repeats this cycle continuously.
+* The behavior in DEFAULT mode depends on the firmware you are using and whether the AudioMoth has been programmed, but in general, it results in the AudioMoth turning on and starting to record immediately.
 
 * In CUSTOM mode, the AudioMoth also cycles through recording/sleeping, but only within "recording periods" that you have already configured. For instance, you could set the AudioMoth to record a minute-long file every 10 minutes for the first 6 hours after sunset. 
 
 * In summary, to make recordings immediately, or make them continuously without regard to the recording schedule programmed on the device, use the DEFAULT mode. When recording at a particular time of day is desired, use the CUSTOM mode. The device behaves differently in several other ways in these different modes, as described in the following sections.
 
-To make a custom recording schedule, or to customize the length of record/sleep periods in DEFAULT mode, use the AudioMoth configuration app. After creating your configuration, you will plug the AudioMoth into your computer, and set the current time and desired recording schedule via the app interface. For a simple and intuitive introduction to this process, see the [Open Acoustic Devices Config App Guide](https://www.openacousticdevices.info/config-app-guide). For more in-depth information, read the steps below.
+Use the AudioMoth configuration app to create a custom recording schedule for your AudioMoth. After creating your configuration, you will plug the AudioMoth into your computer, and set the current time and desired recording schedule via the app interface. For a simple and intuitive introduction to this process, see the [Open Acoustic Devices Config App Guide](https://www.openacousticdevices.info/config-app-guide). For more in-depth information, read the steps below.
 
 Note that the switch is fragile and snaps off easily. A slow, careful, and firm touch reduces disappointing switch snapping when turning the AudioMoth on and off. If your switch has snapped, it is possible to [replace the switch slider](https://www.openacousticdevices.info/support/device-support/simple-audiomoth-switch-repair).
 
-
-### How to create a recording schedule 
-
+## How to create a recording schedule
 Download configuration app: https://www.openacousticdevices.info/applications
 
-Set up to 5 recording period(s) in Coordinated Universal Time (UTC) using 24-hour clock.
+The latest version of the configuration app has three tabs: Recording Settings, Schedule, and Advanced Settings.
+
+
+### "Schedule" tab
+
+#### Recording periods
+The "schedule" tab lets you set 1-4 recording period(s) in Coordinated Universal Time (UTC) using a 24-hour clock.
 
    * **What is UTC?**: Instead of referring to a time zone (like Eastern Time, Pacific Time, etc.), recordings on the AudioMoth are scheduled in UTC, a universal time standard. This is done to avoid ambiguity in time zones. UTC is equivalent to Greenwich Mean Time (GMT), but does not observe Daylight Savings time as some countries in the GMT time zone do.
    
    * Make sure to press "Add recording period" after typing in the desired time of each recording period. Recording periods will show up on the red/white graphic or the period listing on the right side of the program. Likewise, be sure to remove unwanted periods.
    
+   * The recording periods will only be adhered to when the AudioMoth is on CUSTOM mode. On DEFAULT mode, the recorder begins recording continuously, without regard to any scheduled recording periods. 
+   
 ![Set recording period on AudioMoth configuration app](images/programming/recording-period-fast.gif)
 
-Set recording and sleep duration in seconds. 
+### "Recording settings" tab
+This tab controls the sample rate of recordings, the gain to be used on the microphone, the length and space between recordings, and a few other settings.
 
-* Even if sleep period is set to 0, the device will sleep briefly between recordings to save the prior recording to the card.
-
-* To make a single continuous file each recording period, set the recording duration length equal to the length of the longest recording period. Note that the maximum file size for any single file is 4GB, so make sure that the estimated size of each individual file is less than 4000 MB. 
-
-* The time that recording begins depends on the switch position (DEFAULT or CUSTOM):
-
-    * **DEFAULT:** Device immediately starts recording for recording duration time, then sleeps, then begins recording again. This repeats until DEFAULT mode is turned off or the recorder dies. Recording period/schedule is irrelevant in DEFAULT mode.
-
-    * **CUSTOM:** 
-
-        * If device is turned on outside of the scheduled recording periods, it waits until recording period starts, then begins its recording schedule. 
-    
-        * If it is turned on during the recording period, it will not start recording until the next scheduled recording begins. 
-  
-          For instance, consider an AudioMoth scheduled to record at 09:00, with a 2-minute recording duration and 2-minute sleep duration. If the AudioMoth was switched to CUSTOM mode at 9:01, it would skip the recording scheduled for 9:00-9:02, and wait until 09:04 to make its first recording.
-
-
-The program will calculate the energy and storage used each day once you have specified the recording period and recording/sleep durations.
-
-* To refresh batteries and cards as infrequently as possible during multi-month deployments, use a battery/SD card combination where the battery life and card storage run out at roughly the same time, given the device's estimated energy and storage usage.
-
-* Use [this code](https://trinket.io/python/ff8aeb66e1) to estimate the number of operational days of a battery and SD card. Input card size and capacity of a single battery (e.g., 2850 mAh for a Duracell alkaline AA battery), plus the config app's estimated and storage and energy usage. For more information on battery capacity, see the section on [batteries](#sd-cards-and-batteries).
-
-### Other settings to consider
-
+#### Sample rate
 Set sample rate as 2x the highest frequency you want to record.
 
 * **What sample rate should I use?** You should use a sample rate that is 2x higher than the highest frequency you want to record. This sample rate is known as the [Nyquist rate](https://en.wikipedia.org/wiki/Nyquist_rate) and is the minimum sample rate required to resolve a sound at a particular frequency. For birds, a 32kHz sample rate is fine. For bats' ultrasonic calls, a much higher sample rate is required.
@@ -126,38 +108,79 @@ Set sample rate as 2x the highest frequency you want to record.
 
 * What is a sample rate, anyway? A microphone captures audio by transforming the sound waves into voltage. Digital audio is recorded by sampling that voltage. The *sample rate* in Hertz is the number of times per second the voltage is sampled. For a helpful introduction to digital audio, check out [this guide](https://web.archive.org/web/20190201094638/https://docs.cycling74.com/max5/tutorials/msp-tut/mspdigitalaudio.html)
 
+#### Gain
 Set amount of gain for recording.
 
 * The gain is the amount that sounds from the microphone will be amplified once recorded. 
 
 * Selecting the optimal gain requires trial and error in your particular field conditions. If the gain is too high, your recordings will [clip](https://en.wikipedia.org/wiki/Clipping_(audio)), creating an unpleasant distortion that can be challenging, if not impossible, to analyze. Alternatively, if the gain is too low, sounds will be faint and hard to hear.
 
-Decide whether onboard LED light should be on or off.
-
-* **What do the LED lights mean?**  It can be helpful to turn LED lights on for more information about your AudioMoth, though this might attract more attention from animals/curious humans. Lights are especially useful when testing the recorder. LED light meanings are:
-    * Blinking red = recording
-    * Blinking green = sleeping between recordings
-    * Constant red = memory card full
-    * Both green & red = recording cannot be made. Causes of this include, but are not limited to,
-    
-        * time or program not being set (while in CUSTOM mode);
-        * the batteries falling out at some point after programming (while in CUSTOM mode);
-        * the recorder getting wet; and
-        * the SD card malfunctioning or not being formatted correctly.
-        
-    * Flashing red after turned to USB/OFF: an indicator of battery life (see [official documentation](https://www.openacousticdevices.info/led-guide))
-
+#### Sleep-record cycles
+In the "schedule" tab you select the time of day that the AudioMoth should record each day (the "recording period" or periods). However, the AudioMoth doesn't have to record continuously every day. You can use a sleep/record schedule to record only a limited amount of time during the scheduled recording period.
 
 ![Set sleep and recording durations](images/programming/sleep-rec-fast.gif)
+
+* When this feature is enabled, the recorder will create a recording for the number of seconds indicated in "recording duration" and then sleep for the number of seconds indicated in "sleep duration."
+
+* If you do not wish to enable this feature, unclick "Enable sleep/record cyclic recording."
+  
+* With older versions of the firmware (<1.4.0), to make a single continuous file each recording period, you are not able to disable this feature manually. Instead, you must to set the recording duration length equal to the length of the longest recording period. 
+  
+* With older versions of the firmware (<1.4.2), you must make sure that your file sizes are less than the WAV file size limit of 4.3GB (4000MB).
+
+* Even if sleep period is set to 0, the device will sleep briefly between recordings to save the prior recording to the card.
+
+#### Enable LED
+This feature allows you to turn on the LED lights for more information about your AudioMoth, though this might attract more attention from animals/curious humans. Lights are especially useful when testing the recorder. 
+
+LED light meanings are:
+* Blinking red = recording
+* Blinking green = sleeping between recordings
+* Constant red = memory card full
+* Both green & red = recording cannot be made. Causes of this include, but are not limited to,
+
+    * time or program not being set (while in CUSTOM mode);
+    * the batteries falling out at some point after programming (while in CUSTOM mode);
+    * the recorder getting wet; and
+    * the SD card malfunctioning or not being formatted correctly.
+
+* Flashing red after turned to USB/OFF: an indicator of battery life (see [official documentation](https://www.openacousticdevices.info/led-guide))
+
+
+### Advanced settings
+These two features can be used separately, or combined. 
+
+#### Filtering
+This feature allows you to only record data from a particular frequency band. When you enable filtering, you can choose the following filters. Each allows you to select the frequencies you want to include in the recording. All other frequencies will be filtered out.
+* Low-pass: filter out high frequencies
+* Band-pass: filter out both high and low frequencies
+* High-pass: filter out low frequencies
+
+#### Amplitude threshold
+This feature allows you to only save recordings that meet a particular amplitude threshold. (It is unclear whether the entire recording is saved, or whether a smaller segment around the detected threshold is saved.) 
+
+For instance, consider what would happen if you wanted to selectively record bats that call in ultrasonic frequencies. You could use a high-pass frequency filter to only include ultrasonic frequencies in your recordings. Then, you could institute an amplitude filter. This way, only recordings where there is a high-amplitude sound in the ultrasonic frequencies will be saved. 
+
+This allows you to save on storage by not saving empty files--especially helpful for high-sampling rate files, which are very large.
+
+### Recording information calculation
+The program will calculate the energy and storage used each day once you have specified the recording period and recording/sleep durations. This appears at the bottom of the configuration app in every tab.
+
+* To refresh batteries and cards as infrequently as possible during multi-month deployments, use a battery/SD card combination where the battery life and card storage run out at roughly the same time, given the device's estimated energy and storage usage.
+
+* Use [this code](https://trinket.io/python/ff8aeb66e1) to estimate the number of operational days of a battery and SD card. Input card size and capacity of a single battery (e.g., 2850 mAh for a Duracell alkaline AA battery), plus the config app's estimated and storage and energy usage. For more information on battery capacity, see the section on [batteries](#sd-cards-and-batteries).
+
+* With older versions of the firmware (<1.4.2), you must make sure that your file sizes are less than the WAV file size limit of 4.3GB (4000MB). Current versions of the firmware handle file sizes that are approaching this limit by closing the current file and restarting a new one.
+
+### Saving a recording schedule
 
 You may save the completed schedule as a file for later reference, reuse, copying, and sharing.
 
 * Clicking the saved file itself may not correctly open the program. Instead, open the saved program through the configuration app itself. Select the menu option AudioMoth > Open Configuration.
 
-
 #### Example programs
 
-Below are some example programs. 
+Below are some example programs created with an older version of the configuration app.
 
 One creates a single 3-hour long recording per day at 32kHz, suitable for recording a bird dawn chorus. 
 
@@ -166,15 +189,46 @@ The other creates minute-long recordings with minute-long breaks in between, 30 
 ![Two example programs](images/programming/example-programs.jpg)
 
 
+#### Save recording schedule to your AudioMoth
 
-### SD cards and batteries
+After you have configured the program that you want to use, you must load it onto an AudioMoth that contains batteries. 
+Because the AudioMoth doesn’t have an onboard battery, if the batteries fall out, the programming and set time will be lost. 
 
-Install formatted microSD card in AudioMoth to be programmed.
+**The AudioMoth must be reprogrammed if the batteries fall out.** 
+* If you switch the AudioMoth to CUSTOM mode and its red and green lights flash simultaneously, this means that the AudioMoth is not able to record. One cause of this is the AudioMoth's batteries falling out. 
+* If turned to DEFAULT mode after the batteries come out, the AudioMoth's behavior differs depending on what firmware is installed.
+  * Firmware < 1.4.2: record for 10 seconds on, 5 seconds off
+  * Firmware 1.4.2 and after: record continuously, ignoring sleep/duration settings
 
-* SD cards must be reformatted to MS-DOS (FAT32) prior to each use/reuse. **We have experienced problems if we don't reformat the card every time we reuse it--sometimes, erasing is not enough.** 
+Follow the settings below to save the recording schedule to your AudioMoth:
 
-* Windows computers can natively format cards less than or equal to 32GB in size, but there are [free programs](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) that allow Windows users to format larger cards. Mac computers can format cards up to 128GB; we haven't tested anything larger.
+* Turn switch to CUSTOM mode briefly. 
+* Make sure both red and green LED lights flash. This means that your batteries are correctly connected to your AudioMoth, and the program will successfully save on the AudioMoth.
+* Set switch on AudioMoth to USB/OFF mode.
+* Plug into computer via microUSB.
+* Verify that the AudioMoth is plugged in: the date, time, and recorder information on the programming app will switch from "grayed out" to black.
+* Press green "Configure AudioMoth" button in the programming app. This saves the recording program to the AudioMoth, and sets the AudioMoth's internal clock to your computer's time in UTC.
+* The AudioMoth now has a CUSTOM recording schedule. When ready to deploy, move AudioMoth switch to CUSTOM.
 
+
+## SD cards and batteries
+
+The above steps describe how to program an AudioMoth containing batteries and SD cards. Here is some guidance on selecting and using batteries and SD cards.
+
+### microSD cards
+The AudioMoth saves recordings on a microSD card.
+
+#### Card formatting
+* With versions of the firmware < 1.2.2, AudioMoth cards must first be reformatted to FAT32 prior to each use. Firmware versions 1.2.2 and beyond support exFAT formatting of cards as well. Most cards natively come formatted with exFAT.
+
+* When reusing a microSD card that has already been deployed, check to make sure that the card is truly empty before reusing. 
+
+  * On Mac computers, you can check the amount of space remaining on the card using Disk Utility. On some file systems, deleting files on the microSD card using the graphical user interface does not actually delete them until the trash bin is emptied. 
+  * You can be certain a card is empty by reformatting the card every time you reuse it, or using the `rm` command in the terminal.
+  
+* FAT32 was originally intended for cards less than or equal to 32GB in size. Windows computers cannot natively format cards larger than this to FAT32 format, but there are [free programs](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) that allow Windows users to format larger cards. Mac computers can format cards at least up to 128GB; we haven't tested anything larger.
+
+#### Choosing and using cards
 * Recording with high sampling rate (e.g., recording bats) requires SD cards with fast read/write speeds. Files produced with high sampling rate are also larger, so they use up space on the SD card more quickly. We use SanDisk Extreme 128GB for bat recordings. See the [SD card guide](https://www.openacousticdevices.info/sd-card-guide) for more information.
 
 * When an SD card fills, the unit will stop saving recordings to it, and the unit's red LED light will stay constantly lit until the SD card is removed.
@@ -184,7 +238,7 @@ Install formatted microSD card in AudioMoth to be programmed.
 ![Correct way to insert SD card](images/other/sd-card-position.jpg)
 
 
-Install batteries.
+### Batteries
 
 * Battery life depends on the type of battery you use. Check the battery's *capacity* in milliamp-hours (mAh). Lithium AA batteries have a larger capacity than typical alkaline AA batteries, but also cost more. On the AudioMoth, the capacities do not add up--the capacity of the three batteries connected in series is equal to the capacity of any single battery.
 
@@ -204,28 +258,29 @@ Install batteries.
     * While deploying recorders in CUSTOM mode, it will be obvious if a device has lost its programming; its red and green lights will blink simultaneously when you try to flip the switch to CUSTOM.
 
 
-### Set time and program on AudioMoth
-
-Set switch on AudioMoth to “USB/OFF” mode and plug into computer via microUSB.
-
-Verify that the AudioMoth is plugged in: the date, time, and recorder information on the programming app will switch from "grayed out" to black.
-
-Press green button in the programming app. This saves the recording program to the AudioMoth, and sets the AudioMoth's internal clock to your computer's time in UTC.
-
-The AudioMoth now has a CUSTOM recording schedule. When ready to deploy, move AudioMoth switch to CUSTOM.
-
-Because the AudioMoth doesn’t have an onboard battery, if the batteries fall out, the programming and set time will be lost. **The AudioMoth must be reprogrammed if the batteries fall out.**
-
-* If turned to DEFAULT mode after the batteries come out, the device will record at default settings (10 seconds on, 5 seconds off).
-
-* If turned to CUSTOM mode after the batteries come out, the device **will not record**.
-
-
-### Flash firmware
+## Flash firmware
 
 Several different firmware versions for the AudioMoth have been created and released. Some releases are just updates, but some have special functionality; for instance, allowing the AudioMoth to trigger recording only when a sound of interest is heard.
 
 If you want to flash new firmware to your device, follow the guide [here](https://www.openacousticdevices.info/flashing).
+
+## Turn on the recorder
+
+The AudioMoth can be turned on in two ways: DEFAULT mode (move switch to the right) or CUSTOM mode (move switch to the left).
+
+* **DEFAULT:** Device immediately starts recording. Recording period/schedule is irrelevant in DEFAULT mode.
+
+  * With firmware versions before 1.4.2, the AudioMoth will take a recording for a desired amount of time, and then will sleep for a desired amount of time. The device repeats this cycle continuously. If the recorder has not been configured with the configuration app, the sleep/record duration settings default to 10 seconds recording - 5 seconds sleeping.
+
+  * Starting in firmware version 1.4.2, DEFAULT mode records continuously, ignoring sleep/duration settings for recording duration time. 
+
+* **CUSTOM:** 
+
+  * If device is turned on outside of the scheduled recording periods, it waits until recording period starts, then begins its recording schedule. 
+  
+  * If it is turned on during the recording period, it behaves differently based on what firmware is used.
+            * With firmware before version 1.4.1, the AudioMoth will not start recording until the next scheduled recording begins. For instance, consider an AudioMoth scheduled to record at 09:00, with a 2-minute recording duration and 2-minute sleep duration. If the AudioMoth was switched to CUSTOM mode at 9:01, it would skip the recording scheduled for 9:00-9:02, and wait until 09:04 to make its first recording.
+            * With firmware version 1.4.1 and higher, the recording will be started mid-cycle, rather than waiting for the next cycle to begin.
 
 
 
