@@ -63,35 +63,34 @@ AudioMoths are very easy to set up out of the box. A good general introduction t
 
 # Setup
 
-Before using the AudioMoth, you will "program" it using the [Audiomoth configuration app](https://www.openacousticdevices.info/applications). Depending on your needs, you may customize the time of day during which recordings are made, the length of each recording, and the amount of time the recorder "sleeps" between each recording. The AudioMoth can be used in two modes which are be accessed using the switch on the device. 
+Before using the AudioMoth, you will "program" it using the [Audiomoth configuration app](https://www.openacousticdevices.info/applications). Depending on your needs, you may customize the time of day during which recordings are made, the length of each recording, and the amount of time the recorder "sleeps" between each recording. 
 
-* The behavior in DEFAULT mode depends on the firmware you are using and whether the AudioMoth has been programmed, but in general, it results in the AudioMoth turning on and starting to record immediately.
+The AudioMoth can be used in two modes which are be accessed using the switch on the device: DEFAULT, in which the AudioMoth will start recording immediately, and CUSTOM, in which the AudioMoth will only record at certain times. 
 
-* In CUSTOM mode, the AudioMoth also cycles through recording/sleeping, but only within "recording periods" that you have already configured. For instance, you could set the AudioMoth to record a minute-long file every 10 minutes for the first 6 hours after sunset. 
+* The behavior in DEFAULT mode depends on the firmware you are using and whether the AudioMoth has been programmed, but in general, it results in the AudioMoth turning on and starting to record immediately. The DEFAULT mode can be used before programming a recording schedule to the AudioMoth.
 
-* In summary, to make recordings immediately, or make them continuously without regard to the recording schedule programmed on the device, use the DEFAULT mode. When recording at a particular time of day is desired, use the CUSTOM mode. The device behaves differently in several other ways in these different modes, as described in the following sections.
+* In CUSTOM mode, the AudioMoth also cycles through recording/sleeping, but only within "recording periods" that you have already configured. For instance, you could set the AudioMoth to record a minute-long file every 10 minutes for the first 6 hours after sunset. The CUSTOM mode can only be used when the AudioMoth has a recording schedule programmed onto it using the AudioMoth configuration app.
 
 Use the AudioMoth configuration app to create a custom recording schedule for your AudioMoth. After creating your configuration, you will plug the AudioMoth into your computer, and set the current time and desired recording schedule via the app interface. For a simple and intuitive introduction to this process, see the [Open Acoustic Devices Config App Guide](https://www.openacousticdevices.info/config-app-guide). For more in-depth information, read the steps below.
 
 Note that the switch is fragile and snaps off easily. A slow, careful, and firm touch reduces disappointing switch snapping when turning the AudioMoth on and off. If your switch has snapped, it is possible to [replace the switch slider](https://www.openacousticdevices.info/support/device-support/simple-audiomoth-switch-repair).
 
 ## How to create a recording schedule
-Download configuration app: https://www.openacousticdevices.info/applications
+Create a recording schedule using the configuration app, downloadable here: https://www.openacousticdevices.info/applications
 
 The latest version of the configuration app has three tabs: Recording Settings, Schedule, and Advanced Settings.
-
 
 ### "Schedule" tab
 
 #### Recording periods
 The "schedule" tab lets you set 1-4 recording period(s) in Coordinated Universal Time (UTC) using a 24-hour clock.
 
-   * **What is UTC?**: Instead of referring to a time zone (like Eastern Time, Pacific Time, etc.), recordings on the AudioMoth are scheduled in UTC, a universal time standard. This is done to avoid ambiguity in time zones. UTC is equivalent to Greenwich Mean Time (GMT), but does not observe Daylight Savings time as some countries in the GMT time zone do.
-   
-   * Make sure to press "Add recording period" after typing in the desired time of each recording period. Recording periods will show up on the red/white graphic or the period listing on the right side of the program. Likewise, be sure to remove unwanted periods.
-   
-   * The recording periods will only be adhered to when the AudioMoth is on CUSTOM mode. On DEFAULT mode, the recorder begins recording continuously, without regard to any scheduled recording periods. 
-   
+* **What is UTC?**: Instead of referring to a time zone (like Eastern Time, Pacific Time, etc.), recordings on the AudioMoth are scheduled in UTC, a universal time standard. This is done to avoid ambiguity in time zones. UTC is equivalent to Greenwich Mean Time (GMT), but does not observe Daylight Savings time as some countries in the GMT time zone do.
+
+* Make sure to press "Add recording period" after typing in the desired time of each recording period. Recording periods will show up on the red/white graphic or the period listing on the right side of the program. Likewise, be sure to remove unwanted periods.
+
+* The recording periods will only be adhered to when the AudioMoth is on CUSTOM mode. On DEFAULT mode, the recorder begins recording immediately, without regard to any scheduled recording periods. 
+
 ![Set recording period on AudioMoth configuration app](images/programming/recording-period-fast.gif)
 
 ### "Recording settings" tab
@@ -109,11 +108,7 @@ Set sample rate as 2x the highest frequency you want to record.
 * What is a sample rate, anyway? A microphone captures audio by transforming the sound waves into voltage. Digital audio is recorded by sampling that voltage. The *sample rate* in Hertz is the number of times per second the voltage is sampled. For a helpful introduction to digital audio, check out [this guide](https://web.archive.org/web/20190201094638/https://docs.cycling74.com/max5/tutorials/msp-tut/mspdigitalaudio.html)
 
 #### Gain
-Set amount of gain for recording.
-
-* The gain is the amount that sounds from the microphone will be amplified once recorded. 
-
-* Selecting the optimal gain requires trial and error in your particular field conditions. If the gain is too high, your recordings will [clip](https://en.wikipedia.org/wiki/Clipping_(audio)), creating an unpleasant distortion that can be challenging, if not impossible, to analyze. Alternatively, if the gain is too low, sounds will be faint and hard to hear.
+The gain is the amount that sounds from the microphone will be amplified once recorded. Selecting the optimal gain requires trial and error in your particular field conditions. If the gain is too high, your recordings will [clip](https://en.wikipedia.org/wiki/Clipping_(audio)), creating an unpleasant distortion that can be challenging, if not impossible, to analyze. Alternatively, if the gain is too low, sounds will be faint and hard to hear.
 
 #### Sleep-record cycles
 In the "schedule" tab you select the time of day that the AudioMoth should record each day (the "recording period" or periods). However, the AudioMoth doesn't have to record continuously every day. You can use a sleep/record schedule to record only a limited amount of time during the scheduled recording period.
@@ -147,7 +142,7 @@ LED light meanings are:
 * Flashing red after turned to USB/OFF: an indicator of battery life (see [official documentation](https://www.openacousticdevices.info/led-guide))
 
 
-### Advanced settings
+### "Advanced settings" tab
 These two features can be used separately, or combined. 
 
 #### Filtering
@@ -172,13 +167,13 @@ The program will calculate the energy and storage used each day once you have sp
 
 * With older versions of the firmware (<1.4.2), you must make sure that your file sizes are less than the WAV file size limit of 4.3GB (4000MB). Current versions of the firmware handle file sizes that are approaching this limit by closing the current file and restarting a new one.
 
-### Saving a recording schedule
+### Keeping track of recording schedules
 
-You may save the completed schedule as a file for later reference, reuse, copying, and sharing.
+Firmware versions 1.4.0 and later have the ability to write the schedule description to the AudioMoth's microSD card to allow easier recordkeeping.
 
-* Clicking the saved file itself may not correctly open the program. Instead, open the saved program through the configuration app itself. Select the menu option AudioMoth > Open Configuration.
+Additionally, you may save the completed schedule as a file for later reference, reuse, copying, and sharing. Clicking a saved configuration file itself may not correctly open the program. Instead, open the saved program through the configuration app itself. Select the menu option AudioMoth > Open Configuration.
 
-#### Example programs
+### Example programs
 
 Below are some example programs created with an older version of the configuration app.
 
@@ -189,12 +184,10 @@ The other creates minute-long recordings with minute-long breaks in between, 30 
 ![Two example programs](images/programming/example-programs.jpg)
 
 
-#### Save recording schedule to your AudioMoth
+## Apply recording schedule to your AudioMoth
 
 After you have configured the program that you want to use, you must load it onto an AudioMoth that contains batteries. 
-Because the AudioMoth doesn’t have an onboard battery, if the batteries fall out, the programming and set time will be lost. 
-
-**The AudioMoth must be reprogrammed if the batteries fall out.** 
+Because the AudioMoth doesn’t have an onboard battery, if the batteries fall out, the programming and set time will be lost. **The AudioMoth must be reprogrammed if the batteries fall out.** 
 * If you switch the AudioMoth to CUSTOM mode and its red and green lights flash simultaneously, this means that the AudioMoth is not able to record. One cause of this is the AudioMoth's batteries falling out. 
 * If turned to DEFAULT mode after the batteries come out, the AudioMoth's behavior differs depending on what firmware is installed.
   * Firmware < 1.4.2: record for 10 seconds on, 5 seconds off
@@ -209,7 +202,6 @@ Follow the settings below to save the recording schedule to your AudioMoth:
 * Verify that the AudioMoth is plugged in: the date, time, and recorder information on the programming app will switch from "grayed out" to black.
 * Press green "Configure AudioMoth" button in the programming app. This saves the recording program to the AudioMoth, and sets the AudioMoth's internal clock to your computer's time in UTC.
 * The AudioMoth now has a CUSTOM recording schedule. When ready to deploy, move AudioMoth switch to CUSTOM.
-
 
 ## SD cards and batteries
 
@@ -260,9 +252,10 @@ The AudioMoth saves recordings on a microSD card.
 
 ## Flash firmware
 
-Several different firmware versions for the AudioMoth have been created and released. Some releases are just updates, but some have special functionality; for instance, allowing the AudioMoth to trigger recording only when a sound of interest is heard.
+As discussed above, several different firmware versions for the AudioMoth have been created and released. Some releases are just updates, but some have special functionality. For instance, version 1.4.0 enables users to trigger AudioMoth recording only when sound exceeds an amplitude threshold. Behavior of the AudioMoth in different firmware versions differs slightly but meaningfully. To see all of the features added or changed in each version of the firmware, view [the release descriptions in the GitHub repository](https://github.com/OpenAcousticDevices/AudioMoth-Firmware-Basic/releases).
 
-If you want to flash new firmware to your device, follow the guide [here](https://www.openacousticdevices.info/flashing).
+If you want to flash new firmware to your device, download the application [here](https://www.openacousticdevices.info/flashing) and follow its instructions. All of the released firmware versions can be downloaded through the app and applied to the AudioMoth.
+
 
 ## Turn on the recorder
 
@@ -284,18 +277,12 @@ The AudioMoth can be turned on in two ways: DEFAULT mode (move switch to the rig
 
 
 
-### Recording results
+### Recording troubleshooting
 
 * If a unit's microSD card is full, the unit stops saving recordings. This avoids overwriting previous recordings. In this situation, the unit's red LED light will stay constantly lit until the SD card is removed.
 
 * Turning the AudioMoth off while it is still recording will cause some data loss. This is because the speed at which the data are saved to the AudioMoth lags behind real time. We have found that turning off a recorder while it is recording causes about a 3% loss of data; e.g. a recording that was stopped an hour into the recording will lose 1.8 minutes (60 minutes * 0.03 = 1.8 minutes).
 
-* The AudioMoth stores metadata about the recording in the "Comments" field of the EXIF metadata. This includes recording date/time, sample rate, recording duration, gain setting, battery level, and AudioMoth serial number. 
-
-   * EXIF data can be accessed via [`exiftool`](http://owl.phy.queensu.ca/~phil/exiftool/) on Mac, Linux, and Windows. Once it is installed, open a Terminal window and run `exiftool FILENAME.wav`
-
-   * If SD cards get mixed up, this information can be used to recover what unit the recording was made on.
-   
 * The first versions of the AudioMoth firmware use filenames with compact representations of the date and time that the recording started. These filenames can be converted to date & time using the instructions in the AudioMoth user manual. In contrast, the "last modified" time represents the time in UTC that the file was saved, i.e., the time in UTC when the recording ended. More recent firmware saves more easily interpreted filenames.
 
 
@@ -408,9 +395,9 @@ Open Acoustic Devices provides a design for a laser-cut acrylic housing [here](h
     
     * Verbally announce your presence so that all recorders that may capture your recording can hear your announcement
     
-* In the case of SD Card mixups, one can use the EXIF metadata ([described above](#recording-results)) to identify which unit created each recording.
+* In the case of SD Card mixups, one can use the EXIF metadata (described below) to identify which unit created each recording.
 
-## Scaling up
+# Scaling up
 
 For large deployments, special considerations must be taken into account. For instance, when deploying 100 recorders, an extra 5 minutes spent per recorder results in 8+ additional hours in the field!
 
@@ -426,8 +413,24 @@ Wherever you purchase AudioMoths, make sure you check what version you're purcha
 
 * Parts of the original AudioMoth design are constantly going out of stock due to high demand. We enlisted the help of our school's electronics shop to find new parts that were interchangeable with the out-of-stock parts.
 
+### Using protocols
+Since so many recorders will be deployed, information about their identity and location has to be taken accurately and efficiently.
 
-### Pre-select recorder locations
+* Record the deployment date; information about the identity (ID number) of the AudioMoth, SD card, and location; any important notes about placement such as recorder direction; etc.
+* See the section about pre-positioning recorder locations and ideas for location naming conventions.
+* Some researchers use apps such as [Survey123](https://survey123.arcgis.com/) or [Fulcrum](https://apps.apple.com/us/app/fulcrum-mobile-data-collector/id467758260) to record these data in the field
+
+We use protocols to speed up the process and keep track of repetitive tasks. (It's easy to leave out crucial steps, like turning the AudioMoth on, if you don't have to check them each off of a list.) Here are some example protocols that we use:
+    
+* [Packing for a deployment](https://github.com/rhine3/audiomoth-guide/blob/master/documents/packing-list.md)
+* [Deploying recorders](https://github.com/rhine3/audiomoth-guide/blob/master/documents/deployment-protocol.pdf)
+* [Bringing recorders home](https://github.com/rhine3/audiomoth-guide/blob/master/documents/return-protocol.pdf)
+* [Post-field checklist](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-checklist.md) (which references the document below)
+* [Template for protocols to check in data written down in the field](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-protocol-template.pdf) 
+* [Example modification of the above template](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-protocol-example.pdf)
+
+
+### Pre-selecting recorder locations
 
 Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](https://twitter.com/mountain_laur)) developed this method of pre-positioning locations of recorders for deployments:
 
@@ -448,7 +451,7 @@ Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](http
 ![Google My Maps](images/programming/google-maps-demo.gif)
 
 
-### Logistics
+### Other tips and Tricks
 
 ![Two hundred AudioMoth housings made from Ziploc bags](images/housing/bulk-housings.jpg)
 
@@ -459,28 +462,13 @@ Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](http
     * One person can record data, e.g., the unique ID of the AudioMoth, its SD card, and the point at which it is deployed.
 
     * The other person can manage putting the AudioMoth on the tree and collecting a more accurate GPS point
-
-* Since so many recorders will be deployed, information about their identity and location has to be taken accurately and efficiently.
-
-    * Record the deployment date; information about the identity (ID number) of the AudioMoth, SD card, and location; any important notes about placement such as recorder direction; etc.
-    
-    * See the previous section about pre-positioning recorder locations and ideas for location naming conventions.
-    
-    * Some researchers use apps such as [Survey123](https://survey123.arcgis.com/) or [Fulcrum](https://apps.apple.com/us/app/fulcrum-mobile-data-collector/id467758260) to record these data in the field
-   
-* We use protocols to speed up the process and keep track of repetitive tasks. (It's easy to leave out crucial steps, like turning the AudioMoth on, if you don't have to check them each off of a list.)
-    
-    * [Packing for a deployment](https://github.com/rhine3/audiomoth-guide/blob/master/documents/packing-list.md)
-    * [Deploying recorders](https://github.com/rhine3/audiomoth-guide/blob/master/documents/deployment-protocol.pdf)
-    * [Bringing recorders home](https://github.com/rhine3/audiomoth-guide/blob/master/documents/return-protocol.pdf)
-    * [Post-field checklist](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-checklist.md) (which references the document below)
-    * [Template for protocols to check in data written down in the field](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-protocol-template.pdf) 
-    * [Example modification of the above template](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-protocol-example.pdf)
  
-* When writing down data in the field, use waterproof paper and permanent pens (e.g., fine-tipped Sharpies).
+* When writing down data in the field, use waterproof paper and permanent pens (e.g., fine-tipped Sharpies or Rite in the Rain brand pens).
 
-## Data management
 
+# Data management
+
+### Data upload
 ![Storage and SD card reader](images/other/nas.jpg)
 
 Transferring audio files from hundreds of SD cards is a slow process to do manually. Instead, use a multi-port SD card reader. The photo above shows a network-attached storage device (NAS) with 48 TB of storage, plus a multi-port SD card reader.
@@ -503,9 +491,10 @@ Transferring audio files from hundreds of SD cards is a slow process to do manua
 
 * Before you consider your data transfer complete, check to make sure that all of the expected folders have been created and they are of the expected size and number of recordings.
 
+### Metadata management
 It is important to keep track of metadata about the files that were created. 
 
-* These metadata can be stored within each audio file. For instance, AudioMoth recordings include the following metadata (may vary by firmware):
+* The AudioMoth stores metadata about the recording in the "Comments" field of the EXIF metadata. This includes recording date/time, sample rate, recording duration, gain setting, battery level, and AudioMoth serial number. For instance, here is an example metadata record automatically generated by an AudioMoth, accessed through `exiftool` (see below)
 
  ```
 File Name                       : 5ACDE3A8.WAV
@@ -527,13 +516,16 @@ Comment                         : Recorded at 10:30:00 11/04/2018 (UTC) by Audio
 Duration                        : 0:05:00
  ```
 
-* These metadata can be viewed and modified with tools such as [`exiftool`](https://exiftool.org/)
+ * EXIF data can be accessed via [`exiftool`](http://owl.phy.queensu.ca/~phil/exiftool/) on Mac, Linux, and Windows. Once it is installed, open a Terminal window and run `exiftool FILENAME.wav`
 
-* Several metadata standards exist for audio recordings, including [Tethys](https://tethys.sdsu.edu/) and [GUANO](https://guano-md.org/)
+* If SD cards get mixed up, this information can be used to recover what unit the recording was made on.
 
-## Data analysis
+* Several metadata standards exist for audio recordings, including [Tethys](https://tethys.sdsu.edu/) and [GUANO](https://guano-md.org/). Recording metadata can be updated to be compliant with these standards using exiftool.
+
+
+# Data analysis
 
 Data analysis techniques vary from completely automated to completely manual. For instance, some software enables automated identification of species vocalizing in recordings. Other software makes it easier to look at, listen to, and organize recordings. Software may be free or paid. 
 
-See [here](https://github.com/rhine3/audiomoth-guide/blob/develop/resources/analysis-software.md) for brief descriptions of different data analysis techniques, and a list of softwares available.
+See [this list](resources/analysis-software.md) for brief descriptions of different data analysis techniques, and a list of softwares available.
 
