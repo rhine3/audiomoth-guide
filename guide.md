@@ -9,10 +9,10 @@ The information here complements official guides on the [Open Acoustic Devices w
 Please submit suggestions for modifications to this guide via creating pull requests on the GitHub repository, or emailing me at `tessa.rhinehart at pitt.edu`.
 
 
-#### Cite & share this guide
+#### Suggested citation
 If you find this guide helpful, please share it! It is available in both [PDF](https://github.com/rhine3/audiomoth-guide/raw/master/guide.pdf) and [Markdown](https://github.com/rhine3/audiomoth-guide/raw/master/guide.md) formats. 
 
-The guide and the other materials in this repository are licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/). Please feel free to use and modify them with attribution. Please cite as follows, replacing the `<>` with the DOI in the image at the top of this document.
+The guide and the other materials in this repository are licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/). Please feel free to use and modify them with attribution. You may cite the guide as follows, replacing the `<>` with the DOI in the image at the top of this document.
 ```
 Rhinehart, Tessa A (2020). AudioMoth: a practical  
 guide to the open-source ARU. GitHub repository: 
@@ -361,7 +361,7 @@ Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](http
 
 * Click on the "Add Marker" tool and add markers to your map. You might try to target specific locations, for example, identify particular trees that are good candidates for hanging AudioMoths.
 
-    * We name all of our recorder locations with an alphabetical code that gives the site of the deployments, and a numeric code that uniquely identifies the point at that site. For instance, our deployments at Powdermill Nature Reserve in the pond area are named PNRE-POND-0001, PNRE-POND-0002, etc. 
+    * We name all of our recorder locations with an alphanumeric code that gives the site of the deployments, and a numeric code that uniquely identifies the point at that site. For instance, our deployments at Powdermill Nature Reserve in the pond area are named PNRE-POND-0001, PNRE-POND-0002, etc. 
 
 * Use the "measuring" tool to find even spacing between points (press "Enter" to temporarily save a measurement before you plot your next point)
 
@@ -369,87 +369,12 @@ Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](http
 
 ![Google My Maps](images/programming/google-maps-demo.gif)
 
-#### Access the map data via your GPS unit
-
-* Download the Google My Map in KML format: click the three dots next to the map title > Export to KML/KMZ > click checkbox for "Export to a KML file"
-
-* Download [GPSBabel](https://www.gpsbabel.org/download.html), a free converter you can use to convert KML files to the type of file required by your GPS unit
-        
-* Select "Google Earth (Keyhole) Markup Language" as the input type, use the file browser to select your file
-
-* Convert the map to the format required by your GPS unit. For instance, Garmin GPS units require a GPX file, so select output format "GPX XML"
-
-* Use the instructions for your device to transfer the map onto your GPS unit (for instance, here are the [instructions for our device](https://www.youtube.com/watch?v=PdPgse1tHdY))
-
-When need to move a point in the field (e.g., the tree you wanted to use fell down), either reset the location of the point or make a new point on your GPS. Make sure to indicate in your field notes whenever the pre-set location of the point was changed. 
-
-* Most commercial GPS units are imprecise, especially under heavy foliage, so it can be challenging to know when you’re at the right point. When in doubt, take notes, and take another GPS point to compare later
-
-* Practice using the crucial features of your GPS unit before you head out to the field, and bring extra batteries
-
-#### Access the map data on your phone via Gaia GPS
-
-* Download the Google My Map in KML format: click the three dots next to the map title > Export to KML/KMZ > click checkbox for "Export to a KML file"
-
-* Download "Gaia GPS" to your phone and create an account.
-
-* Download the KML file on your phone, e.g., by emailing it to yourself.
-
-* If you have an Android phone, open Gaia GPS > click the "plus" with a circle icon in the upper right corner > select "Import file" > find the file on your phone
-
-* If you have an Apple phone, follow [https://help.gaiagps.com/hc/en-us/articles/115003639048-Import-GPX-and-KML-files-in-Gaia-GPS-for-iOS] these instructions.
-
-In the field, keep track of your points by repositioning them as you go. You can also take pictures of the points to help you find them later, and change the color of the pinpoint on Gaia to easily identify the points where you've already deployed recorders.
-
-If multiple people are deploying recorders, it is easiest to give only one person the task of repositioning/photographing/checking off points, as you won't have to combine two maps later. Make sure to bring an external battery charger for your phone.
-
-How to modify Gaia GPS data in the field:
-
-* Click on the point on your map. A small dialogue box will pop up containing the name of the point. 
-
-* Access the details about the point from this small dialogue box:
-
-    * For Android phones, click on the name of the point
-    * For Apple phones, click on the "information" icon to the right of the name of the point.
-    
-* *Reposition points:* From the point details screen, click Edit/Reposition > use your finger to click and drag the point to your current location > click Save
-
-* *Take picture:* From the point details screen, click on the "camera" icon >  accept the picture when you are satisfied with it
-
-* *Change color of waypoint:* This helps to indicate that you have completed the deployment at this spot. From the point details screen, click Edit/Reposition > tap on the current point icon in the upper corner > select a different icon (e.g. a check mark)
-
-* *Rename waypoint:* This is another way to indicate you have completed the deployment at this spot. From the point details screen, click the "pencil" button next to the name of the waypoint.
-
-After you return, export your completed locations. Note that this web-based method does NOT export photos taken at waypoints, but it IS possible to [export photos taken at waypoints on iOS](https://help.gaiagps.com/hc/en-us/articles/115003639728-Export-Tracks-Routes-and-Waypoints-to-GPX-or-KML) (with a 20-photo limit).
-
-* Ensure you are logged into your Gaia GPS account on your phone. Your points should have automatically synced to gaiagps.com. 
-
-* Log in to GaiaGPS.com with your account username and password
-
-* Click on your name in the upper-right hand corner and select "Waypoints"
-
-* Select all of your waypoints to be exported by clicking the checkbox next to each point. To export all points, click the checkbox in the top row next to the word "Title."
-
-    * If you renamed your waypoints, e.g., "New point 35," you can search for and select new points using the search bar with the magnifying glass next to it.
-    
-* Click "File to Folder" > "Create New Folder" > type in a name for the folder > "Create Folder" > then click on the name of your newly created folder. This adds your points to the folder.
-
-* Click on your name in the upper-right hand corner again and select "Folders"
-
-* Select your folder and then click the "Data" button with a download icon next to it > Download as KML
-
-You can now add your updated points to your original Google Earth map. 
-
-* Open your original map: maps.google.com > Menu icon on the left side > "Your Places" > "Maps" > click your map name > "Open in My Maps"
-
-* Add a new layer for the map: "Add layer" > name layer something descriptive, e.g. "2019 Feb 7th-15th deployment" > under this layer name, click "Import" > select or drag the KML file.
-
 
 ### Logistics
 
 ![Two hundred AudioMoth housings made from Ziploc bags](images/housing/bulk-housings.jpg)
 
-* Save time in the field by pre-pack bags with desiccant and pre-attach them to straps in the lab, instead of performing these tasks in the field.
+* Save time in the field by pre-packing bags with desiccant and pre-attaching them to straps in the lab, instead of performing these tasks in the field.
 
 * It is very helpful to have two people in the field.
 
@@ -459,9 +384,11 @@ You can now add your updated points to your original Google Earth map.
 
 * Since so many recorders will be deployed, information about their identity and location has to be taken accurately and efficiently.
 
-    * Record the deployment date; information about the identity (ID number) of the AudioMoth, SD card, and location; any important notes about placement; etc.
+    * Record the deployment date; information about the identity (ID number) of the AudioMoth, SD card, and location; any important notes about placement such as recorder direction; etc.
     
     * See the previous section about pre-positioning recorder locations and ideas for location naming conventions.
+    
+    * Some researchers use apps such as [Survey123](https://survey123.arcgis.com/) or [Fulcrum](https://apps.apple.com/us/app/fulcrum-mobile-data-collector/id467758260) to record these data in the field
    
 * We use protocols to speed up the process and keep track of repetitive tasks. (It's easy to leave out crucial steps, like turning the AudioMoth on, if you don't have to check them each off of a list.)
     
