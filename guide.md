@@ -36,13 +36,24 @@ Methods in Ecology and Evolution, December 3, 2017.
 #### Table of contents
 
 * [Quick start](#quick-start)
-
 * [Setup](#setup)
-
+  * [How to create a recording schedule](#how-to-create-a-recording-schedule)
+  * [Apply recording schedule to your AudioMoth](#apply-recording-schedule-to-your-audiomoth)
+  * [SD cards and batteries](#sd-cards-and-batteries)
+  * [Turn on the recorder](#turn-on-the-recorder)
+  * [Apply different firmware to the device](#apply-different-firmware-to-the-device)
 * [Deployment](#deployment)
-
+  * [Enclosures](#enclosures)
+  * [Logistics](#logistics)
 * [Scaling up](#scaling-up)
-
+  * [Purchasing AudioMoths](#purchasing-audiomoths)
+  * [Using protocols](#using-protocols)
+  * [Pre-selecting recorder locations](#pre-selecting-recorder-locations)
+  * [Other tips and tricks](#other-tips-and-tricks)
+  * Calibration - *coming soon*
+* [Data management](#data-management)
+  * [Data upload](#data-upload)
+  * [Metadata management](#metadata-management)
 * [Data analysis](#data-analysis)
 
 
@@ -143,7 +154,7 @@ LED light meanings are:
 
 
 ### "Advanced settings" tab
-These two features can be used separately, or combined. 
+These two features can be used separately, or combined. For more information on these features, see [this document](https://github.com/OpenAcousticDevices/Application-Notes/blob/master/Using_AudioMoth_with_Filtering_and_Amplitude_Threshold_Recording.pdf)
 
 #### Filtering
 This feature allows you to only record data from a particular frequency band. When you enable filtering, you can choose the following filters. Each allows you to select the frequencies you want to include in the recording. All other frequencies will be filtered out.
@@ -152,11 +163,7 @@ This feature allows you to only record data from a particular frequency band. Wh
 * High-pass: filter out low frequencies
 
 #### Amplitude threshold
-This feature allows you to only save recordings that meet a particular amplitude threshold. (It is unclear whether the entire recording is saved, or whether a smaller segment around the detected threshold is saved.) 
-
-For instance, consider what would happen if you wanted to selectively record bats that call in ultrasonic frequencies. You could use a high-pass frequency filter to only include ultrasonic frequencies in your recordings. Then, you could institute an amplitude filter. This way, only recordings where there is a high-amplitude sound in the ultrasonic frequencies will be saved. 
-
-This allows you to save on storage by not saving empty files--especially helpful for high-sampling rate files, which are very large.
+This feature allows you to only save samples to the file that meet a particular amplitude threshold. This allows you to save on storage by not saving empty files--especially helpful for high-sampling rate files, which are very large.
 
 ### Recording information calculation
 The program will calculate the energy and storage used each day once you have specified the recording period and recording/sleep durations. This appears at the bottom of the configuration app in every tab.
@@ -169,7 +176,7 @@ The program will calculate the energy and storage used each day once you have sp
 
 ### Keeping track of recording schedules
 
-Firmware versions 1.4.0 and later have the ability to write the schedule description to the AudioMoth's microSD card to allow easier recordkeeping.
+Firmware versions 1.4.0 and later save the schedule description to the AudioMoth's microSD card to allow easier recordkeeping. This is saved when recordings are made, not when the AudioMoth itself is programmed.
 
 Additionally, you may save the completed schedule as a file for later reference, reuse, copying, and sharing. Clicking a saved configuration file itself may not correctly open the program. Instead, open the saved program through the configuration app itself. Select the menu option AudioMoth > Open Configuration.
 
@@ -250,13 +257,6 @@ The AudioMoth saves recordings on a microSD card.
     * While deploying recorders in CUSTOM mode, it will be obvious if a device has lost its programming; its red and green lights will blink simultaneously when you try to flip the switch to CUSTOM.
 
 
-## Flash firmware
-
-As discussed above, several different firmware versions for the AudioMoth have been created and released. Some releases are just updates, but some have special functionality. For instance, version 1.4.0 enables users to trigger AudioMoth recording only when sound exceeds an amplitude threshold. Behavior of the AudioMoth in different firmware versions differs slightly but meaningfully. To see all of the features added or changed in each version of the firmware, view [the release descriptions in the GitHub repository](https://github.com/OpenAcousticDevices/AudioMoth-Firmware-Basic/releases).
-
-If you want to flash new firmware to your device, download the application [here](https://www.openacousticdevices.info/flashing) and follow its instructions. All of the released firmware versions can be downloaded through the app and applied to the AudioMoth.
-
-
 ## Turn on the recorder
 
 The AudioMoth can be turned on in two ways: DEFAULT mode (move switch to the right) or CUSTOM mode (move switch to the left).
@@ -276,6 +276,13 @@ The AudioMoth can be turned on in two ways: DEFAULT mode (move switch to the rig
             * With firmware version 1.4.1 and higher, the recording will be started mid-cycle, rather than waiting for the next cycle to begin.
 
 
+## Apply different firmware to the device
+
+As discussed above, several different firmware versions for the AudioMoth have been created and released. Some releases are just updates, but some have special functionality. For instance, version 1.4.0 enables users to trigger AudioMoth recording only when sound exceeds an amplitude threshold. Behavior of the AudioMoth in different firmware versions differs slightly but meaningfully. To see all of the features added or changed in each version of the firmware, view [the release descriptions in the GitHub repository](https://github.com/OpenAcousticDevices/AudioMoth-Firmware-Basic/releases).
+
+If you want to flash new firmware to your device, download the application [here](https://www.openacousticdevices.info/flashing) and follow its instructions. All of the released firmware versions can be downloaded through the app and applied to the AudioMoth. AudioMoth batteries must be removed before flashing new firmware on the device.
+
+
 
 ### Recording troubleshooting
 
@@ -286,30 +293,13 @@ The AudioMoth can be turned on in two ways: DEFAULT mode (move switch to the rig
 * The first versions of the AudioMoth firmware use filenames with compact representations of the date and time that the recording started. These filenames can be converted to date & time using the instructions in the AudioMoth user manual. In contrast, the "last modified" time represents the time in UTC that the file was saved, i.e., the time in UTC when the recording ended. More recent firmware saves more easily interpreted filenames.
 
 
-## Deployment
+# Deployment
 
 "Deployment" is the process of putting recorders out into the field. Below are ideas and important notes to remember about deployments, including how to inform the public, record data, safely affix AudioMoths to trees, and more.
 
-### Informing the public
+## Enclosures
 
-* To legally deploy recording devices on public lands in the United States, you must make a good-faith effort to inform people that recording is occurring
-
-* Place signs on all entry points (especially roads, parking lots). Signs must include the verbiage “By proceeding, you consent to being recorded.” An example of a complete sign:
-
-```
-Equipment for recording bird vocalizations is in use in this 
-area within 3 hours of sunrise. This equipment may incidentally 
-record other sounds, including human conversation. By 
-proceeding during this period, you consent to being recorded. 
-Please contact Jane Doe at jane.doe@university.edu
-with questions about this study.
-```
-
-* Another idea is to add a note on each recorder with information about the study. However, it is unclear whether these notes would deter or encourage recorder loss. :-)
-
-### Housings
-
-AudioMoths may break if exposed to water, so it is necessary to house them in a secure, watertight container. This is complicated by the fact that the mic, a MEMS mic, is attached to the circuitboard. The housing must be both watertight and acoustically transparent over the mic.
+AudioMoths may break if exposed to water, so it is necessary to house them in a secure, watertight enclosure. This is complicated by the fact that the mic, a MEMS mic, is attached to the circuitboard. The housing must be both watertight and acoustically transparent over the mic.
 
 #### Ziploc baggies
 
@@ -382,26 +372,35 @@ Open Acoustic Devices provides a design for a laser-cut acrylic housing [here](h
 
 * [Hand-assembled case by Ruby Lee](https://www.wildlabs.net/resources/case-studies/trialing-audiomoth-detect-hidden-threats-under-canopies-belize) (design not released; scroll down to see picture)
 
-
-### Logistics
+## Logistics
 
 * Create a packing list to make sure you have a few essential tools. [Example](https://github.com/rhine3/audiomoth-guide/blob/master/documents/packing-list.md)
-
 * If you’re also using playback or imitation to survey the area, make sure these sounds can’t be mistaken on the recordings for actual birds. For instance:
-
     * Use playback or imitation only outside the hours of the recording
-    
     * Use a distinctive unnatural sound (e.g., a “triple knock” instead of a “double knock”)
-    
     * Verbally announce your presence so that all recorders that may capture your recording can hear your announcement
-    
-* In the case of SD Card mixups, one can use the EXIF metadata (described below) to identify which unit created each recording.
+* In the case of SD card mixups, one can use the EXIF metadata (described below) to identify which unit created each recording.
+
+#### Informing the public
+* To legally deploy recording devices on public lands in the United States, you must make a good-faith effort to inform people that recording is occurring
+* Place signs on all entry points (especially roads, parking lots). Signs must include the verbiage “By proceeding, you consent to being recorded.” An example of a complete sign:
+
+```
+Equipment for recording bird vocalizations is in use in this 
+area within 3 hours of sunrise. This equipment may incidentally 
+record other sounds, including human conversation. By 
+proceeding during this period, you consent to being recorded. 
+Please contact Jane Doe at jane.doe@university.edu
+with questions about this study.
+```
+
+* Another idea is to add a note on each recorder with information about the study. However, it is unclear whether these notes would deter or encourage recorder loss. :-)
 
 # Scaling up
 
 For large deployments, special considerations must be taken into account. For instance, when deploying 100 recorders, an extra 5 minutes spent per recorder results in 8+ additional hours in the field!
 
-### Purchasing AudioMoths
+## Purchasing AudioMoths
 
 Wherever you purchase AudioMoths, make sure you check what version you're purchasing. For instance, AudioMoth v1.0.0 has sharp corners and a protruding switch; v1.1.0 has rounded corners and a recessed switch to reduce bag breakage.
 
@@ -413,7 +412,8 @@ Wherever you purchase AudioMoths, make sure you check what version you're purcha
 
 * Parts of the original AudioMoth design are constantly going out of stock due to high demand. We enlisted the help of our school's electronics shop to find new parts that were interchangeable with the out-of-stock parts.
 
-### Using protocols
+## Using protocols
+
 Since so many recorders will be deployed, information about their identity and location has to be taken accurately and efficiently.
 
 * Record the deployment date; information about the identity (ID number) of the AudioMoth, SD card, and location; any important notes about placement such as recorder direction; etc.
@@ -430,7 +430,7 @@ We use protocols to speed up the process and keep track of repetitive tasks. (It
 * [Example modification of the above template](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-protocol-example.pdf)
 
 
-### Pre-selecting recorder locations
+## Pre-selecting recorder locations
 
 Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](https://twitter.com/mountain_laur)) developed this method of pre-positioning locations of recorders for deployments:
 
@@ -451,7 +451,7 @@ Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](http
 ![Google My Maps](images/programming/google-maps-demo.gif)
 
 
-### Other tips and Tricks
+## Other tips and tricks
 
 ![Two hundred AudioMoth housings made from Ziploc bags](images/housing/bulk-housings.jpg)
 
@@ -468,7 +468,7 @@ Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](http
 
 # Data management
 
-### Data upload
+## Data upload
 ![Storage and SD card reader](images/other/nas.jpg)
 
 Transferring audio files from hundreds of SD cards is a slow process to do manually. Instead, use a multi-port SD card reader. The photo above shows a network-attached storage device (NAS) with 48 TB of storage, plus a multi-port SD card reader.
@@ -491,7 +491,7 @@ Transferring audio files from hundreds of SD cards is a slow process to do manua
 
 * Before you consider your data transfer complete, check to make sure that all of the expected folders have been created and they are of the expected size and number of recordings.
 
-### Metadata management
+## Metadata management
 It is important to keep track of metadata about the files that were created. 
 
 * The AudioMoth stores metadata about the recording in the "Comments" field of the EXIF metadata. This includes recording date/time, sample rate, recording duration, gain setting, battery level, and AudioMoth serial number. For instance, here is an example metadata record automatically generated by an AudioMoth, accessed through `exiftool` (see below)
