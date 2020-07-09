@@ -23,7 +23,7 @@ For full details, tips, and more information, continue on to [the guide](https:/
 
 ## Cite this work
 
-Please cite this work as the following, replacing the `<>` with the DOI as listed at the top of this document.
+This work is released under a CC-BY license. Please cite it if you use it, replacing the `<>` with the DOI as listed at the top of this document.
 
     Rhinehart, Tessa A. (2020). AudioMoth: a practical 
     guide to the open-source ARU. GitHub repository: 
