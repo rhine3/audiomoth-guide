@@ -67,6 +67,7 @@ You should always judge the performance of an analysis method by its performance
 
 **Classification**: predict the identity of sounds captured in recordings, e.g. training a convolutional neural network to identify bird species in a recording
 * [Anabat Insight](https://www.titley-scientific.com/us/anabat-insight.html) (free and paid versions) - contains open-source BatClassify classifier and can be used with other algorithms
+* [Animal Sound Identifier](https://datadryad.org/stash/dataset/doi:10.5061/dryad.221mq23) (free) - R software (described [here](https://onlinelibrary.wiley.com/doi/full/10.1111/ele.13092)) for classification of animals using training data directly from field recordings, without reference libraries
 * [ARBIMON](https://arbimon.sieve-analytics.com/) (free for certain number of recordings) - web-based interface for creating own classifiers
 * [Avisoft-SASLab Pro](http://www.avisoft.com/sound-analysis/) (paid) - classification by spectrographic template cross-correlation
 * [AviaNZ](http://www.avianz.net/index.php) (free) - configure your own "filters" for certain species or download pre-configured filters
