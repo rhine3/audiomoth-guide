@@ -90,6 +90,7 @@ You should always judge the performance of an analysis method by its performance
 * [audioset_soundscape_feats_sethi2019](https://github.com/sarabsethi/audioset_soundscape_feats_sethi2019/tree/master/calc_audioset_feats) - GitHub repo for using machine learned features for soundscape analyses (see [original paper](https://doi.org/10.1073/pnas.2004702117))
 * [AVA](https://autoencoded-vocal-analysis.readthedocs.io/en/latest/index.html) (free) - Python package; train generative models of vocalizations
 * [Avisoft-SASLab Pro](http://www.avisoft.com/sound-analysis/) (paid) - "sound parameter measurement" and noise level measurement
+* [hardRain](https://github.com/Cdevenish/hardRain) (free) - R software for detecting sounds of rain
 * [Koe Bioacoustics Software](https://koe.io.ac.nz/) (free) - assess song sequence structure
 * [Luscinia](https://rflachlan.github.io/Luscinia/) (free) - wide variety of acoustic signal analyses
 * [PAMr](https://github.com/TaikiSan21/PAMr) (free) - measure acoustic parameters
