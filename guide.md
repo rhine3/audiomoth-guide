@@ -64,7 +64,7 @@ AudioMoths are very easy to set up out of the box. A good general introduction t
 * [Purchase AudioMoths](#purchasing-audiomoths) 
 * Buy necessary supplies, including batteries and SD cards
 * [Download](https://www.openacousticdevices.info/applications) the configuration app 
-* Use the app to create a "program" (a recording schedule for the AudioMoth to follow) as described in detail below
+* Use the app to create a "program" (a recording schedule for the AudioMoth to follow) as described in detail below, **formatting time in UTC**
 * Insert batteries and microSD card into AudioMoth
 * Connect AudioMoth to computer and press green button on configuration app
 * Create housings for your AudioMoths
@@ -91,7 +91,15 @@ Create a recording schedule using the configuration app, downloadable here: http
 
 The latest version of the configuration app has three tabs: Recording Settings, Schedule, and Advanced Settings.
 
-### "Schedule" tab
+# WARNING: RECORDING SCHEDULES MUST BE CREATED IN UTC, NOT YOUR OWN TIMEZONE! (see below)
+
+Hopefully this warning will catch the eye of anyone quickly skimming this guide. This is one of the biggest and most commonly encountered silent failure points of using an AudioMoth. 
+
+Follow the instructions in the next section carefully, or else you may program your AudioMoths to record at the wrong time. It's disappointing to bring your recorders back from 2 months of deployment and realize your "dawn chorus" recordings were actually taken at midnight.
+
+
+
+### "Schedule" tab 
 
 #### Recording periods
 The "schedule" tab lets you set 1-4 recording period(s) in Coordinated Universal Time (UTC) using a 24-hour clock.
