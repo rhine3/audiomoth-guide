@@ -487,7 +487,7 @@ Transferring audio files from hundreds of SD cards is a slow process to do manua
 
 * When microSD cards are all named in this way, the following `rsync` command automatically copies data: 
 
-   `rsync -rhv --include /Volumes/MSD* --exclude .Spotlight* --exclude .fsevents* --exclude System* /Volumes/seagate/transfer_20200622/`
+   `rsync -rhv /Volumes/MSD* --exclude .Spotlight* --exclude .fsevents* --exclude System* /Volumes/seagate/transfer_20200622/`
 
   * The command will find all cards in `/Volumes` named with the prefix "MSD" 
   
