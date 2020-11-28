@@ -80,7 +80,7 @@ You should always judge the performance of an analysis method by its performance
 * [gibbonR](https://github.com/DenaJGibbon/gibbonR-package) (free) - R package that enables user to train neural networks, GMMs, and others
 * [Kaleidoscope](https://www.wildlifeacoustics.com/products/kaleidoscope-pro) (paid, 15-day free trial) - pre-created bat classification
 * [Koe Bioacoustics Software](https://koe.io.ac.nz/) (free) - clustering with human annotation
-* [OpenSoundscape](https://github.com/ktizeslab/opensoundscape) (free, in development) - pulse rate analysis of repeating calls; features to create own neural network classifiers are in development
+* [OpenSoundscape](https://github.com/ktizeslab/opensoundscape) (free) - create and use convolutional neural networks for classification; identify repeating calls using pulse rate analysis
 * [prinia-project](https://github.com/shivChitinous/prinia-project) (free) - bird song note classification
 * [scikit-maad](https://github.com/scikit-maad/scikit-maad) (free) - Python library enabling creation of own classifiers using scikit learn
 * [SonoBat](https://sonobat.com/) (paid) - classification of bat calls
