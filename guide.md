@@ -2,7 +2,7 @@
 
 # AudioMoth: a practical guide to the open-source ARU
 
-This guide is intended to be comprehensive for both first-time AudioMoth users and those interested in scaling up their AudioMoth deployment. 
+This guide is intended to be comprehensive for both first-time AudioMoth users and those interested in scaling up their AudioMoth deployment. This guide was originally published in 2019. In 2021, it was updated substantially to reflect the newest firmware available (v.1.5.0). The previous version is maintained on a separate branch.
 
 The information here complements official guides on the [Open Acoustic Devices website](https://www.openacousticdevices.info/getting-started) and a guide by [David Brown](https://sites.google.com/view/audiomoth/home). Some technical information about the devices themselves is excluded. We have also elaborated on each step by including images, procedures, and rules of thumb that we've created while deploying hundreds of AudioMoths. 
 
