@@ -34,6 +34,7 @@ You should always judge the performance of an analysis method by its performance
 * [SDEer](http://dx.doi.org/10.6084/m9.figshare.3792780) (free) - manual annotation for acoustic localization
 * [seewave](http://rug.mnhn.fr/seewave/) (free) - R package to display spectrograms
 * [SoundSort](https://github.com/macster110/aipam) (free) - visualize, cluster, and annotate recordings, then export these annotations
+* [Specky](https://github.com/rhine3/specky) (free) - Python app for displaying spectrograms and annotating short sound segments
 * [Tadarida-L](https://github.com/YvesBas/Tadarida-L) (free) - labeling interface of 3-part "Tadarida" software
 * [Triton](http://cetus.ucsd.edu/technologies_Software.html) (free) - condense/annotate very long recordings using Long Term Spectral Averages
 * [Vesper](https://github.com/HaroldMills/Vesper) (free, in development) - web-based application for avian nocturnal flight call analysis; also implements BirdVoxDetect, BirdVoxClassify, and others (see below)
@@ -80,7 +81,7 @@ You should always judge the performance of an analysis method by its performance
 * [gibbonR](https://github.com/DenaJGibbon/gibbonR-package) (free) - R package that enables user to train neural networks, GMMs, and others
 * [Kaleidoscope](https://www.wildlifeacoustics.com/products/kaleidoscope-pro) (paid, 15-day free trial) - pre-created bat classification
 * [Koe Bioacoustics Software](https://koe.io.ac.nz/) (free) - clustering with human annotation
-* [OpenSoundscape](https://github.com/ktizeslab/opensoundscape) (free, in development) - pulse rate analysis of repeating calls; features to create own neural network classifiers are in development
+* [OpenSoundscape](https://github.com/ktizeslab/opensoundscape) (free) - create and use convolutional neural networks for classification; identify repeating calls using pulse rate analysis
 * [prinia-project](https://github.com/shivChitinous/prinia-project) (free) - bird song note classification
 * [scikit-maad](https://github.com/scikit-maad/scikit-maad) (free) - Python library enabling creation of own classifiers using scikit learn
 * [SonoBat](https://sonobat.com/) (paid) - classification of bat calls
