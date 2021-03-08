@@ -1,6 +1,9 @@
 name: Pandoc Test
 
-on: push
+on: 
+  push:
+    paths:
+      - 'guide.md'
 
 jobs:
   convert_via_pandoc:
