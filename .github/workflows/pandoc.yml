@@ -8,4 +8,8 @@ jobs:
     steps:
       - uses: docker://pandoc/core:2.9
         with:
-          args: "--help" # gets appended to pandoc command
+          args: >-
+            guide.md
+            --standalone
+            --output=guide.pdf
+            --variable urlcolor=cyan
