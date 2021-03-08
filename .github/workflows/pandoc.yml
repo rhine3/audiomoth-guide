@@ -8,6 +8,8 @@ jobs:
     steps:
       - run: pwd
       - run: ls -al
+      - run: ls -al ../
+      - run: ls -al ../../
       - uses: docker://pandoc/core:2.9
         with:
           args: >-
