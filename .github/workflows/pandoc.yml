@@ -11,11 +11,11 @@ jobs:
     steps:
       # Get the Guide repo
       - name: Checkout audiomoth-guide repository
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
       
       # Use LaTeX version of pandoc for pdf conversion
       - name: Convert guide.md to guide.pdf
-      - uses: docker://pandoc/latex:2.9
+        uses: docker://pandoc/latex:2.9
         with:
           args: >-
             --standalone
@@ -25,7 +25,7 @@ jobs:
       
       # Add, commit, and push new PDF to repository
       - name: Push converted PDF to repository
-      - uses: EndBug/add-and-commit@v7
+        uses: EndBug/add-and-commit@v7
         with:
         
           # Equivalent of `git add ./guide.pdf`
