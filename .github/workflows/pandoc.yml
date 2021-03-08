@@ -6,12 +6,8 @@ jobs:
   convert_via_pandoc:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v2
-      - run: pwd
-      - run: ls -al
-      - run: ls -al ../
-      - run: ls -al ../../
-      - uses: docker://pandoc/core:2.9
+      - uses: actions/checkout@v2 #Get the Guide repo
+      - uses: docker://pandoc/latex:2.9 #Use LaTeX version of pandoc for pdf conversion
         with:
           args: >-
             --standalone
