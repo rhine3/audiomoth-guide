@@ -9,7 +9,7 @@ jobs:
       - uses: docker://pandoc/core:2.9
         with:
           args: >-
-            guide.md
+            ../../guide.md
             --standalone
-            --output=guide.pdf
+            --output=../../guide.pdf
             --variable urlcolor=cyan
