@@ -6,6 +6,8 @@ jobs:
   convert_via_pandoc:
     runs-on: ubuntu-18.04
     steps:
+      - run: pwd
+      - run: ls -al
       - uses: docker://pandoc/core:2.9
         with:
           args: >-
