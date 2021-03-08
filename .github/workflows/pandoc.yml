@@ -6,11 +6,27 @@ jobs:
   convert_via_pandoc:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v2 #Get the Guide repo
-      - uses: docker://pandoc/latex:2.9 #Use LaTeX version of pandoc for pdf conversion
+      # Get the Guide repo
+      - uses: actions/checkout@v2
+      
+      # Use LaTeX version of pandoc for pdf conversion
+      - uses: docker://pandoc/latex:2.9
         with:
           args: >-
             --standalone
             --output=./guide.pdf
             --variable urlcolor=cyan
             ./guide.md
+      
+      # Add, commit, and push new PDF to repository
+      - uses: EndBug/add-and-commit@v7
+        with:
+        
+          # Equivalent of `git add ./guide.pdf`
+          add: ./guide.pdf
+          
+          # Equivalent of `git commit -m "<message>"`
+          message: "Auto-generate PDF with Pandoc"
+
+          # Equivalent of `git push`
+          push: true
