@@ -2,7 +2,7 @@
 
 # AudioMoth: a practical guide to the open-source ARU
 
-This guide is intended to be comprehensive for both first-time AudioMoth users and those interested in scaling up their AudioMoth deployment. This guide was originally published in 2019. In 2021, it was updated substantially to reflect the newest firmware available (v.1.5.0). The previous version is maintained on a separate branch.
+This guide is intended to be comprehensive for both first-time AudioMoth users and those interested in scaling up their AudioMoth deployment. This guide was originally published in 2019. In 2021, it was updated substantially to reflect the newest firmware available (v.1.5.0). For information about previous firmware versions, see the relevant branch.
 
 The information here complements official guides on the [Open Acoustic Devices website](https://www.openacousticdevices.info/getting-started) and a guide by [David Brown](https://sites.google.com/view/audiomoth/home). Some technical information about the devices themselves is excluded. We have also elaborated on each step by including images, procedures, and rules of thumb that we've created while deploying hundreds of AudioMoths. 
 
@@ -11,21 +11,22 @@ Please submit suggestions for modifications to this guide via creating pull requ
 #### Table of contents
 
 * [Quick start](#quick-start)
-* [Setup](#setup)
+* [Supplies](#supplies)
+  * [Purchasing AudioMoths](#purchasing-audiomoths)
+  * [SD cards and batteries](#sd-cards-and-batteries)
+* [Recording schedule](#recording-schedule)
   * [How to create a recording schedule](#how-to-create-a-recording-schedule)
   * [Apply recording schedule to your AudioMoth](#apply-recording-schedule-to-your-audiomoth)
-  * [SD cards and batteries](#sd-cards-and-batteries)
   * [Turn on the recorder](#turn-on-the-recorder)
   * [Apply different firmware to the device](#apply-different-firmware-to-the-device)
+* [Enclosures](#enclosures)
+* [Calibration](#calibration)
 * [Deployment](#deployment)
-  * [Enclosures](#enclosures)
-  * [Logistics](#logistics)
-* [Scaling up](#scaling-up)
-  * [Purchasing AudioMoths](#purchasing-audiomoths)
-  * [Using protocols](#using-protocols)
-  * [Pre-selecting recorder locations](#pre-selecting-recorder-locations)
-  * [Other tips and tricks](#other-tips-and-tricks)
-  * Calibration - *coming soon*
+  * [Selecting deployment points](#selecting-deployment-points)
+  * [Tracking deployment metadata](#tracking-deployment-metadata)
+  * [Informing the public](#informing-the-public)
+  * [Tips for scaling up](#tips-for-scaling-up)
+  * [Playback and imitation](#playback-and-imitation)
 * [Data management](#data-management)
   * [Data upload](#data-upload)
   * [Metadata management](#metadata-management)
@@ -36,22 +37,93 @@ Please submit suggestions for modifications to this guide via creating pull requ
 
 # Quick start
 
-AudioMoths are very easy to set up out of the box. A good general introduction to the AudioMoth is available in the [AudioMoth guide](https://docs.wixstatic.com/ugd/d97703_9ac305905bdd4cdfab6aee99767a56e6.pdf) by Open Acoustic Devices. Our procedure is as follows.
+What, in general, is required to use an AudioMoth? A good general introduction to the AudioMoth is available in the [AudioMoth guide](https://docs.wixstatic.com/ugd/d97703_9ac305905bdd4cdfab6aee99767a56e6.pdf) by Open Acoustic Devices. Here's an example of the steps we take to deploy AudioMoths:
 
-* [Purchase AudioMoths](#purchasing-audiomoths) 
-* Buy necessary supplies, including batteries and SD cards
-* [Download](https://www.openacousticdevices.info/applications) the configuration app 
-* Use the app to create a "program" (a recording schedule for the AudioMoth to follow) as described in detail below, **formatting time in UTC**
-* Insert batteries and microSD card into AudioMoth
-* Connect AudioMoth to computer and press green button on configuration app
-* Create housings for your AudioMoths
-* Devise a field protocol for deployment of the AudioMoths
-* Deploy AudioMoths and put up legally required "recording in progress" signs
+* Assemble supplies
+  * [Purchase AudioMoths](#purchasing-audiomoths) 
+  * Buy necessary supplies, including batteries and SD cards
+  * Insert batteries and microSD card into AudioMoth
+* Create recording schedule
+  * Download the [configuration app](https://www.openacousticdevices.info/applications) to your computer
+  * Use the app to create a "program" (a recording schedule for the AudioMoth to follow) as described in detail below, **formatting time in UTC**
+  * Connect AudioMoth to computer and press green button on configuration app to set the program
+  * Disconnect AudioMoth from computer
+* Create or purchase housings for your AudioMoths
+* Deploy AudioMoths in the field
+  * Devise a field protocol for deployment of the AudioMoths
+  * Check on the legal requirements of your deployment, e.g. permissions or "recording in progress" signs
+  * Flip switch to "CUSTOM" to start recording on schedule
+  * Deploy AudioMoths in housings
+* Collect AudioMoth data
+  * Pick up AudioMoths and turn them off
+  * Download data from microSD cards onto computer
+
+# Supplies
+
+The first step to assembling an AudioMoth is getting the necessary supplies.
+
+## Purchasing AudioMoths
+
+Wherever you purchase AudioMoths, make sure you check what version you're purchasing. For instance, AudioMoth v1.0.0 has sharp corners and a protruding switch; v1.1.0 has rounded corners and a recessed switch to reduce bag breakage.
+
+* [GroupGets](https://groupgets.com/) purchases are run by [Alasdair Davies](https://twitter.com/Al2kA) every few months. These are helpful for folks looking to buy on the scale of a few dozen AudioMoths for $50 each. 
+
+* For those who can't wait for the next GroupGets purchase, AudioMoth is available at higher prices on [LabMaker](https://www.labmaker.org/products/audiomoth). LabMaker prices are higher due to a smaller number of devices being assembled at once. 
+
+* It may be possible to purchase AudioMoths at a lower price if larger volumes are ordered. Our lab has had excellent experiences purchasing from [RushPCB](https://rushpcb.com/). We bought the devices pre-assembled (i.e., components connected to boards, battery pack soldiered to board), but without the firmware flashed. We found it easy to flash the firmware in our lab.
+
+* Parts of the original AudioMoth design are constantly going out of stock due to high demand. We enlisted the help of our school's electronics shop to find new parts that were interchangeable with the out-of-stock parts.
+
+## SD cards and batteries
+
+The above steps describe how to program an AudioMoth containing batteries and SD cards. Here is some guidance on selecting and using batteries and SD cards.
+
+### microSD cards
+The AudioMoth saves recordings on a microSD card.
+
+#### Card formatting
+* With versions of the firmware < 1.2.2, AudioMoth cards must first be reformatted to FAT32 prior to each use. Firmware versions 1.2.2 and beyond support exFAT formatting of cards as well. Most cards natively come formatted with exFAT.
+
+* When reusing a microSD card that has already been deployed, check to make sure that the card is truly empty before reusing. 
+
+  * On Mac computers, you can check the amount of space remaining on the card using Disk Utility. On some file systems, deleting files on the microSD card using the graphical user interface does not actually delete them until the trash bin is emptied. 
+  * You can be certain a card is empty by reformatting the card every time you reuse it, or using the `rm` command in the terminal.
+  
+* FAT32 was originally intended for cards less than or equal to 32GB in size. Windows computers cannot natively format cards larger than this to FAT32 format, but there are [free programs](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) that allow Windows users to format larger cards. Mac computers can format cards at least up to 128GB; we haven't tested anything larger.
+
+#### Choosing and using cards
+* Recording with high sampling rate (e.g., recording bats) requires SD cards with fast read/write speeds. Files produced with high sampling rate are also larger, so they use up space on the SD card more quickly. We use SanDisk Extreme 128GB for bat recordings. See the [SD card guide](https://www.openacousticdevices.info/sd-card-guide) for more information.
+
+* When an SD card fills, the unit will stop saving recordings to it, and the unit's red LED light will stay constantly lit until the SD card is removed.
+
+* Insert the card into the AudioMoth with the contacts facing **up**, as shown on the graphic on the front of the AudioMoth. (It won't fit any other way.)
+
+![Correct way to insert SD card](images/other/sd-card-position.jpg)
 
 
-# Setup
+### Batteries
 
-Before using the AudioMoth, you will "program" it using the [Audiomoth configuration app](https://www.openacousticdevices.info/applications). Depending on your needs, you may customize the time of day during which recordings are made, the length of each recording, and the amount of time the recorder "sleeps" between each recording. 
+* Battery life depends on the type of battery you use. Check the battery's *capacity* in milliamp-hours (mAh). Lithium AA batteries have a larger capacity than typical alkaline AA batteries, but also cost more. On the AudioMoth, the capacities do not add up--the capacity of the three batteries connected in series is equal to the capacity of any single battery.
+
+* While the AudioMoth's battery casing accepts 3 AA batteries, with some electronics expertise you can modify the device to increase its battery life. The modified bank of batteries must have the same voltage but a higher capacity in mAh. For instance, 3 D batteries have the same voltage as 3 AA batteries but a higher capacity.
+
+    * The *voltage* of batteries connected in series (as they are on the AudioMoth) is equal to the number of batteries multiplied by the voltage of each battery. AudioMoth v1.0 uses 3 batteries at 1.5 volts each, so the voltage of the battery bank is `3 * 1.5V = 4.5V`.
+    
+    * The *capacity* of batteries in series is the capacity of any one battery in the series. (Don't mix batteries of different capacities, or new and old batteries.) For instance, a Duracell alkaline AA battery has a capacity of 2850mAh.
+   
+
+* Because the AudioMoth doesn’t have an onboard battery, if the batteries fall out, the programming and set time will be lost; if you have programmed a CUSTOM recording schedule it is no longer on the AudioMoth and will require reprogramming. 
+
+    * Masking tape is a cheap, mostly secure way of preventing batteries from falling out
+ 
+    * We take care not to jostle AudioMoths in transport, and we always bring several extra programmed AudioMoths with us during deployments, just in case we drop one and the batteries fall out. 
+    
+    * While deploying recorders in CUSTOM mode, it will be obvious if a device has lost its programming; its red and green lights will blink simultaneously when you try to flip the switch to CUSTOM.
+
+
+# Recording schedule
+
+Before using the AudioMoth, you will program it using the [Audiomoth configuration app](https://www.openacousticdevices.info/applications). Depending on your needs, you may customize the time of day during which recordings are made, the length of each recording, and the amount of time the recorder "sleeps" between each recording. 
 
 The AudioMoth can be used in two modes which are be accessed using the switch on the device: DEFAULT, in which the AudioMoth will start recording immediately, and CUSTOM, in which the AudioMoth will only record at certain times. 
 
@@ -185,6 +257,10 @@ Because the AudioMoth doesn’t have an onboard battery, if the batteries fall o
   * Firmware < 1.4.2: record for 10 seconds on, 5 seconds off
   * Firmware 1.4.2 and after: record continuously, ignoring sleep/duration settings
 
+
+There are two ways to apply recording schedules to AudioMoths: using the configuration app and using a new phone app made by Rainforest Connection.
+
+### Configuration app
 Follow the settings below to save the recording schedule to your AudioMoth:
 
 * Turn switch to CUSTOM mode briefly. 
@@ -195,52 +271,9 @@ Follow the settings below to save the recording schedule to your AudioMoth:
 * Press green "Configure AudioMoth" button in the programming app. This saves the recording program to the AudioMoth, and sets the AudioMoth's internal clock to your computer's time in UTC.
 * The AudioMoth now has a CUSTOM recording schedule. When ready to deploy, move AudioMoth switch to CUSTOM.
 
-## SD cards and batteries
+### Phone app
 
-The above steps describe how to program an AudioMoth containing batteries and SD cards. Here is some guidance on selecting and using batteries and SD cards.
-
-### microSD cards
-The AudioMoth saves recordings on a microSD card.
-
-#### Card formatting
-* With versions of the firmware < 1.2.2, AudioMoth cards must first be reformatted to FAT32 prior to each use. Firmware versions 1.2.2 and beyond support exFAT formatting of cards as well. Most cards natively come formatted with exFAT.
-
-* When reusing a microSD card that has already been deployed, check to make sure that the card is truly empty before reusing. 
-
-  * On Mac computers, you can check the amount of space remaining on the card using Disk Utility. On some file systems, deleting files on the microSD card using the graphical user interface does not actually delete them until the trash bin is emptied. 
-  * You can be certain a card is empty by reformatting the card every time you reuse it, or using the `rm` command in the terminal.
-  
-* FAT32 was originally intended for cards less than or equal to 32GB in size. Windows computers cannot natively format cards larger than this to FAT32 format, but there are [free programs](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) that allow Windows users to format larger cards. Mac computers can format cards at least up to 128GB; we haven't tested anything larger.
-
-#### Choosing and using cards
-* Recording with high sampling rate (e.g., recording bats) requires SD cards with fast read/write speeds. Files produced with high sampling rate are also larger, so they use up space on the SD card more quickly. We use SanDisk Extreme 128GB for bat recordings. See the [SD card guide](https://www.openacousticdevices.info/sd-card-guide) for more information.
-
-* When an SD card fills, the unit will stop saving recordings to it, and the unit's red LED light will stay constantly lit until the SD card is removed.
-
-* Insert the card into the AudioMoth with the contacts facing **up**, as shown on the graphic on the front of the AudioMoth. (It won't fit any other way.)
-
-![Correct way to insert SD card](images/other/sd-card-position.jpg)
-
-
-### Batteries
-
-* Battery life depends on the type of battery you use. Check the battery's *capacity* in milliamp-hours (mAh). Lithium AA batteries have a larger capacity than typical alkaline AA batteries, but also cost more. On the AudioMoth, the capacities do not add up--the capacity of the three batteries connected in series is equal to the capacity of any single battery.
-
-* While the AudioMoth's battery casing accepts 3 AA batteries, with some electronics expertise you can modify the device to increase its battery life. The modified bank of batteries must have the same voltage but a higher capacity in mAh. For instance, 3 D batteries have the same voltage as 3 AA batteries but a higher capacity.
-
-    * The *voltage* of batteries connected in series (as they are on the AudioMoth) is equal to the number of batteries multiplied by the voltage of each battery. AudioMoth v1.0 uses 3 batteries at 1.5 volts each, so the voltage of the battery bank is `3 * 1.5V = 4.5V`.
-    
-    * The *capacity* of batteries in series is the capacity of any one battery in the series. (Don't mix batteries of different capacities, or new and old batteries.) For instance, a Duracell alkaline AA battery has a capacity of 2850mAh.
-   
-
-* Because the AudioMoth doesn’t have an onboard battery, if the batteries fall out, the programming and set time will be lost; if you have programmed a CUSTOM recording schedule it is no longer on the AudioMoth and will require reprogramming. 
-
-    * Masking tape is a cheap, mostly secure way of preventing batteries from falling out
- 
-    * We take care not to jostle AudioMoths in transport, and we always bring several extra programmed AudioMoths with us during deployments, just in case we drop one and the batteries fall out. 
-    
-    * While deploying recorders in CUSTOM mode, it will be obvious if a device has lost its programming; its red and green lights will blink simultaneously when you try to flip the switch to CUSTOM.
-
+TODO: add information
 
 ## Turn on the recorder
 
@@ -278,15 +311,11 @@ If you want to flash new firmware to your device, download the application [here
 * The first versions of the AudioMoth firmware use filenames with compact representations of the date and time that the recording started. These filenames can be converted to date & time using the instructions in the AudioMoth user manual. In contrast, the "last modified" time represents the time in UTC that the file was saved, i.e., the time in UTC when the recording ended. More recent firmware saves more easily interpreted filenames.
 
 
-# Deployment
-
-"Deployment" is the process of putting recorders out into the field. Below are ideas and important notes to remember about deployments, including how to inform the public, record data, safely affix AudioMoths to trees, and more.
-
-## Enclosures
+# Enclosures
 
 AudioMoths may break if exposed to water, so it is necessary to house them in a secure, watertight enclosure. This is complicated by the fact that the mic, a MEMS mic, is attached to the circuitboard. The housing must be both watertight and acoustically transparent over the mic.
 
-#### Ziploc baggies
+## Ziploc baggies
 
 ![AudioMoth deployed on tree](images/housing/bag-housing.jpg)
 
@@ -312,7 +341,7 @@ The switch and corners of the AudioMoth v1.0 are sharp and can rip through a Zip
 
 * Before you walk away from a newly-deployed AudioMoth, inspect the bag for scratches or punctures. Replace if necessary.
 
-#### Heat-sealed bags
+## Heat-sealed bags
 
 Ziploc baggies are susceptible to puncture. These baggies can also be challenging to affix to straps. An alternative to Ziploc baggies is creating an enclosure using a heat-sealed bag. We create these using vacuum sealer with a "heat-seal-only" function. (Vacuuming air out of bags would reduce sound quality.)
 
@@ -337,13 +366,15 @@ Two downsides to this method are:
 * The AudioMoth needs to be programmed and turned on before you put it in the bag. Newer versions of AudioMoth firmware allow you to set a delayed start date for recording; without this, your AudioMoths will start recording on their daily schedule after being turned on, whether or not you've placed them in the field!
 
 
-#### Hard cases
+## Hard cases
 
-Ziploc baggies do not provide protection against intrusions like chewing by curious rodents, and rubbing by deer or bison. If these are a problem in your area, consider using hard enclosures for your AudioMoths.
+Ziploc baggies do not provide protection against intrusions like rodent chewing and rubbing by deer or bison. If these are a problem in your deployment area, consider using hard enclosures for your AudioMoths.
 
 Hard plastic or acrylic cases should have a hole through which sound can enter. This sound can be covered with a water-resistant acoustic membrane sticker or cloth.
 
-Open Acoustic Devices provides a design for a laser-cut acrylic housing [here](https://www.openacousticdevices.info/single-post/2019/04/24/AA-acrylic-laser-cut-enclosure). OAD has also started selling injection-molded cases through [GroupGets campaigns](https://groupgets.com/campaigns/775-the-official-audiomoth-ipx7-waterproof-case?archived=true&page=1). In addition, many groups have shared their housing advice on the [WildLabs Acoustic Monitoring forum](https://www.wildlabs.net/community/group/acoustic-monitoring) and Twitter. Some examples:
+Open Acoustic Devices provides a design for a laser-cut acrylic housing [here](https://www.openacousticdevices.info/single-post/2019/04/24/AA-acrylic-laser-cut-enclosure). OAD has also started selling injection-molded cases through [GroupGets campaigns](https://groupgets.com/campaigns/775-the-official-audiomoth-ipx7-waterproof-case?archived=true&page=1).
+
+In addition, many groups have shared their housing advice on the [WildLabs Acoustic Monitoring forum](https://www.wildlabs.net/community/group/acoustic-monitoring) and Twitter. Some examples:
 
 * [Tupperware case by Emily Hoffman](https://twitter.com/em_hoffmann/status/1200221472641282048)
 
@@ -357,18 +388,73 @@ Open Acoustic Devices provides a design for a laser-cut acrylic housing [here](h
 
 * [Hand-assembled case by Ruby Lee](https://www.wildlabs.net/resources/case-studies/trialing-audiomoth-detect-hidden-threats-under-canopies-belize) (design not released; scroll down to see picture)
 
-## Logistics
+# Calibration
 
-* Create a packing list to make sure you have a few essential tools. [Example](https://github.com/rhine3/audiomoth-guide/blob/master/documents/packing-list.md)
-* If you’re also using playback or imitation to survey the area, make sure these sounds can’t be mistaken on the recordings for actual birds. For instance:
-    * Use playback or imitation only outside the hours of the recording
-    * Use a distinctive unnatural sound (e.g., a “triple knock” instead of a “double knock”)
-    * Verbally announce your presence so that all recorders that may capture your recording can hear your announcement
-* In the case of SD card mixups, one can use the EXIF metadata (described below) to identify which unit created each recording.
+TODO: add information
 
-#### Informing the public
-* To legally deploy recording devices on public lands in the United States, you must make a good-faith effort to inform people that recording is occurring
-* Place signs on all entry points (especially roads, parking lots). Signs must include the verbiage “By proceeding, you consent to being recorded.” An example of a complete sign:
+# Deployment
+
+"Deployment" is the process of putting recorders out into the field. Below are ideas and important notes to remember about deployments including how to inform the public, record data, safely affix AudioMoths to trees, and more.
+
+## Selecting deployment points
+
+### Pre-selecting locations
+You can use tools like ArcGIS and Google Maps to pre-identify potential locations at which to place your recorders. Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](https://twitter.com/mountain_laur)) developed this method of pre-positioning locations of recorders for deployments:
+
+* Log in to your Google account.
+* Create a new map: go to https://drive.google.com > New > More > Google My Maps
+* Change the base map to "Satellite"
+* Click on the "Add Marker" tool and add markers to your map. You might try to target specific locations, for example, identify particular trees that are good candidates for hanging AudioMoths.
+    * We name all of our recorder locations with an alphanumeric code that gives the site of the deployments, and a numeric code that uniquely identifies the point at that site. For instance, our deployments at Powdermill Nature Reserve in the pond area are named PNRE-POND-0001, PNRE-POND-0002, etc. 
+* Use the "measuring" tool to find even spacing between points (press "Enter" to temporarily save a measurement before you plot your next point)
+* If multiple groups of people will deploy recorders, decide beforehand which group will deploy at which points. You can change the color of the point marker on Google Maps to easily see the group divisions.
+
+![Google My Maps](images/programming/google-maps-demo.gif)
+
+### Recorder positioning
+Some things to keep in mind when positioning recorders in the field:
+
+* If putting on a tree: tree size affects recording quality. In general, you want a tree that is not huge, but is study enough that the AudioMoth won't be jostled by wind.
+* You may want to camouflage your recorders. Black straps stand out against trees. If you are putting your recorders in an area that people walk around in, try to position them so they can't be seen from nearby roads or trails.
+
+
+## Tracking deployment metadata
+
+During deployments you must capture information about AudioMoths' identity and location, like deployment date, information about the identity (ID number) of the AudioMoth/SD card, the point at which the recorder is deployed, and any important notes about placement such as recorder direction, whether the recorder is hidden by trees, etc.
+
+Detailed protocols help speed up the process and keep track of repetitive tasks. The process of checking steps off a list or filling out a form reduces errors like forgetting to turn the AudioMoth on, checking the recorder is positioned appropriately, making sure to write down the correct ID of the AudioMoth and the point it is at, and so on.
+
+### Written protocols
+
+The "low-tech" way of keeping track of deployment metadata is using printable protocols, then adding this information to a spreadsheet. Here are some example protocols that we use:
+
+TODO: update these?
+
+* [Packing for a deployment](https://github.com/rhine3/audiomoth-guide/blob/master/documents/packing-list.md)
+* [Deploying recorders](https://github.com/rhine3/audiomoth-guide/blob/master/documents/deployment-protocol.pdf)
+* [Bringing recorders home](https://github.com/rhine3/audiomoth-guide/blob/master/documents/return-protocol.pdf)
+* [Post-field checklist](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-checklist.md) (which references the document below)
+* [Template for protocols to check in data written down in the field](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-protocol-template.pdf) 
+* [Example modification of the above template](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-protocol-example.pdf)
+
+TODO: add spreadsheet link and information
+
+TODO: Tips for using this method: 
+* When writing down data in the field, use waterproof paper and permanent pens (e.g., fine-tipped Sharpies or Rite in the Rain brand pens).
+
+### Electronic protocols
+
+TODO: add information about Rainforest Connection app
+
+Some researchers use apps such as [Survey123](https://survey123.arcgis.com/) or [Fulcrum](https://apps.apple.com/us/app/fulcrum-mobile-data-collector/id467758260) to record these data in the field.
+
+TODO: Tips for using this method:
+
+## Informing the public
+
+Because acoustic recording could be considered an invasion of privacy, be careful to check local regulations to determine what you have to do to put recorders on your land. For instance, you may have to acquire permits to perform research on the land. 
+
+To legally deploy recording devices on public lands in the United States, you must make a good-faith effort to inform people that recording is occurring. One way to do this is to place signs at all entry points (especially roads, parking lots) that include the verbiage “By proceeding, you consent to being recorded.” An example of a complete sign:
 
 ```
 Equipment for recording bird vocalizations is in use in this 
@@ -379,77 +465,31 @@ Please contact Jane Doe at jane.doe@university.edu
 with questions about this study.
 ```
 
-* Another idea is to add a note on each recorder with information about the study. However, it is unclear whether these notes would deter or encourage recorder loss. :-)
-
-# Scaling up
-
-For large deployments, special considerations must be taken into account. For instance, when deploying 100 recorders, an extra 5 minutes spent per recorder results in 8+ additional hours in the field!
-
-## Purchasing AudioMoths
-
-Wherever you purchase AudioMoths, make sure you check what version you're purchasing. For instance, AudioMoth v1.0.0 has sharp corners and a protruding switch; v1.1.0 has rounded corners and a recessed switch to reduce bag breakage.
-
-* [GroupGets](https://groupgets.com/) purchases are run by [Alasdair Davies](https://twitter.com/Al2kA) every few months. These are helpful for folks looking to buy on the scale of a few dozen AudioMoths for $50 each. 
-
-* For those who can't wait for the next GroupGets purchase, AudioMoth is available at higher prices on [LabMaker](https://www.labmaker.org/products/audiomoth). LabMaker prices are higher due to a smaller number of devices being assembled at once. 
-
-* It may be possible to purchase AudioMoths at a lower price if larger volumes are ordered. Our lab has had excellent experiences purchasing from [RushPCB](https://rushpcb.com/). We bought the devices pre-assembled (i.e., components connected to boards, battery pack soldiered to board), but without the firmware flashed. We found it easy to flash the firmware in our lab.
-
-* Parts of the original AudioMoth design are constantly going out of stock due to high demand. We enlisted the help of our school's electronics shop to find new parts that were interchangeable with the out-of-stock parts.
-
-## Using protocols
-
-Since so many recorders will be deployed, information about their identity and location has to be taken accurately and efficiently.
-
-* Record the deployment date; information about the identity (ID number) of the AudioMoth, SD card, and location; any important notes about placement such as recorder direction; etc.
-* See the section about pre-positioning recorder locations and ideas for location naming conventions.
-* Some researchers use apps such as [Survey123](https://survey123.arcgis.com/) or [Fulcrum](https://apps.apple.com/us/app/fulcrum-mobile-data-collector/id467758260) to record these data in the field
-
-We use protocols to speed up the process and keep track of repetitive tasks. (It's easy to leave out crucial steps, like turning the AudioMoth on, if you don't have to check them each off of a list.) Here are some example protocols that we use:
-    
-* [Packing for a deployment](https://github.com/rhine3/audiomoth-guide/blob/master/documents/packing-list.md)
-* [Deploying recorders](https://github.com/rhine3/audiomoth-guide/blob/master/documents/deployment-protocol.pdf)
-* [Bringing recorders home](https://github.com/rhine3/audiomoth-guide/blob/master/documents/return-protocol.pdf)
-* [Post-field checklist](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-checklist.md) (which references the document below)
-* [Template for protocols to check in data written down in the field](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-protocol-template.pdf) 
-* [Example modification of the above template](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-protocol-example.pdf)
+You may wish to add a note on or in each recorder housing briefly describing your study and an email address or phone number that curious people can use to contact you for more information. However, it is unclear whether these notes would deter or encourage recorder loss. :-)
 
 
-## Pre-selecting recorder locations
-
-Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](https://twitter.com/mountain_laur)) developed this method of pre-positioning locations of recorders for deployments:
-
-* Log in to your Google account.
-
-* Create a new map: go to https://drive.google.com > New > More > Google My Maps
-
-* Change the base map to "Satellite"
-
-* Click on the "Add Marker" tool and add markers to your map. You might try to target specific locations, for example, identify particular trees that are good candidates for hanging AudioMoths.
-
-    * We name all of our recorder locations with an alphanumeric code that gives the site of the deployments, and a numeric code that uniquely identifies the point at that site. For instance, our deployments at Powdermill Nature Reserve in the pond area are named PNRE-POND-0001, PNRE-POND-0002, etc. 
-
-* Use the "measuring" tool to find even spacing between points (press "Enter" to temporarily save a measurement before you plot your next point)
-
-* If multiple groups of people will deploy recorders, decide beforehand which group will deploy at which points. You can change the color of the point marker on Google Maps to easily see the group divisions.
-
-![Google My Maps](images/programming/google-maps-demo.gif)
-
-
-## Other tips and tricks
+## Tips for scaling up
 
 ![Two hundred AudioMoth housings made from Ziploc bags](images/housing/bulk-housings.jpg)
 
+
+* Speed matters when you deploy a lot of recorders: for instance, when deploying 100 recorders, an extra 5 minutes spent per recorder results in 8+ additional hours in the field! Practice and refine your deployment protocol before you go to the field.
 * Save time in the field by pre-packing bags with desiccant and pre-attaching them to straps in the lab, instead of performing these tasks in the field.
-
 * It is very helpful to have two people in the field.
-
     * One person can record data, e.g., the unique ID of the AudioMoth, its SD card, and the point at which it is deployed.
-
     * The other person can manage putting the AudioMoth on the tree and collecting a more accurate GPS point
- 
-* When writing down data in the field, use waterproof paper and permanent pens (e.g., fine-tipped Sharpies or Rite in the Rain brand pens).
 
+
+## Playback and imitation
+
+Your study might require that you use sound playback or imitations. If you're worried about mistaking these sounds for the actual sounds you are trying to record, here are some options:
+
+* Use playback or imitation only outside the hours of the recording
+* Keep a record of the days and times you performed imitations, then exclude these recordings from analyses
+* Use a distinctive unnatural sound (e.g., a “triple knock” instead of a “double knock”). 
+* Verbally announce your presence loudly enough that all recorders that could capture your recording can hear your announcement
+
+Make sure anyone using your data is aware of the protocols you used around playback and imitation. Keep in mind that if you are using automated analysis algorithms, verbal announcements will be missed and unnatural sounds might still be picked up by your algorithm as sounds of interest. 
 
 # Data management
 
