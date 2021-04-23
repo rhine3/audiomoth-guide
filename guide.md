@@ -2,9 +2,9 @@
 
 # AudioMoth: a practical guide to the open-source ARU
 
-This guide is intended to be comprehensive for both first-time AudioMoth users and those interested in scaling up their AudioMoth deployment. This guide was originally published in 2019. In 2021, it was updated substantially to reflect the newest firmware available (v.1.5.0). For information about previous firmware versions, see the relevant branch.
+This guide is intended to be comprehensive for both first-time AudioMoth users and those interested in scaling up their AudioMoth deployment. This guide was originally created in 2019. In 2021, it was updated substantially to reflect the newest firmware available (v.1.5.0). For information about previous firmware versions, see the relevant branch.
 
-The information here complements official guides on the [Open Acoustic Devices website](https://www.openacousticdevices.info/getting-started) and a guide by [David Brown](https://sites.google.com/view/audiomoth/home). Some technical information about the devices themselves is excluded. We have also elaborated on each step by including images, procedures, and rules of thumb that we've created while deploying hundreds of AudioMoths. 
+The information here complements official guides on the [Open Acoustic Devices website](https://www.openacousticdevices.info/getting-started) and a guide by [David Brown](https://sites.google.com/view/audiomoth/home). Some technical information about the devices themselves is excluded. We have also elaborated on each step by including images, procedures, and rules of thumb that we've created while deploying thousands of AudioMoths. 
 
 Please submit suggestions for modifications to this guide via creating pull requests on the GitHub repository, or emailing me at `tessa.rhinehart at pitt.edu`.
 
@@ -17,6 +17,7 @@ Please submit suggestions for modifications to this guide via creating pull requ
   * [Batteries](#batteries)
 * [Recording schedule](#recording-schedule)
   * [How to create a recording schedule](#how-to-create-a-recording-schedule)
+  * [How many hours will my AudioMoth record?](#how-many-hours-will-my-audiomoth-record)
   * [Apply recording schedule to your AudioMoth](#apply-recording-schedule-to-your-audiomoth)
   * [Turn on the recorder](#turn-on-the-recorder)
   * [Apply different firmware to the device](#apply-different-firmware-to-the-device)
@@ -80,47 +81,53 @@ Wherever you purchase AudioMoths, make sure you check what version you're purcha
 
 ## MicroSD cards
 
-The AudioMoth saves recordings on a microSD card.
+The AudioMoth saves recordings on a microSD card. 
+
+### Choosing a card
+
+Your card choice will primarily depend on the frequency at which you plan to record.
+
+For recording at sample rates of 48 kHz and below, we typically use SanDisk Ultra 64GB microSD cards. We have found that if using a 64GB card and recording at a 32 kHz sample rate, AudioMoths' storage and battery life run out at approximately the same time.
+
+For recording at sample rates above 48 kHz, we use SanDisk Extreme 128GB microSD cards. These sample rates require SD cards with fast read/write speeds. Files produced with high sampling rate are also larger, so they use up space on the SD card more quickly.  
+
+For more details on microSD card selection, see the Open Acoustic Devices [SD card guide](https://www.openacousticdevices.info/sd-card-guide) for more information.
 
 ### Card formatting
-* With versions of the firmware < 1.2.2, AudioMoth cards must first be reformatted to FAT32 prior to each use. Firmware versions 1.2.2 and beyond support exFAT formatting of cards as well. Most cards natively come formatted with exFAT.
 
-* When reusing a microSD card that has already been deployed, check to make sure that the card is truly empty before reusing. 
+Out of the box, microSD cards are typically supplied with one of two file systems: exFAT (for cards larger than 32GB) and FAT32 (for cards 32GB and less). AudioMoth firmware versions 1.2.2 and after can handle either of these formats. However, firmware versions 1.2.2 and before only support FAT32 cards. 
 
-  * On Mac computers, you can check the amount of space remaining on the card using Disk Utility. On some file systems, deleting files on the microSD card using the graphical user interface does not actually delete them until the trash bin is emptied. 
-  * You can be certain a card is empty by reformatting the card every time you reuse it, or using the `rm` command in the terminal.
-  
-* FAT32 was originally intended for cards less than or equal to 32GB in size. Windows computers cannot natively format cards larger than this to FAT32 format, but there are [free programs](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) that allow Windows users to format larger cards. Mac computers can format cards at least up to 128GB; we haven't tested anything larger.
+If you wish to use an AudioMoth firmware version before 1.2.2, you must reformat your cards to the FAT32 file system. Windows computers cannot natively format cards larger than 32GB to the FAT32 format, but there are [free programs](http://ridgecrop.co.uk/index.htm?guiformat.htm) that allow Windows users to format larger cards. Mac computers can format cards at least up to 128GB; we haven't tested anything larger.
 
-### Choosing and using cards
-* Recording with high sampling rate (e.g., recording bats) requires SD cards with fast read/write speeds. Files produced with high sampling rate are also larger, so they use up space on the SD card more quickly. We use SanDisk Extreme 128GB for bat recordings. See the [SD card guide](https://www.openacousticdevices.info/sd-card-guide) for more information.
 
-* When an SD card fills, the unit will stop saving recordings to it, and the unit's red LED light will stay constantly lit until the SD card is removed.
+### Tips for using cards
 
-* Insert the card into the AudioMoth with the contacts facing **up**, as shown on the graphic on the front of the AudioMoth. (It won't fit any other way.)
+Insert the card into the AudioMoth with the contacts facing **up**, as shown on the graphic on the front of the AudioMoth. (It won't fit any other way.)
 
 ![Correct way to insert SD card](images/other/sd-card-position.jpg)
+
+When an SD card fills, the unit will stop saving recordings to it, and the unit's red LED light will stay constantly lit until the SD card is removed.
+
+When reusing a microSD card that has already been deployed, check to make sure that the card is truly empty before reuse.
+* On Mac computers, you can check the amount of space remaining on the card using Disk Utility. Deleting files on the microSD card using the graphical user interface does not actually delete them until the trash bin is emptied!
+* You can be certain a card is empty by reformatting the card every time you reuse it, or using the `rm` command in the terminal.
 
 
 ## Batteries
 
-* Battery life depends on the type of battery you use. Check the battery's *capacity* in milliamp-hours (mAh). Lithium AA batteries have a larger capacity than typical alkaline AA batteries, but also cost more. On the AudioMoth, the capacities do not add up--the capacity of the three batteries connected in series is equal to the capacity of any single battery.
+The battery life depends on the type of battery you use. Check the battery's *capacity* in milliamp-hours (mAh). 
+* Lithium AA batteries have a larger capacity than typical alkaline AA batteries, but also cost more. 
+* On the AudioMoth, the batteries are connected in series, so their capacities do not add up: the capacity of the three batteries connected in series is equal to the capacity of any single battery.
 
-* While the AudioMoth's battery casing accepts 3 AA batteries, with some electronics expertise you can modify the device to increase its battery life. The modified bank of batteries must have the same voltage but a higher capacity in mAh. For instance, 3 D batteries have the same voltage as 3 AA batteries but a higher capacity.
-
-    * The *voltage* of batteries connected in series (as they are on the AudioMoth) is equal to the number of batteries multiplied by the voltage of each battery. AudioMoth v1.0 uses 3 batteries at 1.5 volts each, so the voltage of the battery bank is `3 * 1.5V = 4.5V`.
-    
-    * The *capacity* of batteries in series is the capacity of any one battery in the series. (Don't mix batteries of different capacities, or new and old batteries.) For instance, a Duracell alkaline AA battery has a capacity of 2850mAh.
+With some electronics expertise you can connect different batteries to the device to increase its battery life. 
+* The modified bank of batteries should have a higher *capacity* while maintaining the same *voltage*. For instance, 3 D batteries have the same voltage as 3 AA batteries, but have a higher capacity, so will last longer.
+* The *voltage* of batteries connected in series (as they are on the AudioMoth) is equal to the number of batteries multiplied by the voltage of each battery. AudioMoth v1.0 uses 3 batteries at 1.5 volts each, so the voltage of the battery bank is `3 * 1.5V = 4.5V`.
+* The *capacity* of batteries in series is the capacity of any one battery in the series. (Don't mix batteries of different capacities, or new and old batteries.) For instance, a Duracell alkaline AA battery has a capacity of 2850mAh.
    
-
-* Because the AudioMoth doesn’t have an onboard battery, if the batteries fall out, the programming and set time will be lost; if you have programmed a CUSTOM recording schedule it is no longer on the AudioMoth and will require reprogramming. 
-
-    * Masking tape is a cheap, mostly secure way of preventing batteries from falling out
- 
-    * We take care not to jostle AudioMoths in transport, and we always bring several extra programmed AudioMoths with us during deployments, just in case we drop one and the batteries fall out. 
-    
-    * While deploying recorders in CUSTOM mode, it will be obvious if a device has lost its programming; its red and green lights will blink simultaneously when you try to flip the switch to CUSTOM.
-
+Because the AudioMoth doesn’t have an onboard battery, if the batteries fall out, the programming and set time will be lost; if you have programmed a CUSTOM recording schedule it is no longer on the AudioMoth and will require reprogramming. 
+* Masking tape is a cheap, mostly secure way of preventing batteries from falling out
+* We take care not to jostle AudioMoths in transport, and we always bring several extra programmed AudioMoths with us during deployments, just in case we drop one and the batteries fall out. 
+* While deploying recorders in CUSTOM mode, it will be obvious if a device has lost its programming; its red and green lights will blink simultaneously when you try to flip the switch to CUSTOM.
 
 # Recording schedule
 
@@ -146,8 +153,6 @@ The latest version of the configuration app has three tabs: Recording Settings, 
 Hopefully this warning will catch the eye of anyone quickly skimming this guide. This is one of the biggest and most commonly encountered silent failure points of using an AudioMoth. 
 
 Follow the instructions in the next section carefully, or else you may program your AudioMoths to record at the wrong time. It's disappointing to bring your recorders back from 2 months of deployment and realize your "dawn chorus" recordings were actually taken at midnight.
-
-
 
 ### "Schedule" tab 
 
@@ -223,14 +228,7 @@ This feature allows you to only record data from a particular frequency band. Wh
 #### Amplitude threshold
 This feature allows you to only save samples to the file that meet a particular amplitude threshold. This allows you to save on storage by not saving empty files--especially helpful for high-sampling rate files, which are very large.
 
-### Recording information calculation
-The program will calculate the energy and storage used each day once you have specified the recording period and recording/sleep durations. This appears at the bottom of the configuration app in every tab.
-
-* To refresh batteries and cards as infrequently as possible during multi-month deployments, use a battery/SD card combination where the battery life and card storage run out at roughly the same time, given the device's estimated energy and storage usage.
-
-* Use [this code](https://trinket.io/python/ff8aeb66e1) to estimate the number of operational days of a battery and SD card. Input card size and capacity of a single battery (e.g., 2850 mAh for a Duracell alkaline AA battery), plus the config app's estimated and storage and energy usage. For more information on battery capacity, see the section on [batteries](#sd-cards-and-batteries).
-
-* With older versions of the firmware (<1.4.2), you must make sure that your file sizes are less than the WAV file size limit of 4.3GB (4000MB). Current versions of the firmware handle file sizes that are approaching this limit by closing the current file and restarting a new one.
+This method is primarily intended for animals that call at high frequencies; the high sample rate recordings required to capture these animals' calls take a lot of storage. We would not recommend using this method for animals that call at audible frequencies, where there is a lot of noise that could cause false triggers. Additionally, using triggering limits the applicability of your recordings to other taxa.
 
 ### Keeping track of recording schedules
 
@@ -247,6 +245,21 @@ One creates a single 3-hour long recording per day at 32kHz, suitable for record
 The other creates minute-long recordings with minute-long breaks in between, 30 each at two different times. The latter program records at a sample rate of 192kHz, perhaps for recording bat ultrasonic sounds, and will require a fast microSD card.
 
 ![Two example programs](images/programming/example-programs.jpg)
+
+
+## How many hours will my AudioMoth record?
+
+The number of hours an AudioMoth will record depends on a combination of the capacity of your batteries, the storage size of your microSD card, the sample rate at which you are recording, and whether or not you are using triggered recording.
+
+The AudioMoth Configuration app will calculate the energy and storage used *per day* once you have specified the recording period and recording/sleep durations. This appears at the bottom of the configuration app in every tab. Your recorder will stop recording either when it uses up all of the storage on the microSD card, or when its battery dies: whichever happens first.
+
+* To refresh batteries and cards as infrequently as possible during multi-month deployments, use a battery/SD card combination where the battery life and card storage run out at roughly the same time, given the device's estimated energy and storage usage. For instance, we use Duracell alkaline AA batteries and 64GB microSD cards. At a 32kHz sampling rate, our storage capacity runs out at about the same time that our recorders' batteries die.
+
+* Use [this code](https://trinket.io/python/ff8aeb66e1) to estimate the number of operational days of a battery and SD card. Input card size and capacity of a single battery (e.g., 2850 mAh for a Duracell alkaline AA battery), plus the config app's estimated and storage and energy usage. For more information on battery capacity, see the section on [batteries](#sd-cards-and-batteries).
+
+* With older versions of the firmware (<1.4.2), you must make sure that your file sizes are less than the WAV file size limit of 4.3GB (4000MB). Current versions of the firmware handle file sizes that are approaching this limit by closing the current file and restarting a new one.
+
+* You can extend your recorder's storage space by using triggered recording (see [Advanced settings information](#advanced-settings)).
 
 
 ## Apply recording schedule to your AudioMoth
@@ -295,14 +308,6 @@ The AudioMoth can be turned on in two ways: DEFAULT mode (move switch to the rig
             * With firmware version 1.4.1 and higher, the recording will be started mid-cycle, rather than waiting for the next cycle to begin.
 
 
-## Apply different firmware to the device
-
-As discussed above, several different firmware versions for the AudioMoth have been created and released. Some releases are just updates, but some have special functionality. For instance, version 1.4.0 enables users to trigger AudioMoth recording only when sound exceeds an amplitude threshold. Behavior of the AudioMoth in different firmware versions differs slightly but meaningfully. To see all of the features added or changed in each version of the firmware, view [the release descriptions in the GitHub repository](https://github.com/OpenAcousticDevices/AudioMoth-Firmware-Basic/releases).
-
-If you want to flash new firmware to your device, download the application [here](https://www.openacousticdevices.info/flashing) and follow its instructions. All of the released firmware versions can be downloaded through the app and applied to the AudioMoth. AudioMoth batteries must be removed before flashing new firmware on the device.
-
-
-
 ### Recording troubleshooting
 
 * If a unit's microSD card is full, the unit stops saving recordings. This avoids overwriting previous recordings. In this situation, the unit's red LED light will stay constantly lit until the SD card is removed.
@@ -310,6 +315,15 @@ If you want to flash new firmware to your device, download the application [here
 * Turning the AudioMoth off while it is still recording will cause some data loss. This is because the speed at which the data are saved to the AudioMoth lags behind real time. We have found that turning off a recorder while it is recording causes about a 3% loss of data; e.g. a recording that was stopped an hour into the recording will lose 1.8 minutes (60 minutes * 0.03 = 1.8 minutes).
 
 * The first versions of the AudioMoth firmware use filenames with compact representations of the date and time that the recording started. These filenames can be converted to date & time using the instructions in the AudioMoth user manual. In contrast, the "last modified" time represents the time in UTC that the file was saved, i.e., the time in UTC when the recording ended. More recent firmware saves more easily interpreted filenames.
+
+
+
+
+# Apply different firmware to the device
+
+As discussed above, several different firmware versions for the AudioMoth have been created and released. Some releases are just updates, but some have special functionality. For instance, version 1.4.0 enables users to trigger AudioMoth recording only when sound exceeds an amplitude threshold. Behavior of the AudioMoth in different firmware versions differs slightly but meaningfully. To see all of the features added or changed in each version of the firmware, view [the release descriptions in the GitHub repository](https://github.com/OpenAcousticDevices/AudioMoth-Firmware-Basic/releases).
+
+If you want to flash new firmware to your device, download the application [here](https://www.openacousticdevices.info/flashing) and follow its instructions. All of the released firmware versions can be downloaded through the app and applied to the AudioMoth. AudioMoth batteries must be removed before flashing new firmware on the device.
 
 
 # Enclosures
