@@ -13,7 +13,8 @@ Please submit suggestions for modifications to this guide via creating pull requ
 * [Quick start](#quick-start)
 * [Supplies](#supplies)
   * [Purchasing AudioMoths](#purchasing-audiomoths)
-  * [SD cards and batteries](#sd-cards-and-batteries)
+  * [MicroSD cards](#microsd-cards)
+  * [Batteries](#batteries)
 * [Recording schedule](#recording-schedule)
   * [How to create a recording schedule](#how-to-create-a-recording-schedule)
   * [Apply recording schedule to your AudioMoth](#apply-recording-schedule-to-your-audiomoth)
@@ -64,24 +65,24 @@ The first step to assembling an AudioMoth is getting the necessary supplies.
 
 ## Purchasing AudioMoths
 
+There are several ways to purchase AudioMoths. 
+
 Wherever you purchase AudioMoths, make sure you check what version you're purchasing. For instance, AudioMoth v1.0.0 has sharp corners and a protruding switch; v1.1.0 has rounded corners and a recessed switch to reduce bag breakage.
 
-* [GroupGets](https://groupgets.com/) purchases are run by [Alasdair Davies](https://twitter.com/Al2kA) every few months. These are helpful for folks looking to buy on the scale of a few dozen AudioMoths for $50 each. 
+**Option 1: GroupGets**: [GroupGets](https://groupgets.com/manufacturers/open-acoustic-devices/products/audiomoth) group purchases are the main way to purchase the latest version of AudioMoths. These purchases open periodically. Make sure to purchase your AudioMoths far in advance of your study, as these purchases are not always open, and the lead time on manufacturing the AudioMoths can be several months.
 
-* For those who can't wait for the next GroupGets purchase, AudioMoth is available at higher prices on [LabMaker](https://www.labmaker.org/products/audiomoth). LabMaker prices are higher due to a smaller number of devices being assembled at once. 
+**Option 2: LabMaker**: For those who can't wait for the next GroupGets purchase, AudioMoth is available at higher prices on LabMaker. Currently the AudioMoth versions available on LabMaker are [AudioMoth v1.2.0](https://www.labmaker.org/products/audiomoth-v1-2-0) and [AudioMoth v1.1.0](https://www.labmaker.org/products/audiomoth-v1-1-0). LabMaker prices are higher because a smaller number of devices are assembled at once, so there is less of an economy of scale.
 
-* It may be possible to purchase AudioMoths at a lower price if larger volumes are ordered. Our lab has had excellent experiences purchasing from [RushPCB](https://rushpcb.com/). We bought the devices pre-assembled (i.e., components connected to boards, battery pack soldiered to board), but without the firmware flashed. We found it easy to flash the firmware in our lab.
+**Option 3: large-scale PCB manufacturing**: For some versions of the AudioMoth, it may be possible to get AudioMoths at a lower price and larger volumes if you place a large order directly through a PCB manufacturer.
+* The PCB manufacturer will create the AudioMoths based off the schematic you provide. The schematic for older versions of AudioMoths (1.0.0 and 1.1.0) has been released publicly. The version 1.2.0 schematic has not been released, so this version cannot currently be purchased through this method. 
+* Our lab has had excellent experiences purchasing from [RushPCB](https://rushpcb.com/). We bought the devices pre-assembled (i.e., components connected to boards, battery pack soldiered to board), but without the firmware flashed. We found it easy to flash the firmware in our lab.
+* Parts of the original AudioMoth design are constantly going out of stock due to high demand. We enlisted the help of our school's electronics shop to find new parts that were interchangeable with the out-of-stock parts and replace these in the schematic.
 
-* Parts of the original AudioMoth design are constantly going out of stock due to high demand. We enlisted the help of our school's electronics shop to find new parts that were interchangeable with the out-of-stock parts.
+## MicroSD cards
 
-## SD cards and batteries
-
-The above steps describe how to program an AudioMoth containing batteries and SD cards. Here is some guidance on selecting and using batteries and SD cards.
-
-### microSD cards
 The AudioMoth saves recordings on a microSD card.
 
-#### Card formatting
+### Card formatting
 * With versions of the firmware < 1.2.2, AudioMoth cards must first be reformatted to FAT32 prior to each use. Firmware versions 1.2.2 and beyond support exFAT formatting of cards as well. Most cards natively come formatted with exFAT.
 
 * When reusing a microSD card that has already been deployed, check to make sure that the card is truly empty before reusing. 
@@ -91,7 +92,7 @@ The AudioMoth saves recordings on a microSD card.
   
 * FAT32 was originally intended for cards less than or equal to 32GB in size. Windows computers cannot natively format cards larger than this to FAT32 format, but there are [free programs](http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm) that allow Windows users to format larger cards. Mac computers can format cards at least up to 128GB; we haven't tested anything larger.
 
-#### Choosing and using cards
+### Choosing and using cards
 * Recording with high sampling rate (e.g., recording bats) requires SD cards with fast read/write speeds. Files produced with high sampling rate are also larger, so they use up space on the SD card more quickly. We use SanDisk Extreme 128GB for bat recordings. See the [SD card guide](https://www.openacousticdevices.info/sd-card-guide) for more information.
 
 * When an SD card fills, the unit will stop saving recordings to it, and the unit's red LED light will stay constantly lit until the SD card is removed.
@@ -101,7 +102,7 @@ The AudioMoth saves recordings on a microSD card.
 ![Correct way to insert SD card](images/other/sd-card-position.jpg)
 
 
-### Batteries
+## Batteries
 
 * Battery life depends on the type of battery you use. Check the battery's *capacity* in milliamp-hours (mAh). Lithium AA batteries have a larger capacity than typical alkaline AA batteries, but also cost more. On the AudioMoth, the capacities do not add up--the capacity of the three batteries connected in series is equal to the capacity of any single battery.
 
@@ -391,6 +392,9 @@ In addition, many groups have shared their housing advice on the [WildLabs Acous
 # Calibration
 
 TODO: add information
+* Sam's guide
+* Importance of calibration
+* Oversampling/changes throughout firmware
 
 # Deployment
 
