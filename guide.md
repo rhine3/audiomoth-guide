@@ -1,5 +1,8 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3667065.svg)](https://doi.org/10.5281/zenodo.3667065)
 
+The features and behaviors of AudioMoths vary by firmware and software version. The version of the guide below describes early versions of the firmware (<=1.4.4) and configuration software. For information on more recent firmware and software, see the [master branch](https://github.com/rhine3/audiomoth-guide/). 
+The guide below is no longer updated but is maintained for future reference.
+
 # AudioMoth: a practical guide to the open-source ARU
 
 This guide is intended to be comprehensive for both first-time AudioMoth users and those interested in scaling up their AudioMoth deployment. 
