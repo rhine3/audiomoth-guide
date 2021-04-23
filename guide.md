@@ -8,31 +8,6 @@ The information here complements official guides on the [Open Acoustic Devices w
 
 Please submit suggestions for modifications to this guide via creating pull requests on the GitHub repository, or emailing me at `tessa.rhinehart at pitt.edu`.
 
-
-#### Suggested citation
-If you find this guide helpful, please share it! It is available in both [PDF](https://github.com/rhine3/audiomoth-guide/raw/master/guide.pdf) and [Markdown](https://github.com/rhine3/audiomoth-guide/raw/master/guide.md) formats. 
-
-The guide and the other materials in this repository are licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/). Please feel free to use and modify them with attribution. You may cite the guide as follows, replacing the `<>` with the DOI in the image at the top of this document.
-```
-Rhinehart, Tessa A (2020). AudioMoth: a practical  
-guide to the open-source ARU. GitHub repository: 
-https://github.com/rhine3/audiomoth-guide. DOI: <>
-```
-
-If you modify this document and would like to make a .pdf version, you can use `pandoc` on the command line to compile the PDF version from Markdown: `pandoc guide.md -o guide.pdf --variable urlcolor=cyan`. (You will have to remove the DOI image at the top of the document to do so, as `pandoc` doesn't support this image type.)
-
-#### Acknowledgements
-
-This guide was improved by the experiences and feedback of Alex Rogers, Trieste Devlin, Lauren Chronister, Lauren Schricker, Abram Fleishman, and other members of the AudioMoth community. The AudioMoth was developed by [Open Acoustic Devices](https://www.openacousticdevices.info/). Its first description in academic literature can be found in:
-
-```
-Hill, Andrew P., Peter Prince, Evelyn Piña Covarrubias, and 
-C. Patrick Doncaster. “AudioMoth: Evaluation of a Smart Open 
-Acoustic Device for Monitoring Biodiversity and the Environment.” 
-Methods in Ecology and Evolution, December 3, 2017.
-```
-
-
 #### Table of contents
 
 * [Quick start](#quick-start)
@@ -55,6 +30,8 @@ Methods in Ecology and Evolution, December 3, 2017.
   * [Data upload](#data-upload)
   * [Metadata management](#metadata-management)
 * [Data analysis](#data-analysis)
+* [Citing this guide](#citing-this-guide)
+* [Acknowledgements](#acknowledgements)
 
 
 # Quick start
@@ -537,3 +514,28 @@ Data analysis techniques vary from completely automated to completely manual. Fo
 
 See [this list](resources/analysis-software.md) for brief descriptions of different data analysis techniques, and a list of softwares available.
 
+
+## Citing this guide
+If you find this guide helpful, please share it! It is available in both [PDF](https://github.com/rhine3/audiomoth-guide/raw/master/guide.pdf) and [Markdown](https://github.com/rhine3/audiomoth-guide/raw/master/guide.md) formats. 
+
+The guide and the other materials in this repository are licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/). Please feel free to use and modify them with attribution. You may cite the guide as follows, replacing the `<>` with the DOI in the image at the top of this document.
+```
+Rhinehart, Tessa A (2020). AudioMoth: a practical  
+guide to the open-source ARU. GitHub repository: 
+https://github.com/rhine3/audiomoth-guide. DOI: <>
+```
+
+If you modify this document and would like to make a .pdf version, you can use `pandoc` on the command line to compile the PDF version from Markdown: `pandoc guide.md -o guide.pdf --variable urlcolor=cyan`. (You will have to remove the DOI image at the top of the document to do so, as `pandoc` doesn't support this image type.)
+
+## Acknowledgements
+
+The AudioMoth was developed by [Open Acoustic Devices](https://www.openacousticdevices.info/). Its first description in academic literature can be found in:
+
+```
+Hill, Andrew P., Peter Prince, Evelyn Piña Covarrubias, and 
+C. Patrick Doncaster. “AudioMoth: Evaluation of a Smart Open 
+Acoustic Device for Monitoring Biodiversity and the Environment.” 
+Methods in Ecology and Evolution, December 3, 2017.
+```
+
+Thank you to Alex Rogers, Sam Lapp, Trieste Devlin, Lauren Chronister, Lauren Schricker, Abram Fleishman, and other members of the AudioMoth and bioacoustics community who have contributed to this guide. 
