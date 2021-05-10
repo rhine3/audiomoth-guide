@@ -1,12 +1,14 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3667065.svg)](https://doi.org/10.5281/zenodo.3667065)
 
 # AudioMoth: a practical guide to the open-source ARU
+*by [Tessa Rhinehart](https://tessarhinehart.com), [Kitzes Lab](https://kitzeslab.org/), University of Pittsburgh*
 
-This guide is intended to be comprehensive for both first-time AudioMoth users and those interested in scaling up their AudioMoth deployment. This guide was originally created in 2019. In 2021, it was updated substantially to reflect the newest firmware available (v.1.5.0). For information about previous firmware versions, see the relevant branch.
+#### About
+This document is intended to be comprehensive guide for both first-time AudioMoth users and those interested in scaling up their AudioMoth deployment. It describes procedures to use AudioMoths at all scales, answers frequently asked questions, and highlights common challenges encountered when using AudioMoths. This version of the guide reflects the newest firmware available at the time of writing (v.1.5.0); previous versions of the guide are also available in the GitHub repository.
 
-The information here complements official guides on the [Open Acoustic Devices website](https://www.openacousticdevices.info/getting-started) and a guide by [David Brown](https://sites.google.com/view/audiomoth/home). Some technical information about the devices themselves is excluded. We have also elaborated on each step by including images, procedures, and rules of thumb that we've created while deploying thousands of AudioMoths.
+The information here complements official documentation on the [Open Acoustic Devices website](https://www.openacousticdevices.info/getting-started) and a guide by [David Brown](https://sites.google.com/view/audiomoth/home). Since the original release of this guide in 2019, Open Acoustic Devices posted a manual based on this material [on their website](https://www.openacousticdevices.info/open-source). These documents contain similar information, but the guide below also has additional information about practical applications including housing options, deployment procedures, acoustic tests, stumbling blocks, and rules of thumb.
 
-Please submit suggestions for modifications to this guide via creating pull requests on the GitHub repository, or emailing me at `tessa.rhinehart at pitt.edu`.
+Please submit suggestions for modifications to this guide via creating pull requests on the GitHub repository, or emailing me at `tessa.rhinehart at pitt.edu`. This guide is released under a [CC-By License](https://creativecommons.org/licenses/by/4.0/), meaning you are free to modify it and redistribute it for almost any purpose with proper [attribution](#citing-this-guide).
 
 #### Table of contents
 
@@ -604,9 +606,11 @@ See [this list](resources/analysis-software.md) for brief descriptions of differ
 ## Citing this guide
 If you find this guide helpful, please share it! It is available in both [PDF](https://github.com/rhine3/audiomoth-guide/raw/master/guide.pdf) and [Markdown](https://github.com/rhine3/audiomoth-guide/raw/master/guide.md) formats. 
 
-The guide and the other materials in this repository are licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/). Please feel free to use and modify them with attribution. You may cite the guide as follows, replacing the `<>` with the DOI in the image at the top of this document.
+The guide and the other materials in this repository are licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/). Please feel free to use and modify them with [attribution as described in the license](https://github.com/rhine3/audiomoth-guide/blob/1f9192ac3d41a9a1f7a362bc7471943d0db49380/LICENSE.txt#L210-L259).
+
+You may cite the guide as follows, replacing the `<>` with the DOI in the image at the top of this document.
 ```
-Rhinehart, Tessa A (2020). AudioMoth: a practical  
+Rhinehart, Tessa A (2021). AudioMoth: a practical  
 guide to the open-source ARU. GitHub repository: 
 https://github.com/rhine3/audiomoth-guide. DOI: <>
 ```
