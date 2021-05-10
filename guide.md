@@ -173,7 +173,7 @@ Instead of referring to a time zone (like Eastern Time, Pacific Time, etc.) reco
 
 **What is UTC?**: UTC is a universal time standard that is used to avoid ambiguity in time zones. UTC is equivalent to Greenwich Mean Time (GMT), but does not observe Daylight Savings time as some countries in the GMT time zone do.
 
-**Can I program AudioMoths in local time?**: Yes, you can use local time instead of UTC to program your devices. To do so, click on the program menu ("File" at the top left of the app on Windows computers; "AudioMoth-Config" at the top of your screen on Mac computers). There you can toggle the "Local time" setting. 
+**Can I program AudioMoths in local time?**: Yes, you can use local time instead of UTC to program your devices. To do so, click on the main program menu ("File" at the top left of the app on Windows computers; "AudioMoth-Config" at the top of your screen on Mac computers). There you can toggle the "Local time" setting. 
 
 **When should I use local time?**: Here are some examples of factors to consider.
 * Will you or your collaborators deploy your recorders across multiple time zones?
@@ -189,6 +189,8 @@ Make sure to press "Add recording period" after typing in the desired time of ea
 
 The recording periods will only be adhered to when the AudioMoth is on CUSTOM mode. On DEFAULT mode, the recorder begins recording immediately, without regard to any scheduled recording periods. 
 
+TODO: update gif
+
 ![Set recording period on AudioMoth configuration app](images/programming/recording-period-fast.gif)
 
 #### Gain
@@ -196,6 +198,8 @@ The gain is the amount that sounds from the microphone will be amplified once re
 
 #### Sleep-record cycles
 In the "schedule" tab you select the time of day that the AudioMoth should record each day (the "recording period" or periods). However, the AudioMoth doesn't have to record continuously every day. You can use a sleep/record schedule to record only a limited amount of time during the scheduled recording period.
+
+TODO: update gif
 
 ![Set sleep and recording durations](images/programming/sleep-rec-fast.gif)
 
@@ -221,6 +225,7 @@ In general, when the AudioMoth is in CUSTOM mode, a red LED means the AudioMoth 
 For complete information on the LED meanings, see [this webpage](https://www.openacousticdevices.info/led-guide)
 
 ### "Advanced settings" tab
+
 These two features can be used separately, or combined. For more information on these features, see [this document](https://github.com/OpenAcousticDevices/Application-Notes/blob/master/Using_AudioMoth_with_Filtering_and_Amplitude_Threshold_Recording.pdf)
 
 #### Filtering
@@ -236,6 +241,8 @@ This method is primarily intended for animals that call at high frequencies; the
 
 ## Example configurations
 
+TODO: update
+
 Below are some example configurations created with an older version of the configuration app.
 
 One creates a single 3-hour long recording per day at 32kHz, suitable for recording a bird dawn chorus. 
@@ -247,53 +254,62 @@ The other creates minute-long recordings with minute-long breaks in between, 30 
 
 ## Save and load configuration
 
-TODO: update
+You can save your completed schedule as a file for later reference, reuse, copying, and sharing. Both features are accessed through the main program menu ("File" at the top left of the app on Windows computers; "AudioMoth-Config" at the top of your screen on Mac computers). 
 
-Firmware versions 1.4.0 and later save the schedule description to the AudioMoth's microSD card to allow easier recordkeeping. This is saved when recordings are made, not when the AudioMoth itself is programmed.
+To save a configuration:
+* Go the main menu
+* Click "Save Configuration"
+* Save it with a descriptive filename 
 
-Additionally, you may save the completed schedule as a file for later reference, reuse, copying, and sharing. Clicking a saved configuration file itself may not correctly open the program. Instead, open the saved program through the configuration app itself. Select the menu option AudioMoth > Open Configuration.
+To open a saved configuration:
+* Go to the main menu
+* Click "Open Configuration"
+* Navigate to your .config file and open it.
+* Clicking a .config file in your file browser may not correctly open the file in the AudioMoth-Config app. Instead, open the saved program through the configuration app itself.
+
+In later firmware versions (1.4.0 and on), a copy of the .config file is saved to the AudioMoth's microSD card. This allows easier recordkeeping. The config is saved when recordings are made, not when the AudioMoth itself is programmed.
 
 
 ## Apply configuration
-
 
 After creating your configuration, you will plug the AudioMoth into your computer, and set the current time and desired recording schedule via the app interface.
 
 * Set switch on AudioMoth to USB/OFF mode.
 * Plug into computer via microUSB.
 * Verify that the AudioMoth is plugged in: the date, time, and recorder information on the programming app will switch from "grayed out" to black.
-* Press green "Configure AudioMoth" button in the programming app. This saves the recording program to the AudioMoth, and sets the AudioMoth's internal clock to your computer's time in UTC.
-* The AudioMoth now has a CUSTOM recording schedule. When ready to deploy, move AudioMoth switch to CUSTOM.
+* Press green "Configure AudioMoth" button in the programming app. This saves the recording program to the AudioMoth, and sets the AudioMoth's internal clock.
+* The time that will be shown depends on whether you are using UTC or local time (see [UTC vs. local time](#utc-vs-local-time)).
 
-TODO: can you load a configuration from the microSD card?
+The AudioMoth now has a custom recording configuration and can be detached from the computer. 
 
-TODO: update this for v 1.5.0; indicate any differences for earlier firmware
+**Why do my AudioMoths count up from 00:00:00, 01/01/1970 UTC when I first plug them in?**: 
+* Midnight on January 1, 1970 is called the "Unix epoch." Most operating systems measure time and date as a measure of how much time has elapsed since this time and date. 
+* When you first attach batteries to the AudioMoth, it will start counting up from this time and date, so the time the AudioMoth shows when it is plugged into the computer is a measure of how much time the batteries have been your AudioMoth. So, usually you will not see a time of exactly 00:00:00, but instead 
+* Watch the time when you first plug your AudioMoth into your computer. If the time starts counting up from exactly 00:00:00, it may indicate that the batteries were not correctly inserted into the AudioMoth, and it never started keeping time. Detach your AudioMoth and check your batteries.
 
-TODO: is there an easy way to make sure batteries are correctly connected? / the AudioMoth is correctly programmed? Used to be: * If you switch the AudioMoth to CUSTOM mode and its red and green lights flash simultaneously, this means that the AudioMoth is not able to record. One cause of this is the AudioMoth's batteries falling out. 
-
-
-On firmware v1.5.0 and beyond, applying the configuration to the AudioMoth once saves the configuration on the AudioMoth even if the batteries are lost. On previous firmware versions, this step did not save the configuration to the microSD card, and it would be lost if the batteries were disconnected. 
-
+On firmware v1.5.0 and beyond, applying the configuration to the AudioMoth once saves the configuration on the AudioMoth even if the batteries are lost. 
 
 ## Set the time
 
-The time is automatically set when you set the configuration. However, if the batteries fall out, the time will be lost. There are three ways to set the time without changing the configuration:
+The time is automatically set when you set the configuration. However, if the batteries fall out of the AudioMoth, the time will be lost. There are three ways to set the time without changing the configuration:
 
 ### Configuration app
 
-TODO
+You can use the configuration app to reset the time. Just be careful: if your desired recording configuration (schedule, sample rate, etc.) is not loaded into the config app when you attempt to reset the time, it will remove your configuration from your AudioMoth!
 
 ### Time app
 
-
-TODO
-
+Open Acoustic Devices offers a standalone computer-based timesetter app ("AudioMoth Time App" on [this webpage](https://www.openacousticdevices.info/applications)) that allows you to set the time without having the recording configuration loaded.
 
 ### Phone app
 
-TODO
+TODO: more updates. Does the other app work? How do you use these with the acoustic chime setting in the AudioMoth-Config desktop app?
 
+Two apps are available for programming AudioMoths.
 
+The phone apps do not program the AudioMoths unless you follow the instructions exactly: turn the AudioMoth to USB/OFF mode, let it listen to the chime as it turns on to CUSTOM mode, then play the acoustic chime. 
+
+We attempted to use the RFCx chime-based timesetter app, but found that when we plugged the AudioMoth back into our computer to check the time on the AudioMoth, the time was several minutes to several hours off. If you plan to use the chime-based app in the field, test that it works 
 
 
 ## Apply new firmware
