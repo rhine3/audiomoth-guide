@@ -372,13 +372,14 @@ At the time of writing, we do not recommend using this app for setting the time 
 
 ## Apply new firmware
 
-As discussed above, several different firmware versions for the AudioMoth have been created and released. Some releases are just updates, but some have special functionality. For instance, version 1.4.0 enables users to trigger AudioMoth recording only when sound exceeds an amplitude threshold. Behavior of the AudioMoth in different firmware versions differs slightly but meaningfully. To see all of the features added or changed in each version of the firmware, view [the release descriptions in the GitHub repository](https://github.com/OpenAcousticDevices/AudioMoth-Firmware-Basic/releases).
+As discussed above, several different firmware versions for the AudioMoth have been created and released. Some releases are just updates, but some have special functionality. For instance, version 1.4.0 enables users to trigger AudioMoth recording only when sound exceeds an amplitude threshold. Behavior of the AudioMoth in different firmware versions differs slightly but meaningfully. To see all of the features added or changed in each version of the firmware, view [the release descriptions in the GitHub repository](https://github.com/OpenAcousticDevices/AudioMoth-Firmware-Basic/releases). You can also modify the firmware yourself and apply custom firmware to your AudioMoth.
 
-If you want to flash new firmware to your device, download the application [here](https://www.openacousticdevices.info/flashing) and follow its instructions. All of the released firmware versions can be downloaded through the app and applied to the AudioMoth. AudioMoth batteries must be removed before flashing new firmware on the device.
+If you want to flash new firmware to your device, download the application [here](https://www.openacousticdevices.info/flashing). This app allows you to download and apply any of the standard firmware releases released by Open Acoustic Devices (under the "Use Standard Release" tab). If you wish to customize the AudioMoth firmware, you can use the flashing app to apply custom firmware to the AudioMoth as well (under the "Use Local File" tab).
+
+If you encounter problems while flashing your AudioMoth, it may be helpful to use a paperclip to reset your AudioMoth. While the AudioMoth is plugged into a computer in USB/OFF mode with the batteries removed, press a paperclip to the two metal pins on the AudioMoth board that are labeled "PROG." The paperclip should align with the white graphic printed underneath the "PROG" label.
 
 
 # Recording
-
 
 ## Switch on the recorder
 
@@ -427,6 +428,7 @@ The AudioMoth can be turned on in two ways: DEFAULT mode (move switch to the rig
 
 * The first versions of the AudioMoth firmware use filenames with compact representations of the date and time that the recording started. These filenames can be converted to date & time using the instructions in the AudioMoth user manual. In contrast, the "last modified" time represents the time in UTC that the file was saved, i.e., the time in UTC when the recording ended. More recent firmware saves more easily interpreted filenames.
 
+* TODO: describe oversampling/gain behavior on different version of firmware (1.2.1)
 
 ## How many hours will my AudioMoth record?
 
@@ -452,6 +454,8 @@ TODO: add information
 
 
 # Enclosures
+
+TODO: add new ziploc baggie recommendation and camo bag example
 
 AudioMoths may break if exposed to water, so it is necessary to house them in a secure, watertight enclosure. This is complicated by the fact that the mic, a MEMS mic, is attached to the circuitboard. The housing must be both watertight and acoustically transparent over the mic.
 
