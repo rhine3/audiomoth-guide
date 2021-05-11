@@ -1,14 +1,27 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3667065.svg)](https://doi.org/10.5281/zenodo.3667065)
 
 # AudioMoth: a practical guide to the open-source ARU
-*by [Tessa Rhinehart](https://tessarhinehart.com), [Kitzes Lab](https://kitzeslab.org/), University of Pittsburgh, 2021*
+by [Tessa Rhinehart](https://tessarhinehart.com), [Kitzes Lab](https://kitzeslab.org/), University of Pittsburgh
+
+Originally published 2019
+
+Revised May 2021
 
 #### About
-This document is intended to be comprehensive guide for both first-time AudioMoth users and experienced users interested in scaling up their AudioMoth deployment. It describes procedures to use AudioMoths at all scales, answers frequently asked questions, and highlights common challenges encountered when using AudioMoths. This version of the guide reflects the newest firmware available at the time of writing (v.1.5.0); previous versions of the guide are also available in the GitHub repository.
+This document is intended to be comprehensive guide for both first-time AudioMoth users and experienced users interested in scaling up their AudioMoth deployment. Our goal with this guide is to help you gain intuition for using AudioMoths; to provide tips that we've developed while deploying thousands of AudioMoths; and to troubleshoot the wide variety of challenges that you might encounter while using these devices. 
 
-The information here complements official [Open Acoustic Devices documentation](https://www.openacousticdevices.info/getting-started) and a guide by [David Brown](https://sites.google.com/view/audiomoth/home). Since the original release of this guide in 2019, Open Acoustic Devices posted a manual based on this material [on their website](https://www.openacousticdevices.info/open-source). These documents contain similar information, but the guide below also has additional information about practical applications including housing options, deployment procedures, acoustic tests, stumbling blocks, and rules of thumb.
+This version of the guide reflects the newest firmware available at the time of writing (v.1.5.0); previous versions of the guide are also available in the GitHub repository.
 
-Please submit suggestions for modifications to this guide via creating pull requests on the GitHub repository, or emailing me at `tessa.rhinehart at pitt.edu`. This guide is released under a [CC-BY](https://creativecommons.org/licenses/by/4.0/) license, meaning you are free to modify it and redistribute it for almost any purpose with proper [attribution](#citing-this-guide).
+#### Other guides and support
+The information here complements official [Open Acoustic Devices documentation](https://www.openacousticdevices.info/getting-started) and a guide by [David Brown](https://sites.google.com/view/audiomoth/home). Since the original release of this guide in 2019, Open Acoustic Devices posted an official manual based on this material [on their website](https://www.openacousticdevices.info/open-source). These documents contain similar information, but the guide below also has additional information about practical applications including housing options, deployment procedures, acoustic tests, common stumbling blocks, and rules of thumb for scaling up.
+
+If you have a question or comment that you can't find addressed in any of these guides, several forums are available to help you. Try searching or posting on the following:
+* [AudioMoth support forum](https://www.openacousticdevices.info/support) for AudioMoth-specific questions
+* [WILDLABS Acoustic Monitoring forum](https://www.wildlabs.net/community/group/acoustic-monitoring) for general bioacoustics questions
+* Twitter bioacoustics community: use hashtags #AudioMoth or #bioacoustics.
+
+Please submit questions suggestions for modifications to this guide via creating pull requests on the GitHub repository, or emailing me at `tessa.rhinehart at pitt.edu`. This guide is released under a [CC-BY](https://creativecommons.org/licenses/by/4.0/) license, meaning you are free to modify it and redistribute it for almost any purpose with proper [attribution](#citing-this-guide).
+
 
 #### Table of contents
 
