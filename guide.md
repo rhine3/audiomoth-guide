@@ -360,15 +360,16 @@ Open Acoustic Devices offers a standalone computer-based timesetter app ("AudioM
 
 ### Phone apps
 
-Phone apps can be used to reset the time on AudioMoths that have lost their time, and are required to be used if an AudioMoth has been configured with the "Always required acoustic chime on switching to CUSTOM" option. The phone apps work by using an acoustic "chime," the pattern of which encodes the date and time. AudioMoths can only be set by this time
+You can set the time using one of two phone apps that encodes date and time in an acoustic signal. AudioMoths can be programmed this way when they enter "acoustic mode," a special mode when the switch is set to CUSTOM where the red LED is lit constantly and the green LED is flashing. There are three ways to enter this mode:
+* The AudioMoth is switched to CUSTOM but the time is not set, e.g. due to battery loss
+* The AudioMoth is switched to CUSTOM and was configured with the "Always require acoustic chime on switching to CUSTOM" option
+* Playing a specific tone (see below) as the AudioMoth is switched from USB/OFF to CUSTOM mode.
 
-Two apps are available for programming AudioMoths. At the time of writing, the RFCx companion app's chime feature does not work correctly; we recommend the AudioMoth phone app. These apps will not reset the time on an AudioMoth unless it is in "chime listening" mode indicated by a solid red LED and a flashing green LED.
+Two apps are available for programming AudioMoths: 
+* The AudioMoth phone app is available for Android and iOS. It only resets the time on recorders that are already in acoustic mode; it cannot switch a recorder into acoustic mode
+* The RFCx Companion app is available for Android and iOS. It switches recorders into acoustic mode by emitting a tone at a specific frequency. When you switch the AudioMoth from USB/OFF mode into CUSTOM mode while playing this tone, the AudioMoth is switched into acoustic mode. The app not only sets the time and date on the recorder, but also encodes a unique deployment ID which the recorder will save into the [metadata](#metadata) of every file. 
 
-#### Timesetting with the AudioMoth phone app
-We found that the AudioMoth phone app works well for resetting the time. This app is available on Android and iOS.
-
-#### Timesetting with the RFCx companion app
-At the time of writing, we do not recommend using this app for setting the time on the AudioMoth, but its other features are useful. When we attempt to use this app we find that when we plug the AudioMoth back into our computer to check the time on the AudioMoth, the time is several minutes to several hours off. The app will probably be fixed in future releases, but if you plan to use it, test that it works first by plugging an AudioMoth into your computer. Make sure to follow the instructions on the app exactly in order to force the AudioMoth into acoustic chime mode.
+At the time of writing, the RFCx companion app's chime feature encodes the date and time at which the app was opened, not the current time. We find that closing and reopening the app gets the set time closer to the true time.  This behavior may be changed in future releases, but if you plan to use this app, we recommend you test it by programming your AudioMoth then plugging it into your computer to check the set time.
 
 ## Apply new firmware
 
@@ -585,7 +586,7 @@ TODO: Tips for using this method:
 
 ### Electronic protocols
 
-TODO: add information about Rainforest Connection app
+TODO: add information about Rainforest Connection app, including uploading, deployment ID through acoustic chime, etc.
 
 Some researchers use apps such as [Survey123](https://survey123.arcgis.com/) or [Fulcrum](https://apps.apple.com/us/app/fulcrum-mobile-data-collector/id467758260) to record these data in the field.
 
