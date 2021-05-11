@@ -140,10 +140,10 @@ With some electronics expertise you can connect different batteries to the devic
 * The *capacity* of batteries in series is the capacity of any one battery in the series. (Don't mix batteries of different capacities, or new and old batteries.) For instance, a Duracell alkaline AA battery has a capacity of 2850mAh.
 
 ### Battery usage
-Because the AudioMoth doesn’t have an onboard battery, the set time will be lost if a battery is jostled out of place or falls out. On AudioMoth firmwares before 1.5.0, the recording schedule will also be lost as well. Some suggestions to handle this problem are:
-* Reduce the likelihood of batteries being jostled by wrapping masking tape around the back of the AudioMoth
-* While deploying recorders in CUSTOM mode, it will be obvious if a device has lost its programming; its red and green lights will blink simultaneously when you try to flip the switch to CUSTOM.
-* Take care not to drop or jostle AudioMoths in transit
+Because the AudioMoth doesn’t have an onboard battery, the set time will be lost if a battery is replaced or jostled. On AudioMoth firmwares before 1.5.0, the recording schedule will also be lost as well. Some suggestions to handle this are:
+* If you are replacing the batteries of your AudioMoth, use one of the [time setting apps](#set-the-time) to reset the time.
+* Take care not to drop or jostle AudioMoths in transit. Reduce the likelihood of batteries being jostled by wrapping painter's tape around the back of the AudioMoth
+* While deploying recorders in CUSTOM mode, it will be obvious if a device has lost its time; its red LED will stay lit constantly while its green LED flashes when you try to flip the switch to CUSTOM.
 * Bring several extra programmed AudioMoths during deployments, just in case one is dropped and the batteries fall out
 
 ### Battery level indication
@@ -253,10 +253,10 @@ This feature allows you to turn on the LED lights for more information about you
 
 In general, when the AudioMoth is in CUSTOM or DEFAULT mode, a red LED means the AudioMoth is recording, a green LED means the AudioMoth is sleeping between recordings, and simultaneous red and green LEDs mean that the AudioMoth recording has failed or will fail in some way. Failures come in two flavors:
 1. Constantly lit red LED, flashing green LED: the AudioMoth has a configuration, but the time is not set. 
-   * This can be caused by loss of batteries or by configuring the AudioMoth with the "Always require acoustic chime on switching to CUSTOM" option."
+   * This can be caused by loss of battery power or by configuring the AudioMoth with the "Always require acoustic chime on switching to CUSTOM" option."
    * This can be solved by setting the time using the computer or phone apps (see information about how to [set the time](#set-the-time))
 2. Flashing red LED, flashing green LED: the "double flash" means that the AudioMoth has encountered a recording error. This happens in three circumstances:
-   * 100ms flash on first switching to CUSTOM mode: no recording schedule has been set. On earlier firmware versions, this would happen if the AudioMoth lost its configuration when its batteries were lost; now, the AudioMoth keeps its configuration even if the batteries were lost.
+   * 100ms flash on first switching to CUSTOM mode: no recording schedule has been set. On earlier firmware versions, this would happen if the AudioMoth lost its configuration when its batteries were lost; now, the AudioMoth keeps its configuration even if the batteries are lost.
    * 500ms flash: there is currently a recording failure due to the recorder malfunctioning (e.g. getting wet), the SD card malfunctioning, being full, or not being formatted correctly, or a low battery. This happens in CUSTOM mode when the recorder is attempting to record, or in DEFAULT mode.
    * 10ms flash: there was a recording failure on a previous recording. This happens when the AudioMoth is scheduled to sleep in CUSTOM mode.
 
@@ -337,14 +337,14 @@ The AudioMoth now has a custom recording configuration and can be detached from 
 
 **Why do my AudioMoths count up from 00:00:00, 01/01/1970 UTC when I first plug them in?**: 
 * Midnight on January 1, 1970 is called the "Unix epoch." Most operating systems measure time and date as a measure of how much time has elapsed since this time and date. 
-* When you first attach batteries to the AudioMoth, it will start counting up from this time and date, so the time the AudioMoth shows when it is plugged into the computer is a measure of how much time the batteries have been your AudioMoth. So, usually you will not see a time of exactly 00:00:00, but instead 
-* Watch the time when you first plug your AudioMoth into your computer. If the time starts counting up from exactly 00:00:00, it may indicate that the batteries were not correctly inserted into the AudioMoth, and it never started keeping time. Detach your AudioMoth and check your batteries.
+* When you first insert batteries into the AudioMoth, it will start counting up from this time and date, so the time the AudioMoth shows when it is plugged into the computer is a measure of how much time the batteries have been your AudioMoth. So, usually you will not see a time of exactly 00:00:00, but instead 
+* Watch the time when you first plug your AudioMoth into your computer. If the time starts counting up from exactly 00:00:00, this may indicate that the batteries were not correctly inserted into the AudioMoth, and it never started keeping time. Detach your AudioMoth and check your batteries.
 
-On firmware v1.5.0 and beyond, applying the configuration to the AudioMoth once saves the configuration on the AudioMoth even if the batteries are lost. 
+On firmware v1.5.0 and beyond, applying the configuration to the AudioMoth once saves the configuration on the AudioMoth even if the batteries are replaced or jostled. 
 
 ## Set the time
 
-The time is automatically set when you set the configuration, unless you select the "Always require acoustic chime on switching to CUSTOM" option in the "Advanced Settings" tab of the configuration app. If that option is selected, or if the AudioMoth is configured but loses time due to a problem like loss of batteries, the time on the AudioMoth will need to be set. If the AudioMoth is configured but the time needs to be set, the AudioMoth LEDs will have the following flashing pattern: red LED continuously lit; green LED flashing quickly. 
+The time is automatically set when you set the configuration, unless you select the "Always require acoustic chime on switching to CUSTOM" option in the "Advanced Settings" tab of the configuration app. If that option is selected, or if the AudioMoth is configured but loses time due to batteries being replaced or jostled, the time on the AudioMoth will need to be set. If the AudioMoth is configured but the time needs to be set, the AudioMoth LEDs will have the following flashing pattern: red LED continuously lit; green LED flashing quickly. 
 
 There are three methods of setting the time.
 
