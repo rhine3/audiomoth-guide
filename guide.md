@@ -133,6 +133,28 @@ Because the AudioMoth doesn’t have an onboard battery, the set time will be lo
 * Take care not to drop or jostle AudioMoths in transit
 * Bring several extra programmed AudioMoths during deployments, just in case one is dropped and the batteries fall out
 
+### Battery level indication
+
+When the AudioMoth is switched from DEFAULT or CUSTOM mode to USB/OFF mode, the red LED will flash a number of times corresponding to the battery level. There are two scales, one for use with alkaline batteries (default) and one for use with NiMH and LiPo batteries. The latter scale can be used by selecting the "Use NiMH/LiPo voltage range for battery level indication" option in the ["Advanced Settings" tab](#advanced-settings-tab) of the AudioMoth-Config computer app.
+
+On the standard scale, more flashes indicates a higher battery level except when the battery voltage is very low. The battery levels are:
+* 4 flashes: >= 4.6 V
+* 3 flashes: 4.4-4.5 V
+* 2 flashes: 4.0-4.3 V
+* 1 flash: 3.6-3.9 V
+* 10 rapid flashes: <= 3.5 V; battery voltage too low to record.
+
+On the NiMH/LiPo scale, more flashes indicates a lower battery level:
+* 1 flash: >= 4.3 V
+* 2 flashes: 4.2 V
+* 3 flashes: 4.1 V
+* 4 flashes: 4.0 V
+* 5 flashes: 3.9 V
+* 6 flashes: 3.8 V
+* 7 flashes: 3.7 V
+* 8 flashes: 3.6 V
+* 10 rapid flashes: <= 3.5 V; battery voltage too low to record.
+
 # Configuration
 Before using the AudioMoth, you will typically want to create a custom recording configuration. This involves creating a configuration using the AudioMoth-Config computer app. We have provided some example configurations below. You may save configurations into separate files and reload them from the app. When your configuration is created, plug the AudioMoth into the computer to apply it and set the time on the AudioMoth.
 
@@ -216,16 +238,28 @@ TODO: update gif
 #### Enable LED
 This feature allows you to turn on the LED lights for more information about your AudioMoth, though this might attract more attention from animals/curious humans. Lights are especially useful when testing the recorder. 
 
-In general, when the AudioMoth is in CUSTOM or DEFAULT mode, a red LED means the AudioMoth is recording, a green LED means the AudioMoth is sleeping between recordings, and simultaneous red and green LEDs mean that a recording failure has occurred. Recording failures can be caused by problems like:
-* time or program not being set (while in CUSTOM mode);
-* the batteries falling out at some point after programming (while in CUSTOM mode);
-* the recorder getting wet; and
-* the SD card malfunctioning or not being formatted correctly.
+In general, when the AudioMoth is in CUSTOM or DEFAULT mode, a red LED means the AudioMoth is recording, a green LED means the AudioMoth is sleeping between recordings, and simultaneous red and green LEDs mean that the AudioMoth recording has failed or will fail in some way. Failures come in two flavors:
+1. Constantly lit red LED, flashing green LED: the AudioMoth has a configuration, but the time is not set. 
+   * This can be caused by loss of batteries or by configuring the AudioMoth with the "Always require acoustic chime on switching to CUSTOM" option."
+   * This can be solved by setting the time using the computer or phone apps (see information about how to [set the time](#set-the-time))
+2. Flashing red LED, flashing green LED: the "double flash" means that the AudioMoth has encountered a recording error. This happens in three circumstances:
+   * 100ms flash on first switching to CUSTOM mode: no recording schedule has been set. On earlier firmware versions, this would happen if the AudioMoth lost its configuration when its batteries were lost; now, the AudioMoth keeps its configuration even if the batteries were lost.
+   * 500ms flash: there is currently a recording failure due to the recorder malfunctioning (e.g. getting wet), the SD card malfunctioning, being full, or not being formatted correctly, or a low battery. This happens in CUSTOM mode when the recorder is attempting to record, or in DEFAULT mode.
+   * 10ms flash: there was a recording failure on a previous recording. This happens when the AudioMoth is scheduled to sleep in CUSTOM mode.
 
 The LED also functions to:
-* Show acoustic chime progress (see information about the [timesetter phone app](#phone-app))
-* 
-For complete information on the LED meanings, see [this webpage](https://www.openacousticdevices.info/led-guide)
+* Show acoustic chime progress (see information about the [timesetter phone apps](#phone-apps))
+* Show battery level (see information about [battery level indication](#battery-level-indication))
+
+For complete information and diagrams of the LED meanings, see [this webpage](https://www.openacousticdevices.info/led-guide)
+
+#### Enable low-voltage cutoff
+
+TODO: Add information
+
+#### Enable battery level indication
+
+TODO: add information
 
 ### "Advanced settings" tab
 
@@ -241,6 +275,9 @@ This feature allows you to only record data from a particular frequency band. Wh
 This feature allows you to only save samples to the file that meet a particular amplitude threshold. This allows you to save on storage by not saving empty files--especially helpful for high-sampling rate files, which are very large.
 
 This method is primarily intended for animals that call at high frequencies; the high sample rate recordings required to capture these animals' calls take a lot of storage. We would not recommend using this method for animals that call at audible frequencies, where there is a lot of noise that could cause false triggers. Additionally, using triggering limits the applicability of your recordings to other taxa.
+
+#### Additional settings
+TODO: Add info about two additional checkboxes
 
 ## Example configurations
 
