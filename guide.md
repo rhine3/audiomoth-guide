@@ -216,12 +216,15 @@ TODO: update gif
 #### Enable LED
 This feature allows you to turn on the LED lights for more information about your AudioMoth, though this might attract more attention from animals/curious humans. Lights are especially useful when testing the recorder. 
 
-In general, when the AudioMoth is in CUSTOM mode, a red LED means the AudioMoth is recording, a green LED means the AudioMoth is sleeping between recordings, and simultaneous red and green LEDs mean that a recording failure has occurred. Recording failures can be caused by problems like:
+In general, when the AudioMoth is in CUSTOM or DEFAULT mode, a red LED means the AudioMoth is recording, a green LED means the AudioMoth is sleeping between recordings, and simultaneous red and green LEDs mean that a recording failure has occurred. Recording failures can be caused by problems like:
 * time or program not being set (while in CUSTOM mode);
 * the batteries falling out at some point after programming (while in CUSTOM mode);
 * the recorder getting wet; and
 * the SD card malfunctioning or not being formatted correctly.
 
+The LED also functions to:
+* Show acoustic chime progress (see information about the [timesetter phone app](#phone-app))
+* 
 For complete information on the LED meanings, see [this webpage](https://www.openacousticdevices.info/led-guide)
 
 ### "Advanced settings" tab
@@ -291,26 +294,31 @@ On firmware v1.5.0 and beyond, applying the configuration to the AudioMoth once 
 
 ## Set the time
 
-The time is automatically set when you set the configuration. However, if the batteries fall out of the AudioMoth, the time will be lost. There are three ways to set the time without changing the configuration:
+The time is automatically set when you set the configuration, unless you select the "Always require acoustic chime on switching to CUSTOM" option in the "Advanced Settings" tab of the configuration app. If that option is selected, or if the AudioMoth is configured but loses time due to a problem like loss of batteries, the time on the AudioMoth will need to be set. If the AudioMoth is configured but the time needs to be set, the AudioMoth LEDs will have the following flashing pattern: red LED continuously lit; green LED flashing quickly. 
 
-### Configuration app
+There are three methods of setting the time.
 
+### Computer apps
+
+Either computer app can be used to set the time on an AudioMoth that has lost its time. However, if the AudioMoth was configured with the "Always require acoustic chime on switching to CUSTOM" option, the AudioMoth will require programming by an acoustic chime, even if you set the time with either of these computer apps.
+
+#### AudioMoth-Config app
 You can use the configuration app to reset the time. Just be careful: if your desired recording configuration (schedule, sample rate, etc.) is not loaded into the config app when you attempt to reset the time, it will remove your configuration from your AudioMoth!
 
-### Time app
-
+#### AudioMoth-Time app
 Open Acoustic Devices offers a standalone computer-based timesetter app ("AudioMoth Time App" on [this webpage](https://www.openacousticdevices.info/applications)) that allows you to set the time without having the recording configuration loaded.
 
-### Phone app
+### Phone apps
 
-TODO: more updates. Does the other app work? How do you use these with the acoustic chime setting in the AudioMoth-Config desktop app?
+Phone apps can be used to reset the time on AudioMoths that have lost their time, and are required to be used if an AudioMoth has been configured with the "Always required acoustic chime on switching to CUSTOM" option. The phone apps work by using an acoustic "chime," the pattern of which encodes the date and time. AudioMoths can only be set by this time
 
-Two apps are available for programming AudioMoths.
+Two apps are available for programming AudioMoths. At the time of writing, the RFCx companion app's chime feature does not work correctly; we recommend the AudioMoth phone app. These apps will not reset the time on an AudioMoth unless it is in "chime listening" mode indicated by a solid red LED and a flashing green LED.
 
-The phone apps do not program the AudioMoths unless you follow the instructions exactly: turn the AudioMoth to USB/OFF mode, let it listen to the chime as it turns on to CUSTOM mode, then play the acoustic chime. 
+#### Timesetting with the AudioMoth phone app
+We found that the AudioMoth phone app works well for resetting the time. This app is available on Android and iOS.
 
-We attempted to use the RFCx chime-based timesetter app, but found that when we plugged the AudioMoth back into our computer to check the time on the AudioMoth, the time was several minutes to several hours off. If you plan to use the chime-based app in the field, test that it works 
-
+#### Timesetting with the RFCx companion app
+At the time of writing, we do not recommend using this app for setting the time on the AudioMoth, but its other features are useful. When we attempt to use this app we find that when we plug the AudioMoth back into our computer to check the time on the AudioMoth, the time is several minutes to several hours off. The app will probably be fixed in future releases, but if you plan to use it, test that it works first by plugging an AudioMoth into your computer. Make sure to follow the instructions on the app exactly in order to force the AudioMoth into acoustic chime mode.
 
 ## Apply new firmware
 
