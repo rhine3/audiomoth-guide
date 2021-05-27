@@ -45,6 +45,10 @@ Please submit questions suggestions for modifications to this guide via creating
   * [How many hours will my AudioMoth record?](#how-many-hours-will-my-audiomoth-record)
   * [Recording quality and calibration](#recording-quality-and-calibration)
 * [Enclosures](#enclosures)
+  * [Plastic bags](#plastic-bags)
+  * [Heat-sealed bags](#ziploc-bags)
+  * [Hard enclosures](#hard-enclosures)
+  * [Camouflage](#camouflage)
 * [Deployment](#deployment)
   * [Select deployment positions](#select-deployment-positions)
   * [Deployment metadata](#deployment-metadata)
@@ -541,39 +545,37 @@ TODO: add information
 
 # Enclosures
 
-TODO: add new ziploc baggie recommendation and camo bag example
 
 AudioMoths may break if exposed to water, so it is necessary to house them in a secure, watertight enclosure. This is complicated by the fact that the mic, a MEMS mic, is attached to the circuitboard. The housing must be both watertight and acoustically transparent over the mic.
 
-## Ziploc baggies
+TODO: add a link -- We have compared the sound quality of several enclosure types [here](add link).
 
-![AudioMoth deployed on tree](images/housing/bag-housing.jpg)
+## Plastic bags
 
-AudioMoths can be deployed in Ziploc baggies using [buckling straps (Amazon link)](https://www.amazon.com/Release-Buckle-Black-Adjustable-Luggage/dp/B005DJIBYA). The baggie can be affixed to the strap using zip-ties or by looping the baggie around the strap and securing it with duct tape.
+TODO: add pic of pink baggie + zip tie deployed on tree.
 
-* Trees should be as small as possible; larger trees block sound from arriving in all directions.
+AudioMoths can be deployed in plastic baggies like Ziploc bags or anti-static bags. Typically the bag should be thick (4mm) and use a zipper seal, not a less robust "slider" seal seen on typical Ziploc bags. Bags can be affixed to trees, poles, or other deployment points using buckling straps or zip-ties. If straps are used, the baggie can be affixed to the strap using zip-ties or by looping the baggie around the strap and securing it with duct tape. 
 
-* If possible, avoid placing AudioMoths in direct sunlight, as their enclosures may heat up.
+Here are the supplies we use or have used. We aren't affiliated with any of these suppliers. The items available at purchase links can sometimes be switched out (especially on Amazon), so you might want to shop around.
+* Our favorite: 4x6in, 4mil thickness anti-static bags. [Purchase link (Amazon)](https://www.amazon.com/dp/B07D1TM25V?psc=1&ref=ppx_yo2_dt_b_product_details)
+* Our Ziploc bag choice: freezer bag with zipper seal, not slider. Ziploc freezer bags are 3mil thickness. Do not use sandwich bags, which are very flimsy (1.5mil thickness). [Purchase link (Amazon)](https://www.amazon.com/Ziploc-Freezer-Bags-Quart-Total/dp/B07NQVYF72/)
+* Desiccant pack: used to soak up lingering moisture in the bag, preventing condensation. We use quite large desiccants (~2x2) [Purchase link (Grainger)](https://www.grainger.com/product/GRAINGER-APPROVED-Desiccant-20TM04)
+* Straps: 1" buckle straps are good. Shop around for the best price. [Purchase link (Amazon)](https://www.amazon.com/Magarrow-Luggage-Buckle-Packing-Accessories/dp/B07H1D15LZ/)
+* Zip ties: we like 16" long black zip ties. Any zip ties from a local hardware store will do. For camouflaging purposes, black zip ties tend to be less visible against tree bark than white ones. You can string together multiple zip ties, but it's best to aim for smaller-diameter trees.
 
-The switch and corners of the AudioMoth v1.0 are sharp and can rip through a Ziploc bag. More recent AudioMoth designs have rounded corners and an inset switch to reduce this issue. Take steps to prevent moisture getting into AudioMoth enclosure:
-
-* Don’t transport AudioMoths within the bags, as the bags are more likely to break. Instead, keep the AudioMoth and bag separated until you are ready to hook the bag to the tree. If it is raining, bring an umbrella and transport AudioMoths within a waterproof bag.
-
-* Use freezer bags, not sandwich bags.
-
+The switch and corners of the AudioMoth v1.0 are sharp and can rip through a plastic bag. More recent AudioMoth designs have rounded corners and an inset switch to reduce this issue. Take steps to prevent moisture getting into AudioMoth enclosure:
+* Avoid transporting AudioMoths within the bags if possible, as the bags are more likely to break. Instead, keep the AudioMoth and bag separated until you are ready to hook the bag to the tree. This is less of a concern for thicker bags (e.g. 4mil thickness).
 * Taping over the sharp parts of the AudioMoth, or judiciously applying hot glue, reduces the chance of punctures. 
-
     * We do not apply anything next to the mic, as we are currently unsure of the effect on the recording quality. Take care not to obstruct SD card insertion or switch movement.
-
     * [Example with tape by Jennifer Sheridan](https://twitter.com/JenASheridan/status/1047766465900818432)
-   
-* Include a desiccant pack in the bag to soak up lingering moisture in the bag, preventing condensation
-
 * Before you walk away from a newly-deployed AudioMoth, inspect the bag for scratches or punctures. Replace if necessary.
+
+TODO: update/remove this?
+![AudioMoth deployed on tree](images/housing/bag-housing.jpg)
 
 ## Heat-sealed bags
 
-Ziploc baggies are susceptible to puncture. These baggies can also be challenging to affix to straps. An alternative to Ziploc baggies is creating an enclosure using a heat-sealed bag. We create these using vacuum sealer with a "heat-seal-only" function. (Vacuuming air out of bags would reduce sound quality.)
+Ziploc baggies are susceptible to puncture and can be challenging to affix to straps. An alternative to Ziploc baggies is creating an enclosure using a heat-sealed bag. We create these using vacuum sealer with a "heat-seal-only" function, and do not vacuum the air out of the bag itself. (Vacuuming air out of bags would reduce sound quality.)
 
 ![Heat-sealed bag](images/housing/heat-sealed.jpg)
 
@@ -595,16 +597,17 @@ Two downsides to this method are:
 
 * The AudioMoth needs to be programmed and turned on before you put it in the bag. Newer versions of AudioMoth firmware allow you to set a delayed start date for recording; without this, your AudioMoths will start recording on their daily schedule after being turned on, whether or not you've placed them in the field!
 
-
 ## Hard cases
 
-Ziploc baggies do not provide protection against intrusions like rodent chewing and rubbing by deer or bison. If these are a problem in your deployment area, consider using hard enclosures for your AudioMoths.
+If rodent chewing, rubbing by deer or bison, or other intrusions are a problem in your deployment area, consider using hard enclosures for your AudioMoths. Hard plastic or acrylic cases should have a hole through which sound can enter. This sound can be covered with a water-resistant acoustic membrane sticker or cloth.
 
-Hard plastic or acrylic cases should have a hole through which sound can enter. This sound can be covered with a water-resistant acoustic membrane sticker or cloth.
+TODO: add more info about this/take pic?
 
-Open Acoustic Devices provides a design for a laser-cut acrylic housing [here](https://www.openacousticdevices.info/single-post/2019/04/24/AA-acrylic-laser-cut-enclosure). OAD has also started selling injection-molded cases through [GroupGets campaigns](https://groupgets.com/campaigns/775-the-official-audiomoth-ipx7-waterproof-case?archived=true&page=1).
+Open Acoustic Devices sells injection-molded cases through [GroupGets campaigns](https://groupgets.com/campaigns/775-the-official-audiomoth-ipx7-waterproof-case?archived=true&page=1).
 
 In addition, many groups have shared their housing advice on the [WildLabs Acoustic Monitoring forum](https://www.wildlabs.net/community/group/acoustic-monitoring) and Twitter. Some examples:
+
+* [Laser-cut housing by Open Acoustic Devices](https://www.openacousticdevices.info/single-post/2019/04/24/AA-acrylic-laser-cut-enclosure)
 
 * [Tupperware case by Emily Hoffman](https://twitter.com/em_hoffmann/status/1200221472641282048)
 
@@ -618,6 +621,10 @@ In addition, many groups have shared their housing advice on the [WildLabs Acous
 
 * [Hand-assembled case by Ruby Lee](https://www.wildlabs.net/resources/case-studies/trialing-audiomoth-detect-hidden-threats-under-canopies-belize) (design not released; scroll down to see picture)
 
+## Camouflage
+
+TODO: add camo bag example
+
 
 # Deployment
 
@@ -628,8 +635,9 @@ In addition, many groups have shared their housing advice on the [WildLabs Acous
 ### Recorder positioning
 Some things to keep in mind when positioning recorders in the field:
 
-* If putting on a tree: tree size affects recording quality. In general, you want a tree that is not huge, but is study enough that the AudioMoth won't be jostled by wind.
-* You may want to camouflage your recorders. Black straps stand out against trees. If you are putting your recorders in an area that people walk around in, try to position them so they can't be seen from nearby roads or trails.
+* If putting on a tree: the larger the tree is, the more it blocks sound from arriving in all directions. In general, you want a tree that is not huge, but is study enough that the AudioMoth won't be jostled by wind.
+* You may want to [camouflage](#camouflage) your recorders. Black straps stand out against trees. If you are putting your recorders in an area that people walk around in, try to position them so they can't be seen from nearby roads or trails.
+* You may want to avoid placing AudioMoths in direct sunlight, as their enclosures may heat up and the sun may wear down plastic, duct tape, camouflage, etc.
 
 ### Pre-selecting locations
 You can use tools like ArcGIS and Google Maps to pre-identify potential locations at which to place your recorders. Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](https://twitter.com/mountain_laur)) developed this method of pre-positioning locations of recorders for deployments:
@@ -771,6 +779,8 @@ Transferring audio files from hundreds of SD cards is a slow process to do manua
 It is important to keep track of metadata about the files that were created. 
 
 * The AudioMoth stores metadata about the recording in the "Comments" field of the EXIF metadata. This includes recording date/time, sample rate, recording duration, gain setting, battery level, and AudioMoth serial number. For instance, here is an example metadata record automatically generated by an AudioMoth, accessed through `exiftool` (see below)
+
+TODO: Create a more current example of this, including Deployment ID from RFCx app.
 
  ```
 File Name                       : 5ACDE3A8.WAV
