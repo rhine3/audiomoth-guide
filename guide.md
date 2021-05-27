@@ -226,9 +226,7 @@ Make sure to press "Add recording period" after typing in the desired time of ea
 
 The recording periods will only be adhered to when the AudioMoth is on CUSTOM mode. On DEFAULT mode, the recorder begins recording immediately, without regard to any scheduled recording periods. 
 
-TODO: update gif
-
-![Set recording period on AudioMoth configuration app](images/programming/recording-period-fast.gif)
+![Set recording period on AudioMoth configuration app](images/programming/recording-period.gif)
 
 #### Gain
 The gain is the amount that sounds from the microphone will be amplified once recorded. Selecting the optimal gain requires trial and error in your particular field conditions. If the gain is too high, your recordings will [clip](https://en.wikipedia.org/wiki/Clipping_(audio)), creating an unpleasant distortion that can be challenging, if not impossible, to analyze. Alternatively, if the gain is too low, sounds will be faint and hard to hear.
