@@ -148,14 +148,14 @@ Because the AudioMoth doesn’t have an onboard battery, the set time will be lo
 
 ### Battery level indication
 
-When the AudioMoth is switched from DEFAULT or CUSTOM mode to USB/OFF mode, the red LED will flash a number of times corresponding to the battery level. There are two scales, one for use with alkaline batteries (default) and one for use with NiMH and LiPo batteries. The latter scale can be used by selecting the "Use NiMH/LiPo voltage range for battery level indication" option in the ["Advanced Settings" tab](#advanced-settings-tab) of the AudioMoth-Config computer app.
+When the AudioMoth is switched from DEFAULT or CUSTOM mode to USB/OFF mode, the red LED will flash a number of times corresponding to the battery level. There are two scales, one for use with alkaline batteries (default) and one for use with NiMH and LiPo batteries. The latter scale can be used by selecting the "Use NiMH/LiPo voltage range for battery level indication" option in the ["Advanced Settings" tab](#advanced-settings-tab) of the AudioMoth-Config computer app. You can disable this feature in the config app.
 
 On the standard scale, more flashes indicates a higher battery level except when the battery voltage is very low. The battery levels are:
 * 4 flashes: >= 4.6 V
 * 3 flashes: 4.4-4.5 V
 * 2 flashes: 4.0-4.3 V
 * 1 flash: 3.6-3.9 V
-* 10 rapid flashes: <= 3.5 V; battery voltage too low to record.
+* 10 rapid flashes: <= 3.5 V; battery voltage too low to reliably record.
 
 On the NiMH/LiPo scale, more flashes indicates a lower battery level:
 * 1 flash: >= 4.3 V
@@ -166,7 +166,7 @@ On the NiMH/LiPo scale, more flashes indicates a lower battery level:
 * 6 flashes: 3.8 V
 * 7 flashes: 3.7 V
 * 8 flashes: 3.6 V
-* 10 rapid flashes: <= 3.5 V; battery voltage too low to record.
+* 10 rapid flashes: <= 3.5 V; battery voltage too low to reliably record.
 
 # Configuration
 Before using the AudioMoth, you will typically want to create a custom recording configuration. This involves creating a configuration using the AudioMoth-Config computer app. We have provided some example configurations below. You may save configurations into separate files and reload them from the app. When your configuration is created, plug the AudioMoth into the computer to apply it and set the time on the AudioMoth.
@@ -266,17 +266,17 @@ The LED also functions to:
 
 For complete information and diagrams of the LED meanings, see [this webpage](https://www.openacousticdevices.info/led-guide)
 
-#### Enable low-voltage cutoff
+#### Enable low-voltage cut-off
 
-TODO: Add information
+When battery voltage is too low, writing to the microSD card may be inconsistent or unreliable. This option causes the AudioMoth to stop taking recordings when the battery voltage is too low for reliable writing.
 
 #### Enable battery level indication
 
-TODO: add information
+When this option is checked, the AudioMoth indicates its battery level with LEDs when it is switched to USB/OFF mode from either CUSTOM mode or DEFAULT mode. For information about the meanings of these flashes, see the section on [battery level indication](#battery-level-indication). If you are using rechargeable batteries, an option to use a more precise battery level indication is available under the "Advanced Settings" tab.
 
 ### "Advanced settings" tab
 
-These two features can be used separately, or combined. For more information on these features, see [this document](https://github.com/OpenAcousticDevices/Application-Notes/blob/master/Using_AudioMoth_with_Filtering_and_Amplitude_Threshold_Recording.pdf)
+The first two features can be used separately, or combined to create an "amplitude in band triggered recording," popular for capturing bat vocalizations. For more information on these features, see [this document](https://github.com/OpenAcousticDevices/Application-Notes/blob/master/Using_AudioMoth_with_Filtering_and_Amplitude_Threshold_Recording.pdf)
 
 #### Filtering
 This feature allows you to only record data from a particular frequency band. When you enable filtering, you can choose the following filters. Each allows you to select the frequencies you want to include in the recording. All other frequencies will be filtered out.
@@ -287,10 +287,18 @@ This feature allows you to only record data from a particular frequency band. Wh
 #### Amplitude threshold
 This feature allows you to only save samples to the file that meet a particular amplitude threshold. This allows you to save on storage by not saving empty files--especially helpful for high-sampling rate files, which are very large.
 
-This method is primarily intended for animals that call at high frequencies; the high sample rate recordings required to capture these animals' calls take a lot of storage. We would not recommend using this method for animals that call at audible frequencies, where there is a lot of noise that could cause false triggers. Additionally, using triggering limits the applicability of your recordings to other taxa.
+This method is primarily intended for animals that call at high frequencies; the high sample rate recordings required to capture these animals' calls take a lot of storage. We would not recommend using this method for animals that call at audible frequencies, where there is a lot of noise that could cause false triggers. Additionally, keep in mind that using triggering limits the applicability of your recordings to other taxa.
 
-#### Additional settings
-TODO: Add info about two additional checkboxes
+#### Always require acoustic chime
+
+This option means that an acoustic chime from a phone app is required to start the AudioMoth's recording every time it is initially switched to CUSTOM mode. With this option enabled, upon first switching to CUSTOM mode the AudioMoth will act as if it has no time setting, even if it has not lost its time keeping: its red LED will be lit constantly, its green LED will blink, and it will not start recording on schedule. Playing the acoustic chime will kick the AudioMoth out of this mode and cause the AudioMoth to start recording on its configured schedule. 
+
+This setting could be useful when using the RFCx app. Its chime also gives the recorder a unique deployment ID that will be embedded in the [metadata](#metadata) of every recording. This deployment ID can also be associated with a location in the app. By requiring a chime, you would remember to use the app to set the deployment ID every time.
+
+#### Use NiMH/LiPo voltage range for battery level indication
+
+If you are using rechargeable (NiMH/LiPo) batteries, checking this box will change the meanings of the number of LED flashes used in [battery level indication](#battery-level-indication). This scale is apparently more precise.
+
 
 ## Example configurations
 
