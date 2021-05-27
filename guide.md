@@ -13,7 +13,7 @@ This document is intended to be comprehensive guide for both first-time AudioMot
 This version of the guide reflects the newest firmware available at the time of writing (v.1.5.0); previous versions of the guide are also available in the GitHub repository.
 
 #### Other guides and support
-The information here complements official [Open Acoustic Devices documentation](https://www.openacousticdevices.info/getting-started) and a guide by [David Brown](https://sites.google.com/view/audiomoth/home). Since the original release of this guide in 2019, Open Acoustic Devices posted an official manual similar to this material [on their website](https://www.openacousticdevices.info/open-source). These documents contain similar information. The guide below also has additional information about using AudioMoths in practice, including housing options, deployment procedures, acoustic tests, common stumbling blocks, and rules of thumb for scaling up.
+The information here complements official [Open Acoustic Devices documentation](https://www.openacousticdevices.info/getting-started) and a guide by [David Brown](https://sites.google.com/view/audiomoth/home). Since the original release of this guide in 2019, Open Acoustic Devices posted an official manual similar to this material [on their website](https://www.openacousticdevices.info/open-source). These documents contain similar information. The guide below also shares additional information about using AudioMoths in practice, including housing options, deployment procedures and protocols, acoustic tests, common stumbling blocks, and rules of thumb for scaling up.
 
 If you have a question or comment that you can't find addressed in any of these guides, several forums are available to help you. Try searching or posting on the following:
 * [AudioMoth support forum](https://www.openacousticdevices.info/support) for AudioMoth-specific questions
@@ -44,10 +44,11 @@ Please submit questions suggestions for modifications to this guide via creating
 * [Enclosures](#enclosures)
 * [Deployment](#deployment)
   * [Select deployment positions](#select-deployment-positions)
-  * [Deployment protocols and metadata](#deployment-protocols-and-metadata)
+  * [Deployment metadata](#deployment-metadata)
+  * [Written deployment protocols](#written-deployment-protocols)
+  * [Electronic deployment aids](#electronic-deployment-aids)
   * [Inform the public](#informing-the-public)
-  * [Tips for scaling up](#tips-for-scaling-up)
-  * [Playback and imitation](#playback-and-imitation)
+  * [Other tips](#other-tips)
 * [Data management](#data-management)
   * [Data upload](#data-upload)
   * [Metadata management](#metadata-management)
@@ -393,11 +394,18 @@ You can set the time using one of two phone apps that encodes date and time in a
 * The AudioMoth is switched to CUSTOM and was configured with the "Always require acoustic chime on switching to CUSTOM" option
 * Playing a specific tone (see below) as the AudioMoth is switched from USB/OFF to CUSTOM mode.
 
-Two apps are available for programming AudioMoths: 
-* The AudioMoth phone app is available for Android and iOS. It only resets the time on recorders that are already in acoustic mode; it cannot switch a recorder into acoustic mode
-* The RFCx Companion app is available for Android and iOS. It switches recorders into acoustic mode by emitting a tone at a specific frequency. When you switch the AudioMoth from USB/OFF mode into CUSTOM mode while playing this tone, the AudioMoth is switched into acoustic mode. The app not only sets the time and date on the recorder, but also encodes a unique deployment ID which the recorder will save into the [metadata](#metadata) of every file. 
+We recommend that before you rely on any app in the field, you test it to make sure it behaves as you expect it to, e.g., by programming your AudioMoth then plugging it into your computer to check the set time.
 
-At the time of writing, the RFCx companion app's chime feature encodes the date and time at which the app was opened, not the current time. We find that closing and reopening the app gets the set time closer to the true time.  This behavior may be changed in future releases, but if you plan to use this app, we recommend you test it by programming your AudioMoth then plugging it into your computer to check the set time.
+Two apps are available for programming AudioMoths:
+
+The [AudioMoth mobile app](https://www.openacousticdevices.info/mobileapplications) is available for Android and iOS. 
+* It only resets the time on recorders that are already in acoustic mode; it cannot switch a recorder into acoustic mode, so will not reset the time on any previously-programmed recorders. 
+* You can manually force a recorder into acoustic mode by removing the batteries, causing it to lose its set time, and then switching it to custom mode.
+
+The [RFCx Companion app](https://support.rfcx.org/article/65-using-the-companion-app) is available for Android and iOS. 
+* It switches recorders into acoustic mode by emitting a tone at a specific frequency. When you switch the AudioMoth from USB/OFF mode into CUSTOM mode while playing this tone, the AudioMoth is switched into acoustic mode. 
+* The app not only sets the time and date on the recorder, but also encodes a unique deployment ID which the recorder will save into the [metadata](#metadata) of every file. This guide briefly describes this behavior [below](#rfcx-companion-app), but check out the official RFCx website for more information.
+* The RFCx companion app's chime feature previously encoded the date and time at which the app was opened, not the current time. This behavior was fixed in later releases--if you downloaded your app before May 2021, make sure to update your app before using it.
 
 ## Apply new firmware
 
@@ -588,12 +596,9 @@ You can use tools like ArcGIS and Google Maps to pre-identify potential location
 ![Google My Maps](images/programming/google-maps-demo.gif)
 
 
-## Deployment protocols and metadata
+## Deployment metadata
 
-Much information must be accurately recorded about each AudioMoth's placement and deployment. Below we describe what information we track for each deployment and recorder. We also share two example options for managing deployments: written protocols and electronic protocols.
-
-### What metadata should I track?
-Here is an example of the metadata we track during AudioMoth deployments: [link](documents/example_deployment_metadata.csv). This spreadsheet includes places for us to indicate the following data for each AudioMoth that has been deployed:
+We use spreadsheets to track metadata about each AudioMoth that has been deployed. [This spreadsheet](documents/example_deployment_metadata.csv) gives an example of the deployment metadata we track, including:
 * AudioMoth and microSD card ID numbers
 * Firmware used on the AudioMoth
 * The filename  of the configuration file (this is not as necessary anymore, since the config file is saved to the microSD card when the AudioMoth begins recording)
@@ -609,9 +614,9 @@ We also use a "master" spreadsheet to track information about all of the recorde
 * Date that the recorder's sound quality was last tested
 * Is the recorder retired or lost?
 
-### Written deployment protocols
+## Written deployment protocols
 
-All of the protocols we currently use for deployment are available in [this document](resources/deployment_protocol_template.docx). This document covers pre-deployment, field deployment, and post-deployment activities. For example, some of the information in this document includes:
+We usually collect deployment metadata using field data sheets. These data sheets and other protocols we currently use for deployment are available in [this document](resources/deployment_protocol_template.docx). This document covers pre-deployment, field deployment, and post-deployment activities, e.g.:
 * How to set up brand new AudioMoths
 * Creating recording schedules for AudioMoths
 * Putting AudioMoths in sealed housings
@@ -625,13 +630,13 @@ Some tips for using written datasheets in the field:
 * Use either pencils or Rite in the Rain brand pens. (Most pens or permanent markers will not write well on wet paper.)
 * If you do lots of deployments, keep a master "template" protocol that you modify based on the needs of each deployment
 
-### Electronic deployment aids
+## Electronic deployment aids
 
 A variety of apps are available for collecting data in the field. Some researchers use apps such as [Survey123](https://survey123.arcgis.com/) or [Fulcrum](https://apps.apple.com/us/app/fulcrum-mobile-data-collector/id467758260) to record these data in the field.
 
 We especially like using the [Gaia GPS](https://www.gaiagps.com/) phone app as a complement to a compass and/or GPS receiver for navigating to our data points. This app can import files of locations, e.g. .GPX or .KML files. It also displays downloaded trail maps and elevation gradients even when you are offline.
 
-#### RFCx Companion app
+### RFCx Companion app
 
 The RFCx "Companion" app is made specifically for use with AudioMoths. You can use this app to collect metadata about each deployed AudioMoth. These metadata are stored in the cloud and accessible through the RFCx ARBIMON interface. Data you can collect include:
 * Name of the deployment site
@@ -661,28 +666,29 @@ with questions about this study.
 You may wish to add a note on or in each recorder housing briefly describing your study and an email address or phone number that curious people can use to contact you for more information. However, it is unclear whether these notes would deter or encourage recorder loss. :-)
 
 
-## Tips for scaling up
+## Other tips
+
+### Tips for scaling up
 
 ![Two hundred AudioMoth housings made from Ziploc bags](images/housing/bulk-housings.jpg)
-
 
 * Speed matters when you deploy a lot of recorders: for instance, when deploying 100 recorders, an extra 5 minutes spent per recorder results in 8+ additional hours in the field! Practice and refine your deployment protocol before you go to the field.
 * Save time in the field by pre-packing bags with desiccant and pre-attaching them to straps in the lab, instead of performing these tasks in the field.
 * It can be helpful to deploy AudioMoths in pairs
     * One person can record data, e.g., the unique ID of the AudioMoth, its SD card, and the point at which it is deployed.
     * The other person can manage putting the AudioMoth on the tree and collecting a more accurate GPS point
+* Pre-assign nearby groups of AudioMoths
 
+### Playback, imitation, and voices
 
-## Playback and imitation
-
-Your study might require that you use sound playback or imitations. If you're worried about mistaking these sounds for the actual sounds you are trying to record, here are some options:
+Your study might require that you use sound playback or imitations. You might also encounter human voices on your recordings. If you're worried about mistaking these sounds for the actual sounds you are trying to record, here are some options:
 
 * Use playback or imitation only outside the hours of the recording
-* Keep a record of the days and times you performed imitations, then exclude these recordings from analyses
+* Keep a record of the days and times you performed imitations or walked near the recorders, then exclude these recordings from analyses
 * Use a distinctive unnatural sound (e.g., a “triple knock” instead of a “double knock”). 
-* Verbally announce your presence loudly enough that all recorders that could capture your recording can hear your announcement
+* While using playback/imitation, verbally announce your presence loudly enough that all recorders that could capture your recording can hear your announcement
 
-Make sure anyone using your data is aware of the protocols you used around playback and imitation. Keep in mind that if you are using automated analysis algorithms, verbal announcements will be missed and unnatural sounds might still be picked up by your algorithm as sounds of interest. 
+Make sure anyone using your data is aware of the protocols you used around playback, imitation, and voices. Keep in mind that if you are using automated analysis algorithms, verbal announcements need to be manually confirmed. Unnatural sounds might still be picked up by your algorithm as sounds of interest, e.g., human voices are sometimes mistaken by classification algorithms as animal sounds.
 
 # Data management
 
