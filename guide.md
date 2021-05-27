@@ -8,20 +8,19 @@ Originally published 2019
 Revised May 2021
 
 #### About
-This document is intended to be comprehensive guide for both first-time AudioMoth users and experienced users interested in scaling up their AudioMoth deployment. Our goal with this guide is to help you gain intuition for using AudioMoths; to provide tips that we've developed while deploying thousands of AudioMoths; and to troubleshoot the wide variety of challenges that you might encounter while using these devices. 
+This document is intended to be comprehensive guide for both first-time AudioMoth users and experienced users interested in scaling up their AudioMoth deployment. Our goal with this guide is to help you gain intuition for using AudioMoths; to provide tips and resources that we've developed while deploying thousands of AudioMoths; and to troubleshoot the wide variety of challenges that you might encounter while using these devices. 
 
 This version of the guide reflects the newest firmware available at the time of writing (v.1.5.0); previous versions of the guide are also available in the GitHub repository.
 
 #### Other guides and support
-The information here complements official [Open Acoustic Devices documentation](https://www.openacousticdevices.info/getting-started) and a guide by [David Brown](https://sites.google.com/view/audiomoth/home). Since the original release of this guide in 2019, Open Acoustic Devices posted an official manual based on this material [on their website](https://www.openacousticdevices.info/open-source). These documents contain similar information, but the guide below also has additional information about practical applications including housing options, deployment procedures, acoustic tests, common stumbling blocks, and rules of thumb for scaling up.
+The information here complements official [Open Acoustic Devices documentation](https://www.openacousticdevices.info/getting-started) and a guide by [David Brown](https://sites.google.com/view/audiomoth/home). Since the original release of this guide in 2019, Open Acoustic Devices posted an official manual similar to this material [on their website](https://www.openacousticdevices.info/open-source). These documents contain similar information. The guide below also has additional information about using AudioMoths in practice, including housing options, deployment procedures, acoustic tests, common stumbling blocks, and rules of thumb for scaling up.
 
 If you have a question or comment that you can't find addressed in any of these guides, several forums are available to help you. Try searching or posting on the following:
 * [AudioMoth support forum](https://www.openacousticdevices.info/support) for AudioMoth-specific questions
 * [WILDLABS Acoustic Monitoring forum](https://www.wildlabs.net/community/group/acoustic-monitoring) for general bioacoustics questions
-* Twitter bioacoustics community: use hashtags #AudioMoth or #bioacoustics.
+* Twitter communities: use hashtags #AudioMoth or #bioacoustics; follow [@OpenAcoustics](https://twitter.com/OpenAcoustics)
 
 Please submit questions suggestions for modifications to this guide via creating pull requests on the GitHub repository, or emailing me at `tessa.rhinehart at pitt.edu`. This guide is released under a [CC-BY](https://creativecommons.org/licenses/by/4.0/) license, meaning you are free to modify it and redistribute it for almost any purpose with proper [attribution](#citing-this-guide).
-
 
 #### Table of contents
 
@@ -44,8 +43,8 @@ Please submit questions suggestions for modifications to this guide via creating
   * [Recording quality and calibration](#recording-quality-and-calibration)
 * [Enclosures](#enclosures)
 * [Deployment](#deployment)
-  * [Select deployment points](#selecting-deployment-points)
-  * [Track deployment metadata](#tracking-deployment-metadata)
+  * [Select deployment points](#select-deployment-points)
+  * [Deployment protocols and metadata](#deployment-protocols-and-metadata)
   * [Inform the public](#informing-the-public)
   * [Tips for scaling up](#tips-for-scaling-up)
   * [Playback and imitation](#playback-and-imitation)
@@ -58,7 +57,6 @@ Please submit questions suggestions for modifications to this guide via creating
 
 
 # Quick start
-
 
 Using AudioMoths is a pretty simple process. A good general introduction to the AudioMoth is available on the Open Acoustic Devices ["Getting Started" page](https://www.openacousticdevices.info/getting-started). Here's a high-level view of what is involved in using AudioMoths:
 
@@ -566,9 +564,15 @@ In addition, many groups have shared their housing advice on the [WildLabs Acous
 
 # Deployment
 
-"Deployment" is the process of putting recorders out into the field. Below are ideas and important notes to remember about deployments including how to inform the public, record data, safely affix AudioMoths to trees, and more.
+"Deployment" is the process of putting recorders out into the field. It might also include other activities like selecting points at which AudioMoths should be deployed, testing AudioMoths after they have been deployed, etc. Below are ideas and important notes to remember about deployments including how to inform the public, record data, safely affix AudioMoths to trees, and more.
 
 ## Selecting deployment points
+
+### Recorder positioning
+Some things to keep in mind when positioning recorders in the field:
+
+* If putting on a tree: tree size affects recording quality. In general, you want a tree that is not huge, but is study enough that the AudioMoth won't be jostled by wind.
+* You may want to camouflage your recorders. Black straps stand out against trees. If you are putting your recorders in an area that people walk around in, try to position them so they can't be seen from nearby roads or trails.
 
 ### Pre-selecting locations
 You can use tools like ArcGIS and Google Maps to pre-identify potential locations at which to place your recorders. Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](https://twitter.com/mountain_laur)) developed this method of pre-positioning locations of recorders for deployments:
@@ -583,44 +587,61 @@ You can use tools like ArcGIS and Google Maps to pre-identify potential location
 
 ![Google My Maps](images/programming/google-maps-demo.gif)
 
-### Recorder positioning
-Some things to keep in mind when positioning recorders in the field:
 
-* If putting on a tree: tree size affects recording quality. In general, you want a tree that is not huge, but is study enough that the AudioMoth won't be jostled by wind.
-* You may want to camouflage your recorders. Black straps stand out against trees. If you are putting your recorders in an area that people walk around in, try to position them so they can't be seen from nearby roads or trails.
+## Deployment protocols and metadata
 
+Much information must be accurately recorded about each AudioMoth's placement and deployment. Below we describe what information we track for each deployment and recorder. We also share two example options for managing deployments: written protocols and electronic protocols.
 
-## Tracking deployment metadata
+### What metadata should I track?
+Here is an example of the metadata we track during AudioMoth deployments: [link](documents/example_deployment_metadata.csv). This spreadsheet includes places for us to indicate the following data for each AudioMoth that has been deployed:
+* AudioMoth and microSD card ID numbers
+* Firmware used on the AudioMoth
+* The filename  of the configuration file (this is not as necessary anymore, since the config file is saved to the microSD card when the AudioMoth begins recording)
+* Name, latitude, and longitude of the point at which the AudioMoth is deployed
+* Important notes about placement such as recorder direction, whether the recorder is hidden by shrubs, etc.
+* Dates of deployment and pickup
+* Dates of other activities like checking in and testing the recorder, date the data were uploaded to a computer, etc.
 
-During deployments you must capture information about AudioMoths' identity and location, like deployment date, information about the identity (ID number) of the AudioMoth/SD card, the point at which the recorder is deployed, and any important notes about placement such as recorder direction, whether the recorder is hidden by trees, etc.
+We also use a "master" spreadsheet to track information about all of the recorders that our lab owns, including:
+* ID of recorder (e.g. AudioMoth v.1.2.0 number 0394 has ID M12-0394)
+* Model of recorder (e.g. AudioMoth v.1.2.0)
+* Firmware version
+* Date that the recorder's sound quality was last tested
+* Is the recorder retired or lost?
 
-Detailed protocols help speed up the process and keep track of repetitive tasks. The process of checking steps off a list or filling out a form reduces errors like forgetting to turn the AudioMoth on, checking the recorder is positioned appropriately, making sure to write down the correct ID of the AudioMoth and the point it is at, and so on.
+### Written deployment protocols
 
-### Written protocols
+All of the protocols we currently use for deployment are available in [this document](resources/deployment_protocol_template.docx). This document covers pre-deployment, field deployment, and post-deployment activities. For example, some of the information in this document includes:
+* How to set up brand new AudioMoths
+* Creating recording schedules for AudioMoths
+* Putting AudioMoths in sealed housings
+* A packing checklist for field deployments
+* Field data sheets for deploying, swapping out, or removing AudioMoths from the field
+* Uploading microSD card recordings to your computer
+* Testing returned AudioMoths
 
-The "low-tech" way of keeping track of deployment metadata is using printable protocols, then adding this information to a spreadsheet. Here are some example protocols that we use:
+Some tips for using written datasheets in the field:
+* Print protocols on Rite in the Rain paper
+* Use either pencils or Rite in the Rain brand pens. (Most pens or permanent markers will not write well on wet paper.)
+* If you do lots of deployments, keep a master "template" protocol that you modify based on the needs of each deployment
 
-TODO: update these?
+### Electronic deployment aids
 
-* [Packing for a deployment](https://github.com/rhine3/audiomoth-guide/blob/master/documents/packing-list.md)
-* [Deploying recorders](https://github.com/rhine3/audiomoth-guide/blob/master/documents/deployment-protocol.pdf)
-* [Bringing recorders home](https://github.com/rhine3/audiomoth-guide/blob/master/documents/return-protocol.pdf)
-* [Post-field checklist](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-checklist.md) (which references the document below)
-* [Template for protocols to check in data written down in the field](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-protocol-template.pdf) 
-* [Example modification of the above template](https://github.com/rhine3/audiomoth-guide/blob/master/documents/post-field-protocol-example.pdf)
+A variety of apps are available for collecting data in the field. Some researchers use apps such as [Survey123](https://survey123.arcgis.com/) or [Fulcrum](https://apps.apple.com/us/app/fulcrum-mobile-data-collector/id467758260) to record these data in the field.
 
-TODO: add spreadsheet link and information
+We especially like using the [Gaia GPS](https://www.gaiagps.com/) phone app as a complement to a compass and/or GPS receiver for navigating to our data points. This app can import files of locations, e.g. .GPX or .KML files. It also displays downloaded trail maps and elevation gradients even when you are offline.
 
-TODO: Tips for using this method: 
-* When writing down data in the field, use waterproof paper and permanent pens (e.g., fine-tipped Sharpies or Rite in the Rain brand pens).
+#### RFCx Companion app
 
-### Electronic protocols
+The RFCx "Companion" app is made specifically for use with AudioMoths. You can use this app to collect metadata about each deployed AudioMoth. These metadata are stored in the cloud and accessible through the RFCx ARBIMON interface. Data you can collect include:
+* Name of the deployment site
+* GPS coordinates and altitude for the deployment site
+* Photos of the deployment site
+* Your track, if enabled
 
-TODO: add information about Rainforest Connection app, including uploading, deployment ID through acoustic chime, etc.
+This app's acoustic chime that sets the time on the AudioMoth and assigns the AudioMoth a unique ID for that deployment. Every recording taken by that AudioMoth then contains this deployment ID in the recording metadata. The deployment ID can then be used to identify where the AudioMoth was deployed when it took that recording.
 
-Some researchers use apps such as [Survey123](https://survey123.arcgis.com/) or [Fulcrum](https://apps.apple.com/us/app/fulcrum-mobile-data-collector/id467758260) to record these data in the field.
-
-TODO: Tips for using this method:
+A drawback to this app is that it currently doesn't have an option to write down the AudioMoth ID if you have hand-labeled your AudioMoths with your own ID number; it is expected that only the deployment ID will be used to pair recordings and site location.
 
 ## Informing the public
 
@@ -647,7 +668,7 @@ You may wish to add a note on or in each recorder housing briefly describing you
 
 * Speed matters when you deploy a lot of recorders: for instance, when deploying 100 recorders, an extra 5 minutes spent per recorder results in 8+ additional hours in the field! Practice and refine your deployment protocol before you go to the field.
 * Save time in the field by pre-packing bags with desiccant and pre-attaching them to straps in the lab, instead of performing these tasks in the field.
-* It is very helpful to have two people in the field.
+* It can be helpful to deploy AudioMoths in pairs
     * One person can record data, e.g., the unique ID of the AudioMoth, its SD card, and the point at which it is deployed.
     * The other person can manage putting the AudioMoth on the tree and collecting a more accurate GPS point
 
@@ -666,6 +687,9 @@ Make sure anyone using your data is aware of the protocols you used around playb
 # Data management
 
 ## Data upload
+
+TODO: ADD INFO ABOUT SWALLOWS
+
 ![Storage and SD card reader](images/other/nas.jpg)
 
 Transferring audio files from hundreds of SD cards is a slow process to do manually. Instead, use a multi-port SD card reader. The photo above shows a network-attached storage device (NAS) with 48 TB of storage, plus a multi-port SD card reader.
@@ -752,4 +776,4 @@ Acoustic Device for Monitoring Biodiversity and the Environment.”
 Methods in Ecology and Evolution, December 3, 2017.
 ```
 
-Thank you to Alex Rogers, Sam Lapp, Trieste Devlin, Lauren Chronister, Lauren Schricker, Abram Fleishman, and other members of the AudioMoth and bioacoustics community who have contributed to this guide. 
+Thank you to Alex Rogers, Sam Lapp, Trieste Devlin, Lauren Chronister, Lauren Schricker, Abram Fleishman, and other members of the AudioMoth and bioacoustics communities who have contributed to this guide. 
