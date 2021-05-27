@@ -43,7 +43,7 @@ Please submit questions suggestions for modifications to this guide via creating
   * [Recording quality and calibration](#recording-quality-and-calibration)
 * [Enclosures](#enclosures)
 * [Deployment](#deployment)
-  * [Select deployment points](#select-deployment-points)
+  * [Select deployment positions](#select-deployment-positions)
   * [Deployment protocols and metadata](#deployment-protocols-and-metadata)
   * [Inform the public](#informing-the-public)
   * [Tips for scaling up](#tips-for-scaling-up)
@@ -566,7 +566,7 @@ In addition, many groups have shared their housing advice on the [WildLabs Acous
 
 "Deployment" is the process of putting recorders out into the field. It might also include other activities like selecting points at which AudioMoths should be deployed, testing AudioMoths after they have been deployed, etc. Below are ideas and important notes to remember about deployments including how to inform the public, record data, safely affix AudioMoths to trees, and more.
 
-## Selecting deployment points
+## Select deployment positions
 
 ### Recorder positioning
 Some things to keep in mind when positioning recorders in the field:
