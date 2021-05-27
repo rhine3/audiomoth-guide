@@ -1,0 +1,4 @@
+deployment_number,recorder_ID,card_ID,firmware_version,config_file,setup_notes,location_site,location_number,latitude,longitude,dropoff_date,dropoff_notes,pickup_date,pickup_notes,recorder_checkin_date,recorder_checkin_notes,card_upload_date,card_upload_notes
+D-0001,M10-0149,MSD-0914,1.5.0,sproul_sunrise.config,had corrosion,GruganHollow,0001,41.29823531,-77.73108586,2021-05-19,10 ft north of big Black Cherry snag,2021-06-28,,2021-08-01,corroded,NA,no data on card
+D-0002,M11-1295,MSD-0041,1.5.0,sproul_sunrise.config,,GruganHollow,0001,41.2921333,-77.70860894,2021-05-19,,NA,lost,NA,,,
+D-0003,M10-0377,MSD-0488,1.5.0,sproul_sunrise.config,,PetesRun,0001,41.29252023,-77.75291904,2021-05-20,flagged with yellow tape,2021-06-27,,2021-08-01,,2021-08-05,
