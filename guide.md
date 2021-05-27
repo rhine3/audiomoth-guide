@@ -192,51 +192,11 @@ Set sample rate as 2x the highest frequency you want to record.
 
 * What is a sample rate, anyway? A microphone captures audio by transforming the sound waves into voltage. Digital audio is recorded by sampling that voltage. The *sample rate* in Hertz is the number of times per second the voltage is sampled. For a helpful introduction to digital audio, check out [this guide](https://web.archive.org/web/20190201094638/https://docs.cycling74.com/max5/tutorials/msp-tut/mspdigitalaudio.html)
 
-
-### "Schedule" tab 
-
-The "schedule" tab lets you set 1-4 recording period(s) in Coordinated Universal Time (UTC) or your local time zone using a 24-hour clock. 
-
-# WARNING: CHECK WHETHER YOU ARE CREATING YOUR RECORDING SCHEDULE IN UTC OR YOUR OWN TIMEZONE! (see below)
-
-Hopefully this warning will catch the eye of anyone quickly skimming this guide. This is one of the most commonly encountered silent failure points of using an AudioMoth. 
-
-Follow the instructions in the next section carefully, or else you may program your AudioMoths to record at the wrong time. It's disappointing to bring your recorders back from 2 months of deployment and realize your "dawn chorus" recordings were actually taken at midnight.
-
-#### UTC vs. local time
-Instead of referring to a time zone (like Eastern Time, Pacific Time, etc.) recordings on the AudioMoth are scheduled in UTC by default.
-
-**What is UTC?**: UTC is a universal time standard that is used to avoid ambiguity in time zones. UTC is equivalent to Greenwich Mean Time (GMT), but does not observe Daylight Savings time as some countries in the GMT time zone do.
-
-**Can I program AudioMoths in local time?**: Yes, you can use local time instead of UTC to program your devices. To do so, click on the main program menu ("File" at the top left of the app on Windows computers; "AudioMoth-Config" at the top of your screen on Mac computers). There you can toggle the "Local time" setting. 
-
-**When should I use local time?**: Here are some examples of factors to consider.
-* Will you or your collaborators deploy your recorders across multiple time zones?
-* Do you or your collaborators work in a different time zone than your recorders will be deployed in? 
-* Are your collaborators expecting to see the recordings in a certain time zone?
-* Will you be creating the recording file in a different time zone than the recording file will be applied to the AudioMoth?
-
-Because our lab works across multiple time zones and using local time introduces ambiguity, we only program our recorders in UTC. However, sometimes we switch on the "local time" option to double-check that we have correctly calculated the time in UTC. You can switch this on to check, then switch it back off before applying it to a recorder.
-
-Note that when a recording is created in local time, even though the filename is in local time, the UTC time at which it was created is still saved to each recording's [metadata](#metadata).
-
-#### Recording periods
-
-Make sure to press "Add recording period" after typing in the desired time of each recording period. Recording periods will show up on the red/white graphic or the period listing on the right side of the program. Likewise, be sure to remove unwanted periods.
-
-The recording periods will only be adhered to when the AudioMoth is on CUSTOM mode. On DEFAULT mode, the recorder begins recording immediately, without regard to any scheduled recording periods. 
-
-![Set recording period on AudioMoth configuration app](images/programming/recording-period.gif)
-
 #### Gain
 The gain is the amount that sounds from the microphone will be amplified once recorded. Selecting the optimal gain requires trial and error in your particular field conditions. If the gain is too high, your recordings will [clip](https://en.wikipedia.org/wiki/Clipping_(audio)), creating an unpleasant distortion that can be challenging, if not impossible, to analyze. Alternatively, if the gain is too low, sounds will be faint and hard to hear.
 
 #### Sleep-record cycles
-In the "schedule" tab you select the time of day that the AudioMoth should record each day (the "recording period" or periods). However, the AudioMoth doesn't have to record continuously every day. You can use a sleep/record schedule to record only a limited amount of time during the scheduled recording period.
-
-TODO: update gif
-
-![Set sleep and recording durations](images/programming/sleep-rec-fast.gif)
+In the "Schedule" tab you select the time of day that the AudioMoth should record each day (the "recording period" or periods). However, the AudioMoth doesn't have to record continuously within that time period. You can use a sleep/record schedule to record only a limited amount of time during the scheduled recording period.
 
 * When this feature is enabled, the recorder will create a recording for the number of seconds indicated in "recording duration" and then sleep for the number of seconds indicated in "sleep duration."
 
@@ -273,6 +233,57 @@ When battery voltage is too low, writing to the microSD card may be inconsistent
 #### Enable battery level indication
 
 When this option is checked, the AudioMoth indicates its battery level with LEDs when it is switched to USB/OFF mode from either CUSTOM mode or DEFAULT mode. For information about the meanings of these flashes, see the section on [battery level indication](#battery-level-indication). If you are using rechargeable batteries, an option to use a more precise battery level indication is available under the "Advanced Settings" tab.
+
+### "Schedule" tab 
+
+The "schedule" tab lets you set 1-4 recording period(s) in Coordinated Universal Time (UTC) or your local time zone using a 24-hour clock. 
+
+# WARNING: CHECK WHETHER YOU ARE CREATING YOUR RECORDING SCHEDULE IN UTC OR YOUR OWN TIMEZONE! (see below)
+
+Hopefully this warning will catch the eye of anyone quickly skimming this guide. This is one of the most commonly encountered silent failure points of using an AudioMoth. 
+
+Follow the instructions in the next section carefully, or else you may program your AudioMoths to record at the wrong time. It's disappointing to bring your recorders back from 2 months of deployment and realize your "dawn chorus" recordings were actually taken at midnight.
+
+#### UTC vs. local time
+Instead of referring to a time zone (like Eastern Time, Pacific Time, etc.) recordings on the AudioMoth are scheduled in UTC by default.
+
+**What is UTC?**: UTC is a universal time standard that is used to avoid ambiguity in time zones. UTC is equivalent to Greenwich Mean Time (GMT), but does not observe Daylight Savings time as some countries in the GMT time zone do.
+
+**Can I program AudioMoths in local time?**: Yes, you can use local time instead of UTC to program your devices. To do so, click on the main program menu ("File" at the top left of the app on Windows computers; "AudioMoth-Config" at the top of your screen on Mac computers). There you can toggle the "Local time" setting. 
+
+**When should I use local time?**: Here are some examples of factors to consider.
+* Will you or your collaborators deploy your recorders across multiple time zones?
+* Do you or your collaborators work in a different time zone than your recorders will be deployed in? 
+* Are your collaborators expecting to see the recordings in a certain time zone?
+* Will you be creating the recording file in a different time zone than the recording file will be applied to the AudioMoth?
+
+Because our lab works across multiple time zones and using local time introduces ambiguity, we only program our recorders in UTC. However, sometimes we switch on the "local time" option to double-check that we have correctly calculated the time in UTC. You can switch this on to check, then switch it back off before applying it to a recorder.
+
+Note that when a recording is created in local time, even though the filename is in local time, the UTC time at which it was created is still saved to each recording's [metadata](#metadata).
+
+#### Recording periods
+
+These are the time each day that the AudioMoth will record. The recording periods will only be adhered to when the AudioMoth is on CUSTOM mode. On DEFAULT mode, the recorder begins recording immediately, without regard to any scheduled recording periods. 
+
+Length of recordings:
+* By default, the AudioMoth will make one long recording for each separate period. 
+* You can specify a shorter recording length if you turn on sleep/record cyclic recording
+* The recordings will be split up if your recording period is so long that the size of the WAV files would exceed the max filesize that can be saved to the microSD card.
+
+Creating recording periods:
+* Type in the time for the period start and end in **the correct time zone ([UTC or local time](#utc-vs-local-time))**
+* Press "Add recording period" after typing in the desired start/end time of each recording period
+* Recording periods will show up on the red/white graphic and the period listing on the right side of the program
+* Remove a single unwanted periods either by clicking on the period in the graphic or in the period listing on the right side of the program and clicking "Remove selected period"
+* Clear all recording periods by clicking the "Clear all periods" button
+
+The animation below illustrates the steps above:
+![Set recording period on AudioMoth configuration app](images/programming/recording-period.gif)
+
+#### Select first and last recording date
+By default, when the AudioMoth is turned to CUSTOM mode it starts following its recording schedule immediately. When these features are enabled, the AudioMoth on CUSTOM mode will instead start following the schedule on the day you specified and stop recording on the day you specified. 
+
+This is helpful if you want to deploy your recorders in advance of your desired study dates (e.g., if your site is inaccessible on those dates, or if you have a lot of recorders to deploy and want them to start recording simultaneously)
 
 ### "Advanced settings" tab
 
