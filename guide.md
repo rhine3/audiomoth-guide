@@ -33,7 +33,7 @@ Please submit questions suggestions for modifications to this guide via creating
 * [Configuration](#configuration)
   * [Create configuration](#create-configuration)
   * [Example configurations](#example-configurations)
-  * [Save and load configuration](#save-and-load-configuration)
+  * [Save and open configurations](#save-and-open-configurations)
   * [Apply configuration](#apply-configuration)
   * [Set the time](#set-the-time)
   * [Apply new firmware](#apply-new-firmware)
@@ -218,6 +218,8 @@ Instead of referring to a time zone (like Eastern Time, Pacific Time, etc.) reco
 
 Because our lab works across multiple time zones and using local time introduces ambiguity, we only program our recorders in UTC. However, sometimes we switch on the "local time" option to double-check that we have correctly calculated the time in UTC. You can switch this on to check, then switch it back off before applying it to a recorder.
 
+Note that when a recording is created in local time, even though the filename is in local time, the UTC time at which it was created is still saved to each recording's [metadata](#metadata).
+
 #### Recording periods
 
 Make sure to press "Add recording period" after typing in the desired time of each recording period. Recording periods will show up on the red/white graphic or the period listing on the right side of the program. Likewise, be sure to remove unwanted periods.
@@ -261,7 +263,7 @@ In general, when the AudioMoth is in CUSTOM or DEFAULT mode, a red LED means the
    * 10ms flash: there was a recording failure on a previous recording. This happens when the AudioMoth is scheduled to sleep in CUSTOM mode.
 
 The LED also functions to:
-* Show acoustic chime progress (see information about the [timesetter phone apps](#phone-apps))
+* Show acoustic chime progress (see information about the [timesetter phone apps](#set-time-with-phone-apps))
 * Show battery level (see information about [battery level indication](#battery-level-indication))
 
 For complete information and diagrams of the LED meanings, see [this webpage](https://www.openacousticdevices.info/led-guide)
@@ -285,7 +287,9 @@ This feature allows you to only record data from a particular frequency band. Wh
 * High-pass: filter out low frequencies
 
 #### Amplitude threshold
-This feature allows you to only save samples to the file that meet a particular amplitude threshold. This allows you to save on storage by not saving empty files--especially helpful for high-sampling rate files, which are very large.
+This feature causes the AudioMoth to only save audio segments to the file when they contain a sample that exceeds a particular amplitude threshold. This allows you to save on storage by not saving empty files--especially helpful for high-sampling rate files, which are very large. 
+
+The AudioMoth continues to record as scheduled during this mode, but only saves a file to the microSD card when the amplitude threshold is reached. The original length and timing of these recordings can be restored using the "Expand AudioMoth Recordings" option in the [main program menu](#main-program-menu).
 
 This method is primarily intended for animals that call at high frequencies; the high sample rate recordings required to capture these animals' calls take a lot of storage. We would not recommend using this method for animals that call at audible frequencies, where there is a lot of noise that could cause false triggers. Additionally, keep in mind that using triggering limits the applicability of your recordings to other taxa.
 
@@ -300,6 +304,15 @@ This setting could be useful when using the RFCx app. Its chime also gives the r
 If you are using rechargeable (NiMH/LiPo) batteries, checking this box will change the meanings of the number of LED flashes used in [battery level indication](#battery-level-indication). This scale is apparently more precise.
 
 
+### Main program menu
+
+Some additional options are available on the main program menu. To access this menu click "File" at the top left of the app on Windows computers; or click "AudioMoth-Config" at the top of your screen on Mac computers. 
+
+* **Open configuration**/**Save configuration**: save or open a saved configuration file (see [below](#save-and-open-configurations))
+* **Copy device ID**: every device has a unique hardware ID. When the device is plugged in, this menu option copies the unique device ID. The device ID is saved into the metadata of every recording the device makes, so this can be a helpful way to double-check where a recording was taken.
+* **Local time**: program the AudioMoth to keep time in, and save recordings in, local time. For more information, see the section on [UTC vs. local time](#utc-vs-local-time)
+* **Expand AudioMoth recordings**: this setting expands recordings made when an AudioMoth uses [amplitude threshold recording](#amplitude-threshold) to restore their original recording length and relative timings. It only applies to recordings with the "T.WAV" suffix.
+
 ## Example configurations
 
 TODO: update
@@ -313,7 +326,7 @@ The other creates minute-long recordings with minute-long breaks in between, 30 
 ![Two example programs](images/programming/example-programs.jpg)
 
 
-## Save and load configuration
+## Save and open configurations
 
 You can save your completed schedule as a file for later reference, reuse, copying, and sharing. Both features are accessed through the main program menu ("File" at the top left of the app on Windows computers; "AudioMoth-Config" at the top of your screen on Mac computers). 
 
@@ -322,11 +335,11 @@ To save a configuration:
 * Click "Save Configuration"
 * Save it with a descriptive filename 
 
-To open a saved configuration:
+
+To open a saved configuration: Clicking a .config file in your file browser does not open the file in the AudioMoth-Config app. Instead, open the saved program through the configuration app itself.
 * Go to the main menu
 * Click "Open Configuration"
 * Navigate to your .config file and open it.
-* Clicking a .config file in your file browser may not correctly open the file in the AudioMoth-Config app. Instead, open the saved program through the configuration app itself.
 
 In later firmware versions (1.4.0 and on), a copy of the .config file is saved to the AudioMoth's microSD card. This allows easier recordkeeping. The config is saved when recordings are made, not when the AudioMoth itself is programmed.
 
@@ -356,7 +369,7 @@ The time is automatically set when you set the configuration, unless you select 
 
 There are three methods of setting the time.
 
-### Computer apps
+### Set time with computer apps
 
 Either computer app can be used to set the time on an AudioMoth that has lost its time. However, if the AudioMoth was configured with the "Always require acoustic chime on switching to CUSTOM" option, the AudioMoth will require programming by an acoustic chime, even if you set the time with either of these computer apps.
 
@@ -366,7 +379,7 @@ You can use the configuration app to reset the time. Just be careful: if your de
 #### AudioMoth-Time app
 Open Acoustic Devices offers a standalone computer-based timesetter app ("AudioMoth Time App" on [this webpage](https://www.openacousticdevices.info/applications)) that allows you to set the time without having the recording configuration loaded.
 
-### Phone apps
+### Set time with phone apps
 
 You can set the time using one of two phone apps that encodes date and time in an acoustic signal. AudioMoths can be programmed this way when they enter "acoustic mode," a special mode when the switch is set to CUSTOM where the red LED is lit constantly and the green LED is flashing. There are three ways to enter this mode:
 * The AudioMoth is switched to CUSTOM but the time is not set, e.g. due to battery loss
