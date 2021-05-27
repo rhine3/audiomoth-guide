@@ -673,7 +673,13 @@ We also use a "master" spreadsheet to track information about all of the recorde
 
 ## Written deployment protocols
 
-We usually collect deployment metadata using field data sheets. These data sheets and other protocols we currently use for deployment are available in [this Google Drive document](https://docs.google.com/document/d/1sjiYVt9-nC2Vyr7Qvu2pRacPSWM6B8tl-AOX44OfrOU/edit?usp=sharing) and this identical downloadable [Word document](resources/deployment_protocol_template.docx). This document covers pre-deployment, field deployment, and post-deployment activities, e.g.:
+We usually collect deployment metadata using field data sheets. The document containing the protocols and data sheets we currently use for deployment is available in the following formats:
+* [Google document (duplicate to edit)](https://docs.google.com/document/d/1sjiYVt9-nC2Vyr7Qvu2pRacPSWM6B8tl-AOX44OfrOU/edit?usp=sharing)
+* [PDF document](documents/deployment_protocol_template.docx)
+* [Word document](documents/deployment_protocol_template.docx)
+
+
+This document covers pre-deployment, field deployment, and post-deployment activities, e.g.:
 * How to set up brand new AudioMoths
 * Creating recording schedules for AudioMoths
 * Putting AudioMoths in sealed housings
