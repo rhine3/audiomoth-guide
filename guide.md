@@ -516,9 +516,9 @@ The AudioMoth can be turned on in two ways: DEFAULT mode (move switch to the rig
 
 * Turning the AudioMoth off while it is still recording will cause some data loss. This is because the speed at which the data are saved to the AudioMoth lags behind real time. We have found that turning off a recorder while it is recording causes about a 3% loss of data; e.g. a recording that was stopped an hour into the recording will lose 1.8 minutes (60 minutes * 0.03 = 1.8 minutes).
 
-* The first versions of the AudioMoth firmware use filenames with compact representations of the date and time that the recording started. These filenames can be converted to date & time using the instructions in the AudioMoth user manual. In contrast, the "last modified" time represents the time in UTC that the file was saved, i.e., the time in UTC when the recording ended. More recent firmware saves more easily interpreted filenames.
+* The first versions of the AudioMoth firmware use filenames with compact representations of the date and time that the recording started. These filenames can be converted to date & time using the instructions in the AudioMoth user manual or using one of several scripts, e.g. [`audiomoth-scripts` by Nathan Wolek](https://github.com/nwolek/audiomoth-scripts). In contrast, the "last modified" time represents the time in UTC that the file was saved, i.e., the time in UTC when the recording ended. More recent firmware saves more easily interpreted filenames.
 
-* TODO: describe oversampling/gain behavior on different version of firmware (1.2.1)
+* The AudioMoth is under continued development. New versions of firmware sometimes change AudioMoth behavior. If your AudioMoth has unexpected behavior, check the [release notes](https://github.com/OpenAcousticDevices/AudioMoth-Firmware-Basic/releases) for the version of the firmware that your AudioMoth was made with and make use of the Open Acoustic Devices Support Forum.
 
 ## How many hours will my AudioMoth record?
 
