@@ -47,7 +47,7 @@ Please submit questions suggestions for modifications to this guide via creating
   * [Recording quality and calibration](#recording-quality-and-calibration)
 * [Enclosures](#enclosures)
   * [Plastic bags](#plastic-bags)
-  * [Heat-sealed bags](#ziploc-bags)
+  * [Heat-sealed bags](#heat-sealed-bags)
   * [Hard enclosures](#hard-enclosures)
   * [Camouflage](#camouflage)
 * [Deployment](#deployment)
@@ -646,7 +646,7 @@ Two downsides to this method are:
 
 * The AudioMoth needs to be programmed and turned on before you put it in the bag. Newer versions of AudioMoth firmware allow you to set a delayed start date for recording; without this, your AudioMoths will start recording on their daily schedule after being turned on, whether or not you've placed them in the field!
 
-## Hard cases
+## Hard enclosures
 
 If rodent chewing, rubbing by deer or bison, or other intrusions are a problem in your deployment area, consider using hard enclosures for your AudioMoths. Hard plastic or acrylic cases should have a hole through which sound can enter. This sound can be covered with a water-resistant acoustic membrane sticker or cloth.
 
