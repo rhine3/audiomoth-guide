@@ -852,7 +852,7 @@ We designed a 32-port SD card reader that can be made using supplies purchased f
 
 Keep in mind that this does not significantly speed up or parallelize the transfer process. It just lets you load multiple cards onto the computer and walk away, without having to insert, upload, and eject cards one at a time.
 
-<img src="images/other/nas.jpg" alt="Network-attached storage and SD card reader" width="200"/>
+![Network-attached storage and SD card reader](images/other/nas.jpg){ width=250px }
 
 ## Metadata management
 It is important to keep track of metadata about the files that were created. 
