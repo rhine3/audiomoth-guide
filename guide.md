@@ -39,6 +39,7 @@ Please submit questions suggestions for modifications to this guide via creating
   * [Save and open configurations](#save-and-open-configurations)
   * [Apply configuration](#apply-configuration)
   * [Set the time](#set-the-time)
+  * [CONFIG.txt](#configtxt)
 * [Recording](#recording)
   * [Switch on the recorder](#switch-on-the-recorder)
   * [Recording troubleshooting](#recording-troubleshooting)
@@ -220,7 +221,7 @@ In the "Schedule" tab you select the time of day that the AudioMoth should recor
   
 * With older versions of the firmware (<1.4.2), you must make sure that your file sizes are less than the WAV file size limit of 4.3GB (4000MB).
 
-* Even if sleep period is set to 0, the device will sleep briefly between recordings to save the prior recording to the card.
+* Even if sleep period is set to 0, the device will sleep briefly between recordings to finish saving the previous recording to the card.
 
 ### Enable LED
 This feature allows you to turn on the LED lights for more information about your AudioMoth, though this might attract more attention from animals/curious humans. Lights are especially useful when testing the recorder. 
@@ -235,7 +236,7 @@ In general, when the AudioMoth is in CUSTOM or DEFAULT mode, a red LED means the
    * 10ms flash: there was a recording failure on a previous recording. This happens when the AudioMoth is scheduled to sleep in CUSTOM mode.
 
 The LED also functions to:
-* Show acoustic chime progress (see information about the [timesetter phone apps](#set-time-with-phone-apps))
+* Show acoustic chime progress (see information about the [timesetter mobile apps](#set-time-with-mobile-apps))
 * Show battery level (see information about [battery level indication](#battery-level-indication))
 
 For complete information and diagrams of the LED meanings, see [this webpage](https://www.openacousticdevices.info/led-guide)
@@ -340,7 +341,9 @@ Some additional options are available on the main program menu. To access this m
 
 Below are links to two example configuration files. Configuration files are composed of structured text that can be viewed in a text editor. The contents of the config file are also displayed below the configuration. 
 
-**Example dawn chorus configuration**: This configuration, [example_bird_config.config](documents/example_bird_config.config), creates a single 3-hour long recording per day between 08:30 UTC (`"startMins":510` = 510 minutes after midnight) and 11:30UTC (`"endMins":690` = 690 minutes after midnight). The AudioMoth is scheduled to begin recording on May 10, 2021 and end recording on July 10, 2021. The recorder's sample rate is set to 32kHz, meaning it will record sounds up to 16kHz. This configuration would be suitable for capturing dawn chorus in much of the northeastern United States. If you choose to use this file as a template for your own recording, make sure to change the first and last recording dates.
+**Example dawn chorus configuration**: This configuration, [example_bird_config.config](documents/example_bird_config.config), creates a single 3-hour long recording per day between 08:30 UTC (`"startMins":510` = 510 minutes after midnight) and 11:30UTC (`"endMins":690` = 690 minutes after midnight). The AudioMoth is scheduled to begin recording on May 10, 2021 and end recording on July 10, 2021. The recorder's sample rate is set to 32kHz, meaning it will record sounds up to 16kHz. This configuration would be suitable for capturing dawn chorus in much of the northeastern United States. 
+
+If you choose to use this file as a template for your own recording, make sure to change the first and last recording dates.
 
 ```
 {
@@ -411,9 +414,6 @@ To open a saved configuration: Clicking a .config file in your file browser does
 * Click "Open Configuration"
 * Navigate to your .config file and open it.
 
-In later firmware versions (1.4.0 and on), a copy of the .config file is saved to the AudioMoth's microSD card. This allows easier recordkeeping. The config is saved when recordings are made, not when the AudioMoth itself is programmed.
-
-
 ## Apply configuration
 
 After creating your configuration, you will plug the AudioMoth into your computer, and set the current time and desired recording schedule via the app interface.
@@ -449,9 +449,9 @@ You can use the configuration app to reset the time. Just be careful: if your de
 #### AudioMoth-Time app
 Open Acoustic Devices offers a standalone computer-based timesetter app ("AudioMoth Time App" on [this webpage](https://www.openacousticdevices.info/applications)) that allows you to set the time without having the recording configuration loaded.
 
-### Set time with phone apps
+### Set time with mobile apps
 
-You can set the time using one of two phone apps that encodes date and time in an acoustic signal. AudioMoths can be programmed this way when they enter "acoustic mode," a special mode when the switch is set to CUSTOM where the red LED is lit constantly and the green LED is flashing. There are three ways to enter this mode:
+You can set the time using two mobile (phone/tablet) apps that encode date and time in an acoustic signal. AudioMoths can be programmed this way when they enter "acoustic mode," a special mode when the switch is set to CUSTOM where the red LED is lit constantly and the green LED is flashing. There are three ways to enter this mode:
 * The AudioMoth is switched to CUSTOM but the time is not set, e.g. due to battery loss
 * The AudioMoth is switched to CUSTOM and was configured with the "Always require acoustic chime on switching to CUSTOM" option
 * Playing a specific tone (see below) as the AudioMoth is switched from USB/OFF to CUSTOM mode.
@@ -460,14 +460,59 @@ We recommend that before you rely on any app in the field, you test it to make s
 
 Two apps are available for programming AudioMoths:
 
-The [AudioMoth mobile app](https://www.openacousticdevices.info/mobileapplications) is available for Android and iOS. 
+The [AudioMoth mobile app](https://www.openacousticdevices.info/mobileapplications) is available for [Android](https://play.google.com/store/apps/details?id=info.openacousticdevices.audiomoth) and [iOS](https://apps.apple.com/us/app/audiomoth/id1530808973). 
 * It only resets the time on recorders that are already in acoustic mode; it cannot switch a recorder into acoustic mode, so will not reset the time on any previously-programmed recorders. 
 * You can manually force a recorder into acoustic mode by removing the batteries, causing it to lose its set time, and then switching it to custom mode.
 
-The [RFCx Companion app](https://support.rfcx.org/article/65-using-the-companion-app) is available for Android and iOS. 
+The [RFCx Companion app](https://support.rfcx.org/article/65-using-the-companion-app) is available for [Android](https://play.google.com/store/apps/details?id=org.rfcx.companion&hl=en_US&gl=US) only.
 * It switches recorders into acoustic mode by emitting a tone at a specific frequency. When you switch the AudioMoth from USB/OFF mode into CUSTOM mode while playing this tone, the AudioMoth is switched into acoustic mode. 
-* The app not only sets the time and date on the recorder, but also encodes a unique deployment ID which the recorder will save into the [metadata](#metadata) of every file. This guide briefly describes this behavior [below](#rfcx-companion-app), but check out the official RFCx website for more information.
-* The RFCx companion app's chime feature previously encoded the date and time at which the app was opened, not the current time. This behavior was fixed in later releases--if you downloaded your app before May 2021, make sure to update your app before using it.
+* This acoustic chime also assigns a unique deployment ID to the AudioMoth. We briefly describe this and some of the other functions of this app [below](#rfcx-companion-app).
+
+
+## CONFIG.txt
+
+In later firmware versions (1.4.0 and on), information about the configuration file is saved to the AudioMoth's microSD card in a file named CONFIG.txt. This allows for easier recordkeeping. 
+
+This file is saved to the microSD card when the AudioMoth is recording in either CUSTOM or DEFAULT mode. Nothing is saved to the card until the AudioMoth is turned on.
+
+Here is an example of a CONFIG.txt file:
+
+```
+Device ID                       : 247AA5015C02F90F
+Firmware                        : AudioMoth-Firmware-Basic (1.5.0)
+
+Deployment ID                   : 94DB49FDC0B963A6
+
+Time zone                       : UTC
+
+Sample rate (Hz)                : 48000
+Gain                            : Medium
+
+Sleep duration (s)              : 5
+Recording duration (s)          : 55
+
+Active recording periods        : 1
+
+Recording period 1              : 13:15 - 14:15 (UTC)
+
+Earliest recording time         : ---------- --:--:--
+Latest recording time           : ---------- --:--:--
+
+Filter                          : -
+Amplitude threshold             : -
+Minimum threshold duration (s)  : -
+
+Enable LED                      : Yes
+Enable low-voltage cutoff       : Yes
+Enable battery level indication : Yes
+
+Always require acoustic chime   : Yes
+```
+
+The CONFIG.txt file will be overwritten as new recordings are taken -- so if you change the recording schedule on your AudioMoth but do not replace its card, keep in mind that the CONFIG.txt on the AudioMoth will only refer to the most recently used recording schedule.
+
+The AudioMoth saves CONFIG.txt files even when the recorder is switched to DEFAULT mode. The information in the CONFIG.txt still refers to the recording periods and other settings selected in the custom program applied to the AudioMoth, even though in DEFAULT mode the AudioMoth starts recording without regard to the custom recording periods.
+
 
 # Recording
 
@@ -658,7 +703,7 @@ You can use tools like ArcGIS and Google Maps to pre-identify potential location
 We use spreadsheets to track metadata about each AudioMoth that has been deployed. [This spreadsheet](documents/example_deployment_metadata.csv) gives an example of the deployment metadata we track, including:
 * AudioMoth and microSD card ID numbers
 * Firmware used on the AudioMoth
-* The filename  of the configuration file (this is not as necessary anymore, since the config file is saved to the microSD card when the AudioMoth begins recording)
+* The filename  of the configuration file (this is not as necessary anymore, since information about the configuration is saved to the microSD card when the AudioMoth begins recording)
 * Name, latitude, and longitude of the point at which the AudioMoth is deployed
 * Important notes about placement such as recorder direction, whether the recorder is hidden by shrubs, etc.
 * Dates of deployment and pickup
@@ -699,17 +744,26 @@ A variety of apps are available for collecting data in the field. Some researche
 
 We especially like using the [Gaia GPS](https://www.gaiagps.com/) phone app as a complement to a compass and/or GPS receiver for navigating to our data points. This app can import files of locations, e.g. .GPX or .KML files. It also displays downloaded trail maps and elevation gradients even when you are offline.
 
+Two mobile apps are made specifically for setting the time on AudioMoths (see ["Set time with mobile apps"](#set-time-with-mobile-apps) above). One of them, the RFCx Companion app, has additional features useful for tracking deployment metadata:
+
 ### RFCx Companion app
 
-The RFCx "Companion" app is made specifically for use with AudioMoths. You can use this app to collect metadata about each deployed AudioMoth. These metadata are stored in the cloud and accessible through the RFCx ARBIMON interface. Data you can collect include:
+You can use the RFCx Companion app to collect metadata about each deployed AudioMoth. These metadata are stored in the cloud and accessible through the RFCx ARBIMON interface. Data you can collect include:
 * Name of the deployment site
 * GPS coordinates and altitude for the deployment site
 * Photos of the deployment site
 * Your track, if enabled
 
-This app's acoustic chime that sets the time on the AudioMoth and assigns the AudioMoth a unique ID for that deployment. Every recording taken by that AudioMoth then contains this deployment ID in the recording metadata. The deployment ID can then be used to identify where the AudioMoth was deployed when it took that recording.
+This app can also be used to set the time on an AudioMoth:
+* It switches recorders into acoustic mode by emitting a tone at a specific frequency. When you switch the AudioMoth from USB/OFF mode into CUSTOM mode while playing this tone, the AudioMoth is switched into acoustic mode. 
+* The RFCx companion app's chime feature previously encoded the date and time at which the app was opened, not the current time. This behavior was fixed in later releases--if you downloaded your app before May 2021, make sure to update your app before using it.
 
-A drawback to this app is that it currently doesn't have an option to write down the AudioMoth ID if you have hand-labeled your AudioMoths with your own ID number; it is expected that only the deployment ID will be used to pair recordings and site location.
+The acoustic chime also encodes a unique deployment ID:
+* The deployment ID is created and saved while using the app's "Create deployment" feature. It indicates a unique deployment time, date, and location.
+* The recorder will save this ID into the "Comments" section of the [metadata](#metadata) of every recording
+* The deployment ID is saved to your phone and synced to RFCx's Arbimon interface. It can then be used to identify where the AudioMoth was deployed when it took that recording.
+
+A drawback to this app is that it currently doesn't have an option to write down the AudioMoth ID if you have hand-labeled your AudioMoths with your own ID number. It is expected that only the deployment ID, which is accessible using the RFCx app or Arbimon website, will be used to pair recordings and site location.
 
 ## Informing the public
 
@@ -784,17 +838,17 @@ Transferring audio files from hundreds of SD cards is a slow process to do manua
 ## Metadata management
 It is important to keep track of metadata about the files that were created. 
 
-* The AudioMoth stores metadata about the recording in the "Comments" field of the EXIF metadata. This includes recording date/time, sample rate, recording duration, gain setting, battery level, and AudioMoth serial number. For instance, here is an example metadata record automatically generated by an AudioMoth, accessed through `exiftool` (see below)
-
-TODO: Create a more current example of this, including Deployment ID from RFCx app.
+* The AudioMoth stores metadata about the recording in the "Comments" field of the EXIF metadata. This includes recording date/time, sample rate, recording duration, gain setting, battery level, and AudioMoth serial number. For instance, here is an example metadata record automatically generated by an AudioMoth that was programmed by the RFCx Companion app:
 
  ```
-File Name                       : 5ACDE3A8.WAV
+> exiftool 20210528_131600.WAV
+ExifTool Version Number         : 11.30
+File Name                       : 20210528_131600.WAV
 Directory                       : .
-File Size                       : 27 MB
-File Modification Date/Time     : 2018:04:11 10:35:00-04:00
-File Access Date/Time           : 2018:04:17 11:16:05-04:00
-File Inode Change Date/Time     : 2018:04:17 11:17:43-04:00
+File Size                       : 5.0 MB
+File Modification Date/Time     : 2021:05:28 13:16:54-04:00
+File Access Date/Time           : 2021:05:28 00:00:00-04:00
+File Inode Change Date/Time     : 2021:05:28 13:16:54-04:00
 File Permissions                : rwxrwxrwx
 File Type                       : WAV
 File Type Extension             : wav
@@ -804,15 +858,18 @@ Num Channels                    : 1
 Sample Rate                     : 48000
 Avg Bytes Per Sec               : 96000
 Bits Per Sample                 : 16
-Comment                         : Recorded at 10:30:00 11/04/2018 (UTC) by AudioMoth 0FE081F80FE081F0 at gain setting 2 while battery state was 3.6V
-Duration                        : 0:05:00
+Comment                         : Recorded at 13:16:00 28/05/2021 (UTC) during deployment 94DB49FDC0B963A6 at medium gain setting while battery state was 4.7V and temperature was 22.9C.
+Artist                          : AudioMoth 247AA5015C02F90F
+Duration                        : 0:00:55
  ```
 
  * EXIF data can be accessed via [`exiftool`](http://owl.phy.queensu.ca/~phil/exiftool/) on Mac, Linux, and Windows. Once it is installed, open a Terminal window and run `exiftool FILENAME.wav`
 
-* If SD cards get mixed up, this information can be used to recover what unit the recording was made on.
+* If SD cards get mixed up, this information can be used to recover what unit the recording was made on:
+  * By device ID (listed under `Artist`: `AudioMoth 247AA5015C02F90F`). You can access AudioMoth device ID when configuring an AudioMoth in the [main program menu](#main-program-menu)
+  * By deployment ID, if you have used the [RFCx Companion app](#rfcx-companion-app) to program the recorder (written in `Comment`: `deployment 94DB49FDC0B963A6`)
 
-* Several metadata standards exist for audio recordings, including [Tethys](https://tethys.sdsu.edu/) and [GUANO](https://guano-md.org/). Recording metadata can be updated to be compliant with these standards using exiftool.
+* Several metadata standards exist for audio recordings, including [Tethys](https://tethys.sdsu.edu/) and [GUANO](https://guano-md.org/). Recording metadata can be updated to be compliant with these standards using `exiftool`.
 
 
 # Data analysis
