@@ -176,7 +176,7 @@ On the NiMH/LiPo scale, more flashes indicates a lower battery level:
 
 # Firmware
 
-As discussed above, several different firmware versions for the AudioMoth have been created and released. Some releases are just updates, but some have special functionality. For instance, version 1.4.0 enables users to trigger AudioMoth recording only when sound exceeds an amplitude threshold. Behavior of the AudioMoth in different firmware versions differs slightly but meaningfully. To see all of the features added or changed in each version of the firmware, view [the release descriptions in the GitHub repository](https://github.com/OpenAcousticDevices/AudioMoth-Firmware-Basic/releases). You can also modify the firmware yourself and apply custom firmware to your AudioMoth.
+As discussed above, several different firmware versions for the AudioMoth have been created and released. These firmwares often fix bugs and introduce new features: for instance, version 1.4.0 enabled users to trigger AudioMoth recording only when sound exceeds an amplitude threshold. Behavior of the AudioMoth in different firmware versions differs slightly but meaningfully. To see all of the features added or changed in each version of the firmware, view [the release descriptions in the GitHub repository](https://github.com/OpenAcousticDevices/AudioMoth-Firmware-Basic/releases). You can also modify the firmware yourself and apply custom firmware to your AudioMoth.
 
 If you want to flash new firmware to your device, download the application [here](https://www.openacousticdevices.info/flashing). This app allows you to download and apply any of the standard firmware releases released by Open Acoustic Devices (under the "Use Standard Release" tab). If you wish to customize the AudioMoth firmware, you can use the flashing app to apply custom firmware to the AudioMoth as well (under the "Use Local File" tab).
 
@@ -518,7 +518,7 @@ The AudioMoth can be turned on in two ways: DEFAULT mode (move switch to the rig
 
 * The first versions of the AudioMoth firmware use filenames with compact representations of the date and time that the recording started. These filenames can be converted to date & time using the instructions in the AudioMoth user manual or using one of several scripts, e.g. [`audiomoth-scripts` by Nathan Wolek](https://github.com/nwolek/audiomoth-scripts). In contrast, the "last modified" time represents the time in UTC that the file was saved, i.e., the time in UTC when the recording ended. More recent firmware saves more easily interpreted filenames.
 
-* The AudioMoth is under continued development. New versions of firmware sometimes change AudioMoth behavior. If your AudioMoth has unexpected behavior, check the [release notes](https://github.com/OpenAcousticDevices/AudioMoth-Firmware-Basic/releases) for the version of the firmware that your AudioMoth was made with and make use of the Open Acoustic Devices Support Forum.
+* The AudioMoth is under continued development. New versions of firmware sometimes change AudioMoth behavior. If your AudioMoth has unexpected behavior, check the [release notes](https://github.com/OpenAcousticDevices/AudioMoth-Firmware-Basic/releases) for the version of the firmware that your AudioMoth was made with and make use of the Open Acoustic Devices Support Forum. (A good rule of thumb is to use the same version of the firmware for all AudioMoths in a given deployment.)
 
 ## How many hours will my AudioMoth record?
 
