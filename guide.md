@@ -114,9 +114,13 @@ For recording at sample rates above 48 kHz, we use SanDisk Extreme 128GB microSD
 
 For more details on microSD card selection, see the Open Acoustic Devices [SD card guide](https://www.openacousticdevices.info/sd-card-guide) for more information.
 
-### Card formatting
+### Card naming and formatting
+
+You may wish to name or number your cards to organize your data. This is especially helpful for organization during [data upload](#data-upload) This can be achieved by plugging the card into your computer and renaming it. It can also be achieved while reformatting the cards.
 
 Out of the box, microSD cards are typically supplied with one of two file systems: exFAT (for cards larger than 32GB) and FAT32 (for cards 32GB and less). AudioMoth firmware versions 1.2.2 and after can handle either of these formats. However, firmware versions 1.2.2 and before only support FAT32 cards. 
+
+In either case, you might wish to reformat your cards every time they are used, to ensure that the card has no lingering data on it (see "Card usage" below).
 
 If you wish to use an AudioMoth firmware version before 1.2.2, you must reformat your cards to the FAT32 file system. Windows computers cannot natively format cards larger than 32GB to the FAT32 format, but there are [free programs](http://ridgecrop.co.uk/index.htm?guiformat.htm) that allow Windows users to format larger cards. Mac computers can format cards at least up to 128GB; we haven't tested anything larger.
 
@@ -811,29 +815,44 @@ Make sure anyone using your data is aware of the protocols you used around playb
 
 ## Data upload
 
-TODO: ADD INFO ABOUT SWALLOWS
+Transferring audio files from hundreds of microSD cards is a slow process to do manually. We organize this process by giving each of our microSD cards a unique ID. We then upload large amounts of data at once using one of two pieces of hardware: Raspberry Pi-based card transfer tools called "Swallows" and multi-card SD readers.
 
-![Storage and SD card reader](images/other/nas.jpg)
+### Upload tips
 
-Transferring audio files from hundreds of SD cards is a slow process to do manually. Instead, use a multi-port SD card reader. The photo above shows a network-attached storage device (NAS) with 48 TB of storage, plus a multi-port SD card reader.
+We assign each microSD card has a unique ID number (e.g. 0526). This number is written on the front of the card in Sharpie, but the card is also given a volume name (e.g., MSD-0526) when it is first formatted. These names are then used to organize the audio files copied off of each card.
 
-* We designed a 32-port SD card reader that can be made using supplies purchased from Amazon, the ["hexadecapus"](https://github.com/kitzeslab/sd-transfer/blob/master/Hexadecapus/Hexadecapus%20multi-SD%20reader.pdf). 
-
-* Each SD card has its number (e.g. 0526) written on the front of the card in Sharpie, but is also given a volume name (e.g., MSD-0526) when it is first reformatted to FAT32. These names are then used to organize the audio files copied off of each card.
-
-* When microSD cards are all named in this way, the following `rsync` command automatically copies data: 
+When microSD cards are all named in this way, the following `rsync` command automatically copies data: 
 
    `rsync -rhv /Volumes/MSD* --exclude .Spotlight* --exclude .fsevents* --exclude System* /Volumes/seagate/transfer_20200622/`
 
-  * The command will find all cards in `/Volumes` named with the prefix "MSD" 
-  
+About this command:
+  * The command finds all cards in `/Volumes` named with the prefix "MSD" 
   * These data will be copied to a folder on an external hard drive, `/Volumes/seagate/transfer_20200622`
-  
   * This command excludes some system files created by some operating systems
-  
   * Use the flag `-n` to run a dry-run of this command first!
 
-* Before you consider your data transfer complete, check to make sure that all of the expected folders have been created and they are of the expected size and number of recordings.
+Before you consider your data transfer complete, check to make sure that all of the expected folders have been created and they are of the expected size and number of recordings.
+
+### Swallows / `picopy`
+
+The method we currently use to transfer microSD cards is a Raspberry Pi-based method. Tutorials and schematics for the Raspberry Pi devices are available in Sam Lapp's [`picopy` repository](
+https://github.com/sammlapp/picopy).
+
+These devices, nicknamed "Swallows," enable data from a microSD card connected to the Raspberry Pi to be transferred to an attached external hard drive. Buttons on the Swallow are used to start and stop transfers and eject the drives. LEDs on the Swallow indicate copy status, progress, and any errors encountered. Under the hood, the Swallow's functions are managed by a Python script that kicks off the transfer using Rsync.
+
+If multiple Swallows are built, they can be used to "parallelize" the upload process, simply by having many Swallows uploading data at once!
+
+![Swallow Raspberry Pi device](images/other/swallow.png)
+
+### Multi-port SD reader
+
+Another option is to use a multi-port SD card reader. The photo below shows a network-attached storage device (NAS) with 48 TB of storage, plus a multi-port SD card reader.
+
+We designed a 32-port SD card reader that can be made using supplies purchased from Amazon, the ["hexadecapus"](https://github.com/kitzeslab/sd-transfer/blob/master/Hexadecapus/Hexadecapus%20multi-SD%20reader.pdf). 
+
+Keep in mind that this does not significantly speed up or parallelize the transfer process. It just lets you load multiple cards onto the computer and walk away, without having to insert, upload, and eject cards one at a time.
+
+![Storage and SD card reader](images/other/nas.jpg)
 
 ## Metadata management
 It is important to keep track of metadata about the files that were created. 
