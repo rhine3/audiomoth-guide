@@ -309,7 +309,8 @@ Creating recording periods:
 * Remove a single unwanted periods either by clicking on the period in the graphic or in the period listing on the right side of the program and clicking "Remove selected period"
 * Clear all recording periods by clicking the "Clear all periods" button
 
-The animation below illustrates the steps above:
+The animation below illustrates the steps above (does not appear in PDF):
+
 ![Set recording period on AudioMoth configuration app](images/programming/recording-period.gif)
 
 ### Select first and last recording date
@@ -955,7 +956,9 @@ Num Channels                    : 1
 Sample Rate                     : 48000
 Avg Bytes Per Sec               : 96000
 Bits Per Sample                 : 16
-Comment                         : Recorded at 13:16:00 28/05/2021 (UTC) during deployment 94DB49FDC0B963A6 at medium gain setting while battery state was 4.7V and temperature was 22.9C.
+Comment                         : Recorded at 13:16:00 28/05/2021 (UTC) during deployment 
+                                  94DB49FDC0B963A6 at medium gain setting while battery 
+                                  state was 4.7V and temperature was 22.9C.
 Artist                          : AudioMoth 247AA5015C02F90F
 Duration                        : 0:00:55
  ```
