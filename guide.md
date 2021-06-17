@@ -586,18 +586,24 @@ The AudioMoth Configuration app will calculate the energy and storage used *per 
 
 ## Recording quality and calibration
 
-TODO: add information
-* Sam's guide
-* Importance of calibration
-* Oversampling/changes throughout firmware
+The Open Acoustic Devices team has specs about recording quality on the following pages/reports: 
+* https://www.openacousticdevices.info/audio
 
+A member of our lab (Sam Lapp) performed full tests of the quality of AudioMoth recording under lab and field conditions, including in protective cases. For more information, see his [AudioMoth Performance Testing report here](https://github.com/kitzeslab/audiomoth-performance).
+
+His report also describes some methods for testing AudioMoth recording quality. It is important to test recording quality of your microphones before and after each deployment for the following reasons.
+
+1. Microphones tend to degrade in quality over time, especially those subjected to the harsh conditions of bioacoustic recording. These changes can be obvious, such as the mic failing to record or producing static. They can also be more subtle, such as a reduction in sensitivity that makes sounds softer.
+
+2. Firmware versions can also affect sound quality: for instance, in firmware v 1.2.0, a bug caused all of our recordings to have a maximum sound amplitude 25% of what it should have been. 
+
+3. The enclosure and placement of your AudioMoth use can drastically alter the sound recorded. For example, enclosures can reduce sound in certain frequency bands arriving at the microphones, and trees can reduce sound from certain directions or produce artefacts in ultrasonic recordings. Before deploying your recorders, it is recommended to test how your enclosure and field setup affect sound quality compared to an AudioMoth in ideal conditions (not enclosed and not acoustically impacted by its deployment point. Another alternative is to [use an external microphone (instructions here)](https://github.com/OpenAcousticDevices/Application-Notes/blob/master/Using_AudioMoth_with_External_Electret_Condenser_Microphones.pdf), which is possible with newer versions of the AudioMoth hardware (1.2.0 and above).
 
 # Enclosures
 
+AudioMoths may break if exposed to water, so it is necessary to house them in a secure, watertight enclosure. This is complicated by the fact that the mic, a MEMS mic, is attached to the circuitboard, although it is possible to [use an external microphone (instructions here)](https://github.com/OpenAcousticDevices/Application-Notes/blob/master/Using_AudioMoth_with_External_Electret_Condenser_Microphones.pdf) with newer versions of the AudioMoth hardware (1.2.0 and above). When the standard MEMS mic is used, the housing must be both watertight and acoustically transparent over the mic.
 
-AudioMoths may break if exposed to water, so it is necessary to house them in a secure, watertight enclosure. This is complicated by the fact that the mic, a MEMS mic, is attached to the circuitboard. The housing must be both watertight and acoustically transparent over the mic.
-
-TODO: add a link -- We have compared the sound quality of several enclosure types [here](add link).
+It is important to know how the enclosure and deployment strategy affects the sound quality. For comparisons, see Sam Lapp's [AudioMoth Performance Testing report](https://github.com/kitzeslab/audiomoth-performance). While we have tested the audio quality of AudioMoths recording in Open Acoustic Devices cases, these results are currently not in the report, as we have gotten some results that differ somewhat from the results reported by Open Acoustic Devices. We're still investigating potential causes of this difference.
 
 ## Plastic bags
 
@@ -650,9 +656,14 @@ Two downsides to this method are:
 
 If rodent chewing, rubbing by deer or bison, or other intrusions are a problem in your deployment area, consider using hard enclosures for your AudioMoths. Hard plastic or acrylic cases should have a hole through which sound can enter. This sound can be covered with a water-resistant acoustic membrane sticker or cloth.
 
-TODO: add more info about this/take pic?
+
+### Open Acoustic Devices enclosure
 
 Open Acoustic Devices sells injection-molded cases through [GroupGets campaigns](https://groupgets.com/campaigns/775-the-official-audiomoth-ipx7-waterproof-case?archived=true&page=1).
+
+Note: we have tested the audio quality of AudioMoths recording in Open Acoustic Devices cases and have gotten some results that differ somewhat from the results reported by Open Acoustic Devices. We're still investigating potential causes of this difference.
+
+### Homemade enclosures
 
 In addition, many groups have shared their housing advice on the [WildLabs Acoustic Monitoring forum](https://www.wildlabs.net/community/group/acoustic-monitoring) and Twitter. Some examples:
 
