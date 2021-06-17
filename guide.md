@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3667065.svg)](https://doi.org/10.5281/zenodo.3667065)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4976243.svg)](https://doi.org/10.5281/zenodo.4976243)
 
 # AudioMoth: a practical guide to the open-source ARU
 by [Tessa Rhinehart](https://tessarhinehart.com), [Kitzes Lab](https://kitzeslab.org/), University of Pittsburgh
