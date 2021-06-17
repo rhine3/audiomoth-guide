@@ -620,7 +620,7 @@ Here are the supplies we use or have used. We aren't affiliated with any of thes
 * Straps: 1" buckle straps are good. Shop around for the best price. [Purchase link (Amazon)](https://www.amazon.com/Magarrow-Luggage-Buckle-Packing-Accessories/dp/B07H1D15LZ/)
 * Zip ties: we like 16" long black zip ties. Any zip ties from a local hardware store will do. For camouflaging purposes, black zip ties tend to be less visible against tree bark than white ones. You can string together multiple zip ties, but it's best to aim for smaller-diameter trees.
 
-![An AudioMoth in an anti-static bag, with top folded over to create a loop for a zip tie (Photo credit: Halie Parker)](images/housing/antistatic_HalieParker.jpeg)
+![An AudioMoth in an anti-static bag, with top folded over to create a loop for a zip tie (Photo credit: Halie Parker)](images/housing/antistaticbag_HalieParker.jpeg)
 
 There are several methods of hanging the AudioMoth:
 * Create a loop in the top of the bag using duct tape and thread a zip tie or strap through the loop.
