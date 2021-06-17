@@ -586,18 +586,20 @@ The AudioMoth Configuration app will calculate the energy and storage used *per 
 
 ## Recording quality and calibration
 
-The Open Acoustic Devices team has specs about recording quality on the following pages/reports: 
-* https://www.openacousticdevices.info/audio
+The Open Acoustic Devices team and several others have tested the recording quality of AudioMoths under a variety of scenarios:
+* Open Acoustic Devices introductory document about sound quality: [link](https://www.openacousticdevices.info/audio)
+* Audible sound quality tests: on- and off-axis frequency response curves, polar sensitivity charts, comparisons of protective housings, effects of strapping AudioMoths to trees of different sizes by Sam Lapp (Kitzes Lab): [here](https://github.com/kitzeslab/audiomoth-performance).
+* Ultrasonic sound quality tests, comparisons to other bat recorders, and assessment of enclosures by Kevin Darras: [link](https://www.openacousticdevices.info/support/device-support/sound-transmission-with-and-without-cases-comparison-with-sm2bat) 
 
-A member of our lab (Sam Lapp) performed full tests of the quality of AudioMoth recording under lab and field conditions, including in protective cases. For more information, see his [AudioMoth Performance Testing report here](https://github.com/kitzeslab/audiomoth-performance).
-
-His report also describes some methods for testing AudioMoth recording quality. It is important to test recording quality of your microphones before and after each deployment for the following reasons.
+It is important to test recording quality of your microphones before and after each deployment. Why?:
 
 1. Microphones tend to degrade in quality over time, especially those subjected to the harsh conditions of bioacoustic recording. These changes can be obvious, such as the mic failing to record or producing static. They can also be more subtle, such as a reduction in sensitivity that makes sounds softer.
 
 2. Firmware versions can also affect sound quality: for instance, in firmware v 1.2.0, a bug caused all of our recordings to have a maximum sound amplitude 25% of what it should have been. 
 
 3. The enclosure and placement of your AudioMoth use can drastically alter the sound recorded. For example, enclosures can reduce sound in certain frequency bands arriving at the microphones, and trees can reduce sound from certain directions or produce artefacts in ultrasonic recordings. Before deploying your recorders, it is recommended to test how your enclosure and field setup affect sound quality compared to an AudioMoth in ideal conditions (not enclosed and not acoustically impacted by its deployment point. Another alternative is to [use an external microphone (instructions here)](https://github.com/OpenAcousticDevices/Application-Notes/blob/master/Using_AudioMoth_with_External_Electret_Condenser_Microphones.pdf), which is possible with newer versions of the AudioMoth hardware (1.2.0 and above).
+
+For information on how to test your AudioMoths, see examples by Sam Lapp in his [AudioMoth Performance Testing report](https://github.com/kitzeslab/audiomoth-performance). Make sure to assess not only the overall decibel level of your recordings, but also whether sensitivity differs over differing frequencies, e.g. by using pink noise playback.
 
 # Enclosures
 
@@ -607,26 +609,34 @@ It is important to know how the enclosure and deployment strategy affects the so
 
 ## Plastic bags
 
-TODO: add pic of pink baggie + zip tie deployed on tree.
+AudioMoths can be deployed in plastic baggies like Ziploc bags or anti-static bags. Typically the bag should be thick (4mm) and use a zipper seal, not a less robust "slider" seal seen on typical Ziploc bags. Bags can be affixed to trees, poles, or other deployment points using buckling straps or zip-ties.
 
-AudioMoths can be deployed in plastic baggies like Ziploc bags or anti-static bags. Typically the bag should be thick (4mm) and use a zipper seal, not a less robust "slider" seal seen on typical Ziploc bags. Bags can be affixed to trees, poles, or other deployment points using buckling straps or zip-ties. If straps are used, the baggie can be affixed to the strap using zip-ties or by looping the baggie around the strap and securing it with duct tape. 
+![AudioMoth deployed on tree in a burned forest (Photo credit: Beth Gardner)](images/housing/ziploc_BethGardner.jpg)
 
 Here are the supplies we use or have used. We aren't affiliated with any of these suppliers. The items available at purchase links can sometimes be switched out (especially on Amazon), so you might want to shop around.
-* Our favorite: 4x6in, 4mil thickness anti-static bags. [Purchase link (Amazon)](https://www.amazon.com/dp/B07D1TM25V?psc=1&ref=ppx_yo2_dt_b_product_details)
+* Our favorite, also pictured below: 4x6in, 4mil thickness anti-static bags. [Purchase link (Amazon)](https://www.amazon.com/dp/B07D1TM25V?psc=1&ref=ppx_yo2_dt_b_product_details)
 * Our Ziploc bag choice: freezer bag with zipper seal, not slider. Ziploc freezer bags are 3mil thickness. Do not use sandwich bags, which are very flimsy (1.5mil thickness). [Purchase link (Amazon)](https://www.amazon.com/Ziploc-Freezer-Bags-Quart-Total/dp/B07NQVYF72/)
 * Desiccant pack: used to soak up lingering moisture in the bag, preventing condensation. We use quite large desiccants (~2x2) [Purchase link (Grainger)](https://www.grainger.com/product/GRAINGER-APPROVED-Desiccant-20TM04)
 * Straps: 1" buckle straps are good. Shop around for the best price. [Purchase link (Amazon)](https://www.amazon.com/Magarrow-Luggage-Buckle-Packing-Accessories/dp/B07H1D15LZ/)
 * Zip ties: we like 16" long black zip ties. Any zip ties from a local hardware store will do. For camouflaging purposes, black zip ties tend to be less visible against tree bark than white ones. You can string together multiple zip ties, but it's best to aim for smaller-diameter trees.
 
+![An AudioMoth in an anti-static bag, with top folded over to create a loop for a zip tie (Photo credit: Halie Parker)](images/housing/antistatic_HalieParker.jpeg)
+
+There are several methods of hanging the AudioMoth:
+* Create a loop in the top of the bag using duct tape and thread a zip tie or strap through the loop.
+* Loop the bag around a horizontal branch If straps or zip-ties are used
+* Attach strap to tree and affix the baggie to the strap using zip-ties
+* Sew a fabric pouch for the bagged AudioMoth to sit in that zip-ties to the trie
+
+![An AudioMoth in a fabric bag, attached to a tree with a zip tie](images/housing/fabric_pouch.jpg)
+
 The switch and corners of the AudioMoth v1.0 are sharp and can rip through a plastic bag. More recent AudioMoth designs have rounded corners and an inset switch to reduce this issue. Take steps to prevent moisture getting into AudioMoth enclosure:
+* Thicker bags (e.g. the 4mmil plastic baggies described above) will reduce possibility of puncture.
 * Avoid transporting AudioMoths within the bags if possible, as the bags are more likely to break. Instead, keep the AudioMoth and bag separated until you are ready to hook the bag to the tree. This is less of a concern for thicker bags (e.g. 4mil thickness).
 * Taping over the sharp parts of the AudioMoth, or judiciously applying hot glue, reduces the chance of punctures. 
     * We do not apply anything next to the mic, as we are currently unsure of the effect on the recording quality. Take care not to obstruct SD card insertion or switch movement.
     * [Example with tape by Jennifer Sheridan](https://twitter.com/JenASheridan/status/1047766465900818432)
 * Before you walk away from a newly-deployed AudioMoth, inspect the bag for scratches or punctures. Replace if necessary.
-
-TODO: update/remove this?
-![AudioMoth deployed on tree](images/housing/bag-housing.jpg)
 
 ## Heat-sealed bags
 
@@ -659,7 +669,7 @@ If rodent chewing, rubbing by deer or bison, or other intrusions are a problem i
 
 ### Open Acoustic Devices enclosure
 
-Open Acoustic Devices sells injection-molded cases through [GroupGets campaigns](https://groupgets.com/campaigns/775-the-official-audiomoth-ipx7-waterproof-case?archived=true&page=1).
+Open Acoustic Devices sells injection-molded cases through [GroupGets campaigns](https://groupgets.com/campaigns/775-the-official-audiomoth-ipx7-waterproof-case?archived=true&page=1). More information about the cases is available in their [report](https://github.com/OpenAcousticDevices/Application-Notes/blob/master/An_Injection_Moulded_Case_for_AudioMoth.pdf). After clipping the case closed, the pressure within the case takes several hours to equalize.
 
 Note: we have tested the audio quality of AudioMoths recording in Open Acoustic Devices cases and have gotten some results that differ somewhat from the results reported by Open Acoustic Devices. We're still investigating potential causes of this difference.
 
@@ -683,7 +693,16 @@ In addition, many groups have shared their housing advice on the [WildLabs Acous
 
 ## Camouflage
 
-TODO: add camo bag example
+![An AudioMoth in a sewn camouflage pouch (Photo credit: Halie Parker)](images/housing/camo_HalieParker.jpeg)
+
+Camouflaging your AudioMoths may help prevent vandalism and theft. Some tips:
+
+* Camouflage fabrics can help reduce the visibility of your AudioMoths, especially when deployed on public lands. Some options are sewing a pouch out of camouflage fabric (sold at fabric stores; see picture above), or covering the AudioMoth in a square of cut-out camouflage blind material (see picture below).
+* You might want to use flagging tape to make your AudioMoths easier to find. To avoiding drawing attention to the AudioMoth, you can place the flagging tape a set distance and direction from it, e.g. on a tree 15 meters north of the AudioMoth.
+* Be cognizant that black straps stand out against trees. Depending on the color of the tree bark, black zip-ties can be fairly unobtrusive, whereas white ones may stand out.
+* If your AudioMoth will be in a well-trafficked area, consider positioning it at a distance from walking trails, facing away from nearby roads or paths, and out of reach of passerby.
+
+![An AudioMoth covered by a square of hunting blind fabric](images/housing/camo_blind.jpg)
 
 
 # Deployment
@@ -695,9 +714,21 @@ TODO: add camo bag example
 ### Recorder positioning
 Some things to keep in mind when positioning recorders in the field:
 
-* If putting on a tree: the larger the tree is, the more it blocks sound from arriving in all directions. In general, you want a tree that is not huge, but is study enough that the AudioMoth won't be jostled by wind.
-* You may want to [camouflage](#camouflage) your recorders. Black straps stand out against trees. If you are putting your recorders in an area that people walk around in, try to position them so they can't be seen from nearby roads or trails.
-* You may want to avoid placing AudioMoths in direct sunlight, as their enclosures may heat up and the sun may wear down plastic, duct tape, camouflage, etc.
+* Consider avoiding placing AudioMoths in direct sunlight, as their enclosures may heat up and the sun may wear down plastic, duct tape, camouflage, etc.
+* You may want to [camouflage](#camouflage) your recorders. If you are putting your recorders in an area that people walk around in, try to position them so they can't be seen from nearby roads or trails.
+
+Some potential sources of noise or reduced sound quality:
+
+* **Tree size**: If deploying on a tree: the larger the tree is, the more it blocks sound from arriving in all directions. In general, you want a tree that is not huge, but is sturdy enough that the AudioMoth won't be jostled by wind. For example, we quantify the sound impacts of tree diameter here: [AudioMoth Performance Testing report here](https://github.com/kitzeslab/audiomoth-performance).
+* **Distance to ground**: Some studies have shown that recorders deployed close to the ground have a smaller hearing radius. If possible, placing AudioMoths at chest height, head height, or even higher can improve sound quality. (And put the recorders out of reach of certain curious animals, e.g. deer, humans)
+* **Other biological sound**: Non-target species can be a problem, e.g., frogs heard while recording nocturnal bird migration. Place recorders higher off the ground and investigate methods to reduce noise from other sources.
+* **Vegetation**: Vegetation can generally reduce sound quality. If it grows around your AudioMoth, movement of the vegetation in the wind and while scraping against the AudioMoth can cause noise. Keep in mind that vegetation can grow a lot between deployment and retrieval of your AudioMoth.
+* **Moving water**: Place AudioMoths out of the hearing range of loud moving, if possible; stream noise will greatly reduce the radius that your AudioMoth can survey.
+* **Wind**: Wind can be problematic in open environments. Windscreens may be able to help (see [this thread](https://www.wildlabs.net/community/thread/914) for advice).
+* **Voices, roads, and mechanical sound**: Try to anticipate the location and loudness of human-caused sounds like road noise, well pads, chainsaws, hikers, etc.  Sometimes these are unavoidable. Depending on your study, you may want to capture them, too!
+
+![People deploy an AudioMoth several meters above the ground (Photo credit: Beth Gardner)](images/housing/height_BethGardner.jpg)
+
 
 ### Pre-selecting locations
 You can use tools like ArcGIS and Google Maps to pre-identify potential locations at which to place your recorders. Lauren Schricker ([website](https://mountainlauren.weebly.com/) - [Twitter](https://twitter.com/mountain_laur)) developed this method of pre-positioning locations of recorders for deployments:
@@ -853,7 +884,7 @@ These devices, nicknamed "Swallows," enable data from a microSD card connected t
 
 If multiple Swallows are built, they can be used to "parallelize" the upload process, simply by having many Swallows uploading data at once!
 
-![Swallow Raspberry Pi device](images/other/swallow.png)
+![Swallow Raspberry Pi device (Photo credit: Sam Lapp)](images/other/swallow.png)
 
 ### Multi-port SD reader
 
