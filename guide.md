@@ -19,11 +19,13 @@ If you have a question or comment that you can't find addressed in any of these 
 
 * [AudioMoth support forum](https://www.openacousticdevices.info/support) for AudioMoth-specific questions
 * [WILDLABS Acoustic Monitoring forum](https://www.wildlabs.net/community/group/acoustic-monitoring) for general bioacoustics questions
-* Twitter communities: use hashtags #AudioMoth or #bioacoustics; follow [@OpenAcoustics](https://twitter.com/OpenAcoustics)
+* Twitter communities: use hashtags #AudioMoth or #bioacoustics; follow [OpenAcoustics](https://twitter.com/OpenAcoustics)
 
 Please submit questions suggestions for modifications to this guide via creating pull requests on the GitHub repository, or emailing me at `tessa.rhinehart at pitt.edu`. This guide is released under a [CC-BY](https://creativecommons.org/licenses/by/4.0/) license, meaning you are free to modify it and redistribute it for almost any purpose with proper [attribution](#citing-this-guide).
 
 #### Table of contents
+
+This document contains both [links to external websites](https://www.openacousticdevices.com) and [internal links](#table-of-contents).
 
 * [Quick start](#quick-start)
 * [Supplies](#supplies)
@@ -118,7 +120,7 @@ For more details on microSD card selection, see the Open Acoustic Devices [SD ca
 
 ### Card naming and formatting
 
-You may wish to name or number your cards to organize your data. This is especially helpful for organization during [data upload](#data-upload) This can be achieved by plugging the card into your computer and renaming it. It can also be achieved while reformatting the cards.
+You may wish to name or number your cards to organize your data. This is especially helpful for organization during [data upload](#data-upload). This can be achieved by plugging the card into your computer and renaming it. It can also be achieved while reformatting the cards.
 
 Out of the box, microSD cards are typically supplied with one of two file systems: exFAT (for cards larger than 32GB) and FAT32 (for cards 32GB and less). AudioMoth firmware versions 1.2.2 and after can handle either of these formats. However, firmware versions 1.2.2 and before only support FAT32 cards. 
 
@@ -993,7 +995,7 @@ guide to the open-source ARU. GitHub repository:
 https://github.com/rhine3/audiomoth-guide. DOI: <>
 ```
 
-If you modify this document and would like to make a .pdf version, you can use `pandoc` on the command line to compile the PDF version from Markdown: `pandoc guide.md -o guide.pdf --variable urlcolor=cyan`. (You will have to remove the DOI image at the top of the document to do so, as `pandoc` doesn't support this image type.)
+If you modify this document and would like to make a .pdf version, you can use `pandoc` on the command line to compile the PDF version from Markdown: `pandoc guide.md -o guide.pdf --variable urlcolor=cyan --variable linkcolor=MediumSeaGreen --template default.latex`.
 
 ## Acknowledgements
 
