@@ -669,7 +669,7 @@ The switch and corners of the AudioMoth v1.0 are sharp and can rip through a pla
 
 Ziploc baggies are susceptible to puncture and can be challenging to affix to straps. An alternative to Ziploc baggies is creating an enclosure using a heat-sealed bag. We create these using vacuum sealer with a "heat-seal-only" function, and do not vacuum the air out of the bag itself. (Vacuuming air out of bags would reduce sound quality.)
 
-![Heat-sealed bag](images/housing/heat-sealed.jpg)
+![Heat-sealed bag](images/housing/heat-sealed.jpg){ width=300px }
 
 You can use the following steps to create, deploy, and reuse a heat-sealed enclosure:
 
@@ -869,7 +869,7 @@ You may wish to add a note on or in each recorder housing briefly describing you
 
 ### Tips for scaling up
 
-![Two hundred AudioMoth housings made from Ziploc bags](images/housing/bulk-housings.jpg)
+![Two hundred AudioMoth housings made from Ziploc bags](images/housing/bulk-housings.jpg){ width=300px }
 
 * Speed matters when you deploy a lot of recorders: for instance, when deploying 100 recorders, an extra 5 minutes spent per recorder results in 8+ additional hours in the field! Practice and refine your deployment protocol before you go to the field.
 * Save time in the field by pre-packing bags with desiccant and pre-attaching them to straps in the lab, instead of performing these tasks in the field.
@@ -921,7 +921,7 @@ These devices, nicknamed "Swallows," enable data from a microSD card connected t
 
 If multiple Swallows are built, they can be used to "parallelize" the upload process, simply by having many Swallows uploading data at once!
 
-![Swallow Raspberry Pi device (Photo credit: Sam Lapp)](images/other/swallow.png)
+![Swallow Raspberry Pi device (Photo credit: Sam Lapp)](images/other/swallow.png){ width=300px }
 
 ### Multi-port SD reader
 
@@ -931,7 +931,7 @@ We designed a 32-port SD card reader that can be made using supplies purchased f
 
 Keep in mind that this does not significantly speed up or parallelize the transfer process. It just lets you load multiple cards onto the computer and walk away, without having to insert, upload, and eject cards one at a time.
 
-![Network-attached storage and SD card reader](images/other/nas.jpg){ width=250px }
+![Network-attached storage and SD card reader](images/other/nas.jpg){ width=300px }
 
 ## Metadata management
 It is important to keep track of metadata about the files that were created. 
@@ -956,9 +956,11 @@ Num Channels                    : 1
 Sample Rate                     : 48000
 Avg Bytes Per Sec               : 96000
 Bits Per Sample                 : 16
-Comment                         : Recorded at 13:16:00 28/05/2021 (UTC) during deployment 
-                                  94DB49FDC0B963A6 at medium gain setting while battery 
-                                  state was 4.7V and temperature was 22.9C.
+Comment                         : Recorded at 13:16:00 28/05/2021 
+                                  (UTC) during deployment 
+                                  94DB49FDC0B963A6 at medium gain
+                                  setting while battery state was
+                                  4.7V and temperature was 22.9C.
 Artist                          : AudioMoth 247AA5015C02F90F
 Duration                        : 0:00:55
  ```
