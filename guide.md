@@ -16,6 +16,7 @@ This version of the guide reflects the newest firmware available at the time of 
 The information here complements official [Open Acoustic Devices documentation](https://www.openacousticdevices.info/getting-started) and a guide by [David Brown](https://sites.google.com/view/audiomoth/home). Since the original release of this guide in 2019, Open Acoustic Devices posted an official manual similar to this material [on their website](https://www.openacousticdevices.info/open-source). These documents contain similar information. The guide below also shares additional information about using AudioMoths in practice, including housing options, deployment procedures and protocols, acoustic tests, common stumbling blocks, and rules of thumb for scaling up.
 
 If you have a question or comment that you can't find addressed in any of these guides, several forums are available to help you. Try searching or posting on the following:
+
 * [AudioMoth support forum](https://www.openacousticdevices.info/support) for AudioMoth-specific questions
 * [WILDLABS Acoustic Monitoring forum](https://www.wildlabs.net/community/group/acoustic-monitoring) for general bioacoustics questions
 * Twitter communities: use hashtags #AudioMoth or #bioacoustics; follow [@OpenAcoustics](https://twitter.com/OpenAcoustics)
@@ -96,6 +97,7 @@ Wherever you purchase AudioMoths, make sure you check what version you're purcha
 **Option 2: LabMaker**: For those who can't wait for the next GroupGets purchase, AudioMoth is available at higher prices on LabMaker. Currently the AudioMoth versions available on LabMaker are [AudioMoth v1.2.0](https://www.labmaker.org/products/audiomoth-v1-2-0) and [AudioMoth v1.1.0](https://www.labmaker.org/products/audiomoth-v1-1-0). LabMaker prices are higher because a smaller number of devices are assembled at once, so there is less of an economy of scale.
 
 **Option 3: large-scale PCB manufacturing**: For some versions of the AudioMoth, it may be possible to get AudioMoths at a lower price and larger volumes if you place a large order directly through a PCB manufacturer.
+
 * The PCB manufacturer will create the AudioMoths based off the schematic you provide. The schematic for older versions of AudioMoths (1.0.0 and 1.1.0) has been released publicly. The version 1.2.0 schematic has not been released, so this version cannot currently be purchased through this method. 
 * Our lab has had excellent experiences purchasing from [RushPCB](https://rushpcb.com/). We bought the devices pre-assembled (i.e., components connected to boards, battery pack soldiered to board), but without the firmware flashed. We found it easy to flash the firmware in our lab.
 * Parts of the original AudioMoth design are constantly going out of stock due to high demand. We enlisted the help of our school's electronics shop to find new parts that were interchangeable with the out-of-stock parts and replace these in the schematic.
@@ -132,7 +134,8 @@ Insert the card into the AudioMoth with the contacts facing **up**, as shown on 
 
 When an SD card fills, the unit will stop saving recordings to it, and the unit's red LED light will stay constantly lit until the SD card is removed.
 
-When reusing a microSD card that has already been deployed, check to make sure that the card is truly empty before reuse.
+When reusing a microSD card that has already been deployed, check to make sure that the card is truly empty before reuse:
+
 * On Mac computers, you can check the amount of space remaining on the card using Disk Utility. Deleting files on the microSD card using the graphical user interface does not actually delete them until the trash bin is emptied!
 * You can be certain a card is empty by reformatting the card every time you reuse it, or using the `rm` command in the terminal.
 
@@ -141,17 +144,20 @@ When reusing a microSD card that has already been deployed, check to make sure t
 
 ### Choose batteries
 The battery life depends on the type of battery you use. Check the battery's *capacity* in milliamp-hours (mAh). 
+
 * Lithium AA batteries have a larger capacity than typical alkaline AA batteries, but also cost more. 
 * On the AudioMoth, the batteries are connected in series, so their capacities do not add up: the capacity of the three batteries connected in series is equal to the capacity of any single battery.
 
 ### Increase battery life
 With some electronics expertise you can connect different batteries to the device to increase its battery life. 
+
 * The modified bank of batteries should have a higher *capacity* while maintaining the same *voltage*. For instance, 3 D batteries have the same voltage as 3 AA batteries, but have a higher capacity, so will last longer.
 * The *voltage* of batteries connected in series (as they are on the AudioMoth) is equal to the number of batteries multiplied by the voltage of each battery. AudioMoth v1.0 uses 3 batteries at 1.5 volts each, so the voltage of the battery bank is `3 * 1.5V = 4.5V`.
 * The *capacity* of batteries in series is the capacity of any one battery in the series. (Don't mix batteries of different capacities, or new and old batteries.) For instance, a Duracell alkaline AA battery has a capacity of 2850mAh.
 
 ### Battery usage
 Because the AudioMoth doesn’t have an onboard battery, the set time will be lost if a battery is replaced or jostled. On AudioMoth firmwares before 1.5.0, the recording schedule will also be lost as well. Some suggestions to handle this are:
+
 * If you are replacing the batteries of your AudioMoth, use one of the [time setting apps](#set-the-time) to reset the time.
 * Take care not to drop or jostle AudioMoths in transit. Reduce the likelihood of batteries being jostled by wrapping painter's tape around the back of the AudioMoth
 * While deploying recorders in CUSTOM mode, it will be obvious if a device has lost its time; its red LED will stay lit constantly while its green LED flashes when you try to flip the switch to CUSTOM.
@@ -162,6 +168,7 @@ Because the AudioMoth doesn’t have an onboard battery, the set time will be lo
 When the AudioMoth is switched from DEFAULT or CUSTOM mode to USB/OFF mode, the red LED will flash a number of times corresponding to the battery level. There are two scales, one for use with alkaline batteries (default) and one for use with NiMH and LiPo batteries. The latter scale can be used by selecting the "Use NiMH/LiPo voltage range for battery level indication" option in the ["Advanced Settings" tab](#advanced-settings-tab) of the AudioMoth-Config computer app. You can disable this feature in the config app.
 
 On the standard scale, more flashes indicates a higher battery level except when the battery voltage is very low. The battery levels are:
+
 * 4 flashes: >= 4.6 V
 * 3 flashes: 4.4-4.5 V
 * 2 flashes: 4.0-4.3 V
@@ -169,6 +176,7 @@ On the standard scale, more flashes indicates a higher battery level except when
 * 10 rapid flashes: <= 3.5 V; battery voltage too low to reliably record.
 
 On the NiMH/LiPo scale, more flashes indicates a lower battery level:
+
 * 1 flash: >= 4.3 V
 * 2 flashes: 4.2 V
 * 3 flashes: 4.1 V
@@ -231,6 +239,7 @@ In the "Schedule" tab you select the time of day that the AudioMoth should recor
 This feature allows you to turn on the LED lights for more information about your AudioMoth, though this might attract more attention from animals/curious humans. Lights are especially useful when testing the recorder. 
 
 In general, when the AudioMoth is in CUSTOM or DEFAULT mode, a red LED means the AudioMoth is recording, a green LED means the AudioMoth is sleeping between recordings, and simultaneous red and green LEDs mean that the AudioMoth recording has failed or will fail in some way. Failures come in two flavors:
+
 1. Constantly lit red LED, flashing green LED: the AudioMoth has a configuration, but the time is not set. 
    * This can be caused by loss of battery power or by configuring the AudioMoth with the "Always require acoustic chime on switching to CUSTOM" option."
    * This can be solved by setting the time using the computer or phone apps (see information about how to [set the time](#set-the-time))
@@ -240,6 +249,7 @@ In general, when the AudioMoth is in CUSTOM or DEFAULT mode, a red LED means the
    * 10ms flash: there was a recording failure on a previous recording. This happens when the AudioMoth is scheduled to sleep in CUSTOM mode.
 
 The LED also functions to:
+
 * Show acoustic chime progress (see information about the [timesetter mobile apps](#set-time-with-mobile-apps))
 * Show battery level (see information about [battery level indication](#battery-level-indication))
 
@@ -271,6 +281,7 @@ Instead of referring to a time zone (like Eastern Time, Pacific Time, etc.) reco
 **Can I program AudioMoths in local time?**: Yes, you can use local time instead of UTC to program your devices. To do so, click on the main program menu ("File" at the top left of the app on Windows computers; "AudioMoth-Config" at the top of your screen on Mac computers). There you can toggle the "Local time" setting. 
 
 **When should I use local time?**: Here are some examples of factors to consider.
+
 * Will you or your collaborators deploy your recorders across multiple time zones?
 * Do you or your collaborators work in a different time zone than your recorders will be deployed in? 
 * Are your collaborators expecting to see the recordings in a certain time zone?
@@ -285,11 +296,13 @@ Note that when a recording is created in local time, even though the filename is
 These are the time each day that the AudioMoth will record. The recording periods will only be adhered to when the AudioMoth is on CUSTOM mode. On DEFAULT mode, the recorder begins recording immediately, without regard to any scheduled recording periods. 
 
 Length of recordings:
+
 * By default, the AudioMoth will make one long recording for each separate period. 
 * You can specify a shorter recording length if you turn on sleep/record cyclic recording
 * The recordings will be split up if your recording period is so long that the size of the WAV files would exceed the max filesize that can be saved to the microSD card.
 
 Creating recording periods:
+
 * Type in the time for the period start and end in **the correct time zone ([UTC or local time](#utc-vs-local-time))**
 * Press "Add recording period" after typing in the desired start/end time of each recording period
 * Recording periods will show up on the red/white graphic and the period listing on the right side of the program
@@ -310,6 +323,7 @@ The first two features can be used separately, or combined to create an "amplitu
 
 ### Filtering
 This feature allows you to only record data from a particular frequency band. When you enable filtering, you can choose the following filters. Each allows you to select the frequencies you want to include in the recording. All other frequencies will be filtered out.
+
 * Low-pass: filter out high frequencies
 * Band-pass: filter out both high and low frequencies
 * High-pass: filter out low frequencies
@@ -409,11 +423,13 @@ I have not tested these settings for the high pass filter and amplitude triggeri
 You can save your completed schedule as a file for later reference, reuse, copying, and sharing. These features are accessed through the main program menu ("File" at the top left of the app on Windows computers; "AudioMoth-Config" at the top of your screen on Mac computers). 
 
 To save a configuration:
+
 * Go the main menu
 * Click "Save Configuration"
 * Save it with a descriptive filename 
 
 To open a saved configuration: Clicking a .config file in your file browser does not open the file in the AudioMoth-Config app. Instead, open the saved program through the configuration app itself.
+
 * Go to the main menu
 * Click "Open Configuration"
 * Navigate to your .config file and open it.
@@ -431,6 +447,7 @@ After creating your configuration, you will plug the AudioMoth into your compute
 The AudioMoth now has a custom recording configuration and can be detached from the computer. 
 
 **Why do my AudioMoths count up from 00:00:00, 01/01/1970 UTC when I first plug them in?**: 
+
 * Midnight on January 1, 1970 is called the "Unix epoch." Most operating systems measure time and date as a measure of how much time has elapsed since this time and date. 
 * When you first insert batteries into the AudioMoth, it will start counting up from this time and date, so the time the AudioMoth shows when it is plugged into the computer is a measure of how much time the batteries have been your AudioMoth. So, usually you will not see a time of exactly 00:00:00, but instead 
 * Watch the time when you first plug your AudioMoth into your computer. If the time starts counting up from exactly 00:00:00, this may indicate that the batteries were not correctly inserted into the AudioMoth, and it never started keeping time. Detach your AudioMoth and check your batteries.
@@ -456,6 +473,7 @@ Open Acoustic Devices offers a standalone computer-based timesetter app ("AudioM
 ### Set time with mobile apps
 
 You can set the time using two mobile (phone/tablet) apps that encode date and time in an acoustic signal. AudioMoths can be programmed this way when they enter "acoustic mode," a special mode when the switch is set to CUSTOM where the red LED is lit constantly and the green LED is flashing. There are three ways to enter this mode:
+
 * The AudioMoth is switched to CUSTOM but the time is not set, e.g. due to battery loss
 * The AudioMoth is switched to CUSTOM and was configured with the "Always require acoustic chime on switching to CUSTOM" option
 * Playing a specific tone (see below) as the AudioMoth is switched from USB/OFF to CUSTOM mode.
@@ -465,10 +483,12 @@ We recommend that before you rely on any app in the field, you test it to make s
 Two apps are available for programming AudioMoths:
 
 The [AudioMoth mobile app](https://www.openacousticdevices.info/mobileapplications) is available for [Android](https://play.google.com/store/apps/details?id=info.openacousticdevices.audiomoth) and [iOS](https://apps.apple.com/us/app/audiomoth/id1530808973). 
+
 * It only resets the time on recorders that are already in acoustic mode; it cannot switch a recorder into acoustic mode, so will not reset the time on any previously-programmed recorders. 
 * You can manually force a recorder into acoustic mode by removing the batteries, causing it to lose its set time, and then switching it to custom mode.
 
 The [RFCx Companion app](https://support.rfcx.org/article/65-using-the-companion-app) is available for [Android](https://play.google.com/store/apps/details?id=org.rfcx.companion&hl=en_US&gl=US) only.
+
 * It switches recorders into acoustic mode by emitting a tone at a specific frequency. When you switch the AudioMoth from USB/OFF mode into CUSTOM mode while playing this tone, the AudioMoth is switched into acoustic mode. 
 * This acoustic chime also assigns a unique deployment ID to the AudioMoth. We briefly describe this and some of the other functions of this app [below](#rfcx-companion-app).
 
@@ -526,11 +546,13 @@ The AudioMoth has a switch on the device for accessing its three modes: USB/OFF,
 
 ### USB/OFF
 This mode has two purposes.
+
 * USB: When the AudioMoth is plugged into the computer via USB, The switch should also be switched to this mode when plugging the AudioMoth into the computer to apply a recording schedule or update firmware (USB).
 * OFF: When not plugged into the computer, the recorder is in a low-power state, but continues to keep time.
 
 ### DEFAULT
 The DEFAULT mode generally causes the AudioMoth to turn on and start recording immediately. 
+
 * Behavior in DEFAULT mode depends on the firmware version applied to the AudioMoth and whether the AudioMoth has been programmed. 
 * Firmware 1.4.2 and after: Record continuously, ignoring sleep/duration settings
   * If AudioMoth has been configured, uses the same sample rate and gain level of the configuration
@@ -587,6 +609,7 @@ The AudioMoth Configuration app will calculate the energy and storage used *per 
 ## Recording quality and calibration
 
 The Open Acoustic Devices team and several others have tested the recording quality of AudioMoths under a variety of scenarios:
+
 * Open Acoustic Devices introductory document about sound quality: [link](https://www.openacousticdevices.info/audio)
 * Audible sound quality tests: on- and off-axis frequency response curves, polar sensitivity charts, comparisons of protective housings, effects of strapping AudioMoths to trees of different sizes by Sam Lapp (Kitzes Lab): [here](https://github.com/kitzeslab/audiomoth-performance).
 * Ultrasonic sound quality tests, comparisons to other bat recorders, and assessment of enclosures by Kevin Darras: [link](https://www.openacousticdevices.info/support/device-support/sound-transmission-with-and-without-cases-comparison-with-sm2bat) 
@@ -614,6 +637,7 @@ AudioMoths can be deployed in plastic baggies like Ziploc bags or anti-static ba
 ![AudioMoth deployed on tree in a burned forest (Photo credit: Beth Gardner)](images/housing/ziploc_BethGardner.jpg)
 
 Here are the supplies we use or have used. We aren't affiliated with any of these suppliers. The items available at purchase links can sometimes be switched out (especially on Amazon), so you might want to shop around.
+
 * Our favorite, also pictured below: 4x6in, 4mil thickness anti-static bags. [Purchase link (Amazon)](https://www.amazon.com/dp/B07D1TM25V?psc=1&ref=ppx_yo2_dt_b_product_details)
 * Our Ziploc bag choice: freezer bag with zipper seal, not slider. Ziploc freezer bags are 3mil thickness. Do not use sandwich bags, which are very flimsy (1.5mil thickness). [Purchase link (Amazon)](https://www.amazon.com/Ziploc-Freezer-Bags-Quart-Total/dp/B07NQVYF72/)
 * Desiccant pack: used to soak up lingering moisture in the bag, preventing condensation. We use quite large desiccants (~2x2) [Purchase link (Grainger)](https://www.grainger.com/product/GRAINGER-APPROVED-Desiccant-20TM04)
@@ -623,6 +647,7 @@ Here are the supplies we use or have used. We aren't affiliated with any of thes
 ![An AudioMoth in an anti-static bag, with top folded over to create a loop for a zip tie (Photo credit: Halie Parker)](images/housing/antistaticbag_HalieParker.jpeg)
 
 There are several methods of hanging the AudioMoth:
+
 * Create a loop in the top of the bag using duct tape and thread a zip tie or strap through the loop.
 * Loop the bag around a horizontal branch If straps or zip-ties are used
 * Attach strap to tree and affix the baggie to the strap using zip-ties
@@ -631,6 +656,7 @@ There are several methods of hanging the AudioMoth:
 ![An AudioMoth in a fabric bag, attached to a tree with a zip tie](images/housing/fabric_pouch.jpg)
 
 The switch and corners of the AudioMoth v1.0 are sharp and can rip through a plastic bag. More recent AudioMoth designs have rounded corners and an inset switch to reduce this issue. Take steps to prevent moisture getting into AudioMoth enclosure:
+
 * Thicker bags (e.g. the 4mmil plastic baggies described above) will reduce possibility of puncture.
 * Avoid transporting AudioMoths within the bags if possible, as the bags are more likely to break. Instead, keep the AudioMoth and bag separated until you are ready to hook the bag to the tree. This is less of a concern for thicker bags (e.g. 4mil thickness).
 * Taping over the sharp parts of the AudioMoth, or judiciously applying hot glue, reduces the chance of punctures. 
@@ -645,6 +671,7 @@ Ziploc baggies are susceptible to puncture and can be challenging to affix to st
 ![Heat-sealed bag](images/housing/heat-sealed.jpg)
 
 You can use the following steps to create, deploy, and reuse a heat-sealed enclosure:
+
 * Create seals on 3 sides of the bag
 * Seal 2 inches below one of the sealed sides, then cut the corners off of this side. This creates a pocket for your strap to go through.
 * Insert strap in pocket
@@ -747,6 +774,7 @@ You can use tools like ArcGIS and Google Maps to pre-identify potential location
 ## Deployment metadata
 
 We use spreadsheets to track metadata about each AudioMoth that has been deployed. [This spreadsheet](documents/example_deployment_metadata.csv) gives an example of the deployment metadata we track, including:
+
 * AudioMoth and microSD card ID numbers
 * Firmware used on the AudioMoth
 * The filename  of the configuration file (this is not as necessary anymore, since information about the configuration is saved to the microSD card when the AudioMoth begins recording)
@@ -756,6 +784,7 @@ We use spreadsheets to track metadata about each AudioMoth that has been deploye
 * Dates of other activities like checking in and testing the recorder, date the data were uploaded to a computer, etc.
 
 We also use a "master" spreadsheet to track information about all of the recorders that our lab owns, including:
+
 * ID of recorder (e.g. AudioMoth v.1.2.0 number 0394 has ID M12-0394)
 * Model of recorder (e.g. AudioMoth v.1.2.0)
 * Firmware version
@@ -765,12 +794,14 @@ We also use a "master" spreadsheet to track information about all of the recorde
 ## Written deployment protocols
 
 We usually collect deployment metadata using field data sheets. The document containing the protocols and data sheets we currently use for deployment is available in the following formats:
+
 * [Google document (duplicate to edit)](https://docs.google.com/document/d/1sjiYVt9-nC2Vyr7Qvu2pRacPSWM6B8tl-AOX44OfrOU/edit?usp=sharing)
 * [PDF document](documents/deployment_protocol_template.docx)
 * [Word document](documents/deployment_protocol_template.docx)
 
 
 This document covers pre-deployment, field deployment, and post-deployment activities, e.g.:
+
 * How to set up brand new AudioMoths
 * Creating recording schedules for AudioMoths
 * Putting AudioMoths in sealed housings
@@ -780,6 +811,7 @@ This document covers pre-deployment, field deployment, and post-deployment activ
 * Testing returned AudioMoths
 
 Some tips for using written datasheets in the field:
+
 * Print protocols on Rite in the Rain paper
 * Use either pencils or Rite in the Rain brand pens. (Most pens or permanent markers will not write well on wet paper.)
 * If you do lots of deployments, keep a master "template" protocol that you modify based on the needs of each deployment
@@ -795,16 +827,19 @@ Two mobile apps are made specifically for setting the time on AudioMoths (see ["
 ### RFCx Companion app
 
 You can use the RFCx Companion app to collect metadata about each deployed AudioMoth. These metadata are stored in the cloud and accessible through the RFCx ARBIMON interface. Data you can collect include:
+
 * Name of the deployment site
 * GPS coordinates and altitude for the deployment site
 * Photos of the deployment site
 * Your track, if enabled
 
 This app can also be used to set the time on an AudioMoth:
+
 * It switches recorders into acoustic mode by emitting a tone at a specific frequency. When you switch the AudioMoth from USB/OFF mode into CUSTOM mode while playing this tone, the AudioMoth is switched into acoustic mode. 
 * The RFCx companion app's chime feature previously encoded the date and time at which the app was opened, not the current time. This behavior was fixed in later releases--if you downloaded your app before May 2021, make sure to update your app before using it.
 
 The acoustic chime also encodes a unique deployment ID:
+
 * The deployment ID is created and saved while using the app's "Create deployment" feature. It indicates a unique deployment time, date, and location.
 * The recorder will save this ID into the "Comments" section of the [metadata](#metadata) of every recording
 * The deployment ID is saved to your phone and synced to RFCx's Arbimon interface. It can then be used to identify where the AudioMoth was deployed when it took that recording.
@@ -868,6 +903,7 @@ When microSD cards are all named in this way, the following `rsync` command auto
    `rsync -rhv /Volumes/MSD* --exclude .Spotlight* --exclude .fsevents* --exclude System* /Volumes/seagate/transfer_20200622/`
 
 About this command:
+
   * The command finds all cards in `/Volumes` named with the prefix "MSD" 
   * These data will be copied to a folder on an external hard drive, `/Volumes/seagate/transfer_20200622`
   * This command excludes some system files created by some operating systems
