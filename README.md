@@ -18,7 +18,7 @@ AudioMoths are simple to set up out of the box. For instance:
 * Connect AudioMoth to computer to set the clock and apply the configuration
 * Flip switch to "CUSTOM" to start recording on schedule
 
-For full details, tips on how to set up a field deployment, troubleshooting information, and other tips, continue on to [the guide](https://github.com/rhine3/audiomoth-guide/blob/master/guide.md).
+For full details, tips about deploying AudioMoths in the field, troubleshooting information, and more, continue on to [the guide](https://github.com/rhine3/audiomoth-guide/blob/master/guide.md).
 
 
 ## Cite this work
