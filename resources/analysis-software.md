@@ -8,6 +8,8 @@ This list is not necessarily a recommendation or a guarantee of quality of parti
 
 You should always judge the performance of an analysis method by its performance on *your* dataset. Analysis methods are often published along with metrics to describe their performance, such as accuracy, precision, and recall. However, different recording conditions or different distributions of sounds present in your dataset can result in starkly different performance of the same method.
 
+This list is also available in the form of a (work-in-progress) spreadsheet [here](https://docs.google.com/spreadsheets/d/1Ba1MY4o5Sm1f08IekJcbxAtSjkDN71Z1RZ42kzrofJ0/edit#gid=0).
+
 **Audiomoth-specific**: user-generated tools for AudioMoths
 * [fieldtools](https://github.com/nilomr/fieldtools) (free) - plan deployments copy/format large numbers of SD cards simultaneously
 * [audiomoth-scripts](https://github.com/nwolek/audiomoth-scripts) (free) - a variety of spectrogram visualization bash scripts. Also includes script to rename AudioMoth hex files to human-readable filenames.
@@ -20,6 +22,7 @@ You should always judge the performance of an analysis method by its performance
 * [Reaper](https://www.reaper.fm/) (free) - spectrogram visualization; enables Python and C/C++ coding within 
 * [**scipy.signal**](https://docs.scipy.org/doc/scipy/reference/signal.html) (free) - Python library including spectrogram creation and cross-correlation functions
 * [SonicVisualizer](https://www.sonicvisualiser.org/) (free) - spectrogram visualization
+* [Soundata](https://soundata.readthedocs.io/en/latest/) (free) - Python library for loading and working with audio data
 
 **Manual review and annotation**: bioacoustics-focused software for organizing and annotating recordings, usually also including features for listening to recordings and generating spectrograms.
 * [Anabat Insight](https://www.titley-scientific.com/us/anabat-insight.html) (free and paid versions) - recording organization, annotation, and mapping
@@ -27,6 +30,7 @@ You should always judge the performance of an analysis method by its performance
 * [AviaNZ](http://www.avianz.net/index.php) (free) - graphical user interface for organizing and analyzing recordings
 * [BatExplorer](https://www.batlogger.com/en/products/batexplorer/) (free and paid versions) - organize and annotate bat recordings
 * [BatScope](https://www.wsl.ch/en/services-and-products/software-websites-and-apps/batscope-4.html) (free) - manage, sort, view, and play databases of recordings, geared toward bats
+* [crowsetta](https://github.com/NickleDave/crowsetta) (free) - package for working with and translating between annotation formats
 * [DetEdit](https://github.com/MarineBioAcousticsRC/DetEdit) (free) - visualize and annotate detections
 * [GlassOFire](http://www.oldbird.org/glassofire.htm) (free) - Windows software for avian nocturnal flight call review and sorting
 * [Ishmael](http://bioacoustics.us/ishmael.html) (free) - annotation and real-time recording
@@ -72,6 +76,7 @@ You should always judge the performance of an analysis method by its performance
 **Classification**: predict the identity of sounds captured in recordings, e.g. training a convolutional neural network to identify bird species in a recording
 * [Anabat Insight](https://www.titley-scientific.com/us/anabat-insight.html) (free and paid versions) - contains open-source BatClassify classifier and can be used with other algorithms
 * [Animal Sound Identifier](https://datadryad.org/stash/dataset/doi:10.5061/dryad.221mq23) (free) - R software (described [here](https://onlinelibrary.wiley.com/doi/full/10.1111/ele.13092)) for classification of animals using training data directly from field recordings, without reference libraries
+* [ANIMAL-SPOT](https://github.com/ChristianBergler/ANIMAL-SPOT) (free) - Python framework for building deep learning classification models
 * [ARBIMON](https://arbimon.sieve-analytics.com/) (free for certain number of recordings) - web-based interface for creating own classifiers
 * [Avisoft-SASLab Pro](http://www.avisoft.com/sound-analysis/) (paid) - classification by spectrographic template cross-correlation
 * [AviaNZ](http://www.avianz.net/index.php) (free) - configure your own "filters" for certain species or download pre-configured filters
@@ -82,13 +87,16 @@ You should always judge the performance of an analysis method by its performance
 * [BirdNET](https://github.com/kahst/BirdNET) (free) - pre-created neural network classifiers for common birds of North America and Europe
 * [BirdVoxClassify](https://github.com/BirdVox/birdvoxclassify) (free) - pre-created nocturnal flight call classifiers for a limited number of North American bird species
 * [gibbonR](https://github.com/DenaJGibbon/gibbonR-package) (free) - R package that enables user to train neural networks, GMMs, and others
+* [hybrid-vocal-classifier](https://github.com/NickleDave/hybrid-vocal-classifier) (free) - automated labeling geared towards individual syllable identification
 * [Kaleidoscope](https://www.wildlifeacoustics.com/products/kaleidoscope-pro) (paid, 15-day free trial) - pre-created bat classification
+* [Ketos](https://meridian.cs.dal.ca/2015/04/12/ketos/) (free) - Python package for acoustic data analysis with neural networks, geared toward underwater acoustics
 * [Koe Bioacoustics Software](https://koe.io.ac.nz/) (free) - clustering with human annotation
 * [OpenSoundscape](https://github.com/ktizeslab/opensoundscape) (free) - create and use convolutional neural networks for classification; identify repeating calls using pulse rate analysis
 * [prinia-project](https://github.com/shivChitinous/prinia-project) (free) - bird song note classification
 * [scikit-maad](https://github.com/scikit-maad/scikit-maad) (free) - Python library enabling creation of own classifiers using scikit learn
 * [SonoBat](https://sonobat.com/) (paid) - classification of bat calls
-* [Tadarida-C](https://github.com/YvesBas/Tadarida-C) (free) - discriminant analysis-based classification; part of 3-part "Tadarida" software
+* [Tadarida-C](https://github.com/YvesBas/Tadarida-C) (free) - discriminant analysis-based classification; part of 3-part "Tadarida" software; includes implementation of classifier for bat sonotypes of the world (described [here](https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.13721?campaign=wolearlyview))
+* [vak](https://github.com/NickleDave/vak) (free) - wrapper around Pytorch originally created to benchmark classifiers of individual birdsong syllables
 
 **Measuring acoustic parameters**: acoustic metrics for soundscapes or individual sounds
 * [Acoustic_Indices](https://github.com/patriceguyot/Acoustic_Indices) (free) - Python package for calculating acoustic indices
