@@ -641,7 +641,6 @@ AudioMoths can be deployed in plastic baggies like Ziploc bags or anti-static ba
 
 Here are the supplies we use or have used. We aren't affiliated with any of these suppliers. The items available at purchase links can sometimes be switched out (especially on Amazon), so you might want to shop around.
 
-* Our favorite, also pictured below: 4x6in, 4mil thickness anti-static bags. [Purchase link (Amazon)](https://www.amazon.com/dp/B07D1TM25V?psc=1&ref=ppx_yo2_dt_b_product_details)
 * Our Ziploc bag choice: freezer bag with zipper seal, not slider. Ziploc freezer bags are 3mil thickness. Do not use sandwich bags, which are very flimsy (1.5mil thickness). [Purchase link (Amazon)](https://www.amazon.com/Ziploc-Freezer-Bags-Quart-Total/dp/B07NQVYF72/)
 * Desiccant pack: used to soak up lingering moisture in the bag, preventing condensation. We use quite large desiccants (~2x2) [Purchase link (Grainger)](https://www.grainger.com/product/GRAINGER-APPROVED-Desiccant-20TM04)
 * Straps: 1" buckle straps are good. Shop around for the best price. [Purchase link (Amazon)](https://www.amazon.com/Magarrow-Luggage-Buckle-Packing-Accessories/dp/B07H1D15LZ/)
