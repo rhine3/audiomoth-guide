@@ -122,7 +122,7 @@ For more details on microSD card selection, see the Open Acoustic Devices [SD ca
 
 You may wish to name or number your cards to organize your data. This is especially helpful for organization during [data upload](#data-upload). This can be achieved by plugging the card into your computer and renaming it. It can also be achieved while reformatting the cards.
 
-Out of the box, microSD cards are typically supplied with one of two file systems: exFAT (for cards larger than 32GB) and FAT32 (for cards 32GB and less). AudioMoth firmware versions 1.2.2 and after can handle either of these formats. However, firmware versions 1.2.2 and before only support FAT32 cards. 
+Out of the box, microSD cards are typically supplied with one of two file systems: exFAT (for cards larger than 32GB) and FAT32 (for cards 32GB and less). AudioMoth firmware versions 1.2.2 and after can handle either of these formats. However, firmware versions 1.2.1 and before only support FAT32 cards. 
 
 In either case, you might wish to reformat your cards every time they are used, to ensure that the card has no lingering data on it (see "Card usage" below).
 
