@@ -26,7 +26,7 @@ This list is also available in the form of a (work-in-progress) spreadsheet [her
 
 **Manual review and annotation**: bioacoustics-focused software for organizing and annotating recordings, usually also including features for listening to recordings and generating spectrograms.
 * [Anabat Insight](https://www.titley-scientific.com/us/anabat-insight.html) (free and paid versions) - recording organization, annotation, and mapping
-* [ARBIMON](https://arbimon.sieve-analytics.com/) (free for certain number of recordings) - web-based interface with annotation functionality
+* [ARBIMON](https://arbimon.rfcx.org/) (free for certain number of recordings) - web-based interface with annotation functionality
 * [AviaNZ](http://www.avianz.net/index.php) (free) - graphical user interface for organizing and analyzing recordings
 * [BatExplorer](https://www.batlogger.com/en/products/batexplorer/) (free and paid versions) - organize and annotate bat recordings
 * [BatScope](https://www.wsl.ch/en/services-and-products/software-websites-and-apps/batscope-4.html) (free) - manage, sort, view, and play databases of recordings, geared toward bats
