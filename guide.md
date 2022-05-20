@@ -979,7 +979,7 @@ Duration                        : 0:00:55
 
 Data analysis techniques vary from completely automated to completely manual. For instance, some software enables automated identification of species vocalizing in recordings. Other software makes it easier to look at, listen to, and organize recordings. Software may be free or paid. 
 
-See [this list](resources/analysis-software.md) for brief descriptions of different data analysis techniques, and a list of softwares available.
+See [this list](https://github.com/rhine3/bioacoustics-software) for brief descriptions of different data analysis techniques, and a list of softwares available.
 
 
 ## Citing this guide
