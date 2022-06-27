@@ -594,6 +594,10 @@ The AudioMoth can be turned on in two ways: DEFAULT mode (move switch to the rig
 
 * The AudioMoth is under continued development. New versions of firmware sometimes change AudioMoth behavior. If your AudioMoth has unexpected behavior, check the [release notes](https://github.com/OpenAcousticDevices/AudioMoth-Firmware-Basic/releases) for the version of the firmware that your AudioMoth was made with and make use of the Open Acoustic Devices Support Forum. (A good rule of thumb is to use the same version of the firmware for all AudioMoths in a given deployment.)
 
+* The expected AudioMoth drift is ~2s per day. This impacts multi-device synchronization for applications such as, e.g., localization. Use of a sound-producing device with known distance that produces sound at a known time of day can be used for rough synchronization.
+
+* Corrosion around the battery terminals can prevent the AudioMoth from recording, or can make the battery voltage appear to be low when the AudioMoth is plugged into the config app, even if the device has new batteries. Use of a pencil eraser can remove corrosion from the terminals.
+
 ## How many hours will my AudioMoth record?
 
 The number of hours an AudioMoth will record depends on a combination of the capacity of your batteries, the storage size of your microSD card, the sample rate at which you are recording, and whether or not you are using triggered recording.
@@ -619,13 +623,16 @@ The Open Acoustic Devices team and several others have tested the recording qual
 
 It is important to test recording quality of your microphones before and after each deployment. Why?:
 
-1. Microphones tend to degrade in quality over time, especially those subjected to the harsh conditions of bioacoustic recording. These changes can be obvious, such as the mic failing to record or producing static. They can also be more subtle, such as a reduction in sensitivity that makes sounds softer.
+1. AudioMoths are fragile and can fail to record, or have poorer recording quality, when exposed to harsh conditions (e.g. water damage).
 
-2. Firmware versions can also affect sound quality: for instance, in firmware v 1.2.0, a bug caused all of our recordings to have a maximum sound amplitude 25% of what it should have been. 
+2. Microphones tend to degrade in quality over time, especially those subjected to the harsh conditions of bioacoustic recording. These changes can be obvious, such as the mic failing to record or producing static. They can also be more subtle, such as a reduction in sensitivity that makes sounds softer.
 
-3. The enclosure and placement of your AudioMoth use can drastically alter the sound recorded. For example, enclosures can reduce sound in certain frequency bands arriving at the microphones, and trees can reduce sound from certain directions or produce artefacts in ultrasonic recordings. Before deploying your recorders, it is recommended to test how your enclosure and field setup affect sound quality compared to an AudioMoth in ideal conditions (not enclosed and not acoustically impacted by its deployment point. Another alternative is to [use an external microphone (instructions here)](https://github.com/OpenAcousticDevices/Application-Notes/blob/master/Using_AudioMoth_with_External_Electret_Condenser_Microphones.pdf), which is possible with newer versions of the AudioMoth hardware (1.2.0 and above).
+3. Firmware versions can also affect sound quality: for instance, in firmware v 1.2.0, a bug caused all of our recordings to have a maximum sound amplitude 25% of what it should have been. 
+
+4. The enclosure and placement of your AudioMoth use can drastically alter the sound recorded. For example, enclosures can reduce sound in certain frequency bands arriving at the microphones, and trees can reduce sound from certain directions or produce artefacts in ultrasonic recordings. Before deploying your recorders, it is recommended to test how your enclosure and field setup affect sound quality compared to an AudioMoth in ideal conditions (not enclosed and not acoustically impacted by its deployment point. Another alternative is to [use an external microphone (instructions here)](https://github.com/OpenAcousticDevices/Application-Notes/blob/master/Using_AudioMoth_with_External_Electret_Condenser_Microphones.pdf), which is possible with newer versions of the AudioMoth hardware (1.2.0 and above).
 
 For information on how to test your AudioMoths, see examples by Sam Lapp in his [AudioMoth Performance Testing report](https://github.com/kitzeslab/audiomoth-performance). Make sure to assess not only the overall decibel level of your recordings, but also whether sensitivity differs over differing frequencies, e.g. by using pink noise playback.
+
 
 # Enclosures
 
