@@ -439,7 +439,7 @@ To open a saved configuration: Clicking a .config file in your file browser does
 
 # WARNING: Bandpass filter added when opening saved configuration
 
-As of 2023 March 04, the newer version of the Audiomoth configuration app changes the way that bandpass filter settings are encoded into configuration files in a way that can cause a **a critically important silent failure**. 
+As of 2023 March 04, the newer version of the Audiomoth configuration app changes the way that bandpass filter settings are encoded into configuration files in a way that can cause a **critically important silent failure**. 
 
 If you load a config file created with an older version of the AudioMoth config app, by default the configuration app will add a 4-12khz bandpass filter. Thus, if you open an old config file in a new app--for instance, if you are basing a new config off of one you used before--make sure to check the filter settings and save the config again using the newer app version.
 
