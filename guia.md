@@ -13,7 +13,7 @@ Esta versión de la guía refleja el firmware más reciente disponible en el mom
 
 ### Otras guías y soporte
 
-La información en esta guía complementa la documentación oficial de [Open Acoustic Devices](https://www.openacousticdevices.info/getting-started) y una guía de [David Brown](https://sites.google.com/view/audiomoth/home). Desde la publicación original de esta guía en 2019, Open Acoustic Devices publicó un manual oficial similar a esta guía [en su sitio web](https://www.openacousticdevices.info/open-source). Estos documentos contienen información similar. La guía a continuación también provee información adicional sobre el uso práctico de AudioMoths, incluidas las opciones de alojamiento, procedimientos y protocolos de implementación, pruebas acústicas, obstáculos comunes y otras reglas generales para scaling up.
+La información en esta guía complementa la documentación oficial de [Open Acoustic Devices](https://www.openacousticdevices.info/getting-started) y una guía de [David Brown](https://sites.google.com/view/audiomoth/home). Desde la publicación original de esta guía en 2019, Open Acoustic Devices publicó un manual oficial similar a esta guía [en su sitio web](https://www.openacousticdevices.info/open-source). Estos documentos contienen información similar. La guía a continuación también provee información adicional sobre el uso práctico de AudioMoths, incluidas las opciones de almacenamiento, procedimientos y protocolos de implementación, pruebas acústicas, obstáculos comunes y otras reglas generales para escalar los muestreos.
 
 Si tiene alguna pregunta o comentario que no encuentre en ninguna de estas guías, hay varios foros disponibles para ayudarle. Intente buscar o publicar en los siguientes foros:
 
@@ -155,13 +155,13 @@ Con algunos conocimientos de electrónica, puede conectar diferentes baterías a
 
 * El banco de baterías modificado debe tener una mayor capacidad manteniendo el mismo voltaje. Por ejemplo, 3 baterías D tienen el mismo voltaje que 3 baterías AA, pero tienen mayor capacidad, por lo que durarán más.
 * El voltaje de las baterías conectadas en serie (como lo están en la AudioMoth) es igual al número de baterías multiplicado por el voltaje de cada batería. La AudioMoth v1.0 utiliza 3 baterías a 1,5 voltios cada una, por lo que el voltaje del banco de baterías es 3 * 1,5V = 4,5V.
-* La capacidad de las baterías en serie es la capacidad de cualquiera de ellas. (No combine baterías de diferentes capacidades, o baterías nuevas y viejas ). Por ejemplo, una batería alcalina Duracell AA tiene una capacidad de 2850 mAh.
+* La capacidad de las baterías en serie es la capacidad de cualquiera de ellas. (No combine baterías de diferentes capacidades, o baterías nuevas y viejas). Por ejemplo, una batería alcalina Duracell AA tiene una capacidad de 2850 mAh.
 
 ### Uso de las baterías
 Debido a que la AudioMoth no tiene una batería incorporada, el tiempo programado se perderá si se cambia una batería o se sacude. En los firmwares de AudioMoth anteriores a 1.5.0, también se perderá el horario de grabación. Algunas sugerencias para solucionar este problema son:
 
 * Si va a cambiar las baterías de su AudioMoth, utilice una de las aplicaciones de ajuste de hora (#set-the-time) para reajustar la hora.
-* Tenga cuidado de no dejar caer o sacudir las AudioMoths durante su transporte. Reduzca la posibilidad de que las baterías se sacudan colocando cinta adhesiva de pintor en la parte trasera de la AudioMoth.
+* Tenga cuidado de no dejar caer o sacudir las AudioMoths durante su transporte. Reduzca la posibilidad de que las baterías se sacudan colocando cinta adhesiva de pintor (cinta de enmascarar) en la parte trasera de la AudioMoth.
 * Al desplegar las grabadoras en modo CUSTOM, será obvio si se ha desconfigurado la hora en un dispositivo; el LED rojo permanecerá encendido constantemente mientras que el LED verde parpadeará cuando intente cambiar el interruptor a CUSTOM.
 * Lleve extra AudioMoths programadas durante los despliegues, por si se cae una y se le caen las baterías.
 
@@ -199,9 +199,9 @@ Si tiene problemas al flashear su AudioMoth, puede ser útil utilizar un clip pa
 
 # Crear la configuración
 
-Antes de utilizar la AudioMoth, normalmente querrá crear una configuración de grabación personalizada. Esto implica crear una configuración utilizando la aplicación AudioMoth-Config. A continuación le ofrecemos algunos ejemplos de configuraciones. Puede guardar las configuraciones en archivos independientes y volver a cargarlas desde la aplicación. Una vez creada la configuración, conecte la AudioMoth al computador para aplicarla y ajustar la hora en la AudioMoth.
+Antes de utilizar el AudioMoth, normalmente querrá crear una configuración de grabación personalizada. Esto implica crear una configuración utilizando la aplicación AudioMoth-Config. A continuación le ofrecemos algunos ejemplos de configuraciones. Puede guardar las configuraciones en archivos independientes y volver a cargarlas desde la aplicación. Una vez creada la configuración, conecte la AudioMoth al computador para aplicarla y ajustar la hora en la AudioMoth.
 
-Dependiendo de sus necesidades, puede personalizar la hora del día en la que se realizan las grabaciones, la duración de cada grabación, el tiempo que la grabadora "duerme" entre cada grabación, etc. En general, las AudioMoths que están grabando según una configuración pasan por fases de grabación/reposo dentro de "periodos de grabación" que ya haya configurado. Por ejemplo, puede configurar la AudioMoth para que grabe un archivo de un minuto de duración cada 10 minutos durante las primeras 6 horas tras la puesta de sol. (Pero vea la información sobre el [modo por defecto](#default) más abajo, que hace que la AudioMoth empiece a grabar inmediatamente).
+Dependiendo de sus necesidades, puede personalizar la hora del día en la que se realizan las grabaciones, la duración de cada grabación, el tiempo que la grabadora "duerme" entre cada grabación, etc. En general, las AudioMoths que están grabando según una configuración pasan por fases de grabación/reposo dentro de "periodos de grabación" que ya haya configurado. Por ejemplo, puede configurar la AudioMoth para que grabe un archivo de un minuto de duración cada 10 minutos durante las primeras 6 horas tras la puesta de sol. (Pero vea la información sobre el [modo por defecto](#default) más abajo, que hace que el AudioMoth empiece a grabar inmediatamente).
 
 Descargue la [aplicación de configuración de Audiomoth](https://www.openacousticdevices.info/applications) en su computador para crear una configuración de grabación personalizada para su AudioMoth. La última versión de la aplicación de configuración tiene tres pestañas para controlar diferentes aspectos de la configuración de la grabadora: Ajustes de grabación, Programación y Ajustes avanzados. 
 
@@ -240,15 +240,15 @@ En la pestaña "Programación" se selecciona la hora del día a la que la AudioM
 ### Habilitar LED
 Esta característica le permite encender las luces LED para obtener más información acerca de su AudioMoth, aunque esto podría atraer la atención de animales / humanos curiosos. Las luces son especialmente útiles cuando se prueba la grabadora. 
 
-En general, cuando la AudioMoth está en modo CUSTOM o DEFAULT, un LED rojo significa que la AudioMoth está grabando, un LED verde significa que la AudioMoth está durmiendo entre grabaciones, y LEDs rojos y verdes simultáneos significan que la grabación de la AudioMoth ha fallado o fallará de alguna manera. Los fallos son de dos tipos:
+En general, cuando el AudioMoth está en modo CUSTOM o DEFAULT, un LED rojo significa que el AudioMoth está grabando, un LED verde significa que el AudioMoth está durmiendo entre grabaciones, y LEDs rojos y verdes simultáneos significan que la grabación del AudioMoth ha fallado o fallará de alguna manera. Los fallos son de dos tipos:
 
-1. LED rojo constantemente encendido, LED verde parpadeante: la AudioMoth tiene una configuración, pero la hora no está ajustada. 
+1. LED rojo constantemente encendido, LED verde parpadeante: el AudioMoth tiene una configuración, pero la hora no está ajustada. 
    * Esto puede ser causado por la pérdida de energía de la batería o por configurar la AudioMoth con la opción "Requerir siempre timbre acústico al cambiar a CUSTOM"."
    * Esto puede solucionarse configurando la hora mediante las aplicaciones del computador o del teléfono (consulte la información sobre cómo [configurar la hora](#configurar-la-hora)).
 2. LED rojo parpadeante, LED verde parpadeante: el "doble parpadeo" significa que la AudioMoth ha encontrado un error de grabación. Esto ocurre en tres circunstancias:
-   * 100ms de parpadeo al cambiar por primera vez al modo CUSTOM: no se ha establecido ninguna programación de grabación. En versiones de firmware anteriores, esto ocurría si la AudioMoth perdía su configuración al quedarse sin baterías; ahora, la AudioMoth mantiene su configuración aunque se quede sin baterías.
-   * 500ms de parpadeo: hay un error de grabación actual debido a un mal funcionamiento de la grabadora (por ejemplo, si se moja), a que la tarjeta SD funciona mal, está llena o no se ha formateado correctamente, o a que la batería está baja. Esto ocurre en el modo CUSTOM cuando la grabadora está intentando grabar, o en el modo DEFAULT.
-   * 10ms de parpadeo: se ha producido un error de grabación en una grabación anterior. Esto ocurre cuando la AudioMoth está programada para dormir en modo CUSTOM.
+   * 100ms de parpadeo al cambiar por primera vez al modo CUSTOM: no se ha establecido ninguna programación de grabación. En versiones de firmware anteriores, esto ocurría si el AudioMoth perdía su configuración al quedarse sin baterías; ahora, el AudioMoth mantiene su configuración aunque se quede sin baterías.
+   * 500ms de parpadeo: hay un error de grabación actual debido a un mal funcionamiento de la grabadora (por ejemplo, si se moja), a si la tarjeta SD no funciona bien, está llena o no se ha formateado correctamente, o si la batería está baja. Esto ocurre en el modo CUSTOM cuando la grabadora está intentando grabar, o en el modo DEFAULT.
+   * 10ms de parpadeo: se ha producido un error de grabación en una grabación anterior. Esto ocurre cuando el AudioMoth está programada para dormir en modo CUSTOM.
 
 El LED también funciona para:
 
@@ -263,7 +263,7 @@ Cuando el voltaje de la batería es demasiado bajo, el ingreso de información e
 
 ### Activar indicación de nivel de batería
 
-Cuando esta opción está marcada, la AudioMoth indica su nivel de batería con LEDs cuando se cambia al modo USB/OFF desde el modo CUSTOM o el modo DEFAULT. Para obtener información sobre el significado de estos parpadeos, consulte la sección [indicación del nivel de batería](#indicacióndelniveldela batería). Si utiliza baterías recargables, en la pestaña "Ajustes avanzados" existe la opción de utilizar una indicación más precisa del nivel de carga de las baterías.
+Cuando esta opción está marcada, el AudioMoth indica su nivel de batería con LEDs cuando se cambia al modo USB/OFF desde el modo CUSTOM o el modo DEFAULT. Para obtener información sobre el significado de estos parpadeos, consulte la sección [indicación del nivel de batería](#indicacióndelniveldela batería). Si utiliza baterías recargables, en la pestaña "Ajustes avanzados" existe la opción de utilizar una indicación más precisa del nivel de carga de las baterías.
 
 ## Pestaña "Programación”
 
@@ -271,7 +271,7 @@ La pestaña "Programación" le permite establecer de 1 a 4 periodos de grabació
 
 # ADVERTENCIA: ¡COMPRUEBE SI ESTÁ CREANDO SU PROGRAMACIÓN DE GRABACIÓN EN UTC O EN SU PROPIA ZONA HORARIA! (ver más abajo)
 
-Esperamos que esta advertencia llame la atención de cualquiera que hojee rápidamente esta guía. Este es uno de los errores silenciosos más frecuentes al utilizar una AudioMoth. 
+Esperamos que esta advertencia llame la atención de cualquiera que hojee rápidamente esta guía. Este es uno de los errores silenciosos más frecuentes al utilizar un AudioMoth. 
 
 Siga cuidadosamente las instrucciones de la siguiente sección, o de lo contrario puede que programe sus AudioMoths para grabar a la hora equivocada. Es decepcionante traer sus grabadoras de vuelta después de 2 meses de despliegue y darse cuenta de que sus grabaciones del "coro del amanecer" fueron tomadas en realidad a medianoche.
 
@@ -287,7 +287,7 @@ En lugar de referirse a una zona horaria (como “Eastern Time”, “Pacific Ti
 * ¿Usted o sus colaboradores utilizarán sus grabadoras en varias zonas horarias?
 * ¿Trabajan usted o sus colaboradores en una zona horaria distinta a la de sus grabadoras? 
 * ¿Sus colaboradores esperan ver las grabaciones en una zona horaria determinada?
-* ¿Va a crear el archivo de grabación en una zona horaria diferente a la que se aplicará el archivo de grabación a la AudioMoth?
+* ¿Va a crear el archivo de grabación en una zona horaria diferente a la que se aplicará el archivo de grabación al AudioMoth?
 
 Como nuestro laboratorio trabaja en varias zonas horarias y el uso de la hora local introduce ambigüedad, sólo programamos nuestras grabadoras en UTC. Sin embargo, a veces activamos la opción "hora local" para comprobar que hemos calculado correctamente la hora en UTC. Puede activar la hora local para comprobarlo y desactivarla de nuevo antes de aplicarla a una grabadora.
 
