@@ -9,7 +9,7 @@ Publicado originalmente en 2019. Revisado en junio de 2021.
 
 Este documento pretende ser una guía completa tanto para usuarios nuevos de AudioMoth como para usuarios experimentados interesados en potenciar el despliegue de sus AudioMoths. Nuestro objetivo con esta guía es ayudarle a ganar intuición en el uso de AudioMoths; brindar consejos y recursos que hemos desarrollado durante el despliegue de miles de AudioMoths; y solucionar la amplia variedad de desafíos que puede encontrar durante el uso de estos dispositivos. 
 
-Esta versión de la guía refleja el firmware más reciente disponible en el momento de la redacción (v.1.5.0); las versiones anteriores de la guía también están disponibles en [GitHub](https://github.com/rhine3/audiomoth-guide).
+Esta versión de la guía se basa en el firmware más reciente disponible en el momento de la redacción (v.1.5.0); las versiones anteriores de la guía también están disponibles en [GitHub](https://github.com/rhine3/audiomoth-guide).
 
 ### Otras guías y soporte
 
@@ -199,9 +199,9 @@ Si tiene problemas al flashear su AudioMoth, puede ser útil utilizar un clip pa
 
 # Crear la configuración
 
-Antes de utilizar el AudioMoth, normalmente querrá crear una configuración de grabación personalizada. Esto implica crear una configuración utilizando la aplicación AudioMoth-Config. A continuación le ofrecemos algunos ejemplos de configuraciones. Puede guardar las configuraciones en archivos independientes y volver a cargarlas desde la aplicación. Una vez creada la configuración, conecte la AudioMoth al computador para aplicarla y ajustar la hora en la AudioMoth.
+Antes de utilizar el AudioMoth, normalmente querrá crear una configuración de grabación personalizada. Esto implica crear una configuración utilizando la aplicación AudioMoth-Config. A continuación le ofrecemos algunos ejemplos de configuraciones. Puede guardar las configuraciones en archivos independientes y volver a cargarlas desde la aplicación. Una vez creada la configuración, conecte el AudioMoth al computador para aplicarla y ajustar la hora en el AudioMoth.
 
-Dependiendo de sus necesidades, puede personalizar la hora del día en la que se realizan las grabaciones, la duración de cada grabación, el tiempo que la grabadora "duerme" entre cada grabación, etc. En general, las AudioMoths que están grabando según una configuración pasan por fases de grabación/reposo dentro de "periodos de grabación" que ya haya configurado. Por ejemplo, puede configurar la AudioMoth para que grabe un archivo de un minuto de duración cada 10 minutos durante las primeras 6 horas tras la puesta de sol. (Pero vea la información sobre el [modo por defecto](#default) más abajo, que hace que el AudioMoth empiece a grabar inmediatamente).
+Dependiendo de sus necesidades, puede personalizar la hora del día en la que se realizan las grabaciones, la duración de cada grabación, el tiempo que la grabadora "duerme" entre cada grabación, etc. En general, los AudioMoths que están grabando según una configuración pasan por fases de grabación/reposo dentro de "periodos de grabación" que ya haya configurado. Por ejemplo, puede configurar el AudioMoth para que grabe un archivo de un minuto de duración cada 10 minutos durante las primeras 6 horas tras la puesta de sol. (Pero vea la información sobre el [modo por defecto](#default) más abajo, que hace que el AudioMoth empiece a grabar inmediatamente).
 
 Descargue la [aplicación de configuración de Audiomoth](https://www.openacousticdevices.info/applications) en su computador para crear una configuración de grabación personalizada para su AudioMoth. La última versión de la aplicación de configuración tiene tres pestañas para controlar diferentes aspectos de la configuración de la grabadora: Ajustes de grabación, Programación y Ajustes avanzados. 
 
@@ -219,10 +219,10 @@ Ajuste la tasa de muestreo como el doble de la frecuencia más alta que quiera g
 
 * Grabar a altas tasas de muestreo requiere tarjetas SD más rápidas y ocupa más espacio de almacenamiento. Vea la sección sobre [Tarjetas SD](#tarjetas-sd-y-baterías) para más información. 
 
-* ¿Qué es una tasa de muestreo? Un micrófono captura audio transformando las ondas sonoras en voltaje. El audio digital se graba muestreando ese voltaje. La *tasa de muestreo* en Hz es el número de veces por segundo que se muestrea el voltaje. Para una introducción útil al audio digital, consulte [esta guía](https://web.archive.org/web/20190201094638/https://docs.cycling74.com/max5/tutorials/msp-tut/mspdigitalaudio.html)
+* ¿Qué es la tasa de muestreo? Un micrófono captura audio transformando las ondas sonoras en voltaje. El audio digital se graba muestreando ese voltaje. La *tasa de muestreo* en Hz es el número de veces por segundo que se muestrea el voltaje. Para una introducción útil al audio digital, consulte [esta guía](https://web.archive.org/web/20190201094638/https://docs.cycling74.com/max5/tutorials/msp-tut/mspdigitalaudio.html)
 
 ### Ganancia
-La ganancia es la cantidad que se amplificarán los sonidos del micrófono una vez grabados. Seleccionar la ganancia óptima requiere prueba y error en sus condiciones de campo particulares. Si la ganancia es demasiado alta, sus grabaciones se [recortarán](https://en.wikipedia.org/wiki/Clipping_(audio)), creando una distorsión desagradable que puede ser difícil, si no imposible, de analizar. Por el contrario, si la ganancia es demasiado baja, los sonidos serán débiles y difíciles de oír.
+La ganancia es la cantidad que se amplificarán los sonidos del micrófono una vez grabados. Seleccionar la ganancia óptima requiere prueba y error en sus condiciones de campo particulares. Si la ganancia es demasiado alta, sus grabaciones se [van a saturar](https://en.wikipedia.org/wiki/Clipping_(audio)), creando una distorsión desagradable que puede ser difícil, si no imposible, de analizar. Por el contrario, si la ganancia es demasiado baja, los sonidos serán débiles y difíciles de oír.
 
 ### Ciclos de grabación/reposo
 En la pestaña "Programación" se selecciona la hora del día a la que la AudioMoth debe grabar cada día (el "periodo de grabación" o periodos). Sin embargo, la AudioMoth no tiene que grabar continuamente dentro de ese periodo de tiempo. Puede utilizar un horario de grabación/reposo para grabar sólo una cantidad limitada de tiempo durante el periodo de grabación programado.
@@ -243,7 +243,7 @@ Esta característica le permite encender las luces LED para obtener más informa
 En general, cuando el AudioMoth está en modo CUSTOM o DEFAULT, un LED rojo significa que el AudioMoth está grabando, un LED verde significa que el AudioMoth está durmiendo entre grabaciones, y LEDs rojos y verdes simultáneos significan que la grabación del AudioMoth ha fallado o fallará de alguna manera. Los fallos son de dos tipos:
 
 1. LED rojo constantemente encendido, LED verde parpadeante: el AudioMoth tiene una configuración, pero la hora no está ajustada. 
-   * Esto puede ser causado por la pérdida de energía de la batería o por configurar la AudioMoth con la opción "Requerir siempre timbre acústico al cambiar a CUSTOM"."
+   * Esto puede ser causado por la pérdida de energía de la batería o por configurar el AudioMoth con la opción "Requerir siempre timbre acústico al cambiar a CUSTOM".
    * Esto puede solucionarse configurando la hora mediante las aplicaciones del computador o del teléfono (consulte la información sobre cómo [configurar la hora](#configurar-la-hora)).
 2. LED rojo parpadeante, LED verde parpadeante: el "doble parpadeo" significa que la AudioMoth ha encontrado un error de grabación. Esto ocurre en tres circunstancias:
    * 100ms de parpadeo al cambiar por primera vez al modo CUSTOM: no se ha establecido ninguna programación de grabación. En versiones de firmware anteriores, esto ocurría si el AudioMoth perdía su configuración al quedarse sin baterías; ahora, el AudioMoth mantiene su configuración aunque se quede sin baterías.
@@ -259,7 +259,7 @@ Para obtener información completa y diagramas de los significados de los LED, c
 
 ### Activar desconexión por bajo voltaje
 
-Cuando el voltaje de la batería es demasiado bajo, el ingreso de información en la tarjeta microSD puede ser inconsistente o poco fiable. Esta opción hace que la AudioMoth deje de grabar cuando el voltaje de la batería es demasiado bajo para un ingreso de información fiable.
+Cuando el voltaje de la batería es demasiado bajo, el ingreso de información en la tarjeta microSD puede ser inconsistente o poco fiable. Esta opción hace que el AudioMoth deje de grabar cuando el voltaje de la batería es demasiado bajo para un ingreso de información fiable.
 
 ### Activar indicación de nivel de batería
 
@@ -295,11 +295,11 @@ Tenga en cuenta que cuando se crea una grabación en hora local, aunque el nombr
 
 ### Periodos de grabación
 
-Son las horas en las que la AudioMoth grabará cada día. Los periodos de grabación sólo se usarán cuando la AudioMoth esté en modo CUSTOM. En modo DEFAULT, la grabadora comienza a grabar inmediatamente, sin tener en cuenta los periodos de grabación programados. 
+Son las horas en las que el AudioMoth grabará cada día. Los periodos de grabación sólo se usarán cuando el AudioMoth esté en modo CUSTOM. En modo DEFAULT, la grabadora comienza a grabar inmediatamente, sin tener en cuenta los periodos de grabación programados. 
 
 Duración de las grabaciones:
 
-* Por defecto, la AudioMoth realizará una grabación larga para cada periodo individual. 
+* Por defecto, el AudioMoth realizará una grabación larga para cada periodo individual. 
 * Puede especificar una duración de grabación más corta si activa la grabación cíclica en reposo/grabación.
 * Las grabaciones se dividirán si el periodo de grabación es tan largo que el tamaño de los archivos WAV supera el tamaño máximo que se puede guardar en la tarjeta microSD.
 
@@ -316,7 +316,7 @@ La siguiente animación ilustra los pasos anteriores (no aparece en versión PDF
 ![Establecer el periodo de grabación en la aplicación de configuración de AudioMoth](images/programming/recording-period.gif)
 
 ### Seleccionar la primera y la última fecha de grabación
-Por defecto, la AudioMoth empieza a seguir inmediatamente su programación de grabación cuando se pone en modo CUSTOM. Cuando estas funciones están activadas, la AudioMoth en modo CUSTOM empezará a seguir el horario el día que usted especifique y dejará de grabar el día que usted especifique. 
+Por defecto, el AudioMoth empieza a seguir inmediatamente su programación de grabación cuando se pone en modo CUSTOM. Cuando estas funciones están activadas, el AudioMoth en modo CUSTOM empezará a seguir el horario el día que usted especifique y dejará de grabar el día que usted especifique. 
 
 Esto es útil si desea desplegar sus grabadoras antes de las fechas de estudio deseadas (por ejemplo, si su sitio es inaccesible en esas fechas, o si tiene muchas grabadoras para desplegar y quiere que empiecen a grabar simultáneamente).
 
@@ -332,15 +332,15 @@ Esta función le permite grabar sólo datos de una banda de frecuencia determina
 * Paso alto (High-pass): filtra las frecuencias bajas
 
 ### Umbral de amplitud
-Esta función hace que AudioMoth sólo guarde segmentos de audio en el archivo cuando contengan una muestra que supere un determinado umbral de amplitud. Esto le permite ahorrar en almacenamiento al no guardar archivos vacíos--especialmente útil para archivos de alta tasa de muestreo, que son muy grandes. 
+Esta función hace que el AudioMoth sólo guarde segmentos de audio en el archivo cuando contengan una muestra que supere un determinado umbral de amplitud. Esto le permite ahorrar en almacenamiento al no guardar archivos vacíos--especialmente útil para archivos de alta tasa de muestreo, que son muy grandes. 
 
-La AudioMoth sigue grabando según lo programado durante este modo, pero sólo guarda un archivo en la tarjeta microSD cuando se alcanza el umbral de amplitud. La duración y programación originales de estas grabaciones se pueden restaurar utilizando la opción "Expandir grabaciones de la AudioMoth" en el [menú principal del programa](#menú-principal-del-programa).
+El AudioMoth sigue grabando según lo programado durante este modo, pero sólo guarda un archivo en la tarjeta microSD cuando se alcanza el umbral de amplitud. La duración y programación originales de estas grabaciones se pueden restaurar utilizando la opción "Expandir grabaciones del AudioMoth" en el [menú principal del programa](#menú-principal-del-programa).
 
 Este método está pensado principalmente para animales que llaman a altas frecuencias; las grabaciones de alta tasa de muestreo necesarias para capturar las llamadas de estos animales ocupan mucho espacio de almacenamiento. No recomendamos usar este método para animales que llaman a frecuencias audibles, donde hay mucho ruido que podría causar falsas activaciones. Además, tenga en cuenta que el uso de activación basada en umbral de amplitud limita la aplicabilidad de sus grabaciones a otros taxa.
 
 ### Requerir siempre timbre acústico
 
-Esta opción significa que se requiere un timbre acústico desde una aplicación de teléfono para iniciar la grabación de la AudioMoth cada vez que se cambia inicialmente al modo CUSTOM. Con esta opción activada, al pasar por primera vez al modo CUSTOM, la AudioMoth actuará como si no tuviera configuración de hora, incluso si no ha perdido la hora: su LED rojo se encenderá constantemente, su LED verde parpadeará y no empezará a grabar a la hora programada. Al tocar el timbre acústico, la AudioMoth saldrá de este modo y comenzará a grabar según el horario configurado. 
+Esta opción significa que se requiere un timbre acústico desde una aplicación de teléfono para iniciar la grabación de la AudioMoth cada vez que se cambia inicialmente al modo CUSTOM. Con esta opción activada, al pasar por primera vez al modo CUSTOM, la AudioMoth actuará como si no tuviera configuración de hora, incluso si no ha perdido la hora: su LED rojo se encenderá constantemente, su LED verde parpadeará y no empezará a grabar a la hora programada. Al tocar el timbre acústico, el AudioMoth saldrá de este modo y comenzará a grabar según el horario configurado. 
 
 Este ajuste puede ser útil cuando se utiliza la aplicación RFCx. Su timbre también proporciona a la grabadora un ID de despliegue único que se incluirá en los [metadatos](#metadata) de cada grabación. Este ID de despliegue también puede asociarse a una ubicación en la aplicación. Al requerir un timbre, debe recordar usar la app para configurar el ID de despliegue cada vez.
 
@@ -355,14 +355,14 @@ Algunas opciones adicionales están disponibles en el menú principal del progra
 
 * **Abrir configuración**/**Guardar configuración**: guardar o abrir un archivo de configuración guardado (ver [más abajo](#guardar-y-abrir-configuraciones))
 * **Copiar ID de dispositivo**: cada dispositivo tiene un ID de hardware único. Cuando se conecta el dispositivo, esta opción de menú copia el ID único del dispositivo. El ID del dispositivo se guarda en los metadatos de cada grabación que realiza el dispositivo, por lo que puede ser una forma útil de comprobar dónde se realizó una grabación.
-**Hora local**: programar la AudioMoth para que tome la hora local y guarde las grabaciones en dicha hora. Para más información, consulte la sección sobre [UTC vs. hora local](#utc-vs-local-time)
+**Hora local**: programar el AudioMoth para que tome la hora local y guarde las grabaciones en dicha hora. Para más información, consulte la sección sobre [UTC vs. hora local](#utc-vs-local-time)
 * **Expand AudioMoth recordings**: este ajuste expande las grabaciones realizadas cuando un AudioMoth utiliza [amplitude threshold recording](#amplitude-threshold) para restaurar la duración de grabación original y los tiempos relativos. Sólo se aplica a las grabaciones con el sufijo "T.WAV".
 
 ## Ejemplos de configuración
 
 A continuación encontrará enlaces a dos ejemplos de archivos de configuración. Los archivos de configuración se componen de texto estructurado que puede visualizarse en un editor de texto. El contenido del archivo de configuración también se muestra debajo de la configuración. 
 
-**Ejemplos de configuración del coro del amanecer **: Esta configuración, [example_bird_config.config](documents/example_bird_config.config), crea una única grabación diaria de 3 horas de duración entre las 08:30 UTC (`"startMins":510` = 510 minutos después de medianoche) y las 11:30UTC (`"endMins":690` = 690 minutos después de medianoche). La AudioMoth está programada para comenzar a grabar el 10 de mayo de 2021 y finalizar la grabación el 10 de julio de 2021. La tasa de muestreo de la grabadora está configurada a 32 kHz, lo que significa que grabará sonidos de hasta 16 kHz. Esta configuración sería adecuada para captar el coro del amanecer en gran parte del noreste de Estados Unidos. 
+**Ejemplos de configuración del coro del amanecer **: Esta configuración, [example_bird_config.config](documents/example_bird_config.config), crea una única grabación diaria de 3 horas de duración entre las 08:30 UTC (`"startMins":510` = 510 minutos después de medianoche) y las 11:30UTC (`"endMins":690` = 690 minutos después de medianoche). El AudioMoth está programada para comenzar a grabar el 10 de mayo de 2021 y finalizar la grabación el 10 de julio de 2021. La tasa de muestreo de la grabadora está configurada a 32 kHz, lo que significa que grabará sonidos de hasta 16 kHz. Esta configuración sería adecuada para captar el coro del amanecer en gran parte del noreste de Estados Unidos. 
 
 Si decide utilizar este archivo como plantilla para su propia grabación, asegúrese de cambiar la primera y la última fecha de grabación.
 
@@ -423,7 +423,7 @@ No hemos probado estos ajustes para el filtro de banda alta y las funciones de a
 
 ## Guardar y abrir configuraciones
 
-Puede guardar su horario de grabación completo como un archivo para consultarla más tarde, reutilizarla, copiarla y compartirla. Puede acceder a estas funciones a través del menú principal del programa ("Archivo" en la parte superior izquierda de la aplicación en computadores Windows; "AudioMoth-Config" en la parte superior de la pantalla en computadores Mac). 
+Puede guardar su horario de grabación completo como un archivo para consultarlo más tarde, reutilizarlo, copiarlo y compartirlo. Puede acceder a estas funciones a través del menú principal del programa ("Archivo" en la parte superior izquierda de la aplicación en computadores Windows; "AudioMoth-Config" en la parte superior de la pantalla en computadores Mac). 
 
 Para guardar una configuración:
 
@@ -439,33 +439,33 @@ Para abrir una configuración guardada: Hacer clic en un archivo .config en el e
 
 ## Aplicar configuración
 
-Después de crear su configuración, conecte la AudioMoth a su computador, y establezca la hora actual y el horario de grabación deseado a través de la interfaz de la app.
+Después de crear su configuración, conecte el AudioMoth a su computador, y establezca la hora actual y el horario de grabación deseado a través de la interfaz de la app.
 
-* Ponga el interruptor de la AudioMoth en modo USB/OFF.
+* Ponga el interruptor del AudioMoth en modo USB/OFF.
 * Conéctela al computador mediante un cable microUSB.
-* Compruebe que la AudioMoth está conectada: la fecha, la hora y la información de la grabadora en la aplicación de programación cambiarán de color gris a negro.
-* Pulse el botón verde "Configurar AudioMoth" en la aplicación de programación. Esto guarda el programa de grabación en la AudioMoth y ajusta el reloj interno de la AudioMoth.
+* Compruebe que el AudioMoth está conectada: la fecha, la hora y la información de la grabadora en la aplicación de programación cambiarán de color gris a negro.
+* Pulse el botón verde "Configurar AudioMoth" en la aplicación de programación. Esto guarda el programa de grabación en el AudioMoth y ajusta el reloj interno del AudioMoth.
 * La hora que se mostrará depende de si está utilizando UTC o la hora local (ver [UTC vs. hora local](#utc-vs-local-time)).
 
-La AudioMoth tiene ahora una configuración de grabación personalizada y puede desconectarla del computador. 
+El AudioMoth tiene ahora una configuración de grabación personalizada y puede desconectarlo del computador. 
 
 **¿Por qué mis AudioMoths cuentan desde las 00:00:00, 01/01/1970 UTC cuando las conecto por primera vez?**: 
 
 * La medianoche del 1 de enero de 1970 se llama "época Unix". La mayoría de los sistemas operativos miden la hora y  fecha como una medida de cuánto tiempo ha transcurrido desde esta hora y fecha. 
-* Cuando inserte las baterías por primera vez en la AudioMoth, empezará a contar desde esta hora y fecha, por lo que el tiempo que muestra la AudioMoth cuando está enchufada al computador es una medida del tiempo que las baterías han estado en su AudioMoth. Por lo tanto, normalmente no verá una hora de exactamente 00:00:00, pero en su lugar 
-* Observe la hora cuando conecte su AudioMoth al computador por primera vez. Si la hora empieza a contar exactamente a partir de las 00:00:00, esto puede indicar que las baterías no estaban correctamente insertadas en la AudioMoth, y nunca empezó a marcar la hora. Desconecte su AudioMoth y compruebe las baterías.
+* Cuando inserte las baterías por primera vez en el AudioMoth, empezará a contar desde esta hora y fecha, por lo que el tiempo que muestra el AudioMoth cuando está enchufado al computador es una medida del tiempo que las baterías han estado en su AudioMoth. Por lo tanto, normalmente no verá una hora de exactamente 00:00:00, pero en su lugar 
+* Observe la hora cuando conecte su AudioMoth al computador por primera vez. Si la hora empieza a contar exactamente a partir de las 00:00:00, esto puede indicar que las baterías no estaban correctamente insertadas en el AudioMoth, y nunca empezó a marcar la hora. Desconecte su AudioMoth y compruebe las baterías.
 
-En el firmware v1.5.0 y posteriores, aplicar la configuración a la AudioMoth una sola vez es suficiente para guardar esta configuración en la AudioMoth incluso si se cambian las baterías o se sacuden. 
+En el firmware v1.5.0 y posteriores, aplicar la configuración al AudioMoth una sola vez es suficiente para guardar esta configuración en el AudioMoth incluso si se cambian las baterías o se sacuden. 
 
 ## Ajustar la hora
 
-La hora se ajusta automáticamente al establecer la configuración, a menos que seleccione la opción "Requerir siempre timbre acústico al cambiar a CUSTOM" en la pestaña "Ajustes avanzados" de la app de configuración. Si esta opción está seleccionada, o si la AudioMoth está configurada pero pierde la hora porque cambió las baterías o las sacudió, será necesario ajustar la hora en la AudioMoth. Si la AudioMoth está configurada pero es necesario ajustar la hora, los LEDs de la AudioMoth tendrán el siguiente patrón de parpadeo: LED rojo encendido constante; LED verde parpadeando rápidamente. 
+La hora se ajusta automáticamente al establecer la configuración, a menos que seleccione la opción "Requerir siempre timbre acústico al cambiar a CUSTOM" en la pestaña "Ajustes avanzados" de la app de configuración. Si esta opción está seleccionada, o si el AudioMoth está configurada pero pierde la hora porque cambió las baterías o las sacudió, será necesario ajustar la hora en el AudioMoth. Si el AudioMoth está configurada pero es necesario ajustar la hora, los LEDs del AudioMoth tendrán el siguiente patrón de parpadeo: LED rojo encendido constante; LED verde parpadeando rápidamente. 
 
 Existen tres métodos para ajustar la hora.
 
 ### Ajustar la hora con aplicaciones de computador
 
-Cualquier aplicación de computador puede utilizarse para ajustar la hora en una AudioMoth que haya perdido su hora. Sin embargo, si la AudioMoth se configuró con la opción "Requerir siempre timbre acústico al cambiar a CUSTOM", la AudioMoth requerirá la programación mediante un timbre acústico, incluso si ajusta la hora con cualquiera de estas apps de computador.
+Cualquier aplicación de computador puede utilizarse para ajustar la hora en un AudioMoth que haya perdido su hora. Sin embargo, si el AudioMoth se configuró con la opción "Requerir siempre timbre acústico al cambiar a CUSTOM", el AudioMoth requerirá la programación mediante un timbre acústico, incluso si ajusta la hora con cualquiera de estas apps de computador.
 
 #### Aplicación AudioMoth-Config
 Puede utilizar la app de configuración para reajustar la hora. Pero tenga cuidado: si su configuración de grabación deseada (horario, tasa de muestreo, etc.) no está cargada en la app config cuando intente reajustar la hora, ¡eliminará su configuración de su AudioMoth!
@@ -477,9 +477,9 @@ Open Acoustic Devices ofrece una aplicación autónoma de ajuste de tiempo que p
 
 Puede ajustar la hora mediante dos aplicaciones para celulares o tablets que codifican la fecha y la hora en una señal acústica. Las AudioMoths se pueden programar de esta forma cuando entran en "modo acústico", un modo especial cuando el interruptor está en CUSTOM en el que el LED rojo está encendido constantemente y el LED verde parpadea. Hay tres formas de entrar en este modo:
 
-* La AudioMoth está  en modo CUSTOM pero la hora no está ajustada, por ejemplo, debido a la pérdida de batería.
-* La AudioMoth está en modo CUSTOM y se ha configurado con la opción "Requerir siempre timbre acústico al pasar a modo CUSTOM".
-* Reproducir un tono específico (ver más abajo) al pasar la AudioMoth del modo USB/OFF al modo CUSTOM.
+* El AudioMoth está  en modo CUSTOM pero la hora no está ajustada, por ejemplo, debido a la pérdida de batería.
+* El AudioMoth está en modo CUSTOM y se ha configurado con la opción "Requerir siempre timbre acústico al pasar a modo CUSTOM".
+* Reproducir un tono específico (ver más abajo) al pasar el AudioMoth del modo USB/OFF al modo CUSTOM.
 
 Le recomendamos que antes de confiar en una aplicación cuando esté en campo, la pruebe para asegurarse de que se comporta como usted espera, por ejemplo, programando su AudioMoth y conectándola después a su computador para comprobar la hora ajustada.
 
@@ -492,15 +492,15 @@ La [AudioMoth Mobile App](https://www.openacousticdevices.info/mobileapplication
 
 La [RFCx Companion app](https://support.rfcx.org/article/65-using-the-companion-app) sólo está disponible para [Android](https://play.google.com/store/apps/details?id=org.rfcx.companion&hl=en_US&gl=US).
 
-* Cambia las grabadoras al modo acústico emitiendo un tono a una frecuencia específica. Cuando cambie la AudioMoth del modo USB/OFF al modo CUSTOM mientras se reproduce este tono, la AudioMoth pasa al modo acústico. 
-* Este timbre acústico también asigna un ID de despliegue único a la AudioMoth. Describimos brevemente esta y otras funciones de esta app [más abajo](#rfcx-companion-app).
+* Cambia las grabadoras al modo acústico emitiendo un tono a una frecuencia específica. Cuando cambie el AudioMoth del modo USB/OFF al modo CUSTOM mientras se reproduce este tono, el AudioMoth pasa al modo acústico. 
+* Este timbre acústico también asigna un ID de despliegue único al AudioMoth. Describimos brevemente esta y otras funciones de esta app [más abajo](#rfcx-companion-app).
 
 
 ## CONFIG.txt
 
-En versiones posteriores del firmware (1.4.0 y posteriores), la información sobre el archivo de configuración se guarda en la tarjeta microSD de la AudioMoth en un archivo llamado CONFIG.txt. Esto permite un registro más sencillo. 
+En versiones posteriores del firmware (1.4.0 y posteriores), la información sobre el archivo de configuración se guarda en la tarjeta microSD del AudioMoth en un archivo llamado CONFIG.txt. Esto permite un registro más sencillo. 
 
-Este archivo se guarda en la tarjeta microSD cuando la AudioMoth está grabando en modo CUSTOM o DEFAULT. No se guarda nada en la tarjeta hasta que se enciende la AudioMoth.
+Este archivo se guarda en la tarjeta microSD cuando el AudioMoth está grabando en modo CUSTOM o DEFAULT. No se guarda nada en la tarjeta hasta que se enciende el AudioMoth.
 
 He aquí un ejemplo de archivo CONFIG.txt:
 
@@ -536,9 +536,9 @@ Activar indicación de nivel de batería : Sí
 Requerir siempre timbre acústico : Sí
 ```
 
-El archivo CONFIG.txt se sobrescribirá a medida que se realicen nuevas grabaciones -- por lo que si cambia el calendario de grabación de su AudioMoth pero no sustituye su tarjeta, tenga en cuenta que el archivo CONFIG.txt de la AudioMoth sólo hará referencia al calendario de grabación utilizado más recientemente.
+El archivo CONFIG.txt se sobrescribirá a medida que se realicen nuevas grabaciones -- por lo que si cambia el calendario de grabación de su AudioMoth pero no sustituye su tarjeta, tenga en cuenta que el archivo CONFIG.txt del AudioMoth sólo hará referencia al calendario de grabación utilizado más recientemente.
 
-La AudioMoth guarda los archivos CONFIG.txt incluso cuando la grabadora está en modo DEFAULT. La información en el CONFIG.txt sigue refiriéndose a los periodos de grabación y otros ajustes seleccionados en el programa personalizado aplicado a la AudioMoth, aunque en modo DEFAULT la AudioMoth comience a grabar sin tener en cuenta los periodos de grabación personalizados.
+El AudioMoth guarda los archivos CONFIG.txt incluso cuando la grabadora está en modo DEFAULT. La información en el CONFIG.txt sigue refiriéndose a los periodos de grabación y otros ajustes seleccionados en el programa personalizado aplicado al AudioMoth, aunque en modo DEFAULT el AudioMoth comience a grabar sin tener en cuenta los periodos de grabación personalizados.
 
 
 # Grabación
@@ -550,28 +550,28 @@ La AudioMoth tiene un interruptor en el dispositivo para acceder a sus tres modo
 ### USB/OFF
 Este modo tiene dos funciones.
 
-* USB: Cuando la AudioMoth está conectada al computador mediante USB. El interruptor también debe cambiarse a este modo cuando se conecta la AudioMoth al computador para aplicar un programa de grabación o actualizar el firmware (USB).
+* USB: Cuando el AudioMoth está conectada al computador mediante USB. El interruptor también debe cambiarse a este modo cuando se conecta el AudioMoth al computador para aplicar un programa de grabación o actualizar el firmware (USB).
 * OFF: Cuando no está conectada al computador, la grabadora está en un estado de bajo consumo, pero sigue manteniendo la hora.
 
 ### DEFAULT
-El modo DEFAULT generalmente hace que la AudioMoth se encienda y comience a grabar inmediatamente. 
+El modo DEFAULT generalmente hace que el AudioMoth se encienda y comience a grabar inmediatamente. 
 
-* El comportamiento en modo DEFAULT depende de la versión de firmware aplicada a la AudioMoth y de si la AudioMoth ha sido programada. 
+* El comportamiento en modo DEFAULT depende de la versión de firmware aplicada al AudioMoth y de si el AudioMoth ha sido programada. 
 * Firmware 1.4.2 y posteriores: Graba continuamente, ignorando los ajustes de reposo/duración.
-  * Si la AudioMoth ha sido configurada, utiliza la misma tasa de muestreo y nivel de ganancia de la configuración
+  * Si el AudioMoth ha sido configurada, utiliza la misma tasa de muestreo y nivel de ganancia de la configuración
 * Firmware < 1.4.2: Crea grabaciones con reposo intercalado
-  * Si se ha configurado el horario de la AudioMoth, utiliza con los ajustes de reposo/duración de esa configuración
-  * Si  AudioMoth schedule no lo está, graba durante 10 segundos encendido, 5 segundos apagado
+  * Si se ha configurado el horario del AudioMoth, utiliza con los ajustes de reposo/duración de esa configuración
+  * Si no se ha configurado el horario del AudioMoth, este va a grabar durante 10 segundos y se apagara por 5 segundos.
 
 ### CUSTOM
 Este es el modo utilizado para grabar según la configuración personalizada.
 Tenga en cuenta que el interruptor es frágil y se rompe con facilidad. Un toque lento, cuidadoso y firme reduce los quiebres del interruptor al encender y apagar la AudioMoth. Si su interruptor se ha roto, es posible [reemplazar el deslizador del interruptor](https://www.openacousticdevices.info/support/device-support/simple-audiomoth-switch-repair).
 
-La AudioMoth se puede encender de dos maneras: Modo DEFAULT (mover el interruptor a la derecha) o modo CUSTOM (mover el interruptor a la izquierda).
+El AudioMoth se puede encender de dos maneras: Modo DEFAULT (mover el interruptor a la derecha) o modo CUSTOM (mover el interruptor a la izquierda).
 
 * **DEFAULT:** El dispositivo empieza a grabar inmediatamente. El periodo/calendario de grabación es irrelevante en el modo DEFAULT.
 
-  * Con versiones de firmware anteriores a la 1.4.2, la AudioMoth realizará una grabación durante el tiempo deseado y, a continuación, reposará durante el tiempo deseado. El dispositivo repite este ciclo continuamente. Si la grabadora no se ha configurado con la aplicación de configuración, los ajustes de duración de reposo/grabación son, por defecto, 10 segundos de grabación - 5 segundos de reposo.
+  * Con versiones de firmware anteriores a la 1.4.2, el AudioMoth realizará una grabación durante el tiempo deseado y, a continuación, reposará durante el tiempo deseado. El dispositivo repite este ciclo continuamente. Si la grabadora no se ha configurado con la aplicación de configuración, los ajustes de duración de reposo/grabación son, por defecto, 10 segundos de grabación - 5 segundos de reposo.
 
   * A partir de la versión de firmware 1.4.2, el modo DEFAULT graba continuamente, ignorando los ajustes de reposo/duración del tiempo de grabación. 
 
@@ -580,7 +580,7 @@ La AudioMoth se puede encender de dos maneras: Modo DEFAULT (mover el interrupto
   * Si el dispositivo se enciende fuera de los períodos de grabación programados,el dispositivo espera hasta que comience el período de grabación y luego comienza su programa de grabación. 
   
   * Si se enciende durante el periodo de grabación, se comporta de forma diferente en función del firmware utilizado.
-            * Con un firmware anterior a la versión 1.4.1, la AudioMoth no comenzará a grabar hasta que comience la siguiente grabación programada. Por ejemplo, considere una AudioMoth programada para grabar a las 09:00, con una duración de grabación de 2 minutos y una duración de reposo de 2 minutos. Si la AudioMoth se pusiera en modo CUSTOM a las 9:01, se saltaría la grabación programada para las 9:00-9:02, y esperaría hasta las 09:04 para realizar su primera grabación.
+            * Con un firmware anterior a la versión 1.4.1, el AudioMoth no comenzará a grabar hasta que comience la siguiente grabación programada. Por ejemplo, considere un AudioMoth programado para grabar a las 09:00, con una duración de grabación de 2 minutos y una duración de reposo de 2 minutos. Si el AudioMoth se pusiera en modo CUSTOM a las 9:01, se saltaría la grabación programada para las 9:00-9:02, y esperaría hasta las 09:04 para realizar su primera grabación.
             * Con la versión de firmware 1.4.1 y superiores, la grabación se iniciará a mitad de ciclo, en lugar de esperar a que comience el siguiente ciclo.
 
 
@@ -588,19 +588,19 @@ La AudioMoth se puede encender de dos maneras: Modo DEFAULT (mover el interrupto
 
 * Si la tarjeta microSD de una unidad está llena, la unidad deja de guardar grabaciones. Así se evita sobrescribir grabaciones anteriores. En esta situación, la luz LED roja de la unidad permanecerá constantemente encendida hasta que se extraiga la tarjeta SD.
 
-* Si apaga la AudioMoth mientras está grabando, se perderán algunos datos. Esto se debe a que la velocidad a la que se guardan los datos en la AudioMoth va por detrás del tiempo real. Hemos comprobado que apagar una grabadora mientras está grabando provoca una pérdida de datos de aproximadamente un 3%; por ejemplo, una grabación que se detuvo a la hora de iniciarse perderá 1,8 minutos (60 minutos * 0,03 = 1,8 minutos).
+* Si apaga el AudioMoth mientras está grabando, se perderán algunos datos. Esto se debe a que la velocidad a la que se guardan los datos en el AudioMoth va por detrás del tiempo real. Hemos comprobado que apagar una grabadora mientras está grabando provoca una pérdida de datos de aproximadamente un 3%; por ejemplo, una grabación que se detuvo a la hora de iniciarse perderá 1,8 minutos (60 minutos * 0,03 = 1,8 minutos).
 
 * Las primeras versiones del firmware de AudioMoth utilizan nombres de archivo con representaciones compactas de la fecha y hora en que comenzó la grabación. Estos nombres de archivo se pueden convertir en fecha y hora siguiendo las instrucciones del manual de usuario de AudioMoth o utilizando uno de los varios scripts, por ejemplo [`audiomoth-scripts` de Nathan Wolek](https://github.com/nwolek/audiomoth-scripts). Por el contrario, la hora de "última modificación" representa la hora en UTC en que se guardó el archivo, es decir, la hora en UTC en que finalizó la grabación. El firmware más reciente guarda nombres de archivo más fáciles de interpretar.
 
-* La AudioMoth está en continuo desarrollo. Las nuevas versiones de firmware a veces cambian el comportamiento de la AudioMoth. Si su AudioMoth tiene un comportamiento inesperado, compruebe en las [notas de la versión](https://github.com/OpenAcousticDevices/AudioMoth-Firmware-Basic/releases) la versión del firmware con la que se fabricó su AudioMoth y utilice el foro de soporte de Open Acoustic Devices. (Una buena regla general es utilizar la misma versión del firmware para todas las AudioMoths en un despliegue).
+* El AudioMoth está en continuo desarrollo. Las nuevas versiones de firmware a veces cambian el comportamiento del AudioMoth. Si su AudioMoth tiene un comportamiento inesperado, compruebe en las [notas de la versión](https://github.com/OpenAcousticDevices/AudioMoth-Firmware-Basic/releases) la versión del firmware con la que se fabricó su AudioMoth y utilice el foro de soporte de Open Acoustic Devices. (Una buena regla general es utilizar la misma versión del firmware para todas las AudioMoths en un despliegue).
 
 * La deriva esperada de AudioMoth es de ~2s por día. Esto afecta la sincronización multidispositivo para aplicaciones como, por ejemplo, la localización. El uso de un dispositivo que produzca un sonido con distancia y hora del día conocida puede ser utilizado para una sincronización general.
 
-* La corrosión alrededor de los terminales de la batería puede impedir que la AudioMoth grabe, o puede hacer que el voltaje de la batería parezca bajo cuando la AudioMoth está conectada a la aplicación de configuración, incluso si el dispositivo tiene baterías nuevas. El uso de un borrador de lápiz puede eliminar la corrosión de los terminales.
+* La corrosión alrededor de los terminales de la batería puede impedir que el AudioMoth grabe, o puede hacer que el voltaje de la batería parezca bajo cuando el AudioMoth está conectada a la aplicación de configuración, incluso si el dispositivo tiene baterías nuevas. El uso de un borrador de lápiz puede eliminar la corrosión de los terminales.
 
 ## ¿Cuántas horas grabará mi AudioMoth?
 
-El número de horas que puede grabar una AudioMoth depende de una combinación de la capacidad de sus baterías, el tamaño de almacenamiento de su tarjeta microSD, la frecuencia de muestreo a la que está grabando y si está utilizando o no la grabación activada.
+El número de horas que puede grabar un AudioMoth depende de una combinación de la capacidad de sus baterías, el tamaño de almacenamiento de su tarjeta microSD, la frecuencia de muestreo a la que está grabando y si está utilizando o no la grabación activada.
 
 La aplicación de configuración de AudioMoth calculará la energía y el almacenamiento utilizados *por día* una vez que haya especificado el periodo de grabación y las duraciones de grabación/reposo. Esto aparece en la parte inferior de la aplicación de configuración en cada pestaña. La grabadora dejará de grabar cuando agote todo el almacenamiento de la tarjeta microSD o cuando se agote la batería: lo que ocurra primero.
 
