@@ -677,8 +677,7 @@ El interruptor y las esquinas del AudioMoth v1.0 son afilados y pueden rasgar un
 
 Las bolsas Ziploc son susceptibles a pincharse y pueden ser difíciles de fijar a las correas. Una alternativa a las bolsas Ziploc es crear una carcasa utilizando una bolsa termosellada. Las creamos utilizando una selladora al vacío con una función de "sólo sellado térmico", y no aspiramos el aire de la bolsa. (Aspirar el aire de las bolsas reduciría la calidad del sonido).
 
-<img src="images/housing/heat-sealed.jpg" style="width: 6.5in; height: 3.444444444444446in">
-
+<img src="images/other/heat-sealed.jpg" width="300" height="200"> 
 Puedes seguir los siguientes pasos para crear, desplegar y reutilizar una carcasa termosellada:
 
 * Crear sellos en 3 lados de la bolsa
@@ -877,7 +876,7 @@ Si lo desea, puede añadir una nota en la carcasa de cada grabadora en la que de
 
 ### Consejos para ampliar
 
-<img src="images/housing/bulk-housings.jpg" style="width: 6.5in; height: 3.444444444444446in">
+<img src="images/housing/bulk-housings.jpg" width="300" height="200"> 
 Doscientas carcasas AudioMoth hechas con bolsas Ziploc
 
 * La velocidad es importante cuando se instalan muchas grabadoras: por ejemplo, si se instalan 100 grabadoras, 5 minutos más por grabadora significa más de 8 horas de trabajo en campo. Practique y perfeccione su protocolo de despliegue antes de salir al campo.
@@ -930,7 +929,7 @@ Estos dispositivos, apodados "Swallow", permiten transferir los datos de una tar
 
 Si se construyen varias Swallows, pueden utilizarse para "paralelizar" el proceso de carga, ¡simplemente haciendo que varios Swallows carguen datos a la vez!
 
-<img src="images/other/swallow.png)" style="width: 6.5in; height: 3.444444444444446in">
+<img src="images/other/swallow.png" width="300" height="200"> 
 Dispositivo Swallow Raspberry Pi (Crédito de la foto: Sam Lapp)
 
 ### Lector SD multipuerto
@@ -941,7 +940,7 @@ Hemos diseñado un lector de tarjetas SD de 32 puertos que se puede fabricar con
 
 Tenga en cuenta que esto no acelera ni paraleliza significativamente el proceso de transferencia. Simplemente le permite cargar varias tarjetas en el computador y marcharse, sin tener que insertar, cargar y expulsar tarjetas de una en una.
 
-<img src="images/other/nas.jpg)" style="width: 6.5in; height: 3.444444444444446in">
+<img src="images/other/nas.jpg" width="300" height="200"> 
 Almacenamiento conectado a la red y lector de tarjetas SD
 
 ## Gestión de metadatos
