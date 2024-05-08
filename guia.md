@@ -27,45 +27,45 @@ Por favor, envíe preguntas y sugerencias para modificar esta guía mediante la 
 
 Este documento contiene [enlaces a sitios web externos](https://www.openacousticdevices.com) y [enlaces internos](#tabla-de-contenidos).
 
-* [Inicio rápido](#quick-start)
-* [Suministros](#supplies)
-  * [Compra de AudioMoths](#compra-audiomoths)
-  * [Tarjetas MicroSD](#microsd-cards)
-  * [baterías](#batteries)
+* [Inicio rápido](#Inicio-rápido)
+* [Suministros](#Suministros)
+  * [Compra de AudioMoths](#Comprar-AudioMoths)
+  * [Tarjetas MicroSD](#Tarjetas-MicroSD)
+  * [baterías](#Baterías)
 * [Firmware](#firmware)
-* [Crear configuración](#create-configuration)
-  * [Pestaña "Configuración de grabación"](#recording-settings-tab)
-  * [Pestaña "Programación"](#schedule-tab)
-  * [Pestaña "Configuración avanzada"](#advanced-settings-tab)
-  * [Ejemplos de configuración](#example-configurations)
-* [Establecer configuración y hora](#set-configuration-and-time)
-  * [Guardar y abrir configuraciones](#save-and-open-configurations)
-  * [Aplicar la configuración](#apply-configuration)
-  * [Establecer la hora](#set-the-time)
-  * [CONFIG.txt](#configtxt)
-* [Grabación](#recording)
-  * [Encender la grabadora](#switch-on-the-recorder)
-  * [Solución de problemas de grabación](#recording-troubleshooting)
-  * [¿Cuántas horas grabará mi AudioMoth?](#how-many-hours-will-my-audiomoth-record)
-  * [Calidad de grabación y calibración](#recording-quality-and-calibration)
-* [Carcasas](#enclosures)
-  * [Bolsas de plástico](#plastic-bags)
-  * [Bolsas termoselladas](#heat-sealed-bags)
-  * [Carcasas rígidas](#hard-enclosures)
-  * [Camuflaje](#camouflage)
-* [Despliegue](#despliegue)
-  * [Selección de posiciones de despliegue](#select-deployment-positions)
-  * [Metadatos de despliegue](#deployment-metadata)
-  * [Protocolos de despliegue escritos](#written-deployment-protocols)
-  * [Ayudas electrónicas sobre despliegue](#electronic-deployment-aids)
-  * [Informar al público](#informing-the-public)
-  * [Otros consejos](#other-tips)
-* [Gestión de datos](#data-management)
-  * [Carga de datos](#data-upload)
-  * [Gestión de metadatos](#metadata-management)
-* [Análisis de datos](#data-analysis)
-* [Citar esta guía](#citing-this-guide)
-* [Agradecimientos](#acknowledgements)
+* [Crear configuración](#Crear-la-configuración)
+  * [Pestaña "Configuración de grabación"](#Pestaña-"Ajustes-de-grabación”)
+  * [Pestaña "Programación"](#Pestaña-"Programación”)
+  * [Pestaña "Configuración avanzada"](#Pestaña-"Ajustes-avanzados")
+  * [Ejemplos de configuración](#Ejemplos-de-configuración)
+* [Establecer configuración y hora](#Establecer-configuración-y-Hora)
+  * [Guardar y abrir configuraciones](#Guardar-y-abrir-configuraciones)
+  * [Aplicar la configuración](#Aplicar-configuración)
+  * [Establecer la hora](#Ajustar-la-hora)
+  * [CONFIG.txt](#CONFIG.txt)
+* [Grabación](#Grabación)
+  * [Encender la grabadora](#Encender-la-grabadora)
+  * [Solución de problemas de grabación](#Resolución-de-problemas-de-grabación)
+  * [¿Cuántas horas grabará mi AudioMoth?](#¿Cuántas-horas-grabará-mi-AudioMoth?)
+  * [Calidad de grabación y calibración](#Calidad-de-grabación-y-calibración)
+* [Carcasas](#Carcasas)
+  * [Bolsas de plástico](#Bolsas-de-plástico)
+  * [Bolsas termoselladas](#Bolsas-termoselladas)
+  * [Carcasas duras](#Carcasas-duras)
+  * [Camuflaje](#Camuflaje)
+* [Despliegue](#Despliegue)
+  * [Selección de posiciones de despliegue](#Seleccionar-las-posiciones-de-despliegue)
+  * [Metadatos de despliegue](#Metadatos-de-despliegue)
+  * [Protocolos de despliegue escritos](#Protocolos-de-despliegue-escritos)
+  * [Ayudas electrónicas sobre despliegue](#Ayudas-electrónicas-para-el-despliegue)
+  * [Informar al público](#Información-al-público)
+  * [Otros consejos](#Otros-consejos)
+* [Gestión de datos](#Gestión-de-datos)
+  * [Carga de datos](#Carga-de-datos)
+  * [Gestión de metadatos](#Gestión-de-metadatos)
+* [Análisis de datos](#Análisis-de-datos)
+* [Citar esta guía](#Citar-esta-guía)
+* [Agradecimientos](#Agradecimientos)
 
 
 # Inicio rápido
@@ -282,7 +282,7 @@ En lugar de referirse a una zona horaria (como “Eastern Time”, “Pacific Ti
 
 **¿Puedo programar AudioMoths en hora local?**: Sí, puede utilizar la hora local en lugar de la UTC para programar sus dispositivos. Para ello, haga clic en el menú principal del programa ("Archivo" en la parte superior izquierda de la aplicación en computadores Windows; "AudioMoth-Config" en la parte superior de la pantalla en computadores Mac). Allí puede cambiar el ajuste "Hora local". 
 
-**¿Cuándo debo utilizar la hora local? algunos ejemplos de factores a tener en cuenta:
+**¿Cuándo debo utilizar la hora local? algunos ejemplos de factores a tener en cuenta:***
 
 * ¿Usted o sus colaboradores utilizarán sus grabadoras en varias zonas horarias?
 * ¿Trabajan usted o sus colaboradores en una zona horaria distinta a la de sus grabadoras? 
@@ -320,7 +320,7 @@ Por defecto, el AudioMoth empieza a seguir inmediatamente su programación de gr
 
 Esto es útil si desea desplegar sus grabadoras antes de las fechas de estudio deseadas (por ejemplo, si su sitio es inaccesible en esas fechas, o si tiene muchas grabadoras para desplegar y quiere que empiecen a grabar simultáneamente).
 
-## Pestaña "Ajustes avanzados
+## Pestaña "Ajustes avanzados"
 
 Las dos primeras características se pueden utilizar por separado, o combinadas para crear una "grabación activada por amplitud de banda", muy popular para capturar vocalizaciones de murciélagos. Para más información sobre estas funciones, consulte [este documento](https://github.com/OpenAcousticDevices/Application-Notes/blob/master/Using_AudioMoth_with_Filtering_and_Amplitude_Threshold_Recording.pdf)
 
