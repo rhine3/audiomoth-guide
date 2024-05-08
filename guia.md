@@ -629,22 +629,22 @@ Es importante comprobar la calidad de grabación de los micrófonos antes y desp
 
 3. Las versiones de firmware también pueden afectar a la calidad del sonido: por ejemplo, en el firmware v 1.2.0, un error hizo que todas nuestras grabaciones tuvieran una amplitud de sonido máxima un 25% de lo que debería haber sido. 
 
-4. Las carcasas y la colocación de su AudioMoth pueden alterar drásticamente el sonido grabado. Por ejemplo, las carcasas pueden reducir el sonido en determinadas bandas de frecuencia que llegan a los micrófonos, y los árboles pueden reducir el sonido procedente de determinadas direcciones o producir artefactos en las grabaciones ultrasónicas. Antes de desplegar las grabadoras, se recomienda probar cómo afectan la carcasa y las condiciones de campo a la calidad del sonido en comparación con una AudioMoth en condiciones ideales (sin carcasa y sin impacto acústico por su punto de despliegue. Otra alternativa es [utilizar un micrófono externo (instrucciones aquí)](https://github.com/OpenAcousticDevices/Application-Notes/blob/master/Using_AudioMoth_with_External_Electret_Condenser_Microphones.pdf), lo que es posible con las versiones más recientes del hardware de AudioMoth (1.2.0 y superiores).
+4. Las carcasas y la forma en la que despliega un AudioMoth pueden alterar drásticamente el sonido grabado. Por ejemplo, las carcasas pueden reducir el sonido en determinadas bandas de frecuencia que llegan a los micrófonos, y los árboles pueden reducir el sonido procedente de determinadas direcciones o producir artefactos en las grabaciones ultrasónicas. Antes de desplegar las grabadoras, se recomienda probar cómo afectan la carcasa y las condiciones de campo a la calidad del sonido en comparación con una AudioMoth en condiciones ideales (sin carcasa y sin impacto acústico por su punto de despliegue. Otra alternativa es [utilizar un micrófono externo (instrucciones aquí)](https://github.com/OpenAcousticDevices/Application-Notes/blob/master/Using_AudioMoth_with_External_Electret_Condenser_Microphones.pdf), lo que es posible con las versiones más recientes del hardware de AudioMoth (1.2.0 y superiores).
 
 Para más información sobre cómo probar sus AudioMoths, consulte los ejemplos de Sam Lapp en su [Informe de pruebas de rendimiento de AudioMoth](https://github.com/kitzeslab/audiomoth-performance). Asegúrese de evaluar no sólo el nivel general de decibelios de sus grabaciones, sino también si la sensibilidad difiere en diferentes frecuencias, por ejemplo, mediante la reproducción de ruido rosa.
 
 
 # Carcasas
 
-Las AudioMoths pueden dañarse si se exponen al agua, por lo que es necesario alojarlas en una carcasa segura y a prueba de agua. Esto se complica por el hecho de que el micrófono, un micrófono MEMS, está unido a la placa de circuitos, aunque es posible [utilizar un micrófono externo (instrucciones aquí)](https://github.com/OpenAcousticDevices/Application-Notes/blob/master/Using_AudioMoth_with_External_Electret_Condenser_Microphones.pdf) con las versiones más recientes del hardware de AudioMoth (1.2.0 y superiores). Cuando se utiliza el micrófono MEMS estándar, la carcasa debe ser a la vez a prueba de agua y acústicamente transparente sobre el micrófono.
+Los AudioMoths pueden dañarse si se exponen al agua, por lo que es necesario alojarlos en una carcasa segura y a prueba de agua. Esto se complica por el hecho de que el micrófono, un micrófono MEMS, está unido a la placa de circuitos, aunque es posible [utilizar un micrófono externo (instrucciones aquí)](https://github.com/OpenAcousticDevices/Application-Notes/blob/master/Using_AudioMoth_with_External_Electret_Condenser_Microphones.pdf) con las versiones más recientes del hardware de AudioMoth (1.2.0 y superiores). Cuando se utiliza el micrófono MEMS estándar, la carcasa debe ser a la vez a prueba de agua y acústicamente transparente sobre el micrófono.
 
 Es importante saber cómo afectan a la calidad del sonido la carcasa y la estrategia de despliegue. Para realizar comparaciones, consulte el [Informe de pruebas de rendimiento de AudioMoth] de Sam Lapp (https://github.com/kitzeslab/audiomoth-performance). Aunque hemos probado la calidad de audio de AudioMoths grabando en cajas de Open Acoustic Devices, estos resultados no están actualmente en el informe, ya que hemos obtenido algunos resultados que difieren un poco de los resultados reportados por Open Acoustic Devices. Aún estamos investigando las posibles causas de esta diferencia.
 
 ## Bolsas de plástico
 
-Las AudioMoths pueden ser desplegadas en bolsas de plástico como bolsas Ziploc o bolsas antiestáticas. Normalmente la bolsa debe ser gruesa (4mm) y usar un cierre de cremallera, no un cierre "deslizante" menos robusto visto en las típicas bolsas Ziploc. Las bolsas pueden fijarse a árboles, postes u otros puntos de despliegue mediante correas o bridas.
+Las AudioMoths pueden ser desplegadas en bolsas de plástico como bolsas Ziploc o bolsas antiestáticas. Normalmente la bolsa debe ser gruesa (4mm) y usar un cierre de cremallera, no un cierre "deslizante" menos robusto visto en las típicas bolsas Ziploc. Las bolsas pueden fijarse a árboles, postes u otros puntos de despliegue mediante correas o bridas (*Zip ties*).
 
-AudioMoth desplegada en un árbol de un bosque quemado (Foto: Beth Gardner)](images/housing/ziploc_BethGardner.jpg)
+AudioMoth desplegado en un árbol de un bosque quemado (Foto: Beth Gardner)](images/housing/ziploc_BethGardner.jpg)
 
 Estos son los materiales que utilizamos o hemos utilizado. No estamos afiliados a ninguno de estos proveedores. Los artículos disponibles en los enlaces de compra a veces se pueden cambiar (especialmente en Amazon), así que puede que quiera comparar precios.
 
@@ -653,14 +653,14 @@ Estos son los materiales que utilizamos o hemos utilizado. No estamos afiliados 
 * Correas: Las correas con hebilla de 1" son buenas. Busque el mejor precio. [Enlace de compra (Amazon)](https://www.amazon.com/Magarrow-Luggage-Buckle-Packing-Accessories/dp/B07H1D15LZ/)
 * Bridas: nos gustan las bridas negras de 16" de largo. Cualquiera de una ferretería local servirá. Para fines de camuflaje, las bridas negras tienden a ser menos visibles contra la corteza de los árboles que las blancas. Puede juntar varias bridas, pero es mejor utilizarlas en árboles de menor diámetro.
 
-Una AudioMoth en una bolsa antiestática, con la parte superior doblada para crear un lazo para la cremallera (Foto: Halie Parker)](images/housing/antistaticbag_HalieParker.jpeg)
+Un AudioMoth en una bolsa antiestática, con la parte superior doblada para crear un lazo para la cremallera (Foto: Halie Parker)](images/housing/antistaticbag_HalieParker.jpeg)
 
-Existen varios métodos para colgar la AudioMoth:
+Existen varios métodos para colgar el AudioMoth:
 
 * Cree un lazo en la parte superior de la bolsa con cinta aislante y pase una brida o correa por el lazo.
 * Enrolle la bolsa alrededor de una rama horizontal.
 * Sujete la correa al árbol y fije la bolsita a la correa con bridas.
-* Cosa una bolsa de tela para colocar la AudioMoth en la bolsa y fíjela al árbol con cremalleras.
+* Cosa una bolsa de tela para colocar el AudioMoth en la bolsa y fíjela al árbol con cremalleras.
 
 Un AudioMoth en una bolsa de tela, atado a un árbol con una cremallera](images/housing/fabric_pouch.jpg)
 
@@ -671,7 +671,7 @@ El interruptor y las esquinas del AudioMoth v1.0 son afilados y pueden rasgar un
 * Cubrir con cinta adhesiva las partes afiladas de la AudioMoth, o aplicar pegante caliente, reduce la posibilidad de pinchazos. 
     * No aplique nada junto al micrófono, ya que actualmente no estamos seguros del efecto sobre la calidad de grabación. Tenga cuidado de no obstruir la inserción de la tarjeta SD o el movimiento del interruptor.
     * [Ejemplo con cinta de Jennifer Sheridan](https://twitter.com/JenASheridan/status/1047766465900818432)
-* Antes de alejarse de una AudioMoth recién desplegada, inspeccione la bolsa en busca de arañazos o pinchazos. Sustitúyala si es necesario.
+* Antes de alejarse de un AudioMoth recién desplegado, inspeccione la bolsa en busca de arañazos o pinchazos. Sustitúyala si es necesario.
 
 ## Bolsas termoselladas
 
@@ -684,19 +684,19 @@ Puedes seguir los siguientes pasos para crear, desplegar y reutilizar una carcas
 * Crear sellos en 3 lados de la bolsa
 * Sellar 5 cm por debajo de uno de los lados sellados y cortar las esquinas de este lado. De este modo se crea un bolsillo por el que puede pasar la correa.
 * Inserte la correa en el bolsillo
-* Programe la AudioMoth y enciéndala
-* Inserte la AudioMoth y cualquier otro componente que desee (por ejemplo, un paquete de desecante, una pequeña nota sobre el estudio).
+* Programe el AudioMoth y enciéndalo
+* Inserte el AudioMoth y cualquier otro componente que desee (por ejemplo, un paquete de desecante, una pequeña nota sobre el estudio).
 * Selle el borde final de la caja
 * Amarre la carcasa al árbol
-* Después del despliegue, abra el fondo de la bolsa para liberar la AudioMoth.
+* Después del despliegue, abra el fondo de la bolsa para liberar el AudioMoth.
 
-Diagrama de preparación de la bolsa termosellada](images/housing/heat-sealed-diagram.png)
+[Diagrama de preparación de la bolsa termosellada](images/housing/heat-sealed-diagram.png)
 
 Dos desventajas de este método son:
 
 * Si prepara las carcasas sobre una superficie alfombrada, puede encontrarse con descargas estáticas. Para evitarlo, puede rociar spray antiestático (como laca para el pelo o [anti-static fabric spray](https://www.amazon.com/Static-Guard-Fabric-Spray-Ounce/dp/B0013IRBG4)) en el interior de la bolsa, o incluso frotar una hoja de secador en el interior de la bolsa.
 
-* La AudioMoth debe estar programada y encendida antes de meterla en la bolsa. Las versiones más recientes del firmware de la AudioMoth le permiten establecer una fecha de inicio retrasada para la grabación; sin esto, sus AudioMoths comenzarán a grabar en su programa diario después de ser encendidas, ¡independientemente de si las ha colocado o no en el campo!
+* El AudioMoth debe estar programado y encendido antes de meterlo en la bolsa. Las versiones más recientes del firmware del AudioMoth le permiten establecer una fecha de inicio retrasada para la grabación; sin esto, sus AudioMoths comenzarán a grabar en su programa diario después de ser encendidos, ¡independientemente de si las ha colocado o no en el campo!
 
 ## Carcasas duras
 
@@ -733,8 +733,8 @@ Una AudioMoth en una funda de camuflaje cosida (Foto: Halie Parker)](images/hous
 
 Camuflar sus AudioMoths puede ayudar a prevenir el vandalismo y el robo. Algunos consejos:
 
-* Las telas de camuflaje pueden ayudar a reducir la visibilidad de sus AudioMoths, especialmente cuando se despliegan en terrenos públicos. Algunas opciones son coser una bolsa de tela de camuflaje (de venta en tiendas de telas; ver imagen superior), o cubrir la AudioMoth con un cuadrado de material de camuflaje recortado (ver imagen inferior).
-* Puede utilizar cinta de señalización para que sus AudioMoths sean más fáciles de encontrar. Para evitar llamar la atención sobre la AudioMoth, puede colocar la cinta de señalización a una distancia y dirección determinadas de ella, por ejemplo, en un árbol a 15 metros al norte de la AudioMoth.
+* Las telas de camuflaje pueden ayudar a reducir la visibilidad de sus AudioMoths, especialmente cuando se despliegan en terrenos públicos. Algunas opciones son coser una bolsa de tela de camuflaje (de venta en tiendas de telas; ver imagen superior), o cubrir el AudioMoth con un cuadrado de material de camuflaje recortado (ver imagen inferior).
+* Puede utilizar cinta de señalización para que sus AudioMoths sean más fáciles de encontrar. Para evitar llamar la atención sobre el AudioMoth, puede colocar la cinta de señalización a una distancia y dirección determinadas de ella, por ejemplo, en un árbol a 15 metros al norte de la AudioMoth.
 * Tenga en cuenta que las cintas negras destacan sobre los árboles. Dependiendo del color de la corteza del árbol, las cintas negras pueden ser bastante discretas, mientras que las blancas pueden destacar.
 * Si su AudioMoth va a estar en una zona muy transitada, considere la posibilidad de colocarla a cierta distancia de senderos, lejos de carreteras o caminos cercanos y fuera del alcance de los transeúntes.
 
@@ -743,14 +743,14 @@ Una AudioMoth cubierta por un cuadrado de tela de caza](images/housing/camo_blin
 
 # Despliegue
 
-El "despliegue" es el proceso de colocar las grabadoras en el campo. También puede incluir otras actividades como la selección de los puntos en los que deben desplegarse las AudioMoths, la comprobación de las AudioMoths una vez desplegadas, etc. A continuación se presentan ideas y notas importantes para recordar acerca de los despliegues, incluyendo cómo informar al público, registrar datos, fijar AudioMoths de forma segura a los árboles, y mucho más.
+El "despliegue" es el proceso de colocar las grabadoras en el campo. También puede incluir otras actividades como la selección de los puntos en los que deben desplegarse los AudioMoths, la comprobación de los AudioMoths una vez desplegadas, etc. A continuación se presentan ideas y notas importantes para recordar acerca de los despliegues, incluyendo cómo informar al público, registrar datos, fijar AudioMoths de forma segura a los árboles, y mucho más.
 
 ## Seleccionar las posiciones de despliegue
 
 ### Posicionamiento de la grabadora
 Algunas cosas a tener en cuenta al colocar las grabadoras en el campo:
 
-* Evite colocar las AudioMoths bajo la luz directa del sol, ya que sus carcasas pueden calentarse y el sol puede desgastar el plástico, la cinta adhesiva, el camuflaje, etc.
+* Evite colocar los AudioMoths bajo la luz directa del sol, ya que sus carcasas pueden calentarse y el sol puede desgastar el plástico, la cinta adhesiva, el camuflaje, etc.
 * Es posible que desee [camuflar](#camuflar) sus grabadoras. Si va a colocar sus grabadoras en una zona por la que pasea la gente, intente colocarlas de forma que no puedan verse desde carreteras o caminos cercanos.
 
 Algunas fuentes potenciales de ruido o reducción de la calidad del sonido:
@@ -758,12 +758,12 @@ Algunas fuentes potenciales de ruido o reducción de la calidad del sonido:
 * **Tamaño del árbol**: Si se despliega en un árbol: cuanto más grande sea el árbol, más bloqueará el sonido que llega en todas direcciones. En general, se recomienda un árbol que no sea enorme, pero lo suficientemente robusto como para que la AudioMoth no sea sacudida por el viento. Por ejemplo, cuantificamos el impacto sonoro del diámetro del árbol aquí: [Informe de pruebas de rendimiento de AudioMoth aquí](https://github.com/kitzeslab/audiomoth-performance).
 * Distancia al suelo**: Algunos estudios han demostrado que las grabadoras colocadas cerca del suelo tienen un radio de audición menor. Si es posible, colocar las AudioMoth a la altura del pecho, de la cabeza o incluso más alto puede mejorar la calidad del sonido. (Y poner las grabadoras fuera del alcance de ciertos animales curiosos, por ejemplo, ciervos, humanos)
 * **Otros sonidos biológicos**: Las especies no objetivo pueden ser un problema, por ejemplo, las ranas que se oyen al grabar la migración nocturna de las aves. Coloque las grabadoras a mayor altura del suelo e investigue métodos para reducir el ruido de otras fuentes.
-**Vegetación**: En general, la vegetación puede reducir la calidad del sonido. Si crece alrededor de su AudioMoth, el movimiento de la vegetación con el viento y al rozar contra la AudioMoth puede causar ruido. Tenga en cuenta que la vegetación puede crecer mucho entre el despliegue y la recuperación de su AudioMoth.
-* **Agua en movimiento**: Si es posible, coloque las AudioMoths fuera del alcance auditivo de movimientos de agua; el ruido de la corriente reducirá en gran medida el radio que su AudioMoth puede grabar.
+**Vegetación**: En general, la vegetación puede reducir la calidad del sonido. Si crece alrededor de su AudioMoth, el movimiento de la vegetación con el viento y al rozar contra el AudioMoth puede causar ruido. Tenga en cuenta que la vegetación puede crecer mucho entre el despliegue y la recuperación de su AudioMoth.
+* **Agua en movimiento**: Si es posible, coloque los AudioMoths fuera del alcance auditivo de movimientos de agua; el ruido de la corriente reducirá en gran medida el radio que su AudioMoth puede grabar.
 * Viento**: El viento puede ser problemático en entornos abiertos. Los parabrisas pueden ayudar (consulte [este hilo](https://www.wildlabs.net/community/thread/914) para obtener consejos).
 * **Voces, carreteras y sonido mecánico**: Intente anticipar la ubicación y el volumen de los sonidos provocados por humanos, como el ruido de la carretera, las motosierras, los excursionistas, etc.  A veces son inevitables. Dependiendo de su estudio, es posible que también quiera capturarlos.
 
-Personas despliegan una AudioMoth a varios metros del suelo (Fotografía: Beth Gardner)](images/housing/height_BethGardner.jpg)
+Personas despliegan un AudioMoth a varios metros del suelo (Fotografía: Beth Gardner)](images/housing/height_BethGardner.jpg)
 
 
 ### Preselección de ubicaciones
@@ -777,7 +777,7 @@ Puede utilizar herramientas como ArcGIS y Google Maps para identificar previamen
 * Utilice la herramienta de "medición" para encontrar un espaciado uniforme entre los puntos (pulse "Intro" para guardar temporalmente una medición antes de trazar el siguiente punto).
 * Si varios grupos de personas van a desplegar registradores, decida de antemano qué grupo los desplegará en qué puntos. Puede cambiar el color del marcador del punto en Google Maps para ver fácilmente las divisiones de los grupos.
 
-Google My Maps](images/programming/google-maps-demo.gif)
+[Google My Maps](images/programming/google-maps-demo.gif)
 
 
 ## Metadatos de despliegue
@@ -785,9 +785,9 @@ Google My Maps](images/programming/google-maps-demo.gif)
 Utilizamos hojas de cálculo para realizar un seguimiento de los metadatos sobre cada AudioMoth que se ha desplegado. [Esta hoja de cálculo](documents/example_deployment_metadata.csv) ofrece un ejemplo de los metadatos de despliegue que rastreamos, incluyendo:
 
 * Números de identificación de AudioMoth y de la tarjeta microSD
-* Firmware utilizado en la AudioMoth
-* El nombre del archivo de configuración (esto ya no es tan necesario, ya que la información sobre la configuración se guarda en la tarjeta microSD cuando la AudioMoth comienza a grabar)
-* Nombre, latitud y longitud del punto en el que se despliega la AudioMoth
+* Firmware utilizado en el AudioMoth
+* El nombre del archivo de configuración (esto ya no es tan necesario, ya que la información sobre la configuración se guarda en la tarjeta microSD cuando el AudioMoth comienza a grabar)
+* Nombre, latitud y longitud del punto en el que se despliega el AudioMoth
 * Notas importantes sobre la ubicación, como la dirección de la grabadora, si está oculta por arbustos, etc.
 * Fechas de despliegue y recogida
 * Fechas de otras actividades, como la comprobación y prueba de la grabadora, la fecha en que se cargaron los datos en un computador, etc.
@@ -805,19 +805,19 @@ También utilizamos una hoja de cálculo "maestra" para registrar información s
 Solemos colectar los metadatos de despliegue mediante hojas de datos de campo. El documento que contiene los protocolos y las hojas de datos que utilizamos actualmente para el despliegue está disponible en los siguientes formatos:
 
 * [Documento Google (duplicar para editar)](https://docs.google.com/document/d/1sjiYVt9-nC2Vyr7Qvu2pRacPSWM6B8tl-AOX44OfrOU/edit?usp=sharing)
-* Documento PDF](documents/deployment_protocol_template.docx)
-* Documento Word](documents/deployment_protocol_template.docx)
+* [Documento PDF](documents/deployment_protocol_template.docx)
+* [Documento Word](documents/deployment_protocol_template.docx)
 
 
 Este documento abarca las actividades previas al despliegue, el despliegue sobre el terreno y el despliegue posterior, por ejemplo
 
-* Cómo configurar AudioMoths nuevas
+* Cómo configurar AudioMoths nuevos
 * Creación de programas de grabación para AudioMoths
 * Colocación de AudioMoths en carcasas selladas
 * Lista de verificación de preparación para despliegues en el campo
 * Hojas de datos de campo para desplegar, intercambiar o retirar AudioMoths del campo
 * Carga de grabaciones de tarjetas microSD en el computador
-* Pruebas de las AudioMoths devueltas
+* Pruebas de los AudioMoths devueltas
 
 Algunos consejos para utilizar hojas de datos escritas en el campo:
 
@@ -842,9 +842,9 @@ Puede utilizar la aplicación RFCx Companion para colectar metadatos sobre cada 
 * Fotos del lugar de despliegue
 * Su track, si está habilitado
 
-Esta aplicación también se puede utilizar para ajustar la hora en una AudioMoth:
+Esta aplicación también se puede utilizar para ajustar la hora en un AudioMoth:
 
-* Cambia las grabadoras al modo acústico emitiendo un tono a una frecuencia específica. Cuando cambia la AudioMoth del modo USB/OFF al modo CUSTOM mientras reproduce este tono, la AudioMoth pasa al modo acústico. 
+* Cambia las grabadoras al modo acústico emitiendo un tono a una frecuencia específica. Cuando cambia el AudioMoth del modo USB/OFF al modo CUSTOM mientras reproduce este tono, el AudioMoth pasa al modo acústico. 
 * Anteriormente, la función de timbre de la aplicación complementaria RFCx codificaba la fecha y la hora en que se abría la aplicación, no la hora actual. Si descargó su aplicación antes de mayo de 2021, asegúrese de actualizarla antes de utilizarla.
 
 El timbre acústico también codifica un ID de despliegue único:
@@ -877,13 +877,13 @@ Si lo desea, puede añadir una nota en la carcasa de cada grabadora en la que de
 
 ### Consejos para ampliar
 
-Doscientas carcasas AudioMoth hechas con bolsas Ziploc](images/housing/bulk-housings.jpg){ width=300px }
+[Doscientas carcasas AudioMoth hechas con bolsas Ziploc](images/housing/bulk-housings.jpg){ width=300px }
 
 * La velocidad es importante cuando se instalan muchas grabadoras: por ejemplo, si se instalan 100 grabadoras, 5 minutos más por grabadora significa más de 8 horas de trabajo en campo. Practique y perfeccione su protocolo de despliegue antes de salir al campo.
 * Ahorre tiempo en campo empaquetando previamente las bolsas con desecante y atándolas previamente a las correas en el laboratorio, en lugar de realizar estas tareas en campo.
-* Puede ser útil desplegar las AudioMoths en parejas.
+* Puede ser útil desplegar los AudioMoths en parejas.
     * Una persona puede registrar los datos, por ejemplo, la identificación única de la AudioMoth, su tarjeta SD, y el punto en el que se despliega.
-    * La otra persona puede gestionar la colocación de la AudioMoth en el árbol y recoger un punto GPS más preciso.
+    * La otra persona puede gestionar la colocación del AudioMoth en el árbol y recoger un punto GPS más preciso.
 * Preasignar grupos cercanos de AudioMoths
 
 ### Playback, imitación y voces
@@ -905,7 +905,7 @@ Transferir archivos de audio desde cientos de tarjetas microSD es un proceso len
 
 ### Consejos para la carga
 
-Asignamos a cada tarjeta microSD un número de identificación único (por ejemplo, 0526). Este número se escribe en el anverso de la tarjeta con Sharpie, pero también se asigna a la tarjeta un nombre de volumen (por ejemplo, MSD-0526) cuando se formatea por primera vez. Estos nombres se utilizan después para organizar los archivos de audio copiados de cada tarjeta.
+Asignamos a cada tarjeta microSD un número de identificación único (por ejemplo, 0526). Este número se escribe en el adverso de la tarjeta con Sharpie, pero también se asigna a la tarjeta un nombre de volumen (por ejemplo, MSD-0526) cuando se formatea por primera vez. Estos nombres se utilizan después para organizar los archivos de audio copiados de cada tarjeta.
 
 Cuando todas las tarjetas microSD tienen este nombre, el siguiente comando `rsync` copia los datos automáticamente: 
 
@@ -925,9 +925,9 @@ Antes de dar por finalizada la transferencia de datos, compruebe que se han crea
 El método que utilizamos actualmente para transferir tarjetas microSD es un método basado en Raspberry Pi. Tutoriales y esquemas para los dispositivos Raspberry Pi están disponibles en el [repositorio `picopy`] de Sam Lapp(
 https://github.com/sammlapp/picopy).
 
-Estos dispositivos, apodados "Golondrinas", permiten transferir los datos de una tarjeta microSD conectada a la Raspberry Pi a un disco duro externo conectado. Los botones de la Swallow se utilizan para iniciar y detener las transferencias y expulsar las unidades. Los LED de la Swallow indican el estado de la copia, el progreso y los errores encontrados. Las funciones de la golondrina son gestionadas por un script de Python que inicia la transferencia utilizando Rsync.
+Estos dispositivos, apodados "Swallow", permiten transferir los datos de una tarjeta microSD conectada a la Raspberry Pi a un disco duro externo conectado. Los botones del Swallow se utilizan para iniciar y detener las transferencias y expulsar las unidades. Los LED del Swallow indican el estado de la copia, el progreso y los errores encontrados. Las funciones de los Swallow son gestionados por un script de Python que inicia la transferencia utilizando Rsync.
 
-Si se construyen varias Golondrinas, pueden utilizarse para "paralelizar" el proceso de carga, ¡simplemente haciendo que varias Golondrinas carguen datos a la vez!
+Si se construyen varias Swallows, pueden utilizarse para "paralelizar" el proceso de carga, ¡simplemente haciendo que varios Swallows carguen datos a la vez!
 
 ![Dispositivo Swallow Raspberry Pi (Crédito de la foto: Sam Lapp)](images/other/swallow.png){ width=300px }
 
@@ -937,14 +937,14 @@ Otra opción es utilizar un lector de tarjetas SD multipuerto. La foto de abajo 
 
 Hemos diseñado un lector de tarjetas SD de 32 puertos que se puede fabricar con materiales comprados en Amazon, el ["hexadecapus"](https://github.com/kitzeslab/sd-transfer/blob/master/Hexadecapus/Hexadecapus%20multi-SD%20reader.pdf). 
 
-Ten en cuenta que esto no acelera ni paraleliza significativamente el proceso de transferencia. Simplemente le permite cargar varias tarjetas en el computador y marcharse, sin tener que insertar, cargar y expulsar tarjetas de una en una.
+Tenga en cuenta que esto no acelera ni paraleliza significativamente el proceso de transferencia. Simplemente le permite cargar varias tarjetas en el computador y marcharse, sin tener que insertar, cargar y expulsar tarjetas de una en una.
 
-Almacenamiento conectado a la red y lector de tarjetas SD](images/other/nas.jpg){ width=300px }
+[Almacenamiento conectado a la red y lector de tarjetas SD](images/other/nas.jpg){ width=300px }
 
 ## Gestión de metadatos
 Es importante hacer un seguimiento de los metadatos sobre los archivos creados. 
 
-## AudioMoth almacena metadatos sobre la grabación en el campo "Comments" de los metadatos EXIF. Esto incluye fecha/hora de grabación, tasa de muestreo, duración de la grabación, ajuste de ganancia, nivel de batería y número de serie de la AudioMoth. Por ejemplo, este es un ejemplo de registro de metadatos generado automáticamente por una AudioMoth programada con la aplicación RFCx Companion:
+## AudioMoth almacena metadatos sobre la grabación en el campo "Comments" de los metadatos EXIF. Esto incluye fecha/hora de grabación, tasa de muestreo, duración de la grabación, ajuste de ganancia, nivel de batería y número de serie de la AudioMoth. Por ejemplo, este es un ejemplo de registro de metadatos generado automáticamente por un AudioMoth programado con la aplicación RFCx Companion:
 
  ```
 > exiftool 20210528_131600.WAV
