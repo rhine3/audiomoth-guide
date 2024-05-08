@@ -644,7 +644,7 @@ Es importante saber cómo afectan a la calidad del sonido la carcasa y la estrat
 
 Las AudioMoths pueden ser desplegadas en bolsas de plástico como bolsas Ziploc o bolsas antiestáticas. Normalmente la bolsa debe ser gruesa (4mm) y usar un cierre de cremallera, no un cierre "deslizante" menos robusto visto en las típicas bolsas Ziploc. Las bolsas pueden fijarse a árboles, postes u otros puntos de despliegue mediante correas o bridas (*Zip ties*).
 
-AudioMoth desplegado en un árbol de un bosque quemado (Foto: Beth Gardner)](images/housing/ziploc_BethGardner.jpg)
+AudioMoth desplegado en un árbol de un bosque quemado [(Foto: Beth Gardner)](images/housing/ziploc_BethGardner.jpg)
 
 Estos son los materiales que utilizamos o hemos utilizado. No estamos afiliados a ninguno de estos proveedores. Los artículos disponibles en los enlaces de compra a veces se pueden cambiar (especialmente en Amazon), así que puede que quiera comparar precios.
 
@@ -677,7 +677,7 @@ El interruptor y las esquinas del AudioMoth v1.0 son afilados y pueden rasgar un
 
 Las bolsas Ziploc son susceptibles a pincharse y pueden ser difíciles de fijar a las correas. Una alternativa a las bolsas Ziploc es crear una carcasa utilizando una bolsa termosellada. Las creamos utilizando una selladora al vacío con una función de "sólo sellado térmico", y no aspiramos el aire de la bolsa. (Aspirar el aire de las bolsas reduciría la calidad del sonido).
 
-![Bolsa termosellada](images/housing/heat-sealed.jpg){ width=300px }
+<img src="images/housing/heat-sealed.jpg" style="width: 6.5in; height: 3.444444444444446in">
 
 Puedes seguir los siguientes pasos para crear, desplegar y reutilizar una carcasa termosellada:
 
@@ -715,13 +715,13 @@ Además, muchos grupos han compartido sus consejos sobre carcasas en el [foro de
 
 * [Carcasa cortada con láser por Open Acoustic Devices](https://www.openacousticdevices.info/single-post/2019/04/24/AA-acrylic-laser-cut-enclosure)
 
-* Caja de tupperware de Emily Hoffman](https://twitter.com/em_hoffmann/status/1200221472641282048)
+* [Caja de tupperware de Emily Hoffman](https://twitter.com/em_hoffmann/status/1200221472641282048)
 
 * [Carcasa de tupperware por Carolina Ocampo](https://twitter.com/CarOcampoA/status/1045013308900868096)
 
-* Caja montada a mano por Heather Wood](https://www.wildlabs.net/community/thread/554)
+* [Caja montada a mano por Heather Wood](https://www.wildlabs.net/community/thread/554)
 
-* Caja imprimible en 3D por Robin Jones](https://www.thingiverse.com/thing:3292311)
+* [Caja imprimible en 3D por Robin Jones](https://www.thingiverse.com/thing:3292311)
 
 * [Caja imprimible en 3D por Jon Flanders](https://twitter.com/jonrflanders/status/1084491613068513282) (diseño aún no publicado)
 
@@ -760,10 +760,10 @@ Algunas fuentes potenciales de ruido o reducción de la calidad del sonido:
 * **Otros sonidos biológicos**: Las especies no objetivo pueden ser un problema, por ejemplo, las ranas que se oyen al grabar la migración nocturna de las aves. Coloque las grabadoras a mayor altura del suelo e investigue métodos para reducir el ruido de otras fuentes.
 **Vegetación**: En general, la vegetación puede reducir la calidad del sonido. Si crece alrededor de su AudioMoth, el movimiento de la vegetación con el viento y al rozar contra el AudioMoth puede causar ruido. Tenga en cuenta que la vegetación puede crecer mucho entre el despliegue y la recuperación de su AudioMoth.
 * **Agua en movimiento**: Si es posible, coloque los AudioMoths fuera del alcance auditivo de movimientos de agua; el ruido de la corriente reducirá en gran medida el radio que su AudioMoth puede grabar.
-* Viento**: El viento puede ser problemático en entornos abiertos. Los parabrisas pueden ayudar (consulte [este hilo](https://www.wildlabs.net/community/thread/914) para obtener consejos).
+* **Viento**: El viento puede ser problemático en entornos abiertos. Los parabrisas pueden ayudar (consulte [este hilo](https://www.wildlabs.net/community/thread/914) para obtener consejos).
 * **Voces, carreteras y sonido mecánico**: Intente anticipar la ubicación y el volumen de los sonidos provocados por humanos, como el ruido de la carretera, las motosierras, los excursionistas, etc.  A veces son inevitables. Dependiendo de su estudio, es posible que también quiera capturarlos.
 
-Personas despliegan un AudioMoth a varios metros del suelo (Fotografía: Beth Gardner)](images/housing/height_BethGardner.jpg)
+Personas despliegan un AudioMoth a varios metros del suelo [(Fotografía: Beth Gardner)](images/housing/height_BethGardner.jpg)
 
 
 ### Preselección de ubicaciones
@@ -877,7 +877,8 @@ Si lo desea, puede añadir una nota en la carcasa de cada grabadora en la que de
 
 ### Consejos para ampliar
 
-[Doscientas carcasas AudioMoth hechas con bolsas Ziploc](images/housing/bulk-housings.jpg){ width=300px }
+<img src="images/housing/bulk-housings.jpg" style="width: 6.5in; height: 3.444444444444446in">
+Doscientas carcasas AudioMoth hechas con bolsas Ziploc
 
 * La velocidad es importante cuando se instalan muchas grabadoras: por ejemplo, si se instalan 100 grabadoras, 5 minutos más por grabadora significa más de 8 horas de trabajo en campo. Practique y perfeccione su protocolo de despliegue antes de salir al campo.
 * Ahorre tiempo en campo empaquetando previamente las bolsas con desecante y atándolas previamente a las correas en el laboratorio, en lugar de realizar estas tareas en campo.
@@ -929,7 +930,8 @@ Estos dispositivos, apodados "Swallow", permiten transferir los datos de una tar
 
 Si se construyen varias Swallows, pueden utilizarse para "paralelizar" el proceso de carga, ¡simplemente haciendo que varios Swallows carguen datos a la vez!
 
-![Dispositivo Swallow Raspberry Pi (Crédito de la foto: Sam Lapp)](images/other/swallow.png){ width=300px }
+<img src="images/other/swallow.png)" style="width: 6.5in; height: 3.444444444444446in">
+Dispositivo Swallow Raspberry Pi (Crédito de la foto: Sam Lapp)
 
 ### Lector SD multipuerto
 
@@ -939,7 +941,8 @@ Hemos diseñado un lector de tarjetas SD de 32 puertos que se puede fabricar con
 
 Tenga en cuenta que esto no acelera ni paraleliza significativamente el proceso de transferencia. Simplemente le permite cargar varias tarjetas en el computador y marcharse, sin tener que insertar, cargar y expulsar tarjetas de una en una.
 
-[Almacenamiento conectado a la red y lector de tarjetas SD](images/other/nas.jpg){ width=300px }
+<img src="images/other/nas.jpg)" style="width: 6.5in; height: 3.444444444444446in">
+Almacenamiento conectado a la red y lector de tarjetas SD
 
 ## Gestión de metadatos
 Es importante hacer un seguimiento de los metadatos sobre los archivos creados. 
