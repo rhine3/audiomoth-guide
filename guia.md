@@ -677,7 +677,7 @@ El interruptor y las esquinas del AudioMoth v1.0 son afilados y pueden rasgar un
 
 Las bolsas Ziploc son susceptibles a pincharse y pueden ser difíciles de fijar a las correas. Una alternativa a las bolsas Ziploc es crear una carcasa utilizando una bolsa termosellada. Las creamos utilizando una selladora al vacío con una función de "sólo sellado térmico", y no aspiramos el aire de la bolsa. (Aspirar el aire de las bolsas reduciría la calidad del sonido).
 
-<img src="images/other/heat-sealed.jpg" width="300" height="200"> 
+<img src="images/housing/heat-sealed.jpg" width="300" height="200"> 
 Puedes seguir los siguientes pasos para crear, desplegar y reutilizar una carcasa termosellada:
 
 * Crear sellos en 3 lados de la bolsa
