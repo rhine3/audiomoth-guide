@@ -116,7 +116,7 @@ Para grabar a frecuencias de muestreo de 48 kHz o inferiores, solemos utilizar t
 
 Para grabar a frecuencias de muestreo superiores a 48 kHz, utilizamos tarjetas microSD SanDisk Extreme de 128 GB. Estas frecuencias de muestreo requieren tarjetas SD con velocidades de lectura/escritura rápidas. Los archivos producidos con altas frecuencias de muestreo también son más grandes, por lo que consumen espacio en la tarjeta SD más rápidamente.  
 
-Para más detalles sobre la selección de tarjetas microSD, consulte la [Guía de tarjetas SD] de Open Acoustic Devices (https://www.openacousticdevices.info/sd-card-guide).
+Para más detalles sobre la selección de tarjetas microSD, consulte la [Guía de tarjetas SD](https://www.openacousticdevices.info/sd-card-guide) de Open Acoustic Devices.
 
 ### Nombre y formateo de la tarjeta
 
