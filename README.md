@@ -29,3 +29,5 @@ This work is released under a CC-BY license. Please cite it if you use it, repla
     Rhinehart, Tessa A. (2021). AudioMoth: a practical 
     guide to the open-source ARU. GitHub repository: 
     https://github.com/rhine3/audiomoth-guide. DOI: <>
+
+Thank you to Marco González Santoro and Santiago Ruiz Guzman for their assistance in translating this guide to Spanish.
