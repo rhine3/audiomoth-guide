@@ -1,4 +1,5 @@
-# About the [Practical AudioMoth Guide](https://github.com/rhine3/audiomoth-guide/blob/master/guide.md)
+# About the Practical AudioMoth Guide 
+### Read the guide [in English](guide.md) - Lee la guía [en español](guia.md)
 
 [![DOI](https://zenodo.org/badge/168228984.svg)](https://zenodo.org/badge/latestdoi/168228984)
 
