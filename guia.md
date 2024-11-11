@@ -3,7 +3,7 @@
 # AudioMoth: una guía práctica de la ARU de código abierto
 por [Tessa Rhinehart](https://tessarhinehart.com), [Kitzes Lab](https://kitzeslab.org/), University of Pittsburgh
 
-Publicado originalmente en 2019. Revisado en junio de 2021.
+Publicado originalmente en 2019. Revisado en noviembre 2024.
 
 ### Acerca de
 
