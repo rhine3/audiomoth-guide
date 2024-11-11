@@ -1003,7 +1003,7 @@ guide to the open-source ARU. Repositorio GitHub:
 https://github.com/rhine3/audiomoth-guide. DOI: <>
 ```
 
-Si modifica este documento y quiere hacer una versión .pdf, puede usar `pandoc` en la línea de comandos para compilar la versión PDF desde Markdown: `pandoc guide.md -o guide.pdf --variable urlcolor=cyan --variable linkcolor=MediumSeaGreen --template pandoc/template.latex`.
+Si modifica este documento y quiere hacer una versión .pdf, puede usar `pandoc` en la línea de comandos para compilar la versión PDF desde Markdown: `pandoc guia.md -o guia.pdf --variable urlcolor=cyan --variable linkcolor=MediumSeaGreen --template pandoc/template.latex`.
 
 ## Agradecimientos
 
