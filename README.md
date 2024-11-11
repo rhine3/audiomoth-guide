@@ -1,11 +1,11 @@
-# About the Practical AudioMoth Guide 
-### Read the guide [in English](guide.md) - Lee la guía [en español](guia.md)
+# About the [Practical AudioMoth Guide](guide.md)
+### [README en español](README_sp.md) - [guía en español](guia.md)
 
 [![DOI](https://zenodo.org/badge/168228984.svg)](https://zenodo.org/badge/latestdoi/168228984)
 
 The [AudioMoth](https://www.openacousticdevices.info/audiomoth) is a low-cost acoustic recorder designed by [Open Acoustic Devices](https://www.openacousticdevices.info/) for wildlife and conservation applications. 
 
-This practical guide is a repository for all of the tips, tricks, and procedures we, the [Kitzes Lab](http://www.kitzeslab.org/), developed in the process of deploying thousands of AudioMoths since March 2018.
+This [practical guide](guide.md) is a repository for all of the tips, tricks, and procedures we, the [Kitzes Lab](http://www.kitzeslab.org/), developed in the process of deploying thousands of AudioMoths since March 2018.
 
 
 ## Quick start
