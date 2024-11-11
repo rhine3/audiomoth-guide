@@ -1,4 +1,4 @@
-# A cerca de la  [Guía practica para Audiomoths](https://github.com/rhine3/audiomoth-guide/blob/master/guide.md)
+# A cerca de la  [Guía practica para Audiomoths](guia.md)
 
 [![DOI](https://zenodo.org/badge/168228984.svg)](https://zenodo.org/badge/latestdoi/168228984)
 
