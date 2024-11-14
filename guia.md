@@ -1016,4 +1016,4 @@ Acoustic Device for Monitoring Biodiversity and the Environment".
 Methods in Ecology and Evolution, 3 de diciembre de 2017.
 ```
 
-Gracias a Alex Rogers, Sam Lapp, Trieste Devlin, Lauren Chronister, Lauren Schricker, Abram Fleishman y otros miembros de las comunidades de AudioMoth y bioacústica que han contribuido a esta guía.
+Gracias a Alex Rogers, Sam Lapp, Trieste Devlin, Lauren Chronister, Lauren Schricker, Abram Fleishman y otros miembros de las comunidades de AudioMoth y bioacústica que han contribuido a esta guía. Gracias a Marco González Santoro y Santiago Ruiz Guzman por traducir esta guía al español.
